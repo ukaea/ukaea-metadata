@@ -1,0 +1,111 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema", 
+    "$id": "urn:scicat:dataset-schema",
+	"type": "object",
+    "required": [ "pid", "owner", "contactEmail", "creationTime", "type", "sourceFolder", "ownerGroup" ],
+    "properties": {
+        "pid": {
+            "type": "string",
+            "description": "Persistent Identifier for datasets derived from UUIDv4 and prepended automatically by site specific PID prefix like 20.500.12345/"
+        },
+        "owner": {
+            "type": "string",
+            "description": "Owner or custodian of the data set, usually first name + lastname. The string may contain a list of persons, which should then be seperated by semicolons."
+        },
+        "contactEmail": {
+            "type": "string",
+            "description": "Email of contact person for this dataset. The string may contain a list of emails, which should then be seperated by semicolons."
+        },
+        "creationTime": {
+            "type": "date-time",
+            "description": "Time when dataset became fully available on disk, i.e. all containing files have been written. Format according to chapter 5.6 internet date/time format in RFC 3339. Local times without timezone/offset info are automatically transformed to UTC using the timezone of the API server."
+        },
+        "type": {
+            "enum": [ "base", "raw", "derived" ],
+            "description": "Characterize type of dataset, either 'base' or 'raw' or 'derived'. Autofilled when choosing the proper inherited models"
+        },
+        "sourceFolder": {
+            "type": "string",
+            "description": "Absolute file path on file server containing the files of this dataset, e.g. /some/path/to/sourcefolder. In case of a single file dataset, e.g. HDF5 data, it contains the path up to, but excluding the filename. Trailing slashes are removed."
+        },
+        "ownerEmail": {
+            "type": "string",
+            "description": "Email of owner or of custodian of the data set. The string may contain a list of emails, which should then be seperated by semicolons."
+        },
+        "orcidOfOwner": {
+            "type": "string",
+            "description": "ORCID of owner/custodian. The string may contain a list of ORCID, which should then be separated by semicolons."
+        },
+        "sourceFolderHost": {
+            "type": "string",
+            "description": "DNS host name of file server hosting sourceFolder, optionally including protocol e.g. [protocol://]fileserver1.example.com"
+        },
+        "size": {
+            "type": "number",
+            "description": "Total size of all source files contained in source folder on disk when unpacked"
+        },
+        "packedSize": {
+            "type": "number",
+            "description": "Total size of all datablock package files created for this dataset"
+        },
+        "numberOfFiles": {
+            "type": "number",
+            "description": "Total number of lines in filelisting of all OrigDatablocks for this dataset"
+        },
+        "numberOfFilesArchived": {
+            "type": "number",
+            "description": "Total number of lines in filelisting of all Datablocks for this dataset"
+        },
+
+        "validationStatus": {
+            "type": "string",
+            "description": "Defines a level of trust, e.g. a measure of how much data was verified or used by other persons"
+        },
+        "keywords": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "description": "Array of tags associated with the meaning or contents of this dataset. Values should ideally come from defined vocabularies, taxonomies, ontologies or knowledge graphs"
+        },
+        "description": {
+            "type": "string",
+            "description": "Free text explanation of contents of dataset"
+        },
+        "datasetName": {
+            "type": "string",
+            "description": "A name for the dataset, given by the creator to carry some semantic meaning. Useful for display purposes e.g. instead of displaying the pid. Will be autofilled if missing using info from sourceFolder"
+        },
+        "classification": {
+            "type": "string",
+            "description": "ACIA information about AUthenticity,COnfidentiality,INtegrity and AVailability requirements of dataset. E.g. AV(ailabilty)=medium could trigger the creation of a two tape copies. Format 'AV=medium,CO=low'"
+        },
+        "license": {
+            "type": "string",
+            "description": "Name of license under which data can be used"
+        },
+        "version": {
+            "type": "string",
+            "description": "Version of API used in creation of dataset"
+        },
+        "isPublished": {
+            "type": "boolean",
+            "description": "Flag is true when data are made publically available"
+        },
+        "sharedWith": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "description": "List of users that the dataset has been shared with"
+        },
+        "dataQualityMetrics": {
+            "type": "number",
+            "description": "Rate the quality of a dataset. The field is only relevant for user working on a given proposal and know what type of data quality this rating refer to. A number between 1-3 that the user could use to rate a dataset. 1 means bad, 2 means good, 3 means very good"
+        },
+        "comments": {
+            "type": "string",
+            "description": "Comment the user has about a given dataset."
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema", 
+    "$id": "urn:ukaea:experiment:hive-schema",
+    "description": "HIVE scientific metadata schema",
+	"type": "object",
+    "required": [ "purpose", "physics", "studyID" ],
+    "properties": {
+        "purpose": {
+            "type": "enum[string]",
+            "description": ""
+        },
+        "physics": {
+            "type": "enum[string]",
+            "description": ""
+        },
+        "studyID": {
+            "type": "string",
+            "description": ""
+        }
+    }
+}

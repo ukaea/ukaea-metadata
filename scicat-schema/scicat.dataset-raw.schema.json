@@ -1,0 +1,29 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema", 
+    "$id": "urn:scicat:dataset-raw-schema",
+    "description": "SciCat raw dataset schema",
+	"type": "object",
+    "required": [ "principalInvestigator", "creationLocation" ],
+    "properties": {
+        "principalInvestigator": {
+            "type": "string",
+            "description": "Email of principal investigator"
+        },
+        "creationLocation": {
+            "type": "string",
+            "description": "Unique location identifier where data was taken, usually in the form /Site-name/facility-name/instrumentOrBeamline-name"
+        },
+        "endTime": {
+            "type": "date-time",
+            "description": "Time of end of data taking for this dataset, format according to chapter 5.6 internet date/time format in RFC 3339. Local times without timezone/offset info are automatically transformed to UTC using the timezone of the API server"
+        },
+        "dataFormat": {
+            "type": "string",
+            "description": "Defines format of subsequent scientific meta data, e.g Nexus Version x.y"
+        },
+        "scientificMetadata": {
+            "type": "object",
+            "description": "JSON object containing the scientific meta data"
+        }
+    }
+}

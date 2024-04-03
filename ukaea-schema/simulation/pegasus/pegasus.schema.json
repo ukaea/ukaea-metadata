@@ -1,0 +1,25 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema", 
+    "$id": "urn:ukaea:simulation:pegasus-schema",
+    "description": "Pegasus scientific metadata schema",
+	"type": "object",
+    "required": [ "purpose", "physics", "studyID" ],
+    "properties": {
+        "purpose": {
+            "type": "enum[string]",
+            "description": "Study / ROM Production / others.."
+        },
+        "physics": {
+            "type": "enum[string]",
+            "description": "EM / Thermal Structural / Fluid Dynamics / others.."
+        },
+        "studyID": {
+            "type": "string",
+            "description": ""
+        },
+        "chimeraID": {
+            "type": "string",
+            "description": ""
+        }
+    }
+}

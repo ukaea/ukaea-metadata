@@ -1,0 +1,74 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema", 
+    "$id": "urn:ukaea:toplevel-schema",
+    "description": "UKAEA top-level metadata schema",
+	"type": "object",
+    "required": [
+        "identifier", "creator", "creationTime", "ownerGroup",
+        "workflowType", "isPublished", "dataQuality"
+    ],
+    "properties": {
+        "identifier": {
+            "type": "string",
+            "description": ""
+        },
+        "creator": {
+            "type": "string",
+            "description": ""
+        },
+        "creationTime": {
+            "type": "date-time",
+            "description": ""
+        },
+        "ownerGroup": {
+            "type": "string",
+            "description": ""
+        },
+        "workflowType": {
+            "type": "string",
+            "enum": ["experiment", "simulation"],
+            "description": ""
+        },
+        "isPublished": {
+            "type": "bool",
+            "description": ""
+        },
+        "dataQuality": {
+            "type": "string",
+            "enum": ["unchecked", "good", "pass", "bad"],
+            "description": ""
+        },
+        "description": {
+            "type": "string",
+            "description": ""
+        },
+        "format": {
+            "type": "string",
+            "description": "could be array of strings for multiple formats"
+        },
+        "license": {
+            "type": "string",
+            "description": ""
+        },
+        "parent": {
+            "type": "string",
+            "description": ""
+        },
+        "children": {
+            "type": "array[string]",
+            "description": ""
+        },
+        "ukaeaUsername": {
+            "type": "string",
+            "description": ""
+        },
+        "updateTime": {
+            "type": "date-time",
+            "description": ""
+        },
+        "updatedBy": {
+            "type": "string",
+            "description": ""
+        }
+    }
+}
