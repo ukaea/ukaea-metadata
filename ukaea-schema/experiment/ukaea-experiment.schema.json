@@ -1,25 +1,25 @@
 {
-	"$schema": "https://json-schema.org/draft/2020-12/schema", 
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "urn:ukaea:experiment-schema",
     "description": "UKAEA experiment metadata schema",
-	"type": "object",
+    "type": "object",
     "required": [
-        "runLocation", "startTime", "endTime", "outputFiles"
+        "run_location", "start_time", "end_time", "output_files"
     ],
     "properties": {
-        "runLocation": {
+        "run_location": {
             "type": "enum[string]",
             "description": "Culham, FTF, The Moon"
         },
-        "startTime": {
+        "start_time": {
             "type": "date-time",
             "description": ""
         },
-        "endTime": {
+        "end_time": {
             "type": "date-time",
             "description": ""
         },
-        "outputFiles": {
+        "output_files": {
             "type": "array[string]",
             "description": ""
         }

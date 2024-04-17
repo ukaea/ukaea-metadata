@@ -1,8 +1,8 @@
 {
-	"$schema": "https://json-schema.org/draft/2020-12/schema", 
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "urn:ukaea:simulation:pegasus-schema:ansys-mechanical",
     "description": "Pegasus scientific metadata schema for ansys-mechanical",
-	"type": "object",
+    "type": "object",
     "required": [ "physics_quantity" ],
     "properties": {
         "physics_quantity": {

@@ -1,17 +1,17 @@
 {
-	"$schema": "https://json-schema.org/draft/2020-12/schema", 
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "urn:ukaea:simulation-schema",
     "description": "UKAEA simulation metadata schema",
-	"type": "object",
+    "type": "object",
     "required": [
-        "hardwareInformation", "code", "inputs", "outputFiles"
+        "hardware_information", "code", "inputs", "output_files"
     ],
     "properties": {
-        "simulationRuntime": {
+        "simulation_runtime": {
             "type": "date-time",
             "description": ""
         },
-        "hardwareInformation": {
+        "hardware_information": {
             "type": "object[string, string]",
             "description": ""
         },
@@ -38,7 +38,7 @@
             "type": "array[string]",
             "description": ""
         },
-        "outputFiles": {
+        "output_files": {
             "type": "array[string]",
             "description": ""
         }
