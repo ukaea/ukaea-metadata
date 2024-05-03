@@ -1,7 +1,7 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "urn:ukaea:experiment:hive:dci-schema",
-    "description": "Metadata to describe DCI diagnostic",
+    "$id": "urn:ukaea:experiment:hive:dic-schema",
+    "description": "Metadata to describe DIC diagnostic",
     "type": "object",
     "required": [ "insert_required" ],
     "properties": {
