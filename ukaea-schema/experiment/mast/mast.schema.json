@@ -1,0 +1,69 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "urn:ukaea:experiment:mast-schema",
+    "description": "MAST scientific metadata schema",
+    "type": "object",
+    "required": ["shot_id", "timestamp", "campaign", "facility"],
+    "properties": {
+        "shot_id": {
+            "type": "int",
+            "description": "Unique number identifying this shot"
+        },
+        "timestamp": {
+            "type": "timestamp",
+            "description": "Time the shot was fired in ISO 8601 format. e.g. '2023‐08‐10T09:51:19+00:00'"
+        },
+        "preshot_description": {
+            "type": "string",
+            "description": "A description by the investigator of the experiment before the shot was fired."
+        },
+        "postshot_description": {
+            "type": "string",
+            "description": "A description by the investigator of the experiment after the shot was fired."
+        },
+        "campaign": {
+            "type": "enum[str]",
+            "description": "A description by the investigator of the experiment after the shot was fired."
+        },
+        "reference_shot": {
+            "type": "int",
+            "description": "Unique number identifying the reference shot used by this shot."
+        },
+        "scenario": {
+            "type": "enum[string]",
+            "description": "The scenario used for this shot."
+        },
+        "heating": {
+            "type": "enum[string]",
+            "description": "The type of heating used for this shot."
+        },
+        "pellets": {
+            "type": "boolean",
+            "description": "Whether pellets were used as part of this shot."
+        },
+        "rmp_coil": {
+            "type": "boolean",
+            "description": "Whether an RMP coil was used as port of this shot."
+        },
+        "current_range": {
+            "type": "enum[string]",
+            "description": "The current range used for this shot. e.g. '7500 kA'"
+        },
+        "divertor_config": {
+            "type": "enum[string]",
+            "description": "The divertor configuration used for this shot. e.g. 'Super-X'"
+        },
+        "plasma_shape": {
+            "type": "enum[string]",
+            "description": "The plasma shape used for this shot. e.g. 'Connected Double Null'"
+        },
+        "comissioner": {
+            "type": "enum[string]",
+            "description": "The comissioner of this shot. e.g. 'UKAEA'"
+        },
+        "facility": {
+            "type": "enum[string]",
+            "description": "The facility (tokamak) that produced this shot. e.g. 'MAST'"
+        }
+    }
+}
