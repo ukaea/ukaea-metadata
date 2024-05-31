@@ -1,0 +1,17 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "urn:ukaea:experiment:mast:camera-schema",
+    "description": "Metadata to describe from diagnostic sources",
+    "type": "object",
+    "required": [ "name", "description", "source_type"],
+    "properties": {
+        "subclass": {
+            "type": "enum[string]",
+            "description": "The subclass for this camera data. e.g. 'IMAGE_INDEXED'"
+        },
+        "format": {
+            "type": "enum[string]",
+            "description": "The format the image from this camera was original recorded in. e.g. IPX"
+        }
+    }
+}

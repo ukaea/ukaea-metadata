@@ -1,7 +1,7 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "urn:ukaea:experiment:mast-schema",
-    "description": "MAST scientific metadata schema",
+    "$id": "urn:ukaea:experiment:shot-schema",
+    "description": "A metadata schema for describing a single shot",
     "type": "object",
     "required": ["shot_id", "timestamp", "campaign", "facility"],
     "properties": {
