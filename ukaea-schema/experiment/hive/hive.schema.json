@@ -3,19 +3,134 @@
     "$id": "urn:ukaea:experiment:hive-schema",
     "description": "HIVE scientific metadata schema",
     "type": "object",
-    "required": [ "purpose", "physics", "study_id" ],
+    "required": [
+        "pulse_id",
+        "pulse_type",
+        "sample_id",
+        "sample_cooling",
+        "coolant_type",
+        "coolant_flow",
+        "coolant_temperature",
+        "current_type",
+        "input_power",
+        "input_power",
+        "pulse_duration",
+        "diagnostics"
+    ],
     "properties": {
-        "purpose": {
-            "type": "enum[string]",
-            "description": ""
-        },
-        "physics": {
-            "type": "enum[string]",
-            "description": ""
-        },
-        "study_id": {
+        "pulse_id": { 
             "type": "string",
-            "description": ""
+            "comment": "regex-able"
+        },
+        "pulse_type": { 
+            "type": "string",
+            "enum": [ "Commissioning", "Test" ]
+        },
+        "sample_id": { 
+            "type": "string",
+            "comment": "regex-able"
+        },
+        "sample_cooling": {
+            "type": "boolean"
+        },
+        "coolant_type": { 
+            "type": "string",
+            "enum": [ "Water", "NotWater" ]
+        },
+        "coolant_flow": {
+            "type": "number",
+            "unit": "qudt:L-PER-MIN"
+        },
+        "coolant_temperature": {
+            "type": "number",
+            "unit": "qudt:DEG_C"
+        },
+        "coolant_delta_temp": { 
+            "type": "number",
+            "unit": "qudt:DEG_C",
+            "description": "Coolant delta temperature across the sample."
+        },
+        "coolant_delta_pressure": { 
+            "type": "number",
+            "unit": "qudt:BAR"
+        },
+        "current_type": {
+            "type": "string",
+            "enum": [ "AC", "DC" ]
+        },
+        "input_power": {
+            "type": "number",
+            "unit": "qudt:KiloW"
+        },
+        "input_voltage": {
+            "type": "number",
+            "unit": "qudt:V"
+        },
+        "input_current": {
+            "type": "number",
+            "unit": "qudt:A"
+        },
+        "output_frequency": {
+            "type": "number",
+            "unit": "qudt:KiloHZ"
+        },
+        "output_voltage": {
+            "type": "number",
+            "unit": "qudt:V"
+        },
+        "output_current": {
+            "type": "number",
+            "unit": "qudt:A"
+        },
+        "output_power": {
+            "type": "number",
+            "unit": "qudt:KiloW"
+        },
+        "pulse_duration": {
+            "type": "number",
+            "unit": "qudt:SEC"
+        },
+        "sample_max_temp": {
+            "type": "number",
+            "unit": "qudt:DEG_C"
+        },
+        "IR_max_temp": {
+            "type": "number",
+            "unit": "qudt:DEG_C"
+        },
+        "pyro_max_temp": {
+            "type": "number",
+            "unit": "qudt:DEG_C"
+        },
+        "calometric_heat_transfer": {
+            "type": "number",
+            "unit": "qudt:W"
+        },
+        "radiative_heat_loss": {
+            "type": "number",
+            "unit": "qudt:W"
+        },
+        "est_power_into_sample": {
+            "type": "number",
+            "unit": "qudt:W"
+        },
+        "est_heat_flux": {
+            "type": "number",
+            "unit": "qudt:W-PER-M2"
+        },
+        "diagnostic_setup": {
+            "type": "object",
+            "properties": {
+                "diagnostics": {
+                    "type": "array",
+                    "items": {
+                        "oneOf": [
+                            { "$ref": "./diagnostics/dic.schema.json" },
+                            { "$ref": "./diagnostics/tc.schema.json" }
+                        ]
+                    }
+                } 
+            }
         }
     }
 }
