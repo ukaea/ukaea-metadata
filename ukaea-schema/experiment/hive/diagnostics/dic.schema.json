@@ -1,124 +1,91 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "urn:ukaea:experiment:hive:dic-schema",
-    "description": "Metadata to describe DIC diagnostic",
+    "$id": "urn:ukaea:experiment:hive:diagnostics:dic-schema",
+    "description": "Digital Image Correlation (DIC) diagnostic metadata",
     "type": "object",
-    "required": [ "insert_required" ],
+    "required": [ "setup_information", "software_information", "camera_setup" ],
     "properties": {
-        "config": {
-            "type": "string",
-            "description": "[-]",
-            "example": "Stereo (symmetric)"
+        "setup_information": {
+            "type": "object",
+            "required": [ "configuration", "stereo_angle", "stand_off_distance" ],
+            "properties": {
+                "configuration": {
+                    "type": "string",
+                    "enum": [ "2D", "Stereo", "Stereo+IR" ]
+                },
+                "stereo_angle": {
+                    "type": "number",
+                    "unit": "qudt:DEG"
+                },
+                "stand_off_distance": {
+                    "type": "number",
+                    "unit": "qudt:M"
+                },
+                "imaged_surface_on_specimen": {
+                    "type": "string",
+                    "example": "XY plane"
+                }
+            }
         },
-        "camera_model": {
-            "type": "string",
-            "description": "[-]",
-            "example": "Allied Vision U-2460-M"
+        "software_information": {
+            "type": "object",
+            "required": [ "software_name", "software_version" ],
+            "properties": {
+                "software_name": {
+                    "type": "string",
+                    "description": "Name of the acquisition software used"
+                },
+                "software_version": {
+                    "type": "string",
+                    "description": "Version of the acquisition software used",
+                    "comment": "versioning to be improved"
+                }
+            }
         },
-        "camera_resolution": {
-            "type": "array[int]",
-            "description": "[pixels]",
-            "example": [5328, 4608]
+        "additional_information": {
+            "comment": "discuss again with Lloyd",
+            "type": "object",
+            "required": [ "pattern_technique", "pattern_background", "pattern_speckle" ],
+            "properties": {
+                "pattern_technique": {
+                    "type": "string"
+                },
+                "pattern_background": {
+                    "type": "string"
+                },
+                "pattern_speckle": {
+                    "type": "string"
+                },
+                "approx_feature_size": {
+                    "type": "number",
+                    "units": "qudt:MicroM"
+                },
+                "cal_target_make": {
+                    "type": "string"
+                },
+                "cal_target_dims": {
+                    "type": "array",
+                    "description": "",
+                    "items": {
+                        "type": "integer"
+                    }
+                },
+                "cal_target_spacing": {
+                    "type": "number"
+                }
+            }
         },
-        "field_of_view": {
-            "type": "array[float]",
-            "description": "[mm]",
-            "example": [83.21, 71.91]
-        },
-        "image_scale": {
-            "type": "float",
-            "description": "[mm/pixel]",
-            "example": 0.015
-        },
-        "stereo_angle": {
-            "type": "float",
-            "description": "[degrees]",
-            "example": 12.45
-        },
-        "stand_off_distance": {
-            "type": "float",
-            "description": "[m]",
-            "example": 0.335
-        },
-        "image_acquisition_rate": {
-            "type": "float",
-            "description": "[Hz]",
-            "example": 1
-        },
-        "image_noise": {
-            "type": "float",
-            "description": "[%]",
-            "example": 0.31
-        },
-        "imaged_surface_on_specimen": {
-            "type": "string",
-            "description": "[-]",
-            "example": "XY plane"
-        },
-        "software_name": {
-            "type": "string",
-            "description": "[-]",
-            "example": "MatchID"
-        },
-        "software_version": {
-            "type": "string",
-            "description": "[-]",
-            "example": "2022.2"
-        },
-        "pattern_technique": {
-            "type": "string",
-            "description": "[-]",
-            "example": "Airbrush"
-        },
-        "pattern_background": {
-            "type": "string",
-            "description": "[-]",
-            "example": "black VHT paint"
-        },
-        "pattern_speckle": {
-            "type": "string",
-            "description": "[-]",
-            "example": "white VHT paint"
-        },
-        "approx_feature_size": {
-            "type": "float",
-            "description": "[micron]",
-            "example": 46.5
-        },
-        "lens_model": {
-            "type": "string",
-            "description": "[-]",
-            "example": "Edmund Optics/50mm C Series Fixed Focal Length Lens"
-        },
-        "lens_focal_length": {
-            "type": "float",
-            "description": "[mm]",
-            "example": 50.0 
-        },
-        "lens_aperture": {
-            "type": "string",
-            "description": "[-]",
-            "example": "f/8" 
-        },
-        "lens_filters": {
-            "type": "string",
-            "description": "[-]",
-            "example": "Edmund optics blue filter" 
-        },
-        "cal_target_make": {
-            "type": "string",
-            "description": "[-]",
-            "example": "MatchID"
-        },
-        "cal_target_dims": {
-            "type": "array[int]",
-            "description": "[dots]",
-            "example": [9,12]
-        },
-        "cal_target_spacing": {
-            "type": "float",
-            "description": "[mm]",
-            "example": 5.0
+        "camera_setup": {
+            "type": "object",
+            "properties": {
+                "comment": "can add additional properties for a camera setup if needed",
+                "cameras": {
+                    "type": "array",
+                    "items": {
+                        { "$ref": "./camera.schema.json" }
+                    }
+                } 
+            }
         }
     }
 }
