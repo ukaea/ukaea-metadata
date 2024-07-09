@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "urn:ukaea:experiment:hive-schema",
+    "$id": "urn:ukaea:facility:hive-schema",
     "description": "HIVE scientific metadata schema",
     "type": "object",
     "required": [
