@@ -1,7 +1,7 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "urn:ukaea:experiment-schema",
-    "description": "UKAEA experiment metadata schema",
+    "$id": "urn:ukaea:facility",
+    "description": "UKAEA facility metadata schema",
     "type": "object",
     "required": [
         "run_location", "start_time", "end_time", "output_files"
