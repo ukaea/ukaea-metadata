@@ -4,8 +4,11 @@
     "description": "UKAEA top-level metadata schema",
     "type": "object",
     "required": [
-        "identifier", "creator", "creation_time", "owner_group",
-        "workflow_type", "is_published", "data_quality"
+        "identifier",
+        "creator",
+        "workflowType",
+        "isPublished",
+        "dataQuality"
     ],
     "properties": {
         "identifier": {
@@ -14,59 +17,57 @@
         },
         "creator": {
             "type": "string",
-            "description": ""
+            "description": "Person overseeing the creation of the data, i.e. the Session Leader for a MAST-U shot, Lead Investigator for HIVE, or the user running a simulation."
         },
-        "creation_time": {
-            "type": "date-time",
-            "description": ""
-        },
-        "owner_group": {
+        "creationTime": {
             "type": "string",
-            "description": ""
+            "format": "date-time",
+            "description": "Creation time for this metadata entry."
         },
-        "workflow_type": {
+        "workflowType": {
             "type": "string",
-            "enum": ["experiment", "simulation"],
+            "enum": [
+                "facility",
+                "simulation"
+            ],
             "description": ""
         },
-        "is_published": {
+        "isPublished": {
             "type": "bool",
             "description": ""
         },
-        "data_quality": {
+        "quality": {
             "type": "string",
-            "enum": ["unchecked", "bad", "pass", "good"],
+            "enum": [
+                "unchecked",
+                "bad",
+                "pass",
+                "good"
+            ],
             "description": ""
         },
         "description": {
             "type": "string",
             "description": ""
         },
-        "format": {
-            "type": "string",
-            "description": "could be array of strings for multiple formats"
-        },
         "license": {
             "type": "string",
             "description": ""
         },
-        "parent": {
+        "inputDatasets": {
             "type": "string",
             "description": ""
         },
-        "children": {
-            "type": "array[string]",
-            "description": ""
-        },
-        "ukaea_username": {
+        "ukaeaUsername": {
             "type": "string",
             "description": ""
         },
-        "update_time": {
-            "type": "date-time",
+        "updatedTime": {
+            "type": "string",
+            "format": "date-time",
             "description": ""
         },
-        "updated_by": {
+        "updatedBy": {
             "type": "string",
             "description": ""
         }
