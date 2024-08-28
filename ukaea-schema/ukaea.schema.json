@@ -12,31 +12,32 @@
     ],
     "properties": {
         "identifier": {
-            "type": "string",
             "description": "A unique value that serves as a distinct reference for this metadata entry."
+            "type": "string",
         },
         "creator": {
-            "type": "string",
             "description": "Person overseeing the creation of the data, i.e. the Session Leader for a MAST-U shot, Lead Investigator for HIVE, or the user running a simulation."
+            "type": "string",
         },
         "creationTime": {
+            "description": "Creation time for this metadata entry."
             "type": "string",
             "format": "date-time",
-            "description": "Creation time for this metadata entry."
         },
         "workflowType": {
+            "description": "Specifies the type of workflow being executed, with possible values indicating whether the workflow is related to a 'facility' or a 'simulation'. A workflowType of 'facility' at UKAEA would concern data from HIVE or MAST-U, whereas a 'simulation' would be the output of the many codes used at UKAEA."
             "type": "string",
             "enum": [
                 "facility",
                 "simulation"
             ],
-            "description": "Specifies the type of workflow being executed, with possible values indicating whether the workflow is related to a 'facility' or a 'simulation'. A workflowType of 'facility' at UKAEA would concern data from HIVE or MAST-U, whereas a 'simulation' would be the output of the many codes used at UKAEA."
         },
         "isPublished": {
-            "type": "bool",
             "description": "Indicates whether the data has been officially published and made publicly accessible. A value of 'true' means the data is published, while 'false' means it is not."
+            "type": "bool",
         },
         "quality": {
+            "description": "Represents the assessed quality of the data, with possible values indicating whether the data is 'unchecked', of 'bad' quality, 'pass' level, or 'good' quality." 
             "type": "string",
             "enum": [
                 "unchecked",
@@ -44,32 +45,31 @@
                 "pass",
                 "good"
             ],
-            "description": "Represents the assessed quality of the data, with possible values indicating whether the data is 'unchecked', of 'bad' quality, 'pass' level, or 'good' quality." 
         },
         "description": {
-            "type": "string",
             "description": "A textual summary or explanation that provides additional context or details about the data or its contents."
+            "type": "string",
         },
         "license": {
-            "type": "string",
             "description": "Specifies the legal terms under which the data can be used, shared, or distributed. This field typically contains the name or identifier of the applicable license."
+            "type": "string",
         },
         "inputDatasets": {
-            "type": "string",
             "description": ""
+            "type": "string",
         },
         "updatedTime": {
+            "description": "Records the date and time when the data or its metadata was last modified, following the ISO 8601 date-time format."
             "type": "string",
             "format": "date-time",
-            "description": "Records the date and time when the data or its metadata was last modified, following the ISO 8601 date-time format."
         },
         "updatedBy": {
-            "type": "string",
             "description": "Identifies the individual or system responsible for the most recent update to the data or its metadata, typically represented as a username or identifier."
+            "type": "string",
         },
         "ukaeaUsername": {
-            "type": "string",
             "description": "Represents the unique identifier or handle assigned to a user within UKAEA, used for authentication, access control, or tracking interactions with the data or system if applicable."
+            "type": "string",
         }
     }
 }
