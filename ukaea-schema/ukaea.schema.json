@@ -1,74 +1,75 @@
 {
+    "$id": "https://schema.ukaea.uk/toplevel",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "urn:ukaea:toplevel-schema",
     "description": "UKAEA top-level metadata schema",
     "type": "object",
     "required": [
-        "identifier", "creator", "creation_time", "owner_group",
-        "workflow_type", "is_published", "data_quality"
+        "identifier",
+        "creator",
+        "workflowType",
+        "isPublished",
+        "dataQuality"
     ],
     "properties": {
         "identifier": {
-            "type": "string",
-            "description": ""
+            "description": "A unique value that serves as a distinct reference for this metadata entry.",
+            "type": "string"
+            "$comment": "TODO: Add example identifier / decide on id syntax"
         },
         "creator": {
+            "description": "Person overseeing the creation of the data, i.e. the Session Leader for a MAST-U shot, Lead Investigator for HIVE, or the user running a simulation.",
+            "type": "string"
+        },
+        "creationTime": {
+            "description": "Creation time for this metadata entry.",
             "type": "string",
-            "description": ""
+            "format": "date-time"
         },
-        "creation_time": {
-            "type": "date-time",
-            "description": ""
-        },
-        "owner_group": {
+        "workflowType": {
+            "description": "Specifies the type of workflow being executed, with possible values indicating whether the workflow is related to a 'facility' or a 'simulation'. A workflowType of 'facility' at UKAEA would concern data from HIVE or MAST-U, whereas a 'simulation' would be the output of the many codes used at UKAEA.",
             "type": "string",
-            "description": ""
+            "enum": [
+                "facility",
+                "simulation"
+            ]
         },
-        "workflow_type": {
+        "isPublished": {
+            "description": "Indicates whether the data has been officially published and made publicly accessible. A value of 'true' means the data is published, while 'false' means it is not.",
+            "type": "bool"
+        },
+        "quality": {
+            "description": "Represents the assessed quality of the data, with possible values indicating whether the data is 'unchecked', of 'bad' quality, 'pass' level, or 'good' quality.",
             "type": "string",
-            "enum": ["facility", "simulation"],
-            "description": ""
-        },
-        "is_published": {
-            "type": "bool",
-            "description": ""
-        },
-        "data_quality": {
-            "type": "string",
-            "enum": ["unchecked", "bad", "pass", "good"],
-            "description": ""
+            "enum": [
+                "unchecked",
+                "bad",
+                "pass",
+                "good"
+            ]
         },
         "description": {
-            "type": "string",
-            "description": ""
-        },
-        "format": {
-            "type": "string",
-            "description": "could be array of strings for multiple formats"
+            "description": "A textual summary or explanation that provides additional context or details about the data or its contents.",
+            "type": "string"
         },
         "license": {
+            "description": "Specifies the legal terms under which the data can be used, shared, or distributed. This field typically contains the name or identifier of the applicable license.",
+            "type": "string"
+        },
+        "inputDatasets": {
+            "description": "",
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "updatedTime": {
+            "description": "Records the date and time when the data or its metadata was last modified, following the ISO 8601 date-time format.",
             "type": "string",
-            "description": ""
+            "format": "date-time"
         },
-        "parent": {
-            "type": "string",
-            "description": ""
-        },
-        "children": {
-            "type": "array[string]",
-            "description": ""
-        },
-        "ukaea_username": {
-            "type": "string",
-            "description": ""
-        },
-        "update_time": {
-            "type": "date-time",
-            "description": ""
-        },
-        "updated_by": {
-            "type": "string",
-            "description": ""
+        "updatedBy": {
+            "description": "Identifies the individual or system responsible for the most recent update to the data or its metadata, typically represented as a username or identifier.",
+            "type": "string"
         }
     }
 }
