@@ -1,7 +1,7 @@
 {
+    "$id": "urn:ukaea:facility-schema",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "urn:ukaea:experiment-schema",
-    "description": "Metadata schema for UKAEA experiments",
+    "description": "Metadata schema for UKAEA facilities",
     "type": "object",
     "required": [
         "facility_id",
@@ -9,16 +9,16 @@
     ],
     "properties": {
         "facility_id": {
-            "type": "string",
             "description": "A unique identifier for the facility."
+            "type": "string",
         },
         "description": {
-            "type": "string",
             "description": "A brief summary of the facility's purpose and objectives."
+            "type": "string",
         },
         "location": {
-            "type": "string",
             "description": "Location where the experiment was conducted."
+            "type": "string",
         }
     }
 }
