@@ -5,7 +5,7 @@
     "type": "object",
     "required": [
         "portID",
-        "diagnostic",
+        "diagnostic"
     ],
     "properties": {
         "portID": {
@@ -21,7 +21,7 @@
                 "Port_8",
                 "Port_9",
                 "Port_10",
-                "Port_11",
+                "Port_11"
             ],
             "$comment": "Need a better ID system for the ports"
         },
@@ -29,10 +29,9 @@
             "type": "object",
             "properties": {
                 "oneOf": [
-                        { "$ref": "./diagnostics/dic.schema.json" },
-                        { "$ref": "./diagnostics/tc.schema.json" }
-                    ]
-                }
+                    { "$ref": "./diagnostics/dic.schema.json" },
+                    { "$ref": "./diagnostics/tc.schema.json" }
+                ]
             }
         }
     }
