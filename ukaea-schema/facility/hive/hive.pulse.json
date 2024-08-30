@@ -59,7 +59,6 @@
         },
         "operatorComment": {
             "type": "string",
-            "format": "date-time"
         },
         "pulseQuality": {
             "type": "string",
