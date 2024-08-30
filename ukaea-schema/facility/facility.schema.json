@@ -9,16 +9,16 @@
     ],
     "properties": {
         "facility_id": {
-            "description": "A unique identifier for the facility."
-            "type": "string",
+            "description": "A unique identifier for the facility.",
+            "type": "string"
         },
         "description": {
-            "description": "A brief summary of the facility's purpose and objectives."
-            "type": "string",
+            "description": "A brief summary of the facility's purpose and objectives.",
+            "type": "string"
         },
         "location": {
-            "description": "Location where the experiment was conducted."
-            "type": "string",
+            "description": "Location where the experiment was conducted.",
+            "type": "string"
         }
     }
 }
