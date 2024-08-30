@@ -10,7 +10,7 @@
     ],
     "properties": {
         "portID": {
-            "type": "string"
+            "type": "string",
             "example": "Port_1"
         },
         "portDescription": {
