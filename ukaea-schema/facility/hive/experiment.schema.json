@@ -1,0 +1,55 @@
+{
+    "$id": "urn:ukaea:facility:hive:experiment",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "description": "Metadata schema for a HIVE campaign",
+    "type": "object",
+    "required": [
+        "experimentID",
+        "leadInvestigator",
+        "testType",
+        "sampleCooling",
+        "pulse"
+    ],
+    "properties": {
+        "experimentID": {
+            "type": "string",
+            "example": "HIVE-XXXXXX"
+        },
+        "leadInvestigator": {
+            "type": "string",
+            "enum": [
+                "Stephen Cosser",
+                "Joshua Whitley",
+                "James Paterson",
+                "Ella Bartley",
+                "Enrico Marcucci",
+                "Pablo Martin-Hernandez"
+            ],
+            "$comment": "Link to type @person"
+        },
+        "customer": {
+            "type": "string"
+        },
+        "experimentStart": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "experimentEnd": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "testType": {
+            "type": "string",
+            "enum": [
+                "Induction",
+                "DC"
+            ]
+        },
+        "sampleCooling": {
+            "type": "boolean"
+        },
+        "pulse": {
+            "$ref": "./hive.pulse.json#"
+        }
+    }
+}
