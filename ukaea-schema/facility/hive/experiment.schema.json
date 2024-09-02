@@ -4,6 +4,7 @@
     "description": "Metadata schema for a HIVE campaign",
     "type": "object",
     "required": [
+        "campaignID",
         "experimentID",
         "leadInvestigator",
         "testType",
@@ -11,9 +12,14 @@
         "pulse"
     ],
     "properties": {
+        "campaignID": {
+            "type": "string",
+            "example": "HIVE-XXXX"
+            "$comment": "Can be refd to the campaign.schema.json#campaignID?"
+        },
         "experimentID": {
             "type": "string",
-            "example": "HIVE-XXXXXX"
+            "example": "HIVE-E-XXXX"
         },
         "leadInvestigator": {
             "type": "string",
@@ -30,12 +36,13 @@
             "type": "string",
             "format": "date-time"
         },
-        "testType": {
+        "experimentType": {
             "type": "string",
             "enum": [
                 "Induction",
                 "DC"
-            ]
+            ],
+            "$comment": "Discuss with JP and SC if this can move to the pulse level."
         },
         "sampleCooling": {
             "type": "boolean"
