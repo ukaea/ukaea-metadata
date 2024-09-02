@@ -1,16 +1,13 @@
 {
-    "$id": "urn:ukaea:facility:hive-campaign",
+    "$id": "urn:ukaea:facility:hive:campaign",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "description": "Metadata schema for a HIVE campaign",
     "type": "object",
     "required": [
         "campaignID",
         "campaignTitle",
-        "leadInvestigator",
         "campaignStart",
-        "testType",
-        "sampleCooling",
-        "pulse"
+        "experiment"
     ],
     "properties": {
         "campaignID": {
@@ -18,21 +15,6 @@
             "example": "HIVE-XXXXXX"
         },
         "campaignTitle": {
-            "type": "string"
-        },
-        "leadInvestigator": {
-            "type": "string",
-            "enum": [
-                "Stephen Cosser",
-                "Joshua Whitley",
-                "James Paterson",
-                "Ella Bartley",
-                "Enrico Marcucci",
-                "Pablo Martin-Hernandez"
-            ],
-            "$comment": "Link to type @person"
-        },
-        "customer": {
             "type": "string"
         },
         "campaignStart": {
@@ -43,18 +25,8 @@
             "type": "string",
             "format": "date-time"
         },
-        "testType": {
-            "type": "string",
-            "enum": [
-                "Induction",
-                "DC"
-            ]
-        },
-        "sampleCooling": {
-            "type": "boolean"
-        },
-        "pulse": {
-            "$ref": "./hive.pulse.json#"
+        "experiment": {
+            "$ref": "./experiment.schema.json#"
         }
     }
 }
