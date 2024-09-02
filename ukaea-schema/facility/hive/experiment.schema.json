@@ -17,14 +17,6 @@
         },
         "leadInvestigator": {
             "type": "string",
-            "enum": [
-                "Stephen Cosser",
-                "Joshua Whitley",
-                "James Paterson",
-                "Ella Bartley",
-                "Enrico Marcucci",
-                "Pablo Martin-Hernandez"
-            ],
             "$comment": "Link to type @person"
         },
         "customer": {
@@ -49,7 +41,7 @@
             "type": "boolean"
         },
         "pulse": {
-            "$ref": "./hive.pulse.json#"
+            "$ref": "./pulse.schema.json#"
         }
     }
 }
