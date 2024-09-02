@@ -1,5 +1,5 @@
 {
-    "$id": "urn:ukaea:facility:hive-pulse",
+    "$id": "urn:ukaea:facility:hive:pulse",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "description": "Metadata schema for a HIVE pulse",
     "type": "object",
@@ -21,26 +21,10 @@
         },
         "operator1": {
             "type": "string",
-            "enum": [
-                "Stephen Cosser",
-                "Joshua Whitley",
-                "James Paterson",
-                "Ella Bartley",
-                "Enrico Marcucci",
-                "Pablo Martin-Hernandez"
-            ],
             "$comment": "Link to type @person"
         },
         "operator2": {
             "type": "string",
-            "enum": [
-                "Stephen Cosser",
-                "Joshua Whitley",
-                "James Paterson",
-                "Ella Bartley",
-                "Enrico Marcucci",
-                "Pablo Martin-Hernandez"
-            ],
             "$comment": "Link to type @person"
         },
         "pulseStart": {
