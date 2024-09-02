@@ -10,7 +10,11 @@
     "properties": {
         "facility_id": {
             "description": "A unique identifier for the facility.",
-            "type": "string"
+            "type": "string",
+            "enum": [
+                "HIVE",
+                "MAST-U"
+            ]
         },
         "description": {
             "description": "A brief summary of the facility's purpose and objectives.",
