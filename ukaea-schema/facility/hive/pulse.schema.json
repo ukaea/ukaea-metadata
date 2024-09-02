@@ -180,8 +180,9 @@
         "diagnostics": {
             "type": "array",
             "items": {
-                "$ref": "./hive.diagnostic.json"
-            }
+                "$ref": "./diagnostic.schema.json#"
+            },
+            "$comment": "diagnostic.schema.json is within HIVE directory, not to be confused with toplevel"
         }
     }
 }
