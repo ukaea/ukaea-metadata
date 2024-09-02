@@ -5,17 +5,12 @@
     "type": "object",
     "required": [
         "campaignID",
-        "campaignTitle",
-        "campaignStart",
-        "experiment"
+        "campaignStart"
     ],
     "properties": {
         "campaignID": {
             "type": "string",
             "example": "HIVE-XXXXXX"
-        },
-        "campaignTitle": {
-            "type": "string"
         },
         "campaignStart": {
             "type": "string",
@@ -24,9 +19,6 @@
         "campaignEnd": {
             "type": "string",
             "format": "date-time"
-        },
-        "experiment": {
-            "$ref": "./experiment.schema.json#"
         }
     }
 }
