@@ -1,0 +1,163 @@
+{
+    "campaignID": "proposal:metadata:campaignID",
+    "experimentID": "proposal:proposalId",
+    "leadInvestigator": ["proposal:createdBy", "proposal.updatedBy"],
+    "customer": "proposal:metadata:customer",
+    "experimentStart": "proposal:startTime",
+    "experimentEnd": "proposal:endTime",
+    "experimentType": "proposal:metadata:experimentType",
+    "sampleCooling": "proposal:metadata:sampleCooling",
+    "pulse": {
+        "pulseID": "dataset:datasetName",
+        "operator1": "John Smith",
+        "operator2": "Alice Johnson",
+        "pulseStart": "2023-09-05T12:00:00Z",
+        "pulseDuration": 120,
+        "dataCaptureStart": "2023-09-05T12:00:10Z",
+        "operatorComment": "Pulse completed without issues. Slight delay in data capture start.",
+        "pulseQuality": "Success",
+        "coolantInformation": {
+            "coolantType": "Demineralised Water",
+            "coolantFlow": {
+                "rate": "High",
+                "setpoint": 15.0,
+                "value": 14.8,
+                "variance": 0.2
+            },
+            "coolantTemperature": {
+                "setpoint": 25.0,
+                "in": 24.8,
+                "inVariance": 0.2,
+                "out": 24.5,
+                "outVariance": 0.3,
+                "delta": 0.3
+            },
+            "coolantPressure": {
+                "in": 3.0,
+                "out": 2.8,
+                "delta": 0.2
+            }
+        },
+        "coilInformation": {
+            "currentType": "AC",
+            "inputPower": 50.0,
+            "inputVoltage": 400.0,
+            "inputCurrent": 125.0,
+            "outputFrequency": 60.0,
+            "outputPower": 48.0,
+            "outputVoltage": 380.0,
+            "outputCurrent": 126.0
+        },
+        "diagnostics": [
+            {
+                "port": {
+                    "portID": "Port_1",
+                    "portDescription": "Front Port",
+                    "portSizeStandard": "CF100"
+                },
+                "diagnostic": {
+                    "status": "Active",
+                    "attachment": "spot weld with inert gas shield",
+                    "tc_type": "K",
+                    "location": [
+                        18.065,
+                        2.355,
+                        23.0
+                    ],
+                    "area_type": "Circular",
+                    "circle_diameter": 1.31,
+                    "noise_floor": "not captured - assume standard resolution"
+                }
+            },
+            {
+                "port": {
+                    "portID": "Port_6",
+                    "portDescription": "Bottom Port",
+                    "portSizeStandard": "CF63"
+                },
+                "diagnostic": {
+                    "setup_information": {
+                        "configuration": "Stereo+IR",
+                        "stereo_angle": 30.0,
+                        "stand_off_distance": 1.5,
+                        "imaged_surface_on_specimen": "XY plane"
+                    },
+                    "software_information": {
+                        "software_name": "AcquisitionPro",
+                        "software_version": "v3.2.1"
+                    },
+                    "additional_information": {
+                        "pattern_technique": "Digital Image Correlation",
+                        "pattern_background": "Matte black",
+                        "pattern_speckle": "White speckles",
+                        "approx_feature_size": 50.0,
+                        "cal_target_make": "OptiCal",
+                        "cal_target_dims": [
+                            100,
+                            100
+                        ],
+                        "cal_target_spacing": 0.5
+                    },
+                    "camera_setup": {
+                        "cameras": [
+                            {
+                                "camera_information": {
+                                    "make": "Canon",
+                                    "model": "EOS 5D Mark IV",
+                                    "serial_number": "CN12345678",
+                                    "resolution": [
+                                        6720,
+                                        4480
+                                    ]
+                                },
+                                "lens_information": {
+                                    "make": "Canon",
+                                    "model": "EF 50mm f/1.8",
+                                    "serial_number": "LN98765432",
+                                    "focal_length": 50,
+                                    "aperture": "f/1.8",
+                                    "field_of_view": [
+                                        6720,
+                                        4480
+                                    ]
+                                },
+                                "capture_settings": {
+                                    "image_acquisition_rate": 30,
+                                    "image_noise": 0.02,
+                                    "image_scale": 0.1
+                                }
+                            },
+                            {
+                                "camera_information": {
+                                    "make": "Nikon",
+                                    "model": "D850",
+                                    "serial_number": "NK87654321",
+                                    "resolution": [
+                                        8256,
+                                        5504
+                                    ]
+                                },
+                                "lens_information": {
+                                    "make": "Nikon",
+                                    "model": "AF-S NIKKOR 24-70mm f/2.8E",
+                                    "serial_number": "LN12345678",
+                                    "focal_length": 70,
+                                    "aperture": "f/2.8",
+                                    "field_of_view": [
+                                        8256,
+                                        5504
+                                    ]
+                                },
+                                "capture_settings": {
+                                    "image_acquisition_rate": 25,
+                                    "image_noise": 0.01,
+                                    "image_scale": 0.12
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}
