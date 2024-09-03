@@ -1,0 +1,24 @@
+{
+    "$id": "urn:ukaea:facility:hive:campaign",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "description": "Metadata schema for a HIVE campaign",
+    "type": "object",
+    "required": [
+        "campaignID",
+        "campaignStart"
+    ],
+    "properties": {
+        "campaignID": {
+            "type": "string",
+            "example": "HIVE-XXXXXX"
+        },
+        "campaignStart": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "campaignEnd": {
+            "type": "string",
+            "format": "date-time"
+        }
+    }
+}

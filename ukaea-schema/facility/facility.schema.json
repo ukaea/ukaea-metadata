@@ -1,0 +1,28 @@
+{
+    "$id": "urn:ukaea:facility-schema",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "description": "Metadata schema for UKAEA facilities",
+    "type": "object",
+    "required": [
+        "facility_id",
+        "location"
+    ],
+    "properties": {
+        "facility_id": {
+            "description": "A unique identifier for the facility.",
+            "type": "string",
+            "enum": [
+                "HIVE",
+                "MAST-U"
+            ]
+        },
+        "description": {
+            "description": "A brief summary of the facility's purpose and objectives.",
+            "type": "string"
+        },
+        "location": {
+            "description": "Location where the experiment was conducted.",
+            "type": "string"
+        }
+    }
+}

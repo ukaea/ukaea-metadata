@@ -1,0 +1,91 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "urn:ukaea:experiment:hive:diagnostics:dic-schema",
+    "description": "Digital Image Correlation (DIC) diagnostic metadata",
+    "type": "object",
+    "required": [ "setup_information", "software_information", "camera_setup" ],
+    "properties": {
+        "setup_information": {
+            "type": "object",
+            "required": [ "configuration", "stereo_angle", "stand_off_distance" ],
+            "properties": {
+                "configuration": {
+                    "type": "string",
+                    "enum": [ "2D", "Stereo", "Stereo+IR" ]
+                },
+                "stereo_angle": {
+                    "type": "number",
+                    "unit": "qudt:DEG"
+                },
+                "stand_off_distance": {
+                    "type": "number",
+                    "unit": "qudt:M"
+                },
+                "imaged_surface_on_specimen": {
+                    "type": "string",
+                    "example": "XY plane"
+                }
+            }
+        },
+        "software_information": {
+            "type": "object",
+            "required": [ "software_name", "software_version" ],
+            "properties": {
+                "software_name": {
+                    "type": "string",
+                    "description": "Name of the acquisition software used"
+                },
+                "software_version": {
+                    "type": "string",
+                    "description": "Version of the acquisition software used",
+                    "comment": "versioning to be improved"
+                }
+            }
+        },
+        "additional_information": {
+            "comment": "discuss again with Lloyd",
+            "type": "object",
+            "required": [ "pattern_technique", "pattern_background", "pattern_speckle" ],
+            "properties": {
+                "pattern_technique": {
+                    "type": "string"
+                },
+                "pattern_background": {
+                    "type": "string"
+                },
+                "pattern_speckle": {
+                    "type": "string"
+                },
+                "approx_feature_size": {
+                    "type": "number",
+                    "units": "qudt:MicroM"
+                },
+                "cal_target_make": {
+                    "type": "string"
+                },
+                "cal_target_dims": {
+                    "type": "array",
+                    "description": "",
+                    "items": {
+                        "type": "integer"
+                    }
+                },
+                "cal_target_spacing": {
+                    "type": "number"
+                }
+            }
+        },
+        "camera_setup": {
+            "type": "object",
+            "properties": {
+                "comment": "can add additional properties for a camera setup if needed",
+                "cameras": {
+                    "type": "array",
+                    "items": {
+                        { "$ref": "./camera.schema.json" }
+                    }
+                } 
+            }
+        }
+    }
+}

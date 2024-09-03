@@ -1,0 +1,54 @@
+{
+    "$id": "urn:ukaea:facility:hive:experiment",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "description": "Metadata schema for a HIVE campaign",
+    "type": "object",
+    "required": [
+        "campaignID",
+        "experimentID",
+        "leadInvestigator",
+        "testType",
+        "sampleCooling",
+        "pulse"
+    ],
+    "properties": {
+        "campaignID": {
+            "type": "string",
+            "example": "HIVE-XXXX"
+            "$comment": "Can be refd to the campaign.schema.json#campaignID?"
+        },
+        "experimentID": {
+            "type": "string",
+            "example": "HIVE-E-XXXX"
+        },
+        "leadInvestigator": {
+            "type": "string",
+            "$comment": "Link to type @person"
+        },
+        "customer": {
+            "type": "string"
+        },
+        "experimentStart": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "experimentEnd": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "experimentType": {
+            "type": "string",
+            "enum": [
+                "Induction",
+                "DC"
+            ],
+            "$comment": "Discuss with JP and SC if this can move to the pulse level."
+        },
+        "sampleCooling": {
+            "type": "boolean"
+        },
+        "pulse": {
+            "$ref": "./pulse.schema.json#"
+        }
+    }
+}
