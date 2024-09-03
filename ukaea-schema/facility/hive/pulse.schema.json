@@ -11,7 +11,7 @@
         "pulseDuration",
         "dataCaptureStart",
         "pulseQuality",
-        "currentHeatingInformation",
+        "coilInformation",
         "coolantInformation"
     ],
     "properties": {
