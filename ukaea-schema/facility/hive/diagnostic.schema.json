@@ -11,7 +11,7 @@
         "port": {
             "type": "object",
             "properties": {
-                { "$ref": "./port.schema.json#" }
+                "$ref": "./port.schema.json#"
             }
         },
         "diagnostic": {

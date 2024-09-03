@@ -42,7 +42,7 @@
             "format": "date-time"
         },
         "operatorComment": {
-            "type": "string",
+            "type": "string"
         },
         "pulseQuality": {
             "type": "string",
