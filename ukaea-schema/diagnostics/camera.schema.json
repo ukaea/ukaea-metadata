@@ -11,16 +11,18 @@
                 "make": { "type": "string" },
                 "model": { "type": "string" },
                 "serial_number": { "type": "string" },
-                "resolution": {
-                    "type": "array",
-                    "items": {
-                        "type": "integer",
-                        "units": "qudt:px"
-                    },
-                    "description": "The camera resolution in pixels, represented as [width, height]."
+                "resolutionX": {
+                    "type": "integer",
+                    "units": "qudt:px"
+                    "description": "The camera resolution in pixels, represented as width."
+                },
+                "resolutionY": {
+                    "type": "integer",
+                    "units": "qudt:px"
+                    "description": "The camera resolution in pixels, represented as height."
                 }
             },
-            "required": ["make", "model", "resolution"]
+            "required": ["make", "model", "resolutionX", "resolutionY"]
         },
         "lens_information": {
             "type": "object",
@@ -30,13 +32,15 @@
                 "serial_number": { "type": "string" },
                 "focal_length": { "type": "number" },
                 "aperture": { "type": "string" },
-                "field_of_view": {
-                    "type": "array",
-                    "items": {
-                        "type": "integer",
-                        "units": "qudt:px"
-                    },
-                    "description": "The field of view in pixels, represented as [width, height]."
+                "field_of_viewX": {
+                    "type": "integer",
+                    "units": "qudt:px"
+                    "description": "The field of view in pixels, represented as width."
+                },
+                "field_of_viewY": {
+                    "type": "integer",
+                    "units": "qudt:px"
+                    "description": "The field of view in pixels, represented as height."
                 }
             },
             "required": ["make", "model", "focal_length", "aperture"]

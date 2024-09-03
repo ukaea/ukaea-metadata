@@ -64,11 +64,8 @@
                     "type": "string"
                 },
                 "cal_target_dims": {
-                    "type": "array",
-                    "description": "",
-                    "items": {
-                        "type": "integer"
-                    }
+                    "type": "string",
+                    "example": "9 x 12 dots with 5 mm spacing"
                 },
                 "cal_target_spacing": {
                     "type": "number"
