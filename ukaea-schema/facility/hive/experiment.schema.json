@@ -22,7 +22,7 @@
             "example": "HIVE-E-XXXX"
         },
         "leadInvestigator": {
-            "type": "object"
+            "type": "object",
             "properties": {
                 "firstName": {
                     "type": "string"
@@ -33,7 +33,7 @@
                 "email": {
                     "type": "string"
                 }
-            }
+            },
             "$comment": "Link to type @person"
         },
         "customer": {

@@ -15,7 +15,7 @@
         "diagnosticType": {
             "type": "string",
             "example": "Thermocouple"
-        }
+        },
         "port": {
             "type": "object",
             "properties": {

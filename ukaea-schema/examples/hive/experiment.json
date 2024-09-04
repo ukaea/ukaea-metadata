@@ -1,7 +1,11 @@
 {
     "campaignID": "HIVE-20230901", 
     "experimentID": "HIVE-E-20230905", 
-    "leadInvestigator": "Dr. Jane Doe", 
+    "leadInvestigator": {
+        "firstName": "Alice",
+        "lastName": "Johnson",
+        "email": "alice.johnson@example.com"
+    },
     "customer": "ACME Corp",
     "experimentStart": "2023-09-05T10:00:00Z", 
     "experimentEnd": "2023-09-05T16:00:00Z", 
@@ -9,8 +13,16 @@
     "sampleCooling": true,
     "pulse": {
         "pulseID": "123e4567-e89b-12d3-a456-426614174000", 
-        "operator1": "John Smith", 
-        "operator2": "Alice Johnson", 
+        "firstOperator": {
+            "firstName": "Bob",
+            "lastName": "Smith",
+            "email": "bob.smith@example.com"
+        },
+        "secondOperator": {
+            "firstName": "Carol",
+            "lastName": "Davis",
+            "email": "carol.davis@example.com"
+        },
         "pulseStart": "2023-09-05T12:00:00Z", 
         "pulseDuration": 120, 
         "dataCaptureStart": "2023-09-05T12:00:10Z", 
