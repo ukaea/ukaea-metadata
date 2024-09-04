@@ -7,14 +7,14 @@
         "campaignID",
         "experimentID",
         "leadInvestigator",
-        "testType",
+        "experimentType",
         "sampleCooling",
         "pulse"
     ],
     "properties": {
         "campaignID": {
             "type": "string",
-            "example": "HIVE-XXXX"
+            "example": "HIVE-XXXX",
             "$comment": "Can be refd to the campaign.schema.json#campaignID?"
         },
         "experimentID": {
@@ -59,7 +59,7 @@
             "type": "boolean"
         },
         "pulse": {
-            "$ref": "./pulse.schema.json#"
+            "$ref": "./facility/hive/pulse.schema.json#"
         }
     }
 }

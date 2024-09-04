@@ -21,9 +21,14 @@
             "example": "K"
         },
         "location": {
-            "type": "array[float]",
+            "type": "array",
             "description": "[X,Y,Z] [mm]",
-            "example": [18.065, 2.355, 23.0]
+            "example": [18.065, 2.355, 23.0],
+            "items": {
+                "type": "number"
+            },
+            "minItems": 3,
+            "maxItems": 3
         },
         "area_type": {
             "type": "string",
