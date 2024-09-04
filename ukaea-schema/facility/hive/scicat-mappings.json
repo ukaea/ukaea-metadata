@@ -1,0 +1,40 @@
+{
+    "campaignID": "proposal.metadata:campaignID",
+    "experimentID": [
+        "proposal.proposalId",
+        "dataset.proposalId"
+    ],
+    "leadInvestigator": {
+        "firstName": "proposal.pi_firstname",
+        "lastName": "proposal.pi_lastname",
+        "email": "proposal.pi_email"
+    },
+    "customer": "proposal.metadata:customer",
+    "experimentStart": "proposal.startTime",
+    "experimentEnd": "proposal.endTime",
+    "experimentType": "proposal.metadata.experimentType",
+    "sampleCooling": "proposal.metadata.sampleCooling",
+    "pulse": {
+        "pulseID": "dataset.scientificMetadata.pulseID",
+        "firstOperator": "dataset.scientificMetadata.firstOperator",
+        "secondOperator": "dataset.scientificMetadata.secondOperator",
+        "pulseStart": "dataset.scientificMetadata.pulseStart",
+        "pulseDuration": "dataset.scientificMetadata.pulseDuration",
+        "dataCaptureStart": "dataset.scientificMetadata.dataCaptureStart",
+        "operatorComment": "dataset.comment",
+        "pulseQuality": "dataset.scientificMetadata.pulseQuality",
+        "coolantInformation": "dataset.scientificMetadata.coolantInformation",
+        "coilInformation": "dataset.scientificMetadata.coilInformation",
+        "diagnostics": [
+            {
+                "diagnosticName": [
+                    "dataset.instrumentId",
+                    "instrument.uniqueName"
+                ],
+                "diagnosticType": "instrument.name",
+                "port": "instrument.customMetadata.port",
+                "diagnostic": "instrument.customMetadata.diagnostic"
+            }
+        ]
+    }
+}
