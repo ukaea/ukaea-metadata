@@ -1,5 +1,5 @@
 {
-    "campaignID": "proposal.metadata:campaignID",
+    "campaignID": "proposal.metadata.campaignID",
     "experimentID": [
         "proposal.proposalId",
         "dataset.proposalId"
@@ -9,7 +9,7 @@
         "lastName": "proposal.pi_lastname",
         "email": "proposal.pi_email"
     },
-    "customer": "proposal.metadata:customer",
+    "customer": "proposal.metadata.customer",
     "experimentStart": "proposal.startTime",
     "experimentEnd": "proposal.endTime",
     "experimentType": "proposal.metadata.experimentType",
