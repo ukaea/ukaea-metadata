@@ -8,6 +8,14 @@
         "diagnostic"
     ],
     "properties": {
+        "diagnosticName": {
+            "type": "string",
+            "example": "TC01"
+        },
+        "diagnosticType": {
+            "type": "string",
+            "example": "Thermocouple"
+        },
         "port": {
             "type": "object",
             "properties": {

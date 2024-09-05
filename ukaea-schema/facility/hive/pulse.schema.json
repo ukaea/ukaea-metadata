@@ -5,8 +5,8 @@
     "type": "object",
     "required": [
         "pulseID",
-        "operator1",
-        "operator2",
+        "firstOperator",
+        "secondOperator",
         "pulseStart",
         "pulseDuration",
         "dataCaptureStart",
@@ -19,12 +19,34 @@
             "type": "string",
             "example": "uuid?"
         },
-        "operator1": {
-            "type": "string",
+        "firstOperator": {
+            "type": "object",
+            "properties": {
+                "firstName": {
+                    "type": "string"
+                },
+                "lastName": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string"
+                }
+            },
             "$comment": "Link to type @person"
         },
-        "operator2": {
-            "type": "string",
+        "secondOperator": {
+            "type": "object",
+            "properties": {
+                "firstName": {
+                    "type": "string"
+                },
+                "lastName": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string"
+                }
+            },
             "$comment": "Link to type @person"
         },
         "pulseStart": {
