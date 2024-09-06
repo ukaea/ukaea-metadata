@@ -79,7 +79,7 @@
                 "cameras": {
                     "type": "array",
                     "items": {
-                        { "$ref": "./camera.schema.json" }
+                        "$ref": "./camera.schema.json"
                     }
                 } 
             }

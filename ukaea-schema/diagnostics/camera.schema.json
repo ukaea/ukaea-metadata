@@ -13,12 +13,12 @@
                 "serial_number": { "type": "string" },
                 "resolutionX": {
                     "type": "integer",
-                    "units": "qudt:px"
+                    "units": "qudt:px",
                     "description": "The camera resolution in pixels, represented as width."
                 },
                 "resolutionY": {
                     "type": "integer",
-                    "units": "qudt:px"
+                    "units": "qudt:px",
                     "description": "The camera resolution in pixels, represented as height."
                 }
             },
@@ -34,12 +34,12 @@
                 "aperture": { "type": "string" },
                 "field_of_viewX": {
                     "type": "integer",
-                    "units": "qudt:px"
+                    "units": "qudt:px",
                     "description": "The field of view in pixels, represented as width."
                 },
                 "field_of_viewY": {
                     "type": "integer",
-                    "units": "qudt:px"
+                    "units": "qudt:px",
                     "description": "The field of view in pixels, represented as height."
                 }
             },
