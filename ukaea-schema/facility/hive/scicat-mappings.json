@@ -15,16 +15,16 @@
     "experimentType": "proposal.metadata.experimentType",
     "sampleCooling": "proposal.metadata.sampleCooling",
     "pulse": {
-        "pulseID": "dataset.scientificMetadata.pulseID",
-        "firstOperator": "dataset.scientificMetadata.firstOperator",
-        "secondOperator": "dataset.scientificMetadata.secondOperator",
-        "pulseStart": "dataset.scientificMetadata.pulseStart",
-        "pulseDuration": "dataset.scientificMetadata.pulseDuration",
-        "dataCaptureStart": "dataset.scientificMetadata.dataCaptureStart",
+        "pulseID": "dataset.scientificMetadata.pulseID.value",
+        "firstOperator": "dataset.scientificMetadata.firstOperator.value",
+        "secondOperator": "dataset.scientificMetadata.secondOperator.value",
+        "pulseStart": "dataset.scientificMetadata.pulseStart.value",
+        "pulseDuration": "dataset.scientificMetadata.pulseDuration.value",
+        "dataCaptureStart": "dataset.scientificMetadata.dataCaptureStart.value",
         "operatorComment": "dataset.comment",
-        "pulseQuality": "dataset.scientificMetadata.pulseQuality",
-        "coolantInformation": "dataset.scientificMetadata.coolantInformation",
-        "coilInformation": "dataset.scientificMetadata.coilInformation",
+        "pulseQuality": "dataset.scientificMetadata.pulseQuality.value",
+        "coolantInformation": "dataset.scientificMetadata.coolantInformation.value",
+        "coilInformation": "dataset.scientificMetadata.coilInformation.value",
         "diagnostics": [
             {
                 "diagnosticName": [
