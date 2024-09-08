@@ -13,7 +13,7 @@
     "properties": {
         "identifier": {
             "description": "A unique value that serves as a distinct reference for this metadata entry.",
-            "type": "string"
+            "type": "string",
             "$comment": "TODO: Add example identifier / decide on id syntax"
         },
         "creator": {

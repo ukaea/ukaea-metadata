@@ -4,11 +4,11 @@
     "description": "Metadata schema for UKAEA facilities",
     "type": "object",
     "required": [
-        "facility_id",
+        "facilityId",
         "location"
     ],
     "properties": {
-        "facility_id": {
+        "facilityId": {
             "description": "A unique identifier for the facility.",
             "type": "string",
             "enum": [

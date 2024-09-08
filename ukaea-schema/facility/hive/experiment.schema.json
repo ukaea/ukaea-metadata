@@ -14,7 +14,7 @@
     "properties": {
         "campaignID": {
             "type": "string",
-            "example": "HIVE-XXXX"
+            "example": "HIVE-XXXX",
             "$comment": "Can be refd to the campaign.schema.json#campaignID?"
         },
         "experimentID": {

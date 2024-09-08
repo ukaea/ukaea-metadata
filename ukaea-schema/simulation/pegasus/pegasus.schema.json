@@ -3,7 +3,7 @@
     "$id": "urn:ukaea:simulation:pegasus-schema",
     "description": "Pegasus scientific metadata schema",
     "type": "object",
-    "required": [ "purpose", "physics", "study_id" ],
+    "required": [ "purpose", "physics", "studyId" ],
     "properties": {
         "purpose": {
             "type": "enum[string]",
@@ -13,11 +13,11 @@
             "type": "enum[string]",
             "description": "EM / Thermal Structural / Fluid Dynamics / others.."
         },
-        "study_id": {
+        "studyId": {
             "type": "string",
             "description": ""
         },
-        "chimera_id": {
+        "chimeraId": {
             "type": "string",
             "description": ""
         }

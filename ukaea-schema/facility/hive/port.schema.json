@@ -19,7 +19,7 @@
         },
         "portSizeStandard": {
             "type": "string",
-            "example": "CF100"
+            "example": "CF100" 
         }
     }
 }

@@ -3,7 +3,7 @@
     "$id": "urn:ukaea:experiment:hive:tc-schema",
     "description": "Metadata to describe thermocouple diagnostic",
     "type": "object",
-    "required": [ "insert_required" ],
+    "required": [ "insertRequired" ],
     "properties": {
         "status": {
             "type": "string",
@@ -15,7 +15,7 @@
             "description": "[-]",
             "example": "spot weld with inert gas shield"
         },
-        "tc_type": {
+        "tcType": {
             "type": "string",
             "description": "[-]",
             "example": "K"
@@ -25,20 +25,22 @@
             "description": "[X,Y,Z] [mm]",
             "example": [18.065, 2.355, 23.0]
         },
-        "area_type": {
+        "areaType": {
             "type": "string",
             "description": "[-]",
             "example": "Circular"
         },
-        "circle_diameter": {
+        "circleDiameter": {
             "type": "float",
             "description": "[mm]",
             "example": 1.31
         },
-        "noise_floor": {
+        "noiseFloor": {
             "type": "string",
             "description": "[-]",
             "example": "not captured - assume standard resolution"
         }
     }
 }
+
+//changes made to this file 
