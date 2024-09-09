@@ -3,76 +3,76 @@
     "$id": "urn:ukaea:experiment:hive:diagnostics:dic-schema",
     "description": "Digital Image Correlation (DIC) diagnostic metadata",
     "type": "object",
-    "required": [ "setup_information", "software_information", "camera_setup" ],
+    "required": [ "setupInformation", "softwareInformation", "cameraSetup" ],
     "properties": {
-        "setup_information": {
+        "setupInformation": {
             "type": "object",
-            "required": [ "configuration", "stereo_angle", "stand_off_distance" ],
+            "required": [ "configuration", "stereoAngle", "standOffDistance" ],
             "properties": {
                 "configuration": {
                     "type": "string",
                     "enum": [ "2D", "Stereo", "Stereo+IR" ]
                 },
-                "stereo_angle": {
+                "stereoAngle": {
                     "type": "number",
                     "unit": "qudt:DEG"
                 },
-                "stand_off_distance": {
+                "standOffDistance": {
                     "type": "number",
                     "unit": "qudt:M"
                 },
-                "imaged_surface_on_specimen": {
+                "imagedSurfaceOnSpecimen": {
                     "type": "string",
                     "example": "XY plane"
                 }
             }
         },
-        "software_information": {
+        "softwareInformation": {
             "type": "object",
-            "required": [ "software_name", "software_version" ],
+            "required": [ "softwareName", "softwareVersion" ],
             "properties": {
-                "software_name": {
+                "softwareName": {
                     "type": "string",
                     "description": "Name of the acquisition software used"
                 },
-                "software_version": {
+                "softwareVersion": {
                     "type": "string",
                     "description": "Version of the acquisition software used",
                     "comment": "versioning to be improved"
                 }
             }
         },
-        "additional_information": {
+        "additionalInformation": {
             "comment": "discuss again with Lloyd",
             "type": "object",
-            "required": [ "pattern_technique", "pattern_background", "pattern_speckle" ],
+            "required": [ "patternTechnique", "patternBackground", "patternSpeckle" ],
             "properties": {
-                "pattern_technique": {
+                "patternTechnique": {
                     "type": "string"
                 },
-                "pattern_background": {
+                "patternBackground": {
                     "type": "string"
                 },
-                "pattern_speckle": {
+                "patternSpeckle": {
                     "type": "string"
                 },
-                "approx_feature_size": {
+                "approxFeatureSize": {
                     "type": "number",
                     "units": "qudt:MicroM"
                 },
-                "cal_target_make": {
+                "calTargetMake": {
                     "type": "string"
                 },
-                "cal_target_dims": {
+                "calTargetDims": {
                     "type": "string",
                     "example": "9 x 12 dots with 5 mm spacing"
                 },
-                "cal_target_spacing": {
+                "calTargetSpacing": {
                     "type": "number"
                 }
             }
         },
-        "camera_setup": {
+        "cameraSetup": {
             "type": "object",
             "properties": {
                 "comment": "can add additional properties for a camera setup if needed",

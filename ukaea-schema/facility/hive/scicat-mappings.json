@@ -5,9 +5,9 @@
         "dataset.proposalId"
     ],
     "leadInvestigator": {
-        "firstName": "proposal.pi_firstname",
-        "lastName": "proposal.pi_lastname",
-        "email": "proposal.pi_email"
+        "firstName": "proposal.piFirstname",
+        "lastName": "proposal.piLastname",
+        "email": "proposal.piEmail"
     },
     "customer": "proposal.metadata.customer",
     "experimentStart": "proposal.startTime",
