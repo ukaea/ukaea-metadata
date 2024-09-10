@@ -3,67 +3,67 @@
     "$id": "urn:ukaea:experiment:hive:diagnostics:camera-schema",
     "description": "Metadata to describe camera diagnostics",
     "type": "object",
-    "required": ["camera_information", "lens_information", "capture_settings"],
+    "required": ["cameraInformation", "lensInformation", "captureSettings"],
     "properties": {
-        "camera_information": {
+        "cameraInformation": {
             "type": "object",
             "properties": {
                 "make": { "type": "string" },
                 "model": { "type": "string" },
-                "serial_number": { "type": "string" },
+                "serialNumber": { "type": "string" },
                 "resolutionX": {
                     "type": "integer",
-                    "units": "qudt:px"
+                    "units": "qudt:px",
                     "description": "The camera resolution in pixels, represented as width."
                 },
                 "resolutionY": {
                     "type": "integer",
-                    "units": "qudt:px"
+                    "units": "qudt:px",
                     "description": "The camera resolution in pixels, represented as height."
                 }
             },
             "required": ["make", "model", "resolutionX", "resolutionY"]
         },
-        "lens_information": {
+        "lensInformation": {
             "type": "object",
             "properties": {
                 "make": { "type": "string" },
                 "model": { "type": "string" },
-                "serial_number": { "type": "string" },
-                "focal_length": { "type": "number" },
+                "serialNumber": { "type": "string" },
+                "focalLength": { "type": "number" },
                 "aperture": { "type": "string" },
-                "field_of_viewX": {
+                "fieldOfViewX": {
                     "type": "integer",
-                    "units": "qudt:px"
+                    "units": "qudt:px",
                     "description": "The field of view in pixels, represented as width."
                 },
-                "field_of_viewY": {
+                "fieldOfViewY": {
                     "type": "integer",
-                    "units": "qudt:px"
+                    "units": "qudt:px",
                     "description": "The field of view in pixels, represented as height."
                 }
             },
-            "required": ["make", "model", "focal_length", "aperture"]
+            "required": ["make", "model", "focalLength", "aperture"]
         },
-        "capture_settings": {
+        "captureSettings": {
             "type": "object",
             "properties": {
-                "image_acquisition_rate": {
+                "imageAcquisitionRate": {
                     "type": "number",
                     "description": "The rate at which images are acquired, measured in Hertz.",
                     "unit": "qudt:Hertz"
                 },
-                "image_noise": {
+                "imageNoise": {
                     "type": "number",
                     "description": "The noise level in the image, typically measured as a signal-to-noise ratio."
                 },
-                "image_scale": {
+                "imageScale": {
                     "type": "number",
                     "description": "The scale of the image in millimeters per pixel (mm/pixel) or similar.",
                     "unit": "qudt:MilliM-PER-Pixel"
                 }
             },
-            "required": ["image_acquisition_rate", "image_noise"]
+            "required": ["imageAcquisitionRate", "imageNoise"]
         }
     }
 }

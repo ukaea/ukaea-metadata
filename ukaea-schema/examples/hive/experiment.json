@@ -70,11 +70,11 @@
                 "diagnostic": {
                     "status": "Active",
                     "attachment": "spot weld with inert gas shield",
-                    "tc_type": "K",
+                    "tcType": "K",
                     "location": [18.065, 2.355, 23.0],
-                    "area_type": "Circular",
-                    "circle_diameter": 1.31,
-                    "noise_floor": "not captured - assume standard resolution"
+                    "areaType": "Circular",
+                    "circleDiameter": 1.31,
+                    "noiseFloor": "not captured - assume standard resolution"
                 }
             },
             {
@@ -84,67 +84,67 @@
                     "portSizeStandard": "CF63"
                 },
                 "diagnostic": {
-                    "setup_information": {
+                    "setupInformation": {
                         "configuration": "Stereo+IR",
-                        "stereo_angle": 30.0,
-                        "stand_off_distance": 1.5,
-                        "imaged_surface_on_specimen": "XY plane"
+                        "stereoAngle": 30.0,
+                        "standOffDistance": 1.5,
+                        "imagedSurfaceOnSpecimen": "XY plane"
                     },
-                    "software_information": {
-                        "software_name": "AcquisitionPro",
-                        "software_version": "v3.2.1"
+                    "softwareInformation": {
+                        "softwareName": "AcquisitionPro",
+                        "softwareVersion": "v3.2.1"
                     },
-                    "additional_information": {
-                        "pattern_technique": "Digital Image Correlation",
-                        "pattern_background": "Matte black",
-                        "pattern_speckle": "White speckles",
-                        "approx_feature_size": 50.0,
-                        "cal_target_make": "OptiCal",
-                        "cal_target_dims": [100, 100],
-                        "cal_target_spacing": 0.5
+                    "additionalInformation": {
+                        "patternTechnique": "Digital Image Correlation",
+                        "patternBackground": "Matte black",
+                        "patternSpeckle": "White speckles",
+                        "approxFeatureSize": 50.0,
+                        "calTargetMake": "OptiCal",
+                        "calTargetDims": [100, 100],
+                        "calTargetSpacing": 0.5
                     },
-                    "camera_setup": {
+                    "cameraSetup": {
                         "cameras": [
                             {
-                                "camera_information": {
+                                "cameraInformation": {
                                     "make": "Canon",
                                     "model": "EOS 5D Mark IV",
-                                    "serial_number": "CN12345678",
+                                    "serialNumber": "CN12345678",
                                     "resolution": [6720, 4480]
                                 },
-                                "lens_information": {
+                                "lensInformation": {
                                     "make": "Canon",
                                     "model": "EF 50mm f/1.8",
-                                    "serial_number": "LN98765432",
-                                    "focal_length": 50,
+                                    "serialNumber": "LN98765432",
+                                    "focalLength": 50,
                                     "aperture": "f/1.8",
-                                    "field_of_view": [6720, 4480]
+                                    "fieldOfView": [6720, 4480]
                                 },
-                                "capture_settings": {
-                                    "image_acquisition_rate": 30,
-                                    "image_noise": 0.02,
-                                    "image_scale": 0.1
+                                "captureSettings": {
+                                    "imageAcquisitionRate": 30,
+                                    "imageNoise": 0.02,
+                                    "imageScale": 0.1
                                 }
                             },
                             {
-                                "camera_information": {
+                                "cameraInformation": {
                                     "make": "Nikon",
                                     "model": "D850",
-                                    "serial_number": "NK87654321",
+                                    "serialNumber": "NK87654321",
                                     "resolution": [8256, 5504]
                                 },
-                                "lens_information": {
+                                "lensInformation": {
                                     "make": "Nikon",
                                     "model": "AF-S NIKKOR 24-70mm f/2.8E",
-                                    "serial_number": "LN12345678",
-                                    "focal_length": 70,
+                                    "serialNumber": "LN12345678",
+                                    "focalLength": 70,
                                     "aperture": "f/2.8",
-                                    "field_of_view": [8256, 5504]
+                                    "fieldOfView": [8256, 5504]
                                 },
-                                "capture_settings": {
-                                    "image_acquisition_rate": 25,
-                                    "image_noise": 0.01,
-                                    "image_scale": 0.12
+                                "captureSettings": {
+                                    "imageAcquisitionRate": 25,
+                                    "imageNoise": 0.01,
+                                    "imageScale": 0.12
                                 }
                             }
                         ]
