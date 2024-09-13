@@ -1,18 +1,18 @@
 {
-    "campaignID": "HIVE-20230901", 
-    "experimentID": "HIVE-E-20230905", 
+    "campaignID": "HIVE-20230901",
+    "experimentID": "HIVE-E-20230905",
     "leadInvestigator": {
         "firstName": "Alice",
         "lastName": "Johnson",
         "email": "alice.johnson@example.com"
     },
     "customer": "ACME Corp",
-    "experimentStart": "2023-09-05T10:00:00Z", 
-    "experimentEnd": "2023-09-05T16:00:00Z", 
-    "experimentType": "Induction", 
+    "experimentStart": "2023-09-05T10:00:00Z",
+    "experimentEnd": "2023-09-05T16:00:00Z",
+    "experimentType": "Induction",
     "sampleCooling": true,
     "pulse": {
-        "pulseID": "123e4567-e89b-12d3-a456-426614174000", 
+        "pulseID": "123e4567-e89b-12d3-a456-426614174000",
         "firstOperator": {
             "firstName": "Bob",
             "lastName": "Smith",
@@ -23,9 +23,9 @@
             "lastName": "Davis",
             "email": "carol.davis@example.com"
         },
-        "pulseStart": "2023-09-05T12:00:00Z", 
-        "pulseDuration": 120, 
-        "dataCaptureStart": "2023-09-05T12:00:10Z", 
+        "pulseStart": "2023-09-05T12:00:00Z",
+        "pulseDuration": 120,
+        "dataCaptureStart": "2023-09-05T12:00:10Z",
         "operatorComment": "Pulse completed without issues. Slight delay in data capture start.",
         "pulseQuality": "Success",
         "coolantInformation": {
@@ -62,6 +62,8 @@
         },
         "diagnostics": [
             {
+                "diagnosticName": "TC01",
+                "diagnosticType": "Thermocouple",
                 "port": {
                     "portID": "Port_1",
                     "portDescription": "Front Port",
@@ -71,13 +73,19 @@
                     "status": "Active",
                     "attachment": "spot weld with inert gas shield",
                     "tcType": "K",
-                    "location": [18.065, 2.355, 23.0],
+                    "location": [
+                        18.065,
+                        2.355,
+                        23.0
+                    ],
                     "areaType": "Circular",
                     "circleDiameter": 1.31,
                     "noiseFloor": "not captured - assume standard resolution"
                 }
             },
             {
+                "diagnosticName": "Cam01",
+                "diagnosticType": "Camera",
                 "port": {
                     "portID": "Port_6",
                     "portDescription": "Bottom Port",
@@ -100,7 +108,10 @@
                         "patternSpeckle": "White speckles",
                         "approxFeatureSize": 50.0,
                         "calTargetMake": "OptiCal",
-                        "calTargetDims": [100, 100],
+                        "calTargetDims": [
+                            100,
+                            100
+                        ],
                         "calTargetSpacing": 0.5
                     },
                     "cameraSetup": {
@@ -110,7 +121,10 @@
                                     "make": "Canon",
                                     "model": "EOS 5D Mark IV",
                                     "serialNumber": "CN12345678",
-                                    "resolution": [6720, 4480]
+                                    "resolution": [
+                                        6720,
+                                        4480
+                                    ]
                                 },
                                 "lensInformation": {
                                     "make": "Canon",
@@ -118,7 +132,10 @@
                                     "serialNumber": "LN98765432",
                                     "focalLength": 50,
                                     "aperture": "f/1.8",
-                                    "fieldOfView": [6720, 4480]
+                                    "fieldOfView": [
+                                        6720,
+                                        4480
+                                    ]
                                 },
                                 "captureSettings": {
                                     "imageAcquisitionRate": 30,
@@ -131,7 +148,10 @@
                                     "make": "Nikon",
                                     "model": "D850",
                                     "serialNumber": "NK87654321",
-                                    "resolution": [8256, 5504]
+                                    "resolution": [
+                                        8256,
+                                        5504
+                                    ]
                                 },
                                 "lensInformation": {
                                     "make": "Nikon",
@@ -139,7 +159,10 @@
                                     "serialNumber": "LN12345678",
                                     "focalLength": 70,
                                     "aperture": "f/2.8",
-                                    "fieldOfView": [8256, 5504]
+                                    "fieldOfView": [
+                                        8256,
+                                        5504
+                                    ]
                                 },
                                 "captureSettings": {
                                     "imageAcquisitionRate": 25,
