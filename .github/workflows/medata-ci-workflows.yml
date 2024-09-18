@@ -11,19 +11,35 @@ jobs:
       - name: valid-json-files
         uses: cardinalby/schema-validator-action@v3
         with: 
-          file: "./*.json" 
-      - name: validate-campaign-json
+          file: | 
+            ./*.json ./scicat-schema/*.json ./ukaea-schema/diagnostics/*.json \
+            ./ukaea-schema/examples/hive/*.json ./ukaea-schema/examples/*.json ./ukaea-schema/facility/hive/*.json \
+            ./ukaea-schema/facility/*.json ./ukaea-schema/pegasus/ansys_mechanical/*.json \
+            ./ukaea-schema/pegasus/*.json ./ukaea-schema/*.json
+
+      - name: Validate campaign JSON
         use: cardinalby/schema-validator-action@v3
         with: 
           file: ./ukaea-schema/examples/hive/campaign.json
           schema: ./ukaea-schema/facility/hive/campaign.schema.json
-      - name: validate-experiment-json
-        uses: cardinalby/schema-validator-action@v3$
+      - name: Validate experiment JSON
+        uses: cardinalby/schema-validator-action@v3
         with: 
           file: ./ukaea-schema/examples/hive/experiment.json
           schema: ./ukaea-schema/facility/hive/experiment.schema.json
-      - name: validate-facility-json
-        uses: cardinalby/schema-validator-action@v3$
+      - name: Validate facility JSON
+        uses: cardinalby/schema-validator-action@v3
         with: 
           file: ./ukaea-schema/examples/facility.json
           schema: ./ukaea-schema/facility/facility.schema.json
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with: 
+          python-version: '3.11'
+      - name: custom-camel-case-validation:
+        run: | 
+          python validate_camel_case.py ./scicat-schema/*.json ./ukaea-schema/diagnostics/*.json \
+          ./ukaea-schema/examples/hive/*.json ./ukaea-schema/examples/*.json ./ukaea-schema/facility/hive/*.json \
+          ./ukaea-schema/facility/*.json ./ukaea-schema/pegasus/ansys_mechanical/*.json \
+          ./ukaea-schema/pegasus/*.json ./ukaea-schema/*.json
+
