@@ -11,11 +11,10 @@ jobs:
       - name: valid-json-files
         uses: cardinalby/schema-validator-action@v3
         with: 
-          file: | 
-            ./*.json ./scicat-schema/*.json ./ukaea-schema/diagnostics/*.json \
+          file: "./scicat-schema/*.json ./ukaea-schema/diagnostics/*.json \
             ./ukaea-schema/examples/hive/*.json ./ukaea-schema/examples/*.json ./ukaea-schema/facility/hive/*.json \
             ./ukaea-schema/facility/*.json ./ukaea-schema/pegasus/ansys_mechanical/*.json \
-            ./ukaea-schema/pegasus/*.json ./ukaea-schema/*.json
+            ./ukaea-schema/pegasus/*.json ./ukaea-schema/*.json"
 
       - name: Validate campaign JSON
         uses: cardinalby/schema-validator-action@v3
