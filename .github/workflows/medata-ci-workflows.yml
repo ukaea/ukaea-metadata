@@ -1,0 +1,29 @@
+name: Metadata CI Workflow
+on: 
+  push:
+    branches: 
+      - main
+
+jobs: 
+  validate-json: 
+    runs-on: ubuntu-latest
+    steps: 
+      - name: valid-json-files
+        uses: cardinalby/schema-validator-action@v3
+        with: 
+          file: "./*.json" 
+      - name: validate-campaign-json
+        use: cardinalby/schema-validator-action@v3
+        with: 
+          file: ./ukaea-schema/examples/hive/campaign.json
+          schema: ./ukaea-schema/facility/hive/campaign.schema.json
+      - name: validate-experiment-json
+        uses: cardinalby/schema-validator-action@v3$
+        with: 
+          file: ./ukaea-schema/examples/hive/experiment.json
+          schema: ./ukaea-schema/facility/hive/experiment.schema.json
+      - name: validate-facility-json
+        uses: cardinalby/schema-validator-action@v3$
+        with: 
+          file: ./ukaea-schema/examples/facility.json
+          schema: ./ukaea-schema/facility/facility.schema.json
