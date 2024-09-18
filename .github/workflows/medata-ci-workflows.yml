@@ -18,7 +18,7 @@ jobs:
             ./ukaea-schema/pegasus/*.json ./ukaea-schema/*.json
 
       - name: Validate campaign JSON
-        use: cardinalby/schema-validator-action@v3
+        uses: cardinalby/schema-validator-action@v3
         with: 
           file: ./ukaea-schema/examples/hive/campaign.json
           schema: ./ukaea-schema/facility/hive/campaign.schema.json
@@ -36,7 +36,7 @@ jobs:
         uses: actions/setup-python@v4
         with: 
           python-version: '3.11'
-      - name: custom-camel-case-validation:
+      - name: custom-camel-case-validation
         run: | 
           python validate_camel_case.py ./scicat-schema/*.json ./ukaea-schema/diagnostics/*.json \
           ./ukaea-schema/examples/hive/*.json ./ukaea-schema/examples/*.json ./ukaea-schema/facility/hive/*.json \
