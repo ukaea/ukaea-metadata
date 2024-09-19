@@ -14,11 +14,11 @@ jobs:
         run: ls -R
       - name: find json files
         run: |
-            find -name "*.json" -type f > jsonfiles.json 
+            find -name "*.json" -type f > jsonfiles.txt
       - name: validate-json-file
         uses: cardinalby/schema-validator-action@v3
         with: 
-          file: $(cat jsonfiles.json)
+          file: $(cat jsonfiles.txt)
           
   #./ukaea-schema/diagnostics/*.json
   # ./ukaea-schema/examples/hive/*.json
