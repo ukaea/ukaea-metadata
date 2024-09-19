@@ -1,36 +1,32 @@
-name: Metadata CI Workflow
-on: 
-  push:
-    branches: 
-      - main
-  pull_request: 
-    branches: 
-      - main
-
-
-jobs: 
-  validate-json: 
-    runs-on: ubuntu-latest
-    steps: 
-      - uses: actions/checkout@v4
       - name: validate-json-files
         id: json-validate
         uses: GrantBirki/json-yaml-validate@v3
-        
-      # - name: checkout codes
-      #   uses: actions/checkout@v2
-        
-      
-        
-      #   run: ls -R
-      # - name: validate-json-file
-      #   uses: cardinalby/schema-validator-action@v3
-      #   with: 
-      #     file: ./**/*.json
-              
+        with: 
+          comment: "true"
+          
+      - name: Validate campaign JSON
+        uses: GrantBirki/json-yaml-validate@v3
+        with: 
+          json_schema: ./ukaea-schema/facility/hive/campaign.schema.json
+          files: ./ukaea-schema/examples/hive/campaign.json
+          comment: "true"
+      - name: Validate experiment JSON
+        uses: GrantBirki/json-yaml-validate@v3
+        with: 
+          json_schema: ./ukaea-schema/facility/hive/experiment.schema.json
+          files: ./ukaea-schema/examples/hive/experiment.json
+          comment: "true"
 
-
-<<<<<<< HEAD
-#job
-=======
->>>>>>> parent of 29a8eb4 (fix: change json file validator package)
+      - name: Validate facility JSON
+        uses: GrantBirki/json-yaml-validate@v3
+        with: 
+          json_schema: ./ukaea-schema/facility/facility.schema.json
+          files: ./ukaea-schema/examples/facility.json
+          comment: "true"
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with: 
+          python-version: '3.11'
+      - name: custom-camel-case-validation
+        run: | 
+          python validate_camel_case.py "./**/*.json" 
