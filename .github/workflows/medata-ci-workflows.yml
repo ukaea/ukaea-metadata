@@ -20,17 +20,17 @@ jobs:
           comment: "true"
           
       - name: Validate campaign JSON
-        uses: GrantBirki/json-yaml-validate@v3
+        uses: cardinalby/schema-validator-action@v3
         with: 
-          json_schema: ukaea-schema/facility/hive/campaign.schema.json
-          files: ./ukaea-schema/examples/hive/campaign.json
-          comment: "true"
-      - name: Validate experiment JSON
-        uses: cardinalby/schema-validator-action@v3.2.1
-        with: 
-          json_schema: ./ukaea-schema/facility/hive/campaign.schema.json 
-          files: ./ukaea-schema/examples/hive/campaign.json
-          comment: "true"
+          schema: ukaea-schema/facility/hive/campaign.schema.json
+          file: ./ukaea-schema/examples/hive/campaign.json
+          # comment: "true"
+      # - name: Validate experiment JSON
+      #   uses: cardinalby/schema-validator-action@v3.2.1
+      #   with: 
+      #     json_schema: ./ukaea-schema/facility/hive/campaign.schema.json 
+      #     files: ./ukaea-schema/examples/hive/campaign.json
+      #     comment: "true"
 
       # - name: Validate facility JSON
       #   uses: GrantBirki/json-yaml-validate@v3
