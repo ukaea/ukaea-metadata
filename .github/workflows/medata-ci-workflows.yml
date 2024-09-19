@@ -14,7 +14,7 @@ jobs:
         run: ls -R
       - name: find json files
         run: |
-            find -name '*.json' -type -f > jsonfiles.json 
+            find -name "*.json" -type f > jsonfiles.json 
             cat jsonfiles.json 
       # - name: validate-json-file
       #   uses: cardinalby/schema-validator-action@v3
