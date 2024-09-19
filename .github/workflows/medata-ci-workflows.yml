@@ -15,12 +15,10 @@ jobs:
       - name: find json files
         run: |
             find -name "*.json" -type f > jsonfiles.json 
-            cat jsonfiles.json 
-      # - name: validate-json-file
-      #   uses: cardinalby/schema-validator-action@v3
-      #   with: 
-      #     file: | 
-      #           find -name '*.json' -type f 
+      - name: validate-json-file
+        uses: cardinalby/schema-validator-action@v3
+        with: 
+          file: $(cat jsonfiles.json)
           
   #./ukaea-schema/diagnostics/*.json
   # ./ukaea-schema/examples/hive/*.json
