@@ -26,7 +26,7 @@ jobs:
           files: ./ukaea-schema/examples/hive/campaign.json
           comment: "true"
       - name: Validate experiment JSON
-        uses: cardinalby/schema-validator-action@v8
+        uses: cardinalby/schema-validator-action@v4
         with: 
           json_schema: ./ukaea-schema/facility/hive/campaign.schema.json 
           files: ./ukaea-schema/examples/hive/campaign.json
