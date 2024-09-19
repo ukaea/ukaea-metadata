@@ -3,6 +3,10 @@ on:
   push:
     branches: 
       - main
+  pull_request: 
+    branches: 
+      - main
+
 
 jobs: 
   validate-json: 
@@ -25,98 +29,4 @@ jobs:
       #     file: ./**/*.json
               
 
-
-#   ./scicat-schema:
-# scicat.dataset-derived.schema.json
-# scicat.dataset-raw.schema.json
-# scicat.dataset.schema.json
-# scicat.sample.schema.json
-# toplevel.schema.json
-
-# ./ukaea-schema:
-# diagnostics
-# examples
-# facility
-# simulation
-# ukaea.schema.json
-
-# ./ukaea-schema/diagnostics:
-# camera.schema.json
-# dic.schema.json
-# tc.schema.json
-
-# ./ukaea-schema/examples:
-# facility.json
-# hive
-
-# ./ukaea-schema/examples/hive:
-# campaign.json
-# experiment.json
-
-# ./ukaea-schema/facility:
-# facility.schema.json
-# hive
-
-# ./ukaea-schema/facility/hive:
-# campaign.schema.json
-# diagnostic.schema.json
-# experiment.schema.json
-# port.schema.json
-# pulse.schema.json
-# scicat-mappings.json
-
-# ./ukaea-schema/simulation:
-# pegasus
-# ukaea-simulation.schema.json
-
-# ./ukaea-schema/simulation/pegasus:
-# ansys_mechanical
-# pegasus.schema.json
-
-# ./ukaea-schema/simulation/pegasus/ansys_mechanical:
-# ansys_mechanical.schema.json
-
-# ./validation:
-# README.md
-# examples
-# requirements.txt
-# scripts
-
-# ./validation/examples:
-# test.json
-
-  #./ukaea-schema/diagnostics/*.json
-  # ./ukaea-schema/examples/hive/*.json
-  # ./ukaea-schema/examples/*.json
-  # ./ukaea-schema/facility/hive/*.json 
-  # ./ukaea-schema/facility/*.json
-  # ./ukaea-schema/pegasus/ansys_mechanical/*.json 
-  # ./ukaea-schema/pegasus/*.json
-  # ./ukaea-schema/*.json
-
-      # - name: Validate campaign JSON
-      #   uses: cardinalby/schema-validator-action@v3
-      #   with: 
-      #     file: ./ukaea-schema/examples/hive/campaign.json
-      #     schema: ./ukaea-schema/facility/hive/campaign.schema.json
-      # - name: Validate experiment JSON
-      #   uses: cardinalby/schema-validator-action@v3
-      #   with: 
-      #     file: ./ukaea-schema/examples/hive/experiment.json
-      #     schema: ./ukaea-schema/facility/hive/experiment.schema.json
-      # - name: Validate facility JSON
-      #   uses: cardinalby/schema-validator-action@v3
-      #   with: 
-      #     file: ./ukaea-schema/examples/facility.json
-      #     schema: ./ukaea-schema/facility/facility.schema.json
-      # - name: Set up Python
-      #   uses: actions/setup-python@v4
-      #   with: 
-      #     python-version: '3.11'
-      # - name: custom-camel-case-validation
-      #   run: | 
-      #     python validate_camel_case.py "./scicat-schema/*.json" "./ukaea-schema/diagnostics/*.json" \
-      #     "./ukaea-schema/examples/hive/*.json" "./ukaea-schema/examples/*.json" "./ukaea-schema/facility/hive/*.json" \
-      #     "./ukaea-schema/facility/*.json" "./ukaea-schema/pegasus/ansys_mechanical/*.json" \
-      #     "./ukaea-schema/pegasus/*.json" "./ukaea-schema/*.json"
 
