@@ -22,7 +22,7 @@ jobs:
       - name: Validate campaign JSON
         uses: GrantBirki/json-yaml-validate@v3
         with: 
-          json_schema: ./ukaea-schema/facility/hive/campaign.schema.json
+          json_schema: ukaea-schema/facility/hive/campaign.schema.json
           files: ./ukaea-schema/examples/hive/campaign.json
           comment: "true"
       - name: Validate experiment JSON
