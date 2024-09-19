@@ -20,6 +20,7 @@ jobs:
         with: 
           file: |
             ./scicat-schema/*.*.*.json
+            ./ukaea-schema/*.*.json
               
           
   #./ukaea-schema/diagnostics/*.json
