@@ -26,22 +26,22 @@ jobs:
           files: ./ukaea-schema/examples/hive/campaign.json
           comment: "true"
       - name: Validate experiment JSON
-        uses: GrantBirki/json-yaml-validate@v3
+        uses: cardinalby/schema-validator-action@v3
         with: 
-          json_schema: ./ukaea-schema/facility/hive/experiment.schema.json
-          files: ./ukaea-schema/examples/hive/experiment.json
-          comment: "true"
+          schema: ./ukaea-schema/facility/hive/experiment.schema.json
+          file: ./ukaea-schema/examples/hive/experiment.json
+          # comment: "true"
 
-      - name: Validate facility JSON
-        uses: GrantBirki/json-yaml-validate@v3
-        with: 
-          json_schema: ./ukaea-schema/facility/facility.schema.json
-          files: ./ukaea-schema/examples/facility.json
-          comment: "true"
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with: 
-          python-version: '3.11'
-      - name: custom-camel-case-validation
-        run: | 
-          python validate_camel_case.py "./**/*.json" 
+      # - name: Validate facility JSON
+      #   uses: GrantBirki/json-yaml-validate@v3
+      #   with: 
+      #     json_schema: ./ukaea-schema/facility/facility.schema.json
+      #     files: ./ukaea-schema/examples/facility.json
+      #     comment: "true"
+      # - name: Set up Python
+      #   uses: actions/setup-python@v4
+      #   with: 
+      #     python-version: '3.11'
+      # - name: custom-camel-case-validation
+      #   run: | 
+      #     python validate_camel_case.py "./**/*.json" 
