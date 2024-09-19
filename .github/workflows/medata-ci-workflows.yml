@@ -19,8 +19,8 @@ jobs:
         uses: cardinalby/schema-validator-action@v3
         with: 
           file: |
-            ./scicat-schema/*.*.*.json
-            ./ukaea-schema/*.*.json
+            "./scicat-schema/*.*.*.json & \
+            ./ukaea-schema/*.*.json"
               
           
   #./ukaea-schema/diagnostics/*.json
