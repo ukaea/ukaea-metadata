@@ -15,7 +15,7 @@ jobs:
       - name: validate-json-file
         uses: cardinalby/schema-validator-action@v3
         with: 
-          file: ./scicat-schema/scicat.dataset-derived.schema.json
+          file: ./scicat-schema/*.json
           
   #./ukaea-schema/diagnostics/*.json
   # ./ukaea-schema/examples/hive/*.json
