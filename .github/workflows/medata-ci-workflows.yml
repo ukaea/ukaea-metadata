@@ -8,14 +8,21 @@ jobs:
   validate-json: 
     runs-on: ubuntu-latest
     steps: 
-      - name: checkout codes
-        uses: actions/checkout@v2
-      - name: list files
-        run: ls -R
-      - name: validate-json-file
-        uses: cardinalby/schema-validator-action@v3
-        with: 
-          file: ./**/*.json
+      - uses: actions/checkout@v4
+      - name: validate-json-files
+        id: json-validate
+        uses: GrantBirki/json-yaml-validate@v3
+        
+      # - name: checkout codes
+      #   uses: actions/checkout@v2
+        
+      
+        
+      #   run: ls -R
+      # - name: validate-json-file
+      #   uses: cardinalby/schema-validator-action@v3
+      #   with: 
+      #     file: ./**/*.json
               
 
 
