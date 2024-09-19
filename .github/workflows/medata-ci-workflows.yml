@@ -18,7 +18,7 @@ jobs:
       - name: validate-json-file
         run: |
             for file in $(cat jsonfiles.txt); do 
-              npx cardinalby/schema-validator-action@v3 --file $file
+              npx cardinalby/schema-validator-action@v3 --file="$file"
             done
               
           
