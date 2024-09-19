@@ -16,10 +16,9 @@ jobs:
         run: |
             find -name "*.json" -type f > jsonfiles.txt
       - name: validate-json-file
-        run: |
-            for file in $(cat jsonfiles.txt); do 
-              npx https://github.com/cardinalby/schema-validator-action --file $file
-            done
+        uses: cardinalby/schema-validator-action@v3
+        with: 
+          file: './scicat-schema/*.json$'
               
           
   #./ukaea-schema/diagnostics/*.json
