@@ -11,7 +11,7 @@ def match_camel_case(s):
 
 def validate_camel_case(data): 
     # validate camelCase in json key
-    for key, value in data.items(): 
+    for key, value in data: 
         if not match_camel_case(key): 
             return False, f"Invalid key format (not CamelCase): {key}"
         
@@ -38,11 +38,11 @@ def val_json_file(json_file_paths):
         # append result of invalid json file 
         invalid_result.append(f"Error in file {json_file_paths}, Invalid JSON format {e}")
 
-    # return invalid_result list if any file is invalid or contains non-camelCase
+    # return 
     if len(invalid_result) > 0: 
         return "\n".join(invalid_result)
     else: 
-        return "All files are valid"
+        return True 
 
         
 
@@ -50,9 +50,9 @@ def val_json_file(json_file_paths):
 if __name__ == "__main__": 
 
     parser = argparse.ArgumentParser(description="all json files in the repository")
-    parser.add_argument("json_file_paths", type=str, 
+    parser.add_argument("json_file_paths", type="str", required=True, 
                         help="pass the paths to all json files in the repository")
-    arg = parser.parse_args()
+    arg = parser.parse_args
 
     validation_result = val_json_file(arg.json_file_paths)
     print(validation_result)
