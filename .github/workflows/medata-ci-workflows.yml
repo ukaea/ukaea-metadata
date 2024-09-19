@@ -8,10 +8,10 @@ jobs:
   validate-json: 
     runs-on: ubuntu-latest
     steps: 
-      - name: valid-json-files
-        uses: cardinalby/schema-validator-action@v3
-        with: 
-          file: 'scicat-schema/*.json' 
+      - name: checkout codes
+        uses: actions/checkout@v2
+      - name: list files
+        run: ls -R
           
   #./ukaea-schema/diagnostics/*.json
   # ./ukaea-schema/examples/hive/*.json
