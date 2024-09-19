@@ -50,7 +50,7 @@ def val_json_file(json_file_paths):
 if __name__ == "__main__": 
 
     parser = argparse.ArgumentParser(description="all json files in the repository")
-    parser.add_argument("json_file_paths", type="str", required=True, 
+    parser.add_argument("json_file_paths", type="str", 
                         help="pass the paths to all json files in the repository")
     arg = parser.parse_args
 
