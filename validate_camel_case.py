@@ -24,26 +24,21 @@ def validate_camel_case(data):
     return True, None
 
 
-def val_json_file(json_file_paths):
+def val_json_file(json_file):
     # initialize empty list to store error result for invalid json file validation
-    invalid_result = []
-    for json_file in json_file_paths.split(","):  
-        try: 
-            with open(Path(json_file), 'r') as jf: 
-                data = json.load(jf)
-            is_valid, message = validate_camel_case(data)
-            if not is_valid: 
-                # append result of json file with non cameCase keys
-                invalid_result.append(f"{json_file} - {message}")
-        except json.JSONDecodeError as e: 
-            # append result of invalid json file 
-            invalid_result.append(f"Error in file {json_file}, Invalid JSON format {e}")
+    try: 
+        with open(Path(json_file), 'r') as jf: 
+            data = json.load(jf)
+        is_valid, message = validate_camel_case(data)
+        if not is_valid: 
+            # append result of json file with non cameCase keys
+            return(f"{json_file} - {message}")
+        else: 
+            return True
+    except json.JSONDecodeError as e: 
+        # append result of invalid json file 
+        print(f"Error in file {json_file}, Invalid JSON format {e}")
 
-    # return 
-    if len(invalid_result) > 0: 
-        return "\n".join(invalid_result)
-    else: 
-        return True 
 
 
 
