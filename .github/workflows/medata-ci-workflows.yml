@@ -3,9 +3,11 @@ on:
   push:
     branches: 
       - main
+      - develop
   pull_request: 
     branches: 
       - main
+      - develop
 
 
 jobs: 
@@ -20,30 +22,40 @@ jobs:
           comment: "true"
           
       - name: Validate campaign JSON
-        uses: cardinalby/schema-validator-action@v3
+        uses: GrantBirki/json-yaml-validate@v3
         with: 
-          schema: ukaea-schema/facility/hive/campaign.schema.json
-          file: ./ukaea-schema/examples/hive/campaign.json
+          json_schema: ./ukaea-schema/facility/hive/campaign.schema.json
+          files: ./ukaea-schema/examples/hive/campaign.json
+          comment: "true"
       - name: Validate experiment JSON
-        uses: cardinalby/schema-validator-action@v3
+        uses: GrantBirki/json-yaml-validate@v3
         with: 
-          schema: ./ukaea-schema/facility/hive/campaign.schema.json 
-          file: ./ukaea-schema/examples/hive/campaign.json
+          json_schema: ./ukaea-schema/facility/hive/experiment.schema.json
+          files: ./ukaea-schema/examples/hive/experiment.json
+          comment: "true"
 
-      # - name: Validate facility JSON
-      #   uses: cardinalby/schema-validator-action@v3
-      #   with: 
-      #     schema: ./ukaea-schema/facility/facility.schema.json
-      #     file: ./ukaea-schema/examples/facility.json
+      - name: Validate facility JSON
+        uses: GrantBirki/json-yaml-validate@v3
+        with: 
+          json_schema: ./ukaea-schema/facility/facility.schema.json
+          files: ./ukaea-schema/examples/facility.json
+          comment: "true"
       - name: Set up Python
         uses: actions/setup-python@v4
         with: 
           python-version: '3.11'
       - name: custom-camel-case-validation
         run: | 
-          readarray -d '' json_file_paths < <(find . -name *.json -print0)
-          echo ${json_file_paths[@]}
-          for json_file in ${json_file_paths[@]}; do 
-            python validate_camel_case.py $json_file 
-          done
+          python validate_camel_case.py "./**/*.json" 
+          file: /scicat-schema/*.json 
+          
+  #./ukaea-schema/diagnostics/*.json
+  # ./ukaea-schema/examples/hive/*.json
+  # ./ukaea-schema/examples/*.json
+  # ./ukaea-schema/facility/hive/*.json 
+  # ./ukaea-schema/facility/*.json
+  # ./ukaea-schema/pegasus/ansys_mechanical/*.json 
+  # ./ukaea-schema/pegasus/*.json
+  # ./ukaea-schema/*.json
+
 
