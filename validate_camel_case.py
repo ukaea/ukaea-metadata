@@ -21,7 +21,7 @@ def validate_camel_case(data):
         if isinstance(value, dict): 
             is_valid, message = validate_camel_case(value) # recursive check nested dictionary
             if not is_valid: 
-                return False, f"Nested error: {message}"
+                return False, f"{message}"
     return True, None
 
 
