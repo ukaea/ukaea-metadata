@@ -35,7 +35,7 @@ def val_json_file(json_file):
             # append result of json file with non cameCase keys
             return(f"{json_file} - {message}")
         else: 
-            return True
+            return(f"json file: {json_file} contains valid camelCase keys")
     except json.JSONDecodeError as e: 
         # append result of invalid json file 
         print(f"Error in file {json_file}, Invalid JSON format {e}")
