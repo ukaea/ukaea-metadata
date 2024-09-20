@@ -12,7 +12,7 @@
             "type": "string",
             "example": "HIVE-XXXXXX"
         },
-        "campaignStart": {
+        "campaign_Start": {
             "type": "string",
             "format": "date-time"
         },
