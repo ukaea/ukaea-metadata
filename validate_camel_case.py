@@ -7,7 +7,7 @@ from pathlib import Path
  # regex to match camel case
 def match_camel_case(s): 
     # match camelCase format using regular expression
-    return bool(re.match(r'^[$a-z]+([.A-Z]+[a-z]*)*$', s))
+    return bool(re.match(r'^[$a-z]+([.A-Z0-9]+[a-z]*)*$', s))
 
 
 def validate_camel_case(data): 
