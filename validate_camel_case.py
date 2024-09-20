@@ -27,8 +27,7 @@ def validate_camel_case(data):
 def val_json_file(json_file_paths):
     # initialize empty list to store error result for invalid json file validation
     invalid_result = []
-    for json_file in json_file_paths.split(" "):  
-        print(json_file)
+    for json_file in json_file_paths.split(","):  
         try: 
             with open(Path(json_file), 'r') as jf: 
                 data = json.load(jf)
