@@ -8,7 +8,7 @@
         "campaignStart"
     ],
     "properties": {
-        "campaignID": {
+        "campaign_ID": {
             "type": "string",
             "example": "HIVE-XXXXXX"
         },

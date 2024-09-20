@@ -2,6 +2,7 @@ import re
 import json
 import argparse
 from pathlib import Path
+import sys
 
 
  # regex to match camel case
@@ -38,6 +39,7 @@ def val_json_file(json_file):
     except json.JSONDecodeError as e: 
         # append result of invalid json file 
         print(f"Error in file {json_file}, Invalid JSON format {e}")
+        sys.exit(1)
 
 
 
