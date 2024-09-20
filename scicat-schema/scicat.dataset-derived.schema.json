@@ -9,7 +9,7 @@
             "type": "string",
             "description": "Email of person pursuing the data analysis. The string may contain a list of emails, which should then be separated by semicolons"
         },
-        "inputDatasets": {
+        "input_Datasets": {
             "type": "array",
             "items": {
                 "type": "string"
