@@ -41,5 +41,5 @@ jobs:
           python-version: '3.11'
       - name: custom-camel-case-validation
         run: | 
-          jsonfiles=$(find . -name *.json print0 | xargs -0)
+          jsonfiles=$(find . -name *.json -print0 | xargs -0)
           python validate_camel_case.py $jsonfiles 
