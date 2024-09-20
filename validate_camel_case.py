@@ -33,7 +33,7 @@ def val_json_file(json_file):
         is_valid, message = validate_camel_case(data)
         if not is_valid: 
             # append result of json file with non cameCase keys
-            print(f"{json_file} - {message}")
+            print(f"json file: {json_file} contains {message}")
             sys.exit(1)
         else: 
             return(f"json file: {json_file} contains valid camelCase keys")
