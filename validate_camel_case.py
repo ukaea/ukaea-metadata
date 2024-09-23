@@ -11,6 +11,7 @@ def match_camel_case(s):
     return bool(re.match(r'^[$a-z]+([.A-Z0-9]+[a-z]*)*$', s))
 
 
+
 def validate_camel_case(data): 
     # validate camelCase in json key
     for key, value in data.items(): 
@@ -48,6 +49,7 @@ def val_json_file(json_file):
 
 if __name__ == "__main__": 
 
+    # instatiating argument parser for the python file. 
     parser = argparse.ArgumentParser(description="all json files in the repository")
     parser.add_argument("json_file_paths", type=str, 
                         help="pass the paths to all json files in the repository")

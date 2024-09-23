@@ -18,17 +18,17 @@
         "code": {
             "type": "array",
             "description": "",
-            "required": [ "code.name", "code.version", "code.repo" ],
+            "required": [ "name", "version", "repo" ],
             "items": {
-                "code.name": {
+                "name": {
                     "type": "string",
                     "description": ""
                 },
-                "code.version": {
+                "version": {
                     "type": "string",
                     "description": ""
                 },
-                "code.repo": {
+                "repo": {
                     "type": "string",
                     "description": ""
                 }
