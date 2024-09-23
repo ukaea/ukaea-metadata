@@ -22,17 +22,16 @@ jobs:
           comment: "true"
           
       - name: Validate campaign JSON
-        uses: GrantBirki/json-yaml-validate@v3
+        uses: cardinalby/schema-validator-action@v3
         with: 
-          json_schema: ./ukaea-schema/facility/hive/campaign.schema.json
-          files: ./ukaea-schema/examples/hive/campaign.json
-          comment: "true"
+          schema: ukaea-schema/facility/hive/campaign.schema.json
+          file: ./ukaea-schema/examples/hive/campaign.json
+
       - name: Validate experiment JSON
-        uses: GrantBirki/json-yaml-validate@v3
+        uses: cardinalby/schema-validator-action@v3
         with: 
-          json_schema: ./ukaea-schema/facility/hive/experiment.schema.json
-          files: ./ukaea-schema/examples/hive/experiment.json
-          comment: "true"
+          schema: ./ukaea-schema/facility/hive/campaign.schema.json 
+          file: ./ukaea-schema/examples/hive/campaign.json
 
       - name: Validate facility JSON
         uses: GrantBirki/json-yaml-validate@v3
@@ -40,6 +39,7 @@ jobs:
           json_schema: ./ukaea-schema/facility/facility.schema.json
           files: ./ukaea-schema/examples/facility.json
           comment: "true"
+
       - name: Set up Python
         uses: actions/setup-python@v4
         with: 
@@ -48,14 +48,4 @@ jobs:
         run: | 
           python validate_camel_case.py "./**/*.json" 
           file: /scicat-schema/*.json 
-          
-  #./ukaea-schema/diagnostics/*.json
-  # ./ukaea-schema/examples/hive/*.json
-  # ./ukaea-schema/examples/*.json
-  # ./ukaea-schema/facility/hive/*.json 
-  # ./ukaea-schema/facility/*.json
-  # ./ukaea-schema/pegasus/ansys_mechanical/*.json 
-  # ./ukaea-schema/pegasus/*.json
-  # ./ukaea-schema/*.json
-
 
