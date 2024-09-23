@@ -11,6 +11,7 @@ on:
 
 
 jobs: 
+  # validation of all JSON file to ensure that they contain the right JSON syntaxes and formats 
   validate-json: 
     runs-on: ubuntu-latest
     steps: 
@@ -20,27 +21,34 @@ jobs:
         uses: GrantBirki/json-yaml-validate@v3
         with: 
           comment: "true"
-          
+
+    # validation of campaign JSON file against its schema 
       - name: Validate campaign JSON
         uses: cardinalby/schema-validator-action@v3
         with: 
           schema: ukaea-schema/facility/hive/campaign.schema.json
           file: ./ukaea-schema/examples/hive/campaign.json
+
+      # validation of experiment JSON file against its schema 
       - name: Validate experiment JSON
         uses: cardinalby/schema-validator-action@v3
         with: 
           schema: ./ukaea-schema/facility/hive/campaign.schema.json 
           file: ./ukaea-schema/examples/hive/campaign.json
 
-      # - name: Validate facility JSON
-      #   uses: cardinalby/schema-validator-action@v3
-      #   with: 
-      #     schema: ./ukaea-schema/facility/facility.schema.json
-      #     file: ./ukaea-schema/examples/facility.json
+      - name: Validate facility JSON
+        uses: cardinalby/schema-validator-action@v3
+        with: 
+          schema: ./ukaea-schema/facility/facility.schema.json
+          file: ./ukaea-schema/examples/facility.json
+
+
       - name: Set up Python
         uses: actions/setup-python@v4
         with: 
           python-version: '3.11'
+        
+      # validation of all JSON files to ensure their keys contains only camelCase. 
       - name: custom-camel-case-validation
         run: | 
           readarray -d '' json_file_paths < <(find . -name *.json -print0)
