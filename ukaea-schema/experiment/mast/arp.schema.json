@@ -1,0 +1,66 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "arp",
+    "description": "Reciprocating Probe",
+    "type": "object",
+    "properties": {
+        "passnumber": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {}
+            }
+        },
+        "rp_gap_efit": {
+            "type": "object",
+            "description": "Reciprocating Probe: distance in meters between RP and plasma edge based on EFM_R(PSI100)_OUT",
+            "units": {
+                "type": "string",
+                "const": "m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "rp_radius": {
+            "type": "object",
+            "description": "Radial position of standard probe head end",
+            "units": {
+                "type": "string",
+                "const": "m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "status": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {}
+            }
+        }
+    },
+    "required": [
+        "passnumber",
+        "rp_gap_efit",
+        "rp_radius",
+        "status"
+    ]
+}
