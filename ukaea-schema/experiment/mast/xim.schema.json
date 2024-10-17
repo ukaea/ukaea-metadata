@@ -1,0 +1,370 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "xim",
+    "description": "D-alpha emission and other spectral lines",
+    "type": "object",
+    "properties": {
+        "cii_hu10_u": {
+            "type": "object",
+            "description": ">4054 Carbon II - top divertor from port HU10",
+            "units": {
+                "type": "string",
+                "const": "V"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "da_bo10": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "V"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "da_hl11_l1": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "V"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "da_hl11_r1": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "V"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "sec": "number"
+                }
+            }
+        },
+        "da_hm10_r": {
+            "type": "object",
+            "description": "Dalpha - mid-plane centre column radial view from port HM10",
+            "units": {
+                "type": "string",
+                "const": "V"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "da_hm10_r1": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "V"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "da_hm10_t": {
+            "type": "object",
+            "description": "Dalpha - mid-plane wide-angle view from port HM10",
+            "units": {
+                "type": "string",
+                "const": "V"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "da_hu10_r1": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "V"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "da_hu10_t": {
+            "type": "object",
+            "description": ">9580 Dalpha - upper tangential view from port HL11",
+            "units": {
+                "type": "string",
+                "const": "V"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "da_hu10_u1": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "V"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "da_to10": {
+            "type": "object",
+            "description": "Dalpha - bottom divertor from port TO10",
+            "units": {
+                "type": "string",
+                "const": "V"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "sec": "number"
+                }
+            }
+        },
+        "dg_hu10_r2": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "V"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "heii_eceleste": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "V"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "light_end": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "V"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "light_start": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "V"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "mass_end": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "V"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "mass_start": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "V"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "pellet_halpha_2": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "V"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "pellet_time": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "V"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "preion_trig": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "V"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "target": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "V"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "trigger": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "V"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "ts_yag": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "V"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "xsa_logic_out": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "V"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        }
+    },
+    "required": [
+        "cii_hu10_u",
+        "da_bo10",
+        "da_hl11_l1",
+        "da_hl11_r1",
+        "da_hm10_r",
+        "da_hm10_r1",
+        "da_hm10_t",
+        "da_hu10_r1",
+        "da_hu10_t",
+        "da_hu10_u1",
+        "da_to10",
+        "dg_hu10_r2",
+        "heii_eceleste",
+        "light_end",
+        "light_start",
+        "mass_end",
+        "mass_start",
+        "pellet_halpha_2",
+        "pellet_time",
+        "preion_trig",
+        "target",
+        "trigger",
+        "ts_yag",
+        "xsa_logic_out"
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "xdc",
+    "description": "Digital Plasma Control",
+    "type": "object",
+    "properties": {
+        "ip_t_ipref": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "MA"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        }
+    },
+    "required": [
+        "ip_t_ipref"
+    ]
+}

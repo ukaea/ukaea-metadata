@@ -1,0 +1,13 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "urn:ukaea:experiment:mast:dimension-schema",
+    "description": "Metadata to describe from diagnostic sources",
+    "type": "object",
+    "required": [ "name", "description", "source_type"],
+    "properties": {
+        "units": {
+            "type": "string",
+            "description": "Units that this dimension uses. e.g. (s, K, m^2)"
+        }
+    }
+}

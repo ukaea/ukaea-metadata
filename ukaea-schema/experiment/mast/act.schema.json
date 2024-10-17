@@ -1,0 +1,1212 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "act",
+    "description": "Time resolved Charge Exchange",
+    "type": "object",
+    "properties": {
+        "_c_plb_cutoff": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "no"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {}
+            }
+        },
+        "_c_plb_cutofftime": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "s"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {}
+            }
+        },
+        "_c_plb_cx_counts": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "Photo electr"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "majorradius": "number"
+                }
+            }
+        },
+        "_c_plb_raw_spectrum": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "Photo electr"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "chordno": "number",
+                    "pixels": "number"
+                }
+            }
+        },
+        "_c_plb_temperature": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "eV"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "majorradius": "number"
+                }
+            }
+        },
+        "_c_plb_temperature_error": {
+            "type": "object",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "majorradius": "number"
+                }
+            }
+        },
+        "_c_plb_velocity": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "m / s"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "majorradius": "number"
+                }
+            }
+        },
+        "_c_plb_velocity_error": {
+            "type": "object",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "majorradius": "number"
+                }
+            }
+        },
+        "c_pla_cutoff": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "no"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {}
+            }
+        },
+        "c_pla_cutofftime": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "s"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {}
+            }
+        },
+        "c_pla_cx_counts": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "Photo electr"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "majorradius": "number"
+                }
+            }
+        },
+        "c_pla_raw_spectrum": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "Photo electr"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "chordno": "number",
+                    "pixels": "number"
+                }
+            }
+        },
+        "c_pla_temperature": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "eV"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "majorradius": "number"
+                }
+            }
+        },
+        "c_pla_temperature_error": {
+            "type": "object",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "majorradius": "number"
+                }
+            }
+        },
+        "c_pla_velocity": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "m / s"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "majorradius": "number"
+                }
+            }
+        },
+        "c_pla_velocity_error": {
+            "type": "object",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "majorradius": "number"
+                }
+            }
+        },
+        "c_ss_cutoff": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "no"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {}
+            }
+        },
+        "c_ss_cutofftime": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "s"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {}
+            }
+        },
+        "c_ss_cx_counts": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "Photo electr"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "majorradius": "number"
+                }
+            }
+        },
+        "c_ss_raw_spectrum": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "Photo electr"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "chordno": "number",
+                    "pixels": "number"
+                }
+            }
+        },
+        "c_ss_temperature": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "eV"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "majorradius": "number"
+                }
+            }
+        },
+        "c_ss_temperature_error": {
+            "type": "object",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "majorradius": "number"
+                }
+            }
+        },
+        "c_ss_velocity": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "m / s"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "majorradius": "number"
+                }
+            }
+        },
+        "c_ss_velocity_error": {
+            "type": "object",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "majorradius": "number"
+                }
+            }
+        },
+        "c_sw_cutoff": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "no"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "n_sw": "number"
+                }
+            }
+        },
+        "c_sw_cutofftime": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "s"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "n_sw": "number"
+                }
+            }
+        },
+        "c_sw_cx_counts": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "Photo electr"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "n_sw": "number",
+                    "majorradius": "number"
+                }
+            }
+        },
+        "c_sw_raw_spectrum": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "Photo electr"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "n_sw": "number",
+                    "chordno": "number",
+                    "pixels": "number"
+                }
+            }
+        },
+        "c_sw_temperature": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "eV"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "n_sw": "number",
+                    "majorradius": "number"
+                }
+            }
+        },
+        "c_sw_temperature_error": {
+            "type": "object",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "n_sw": "number",
+                    "majorradius": "number"
+                }
+            }
+        },
+        "c_sw_velocity": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "m / s"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "n_sw": "number",
+                    "majorradius": "number"
+                }
+            }
+        },
+        "c_sw_velocity_error": {
+            "type": "object",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "n_sw": "number",
+                    "majorradius": "number"
+                }
+            }
+        },
+        "lostframes": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {}
+            }
+        },
+        "passnumber": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {}
+            }
+        },
+        "pla_bgspec": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "Photo electr"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "majorradius": "number",
+                    "pixels": "number"
+                }
+            }
+        },
+        "pla_chisq": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "chordno": "number"
+                }
+            }
+        },
+        "pla_covariance": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "N / A"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "majorradius": "number",
+                    "dim_0": "number"
+                }
+            }
+        },
+        "pla_cx2bgratio": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "N / A"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "chordno": "number"
+                }
+            }
+        },
+        "pla_cx_counts": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "Photo electr"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "majorradius": "number"
+                }
+            }
+        },
+        "pla_cx_emissivity": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "s-1 m-2 sr-1"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "majorradius": "number"
+                }
+            }
+        },
+        "pla_cx_emissivity_error": {
+            "type": "object",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "majorradius": "number"
+                }
+            }
+        },
+        "pla_cxspec": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "Photo electr"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "majorradius": "number",
+                    "pixels": "number"
+                }
+            }
+        },
+        "pla_fits": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "Photo electr"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "majorradius": "number",
+                    "pixels": "number"
+                }
+            }
+        },
+        "pla_spectra": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "Photo electr"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "majorradius": "number",
+                    "pixels": "number"
+                }
+            }
+        },
+        "pla_temperature": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "eV"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "majorradius": "number"
+                }
+            }
+        },
+        "pla_temperature_error": {
+            "type": "object",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "majorradius": "number"
+                }
+            }
+        },
+        "pla_velocity": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "m / s"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "majorradius": "number"
+                }
+            }
+        },
+        "pla_velocity_error": {
+            "type": "object",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "majorradius": "number"
+                }
+            }
+        },
+        "radfitc": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "n_fit": "number"
+                }
+            }
+        },
+        "ss_bgspec": {
+            "type": "object",
+            "description": "SS beam - Background spectra",
+            "units": {
+                "type": "string",
+                "const": "Photo electr"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "majorradius": "number",
+                    "pixels": "number"
+                }
+            }
+        },
+        "ss_chisq": {
+            "type": "object",
+            "description": "SS beam - Chi squard values for fits",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "chordno": "number"
+                }
+            }
+        },
+        "ss_covariance": {
+            "type": "object",
+            "description": "SS beam - Covariance matrix values for fits",
+            "units": {
+                "type": "string",
+                "const": "N / A"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "majorradius": "number",
+                    "dim_0": "number"
+                }
+            }
+        },
+        "ss_cx2bgratio": {
+            "type": "object",
+            "description": "SS beam - Charge exchange signal to background signal ratios",
+            "units": {
+                "type": "string",
+                "const": "N / A"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "chordno": "number"
+                }
+            }
+        },
+        "ss_cx_counts": {
+            "type": "object",
+            "description": "SS beam - CX counts (fitted)",
+            "units": {
+                "type": "string",
+                "const": "Photo electr"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "majorradius": "number"
+                }
+            }
+        },
+        "ss_cx_emissivity": {
+            "type": "object",
+            "description": "SS beam - CX emissivity",
+            "units": {
+                "type": "string",
+                "const": "s-1 m-2 sr-1"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "majorradius": "number"
+                }
+            }
+        },
+        "ss_cx_emissivity_error": {
+            "type": "object",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "majorradius": "number"
+                }
+            }
+        },
+        "ss_cxspec": {
+            "type": "object",
+            "description": "SS beam - Active Sprectrum",
+            "units": {
+                "type": "string",
+                "const": "Photo electr"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "majorradius": "number",
+                    "pixels": "number"
+                }
+            }
+        },
+        "ss_fits": {
+            "type": "object",
+            "description": "SS beam - Fitted spectrum",
+            "units": {
+                "type": "string",
+                "const": "Photo electr"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "majorradius": "number",
+                    "pixels": "number"
+                }
+            }
+        },
+        "ss_spectra": {
+            "type": "object",
+            "description": "SS beam - Spectrum",
+            "units": {
+                "type": "string",
+                "const": "Photo electr"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "majorradius": "number",
+                    "pixels": "number"
+                }
+            }
+        },
+        "ss_temperature": {
+            "type": "object",
+            "description": "SS beam - Carbon Temperature",
+            "units": {
+                "type": "string",
+                "const": "eV"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "majorradius": "number"
+                }
+            }
+        },
+        "ss_temperature_error": {
+            "type": "object",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "majorradius": "number"
+                }
+            }
+        },
+        "ss_velocity": {
+            "type": "object",
+            "description": "SS beam - Carbon Velocity",
+            "units": {
+                "type": "string",
+                "const": "m / s"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "majorradius": "number"
+                }
+            }
+        },
+        "ss_velocity_error": {
+            "type": "object",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "majorradius": "number"
+                }
+            }
+        },
+        "status": {
+            "type": "object",
+            "description": "Status code",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {}
+            }
+        },
+        "sw_bgspec": {
+            "type": "object",
+            "description": "SW beam - Background spectra",
+            "units": {
+                "type": "string",
+                "const": "Photo electr"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "majorradius": "number",
+                    "pixels": "number"
+                }
+            }
+        },
+        "sw_chisq": {
+            "type": "object",
+            "description": "SW beam - Chi squard values for fits",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "chordno": "number"
+                }
+            }
+        },
+        "sw_covariance": {
+            "type": "object",
+            "description": "SW beam - Covariance matrix values for fits",
+            "units": {
+                "type": "string",
+                "const": "N / A"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "majorradius": "number",
+                    "dim_0": "number"
+                }
+            }
+        },
+        "sw_cx2bgratio": {
+            "type": "object",
+            "description": "SW beam - Charge exchange signal to background signal ratios",
+            "units": {
+                "type": "string",
+                "const": "N / A"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "chordno": "number"
+                }
+            }
+        },
+        "sw_cx_counts": {
+            "type": "object",
+            "description": "SW beam - CX counts (fitted)",
+            "units": {
+                "type": "string",
+                "const": "Photo electr"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "majorradius": "number"
+                }
+            }
+        },
+        "sw_cx_emissivity": {
+            "type": "object",
+            "description": "SW beam - CX emissivity",
+            "units": {
+                "type": "string",
+                "const": "s-1 m-2 sr-1"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "majorradius": "number"
+                }
+            }
+        },
+        "sw_cx_emissivity_error": {
+            "type": "object",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "majorradius": "number"
+                }
+            }
+        },
+        "sw_cxspec": {
+            "type": "object",
+            "description": "SW beam - Active Sprectrum",
+            "units": {
+                "type": "string",
+                "const": "Photo electr"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "majorradius": "number",
+                    "pixels": "number"
+                }
+            }
+        },
+        "sw_fits": {
+            "type": "object",
+            "description": "SW beam - Fitted spectrum",
+            "units": {
+                "type": "string",
+                "const": "Photo electr"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "majorradius": "number",
+                    "pixels": "number"
+                }
+            }
+        },
+        "sw_spectra": {
+            "type": "object",
+            "description": "SS beam - Spectrum",
+            "units": {
+                "type": "string",
+                "const": "Photo electr"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "majorradius": "number",
+                    "pixels": "number"
+                }
+            }
+        },
+        "sw_temperature": {
+            "type": "object",
+            "description": "SS beam - Carbon Temperature",
+            "units": {
+                "type": "string",
+                "const": "eV"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "majorradius": "number"
+                }
+            }
+        },
+        "sw_temperature_error": {
+            "type": "object",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "majorradius": "number"
+                }
+            }
+        },
+        "sw_velocity": {
+            "type": "object",
+            "description": "SS beam - Carbon Velocity",
+            "units": {
+                "type": "string",
+                "const": "m / s"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "majorradius": "number"
+                }
+            }
+        },
+        "sw_velocity_error": {
+            "type": "object",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "majorradius": "number"
+                }
+            }
+        }
+    },
+    "required": [
+        "_c_plb_cutoff",
+        "_c_plb_cutofftime",
+        "_c_plb_cx_counts",
+        "_c_plb_raw_spectrum",
+        "_c_plb_temperature",
+        "_c_plb_temperature_error",
+        "_c_plb_velocity",
+        "_c_plb_velocity_error",
+        "c_pla_cutoff",
+        "c_pla_cutofftime",
+        "c_pla_cx_counts",
+        "c_pla_raw_spectrum",
+        "c_pla_temperature",
+        "c_pla_temperature_error",
+        "c_pla_velocity",
+        "c_pla_velocity_error",
+        "c_ss_cutoff",
+        "c_ss_cutofftime",
+        "c_ss_cx_counts",
+        "c_ss_raw_spectrum",
+        "c_ss_temperature",
+        "c_ss_temperature_error",
+        "c_ss_velocity",
+        "c_ss_velocity_error",
+        "c_sw_cutoff",
+        "c_sw_cutofftime",
+        "c_sw_cx_counts",
+        "c_sw_raw_spectrum",
+        "c_sw_temperature",
+        "c_sw_temperature_error",
+        "c_sw_velocity",
+        "c_sw_velocity_error",
+        "lostframes",
+        "passnumber",
+        "pla_bgspec",
+        "pla_chisq",
+        "pla_covariance",
+        "pla_cx2bgratio",
+        "pla_cx_counts",
+        "pla_cx_emissivity",
+        "pla_cx_emissivity_error",
+        "pla_cxspec",
+        "pla_fits",
+        "pla_spectra",
+        "pla_temperature",
+        "pla_temperature_error",
+        "pla_velocity",
+        "pla_velocity_error",
+        "radfitc",
+        "ss_bgspec",
+        "ss_chisq",
+        "ss_covariance",
+        "ss_cx2bgratio",
+        "ss_cx_counts",
+        "ss_cx_emissivity",
+        "ss_cx_emissivity_error",
+        "ss_cxspec",
+        "ss_fits",
+        "ss_spectra",
+        "ss_temperature",
+        "ss_temperature_error",
+        "ss_velocity",
+        "ss_velocity_error",
+        "status",
+        "sw_bgspec",
+        "sw_chisq",
+        "sw_covariance",
+        "sw_cx2bgratio",
+        "sw_cx_counts",
+        "sw_cx_emissivity",
+        "sw_cx_emissivity_error",
+        "sw_cxspec",
+        "sw_fits",
+        "sw_spectra",
+        "sw_temperature",
+        "sw_temperature_error",
+        "sw_velocity",
+        "sw_velocity_error"
+    ]
+}
