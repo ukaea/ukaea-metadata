@@ -19,7 +19,8 @@
         uniqueName : .diagnosticName,
         name : .diagnosticType,
         customMetadata : {
-        port : .port
+        port : .port,
+	diagnostic : .diagnostic
         }
     }
   ],

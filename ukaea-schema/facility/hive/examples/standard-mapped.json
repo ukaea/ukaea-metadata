@@ -22,6 +22,19 @@
           "portID": "Port_1",
           "portDescription": "Front Port",
           "portSizeStandard": "CF100"
+        },
+        "diagnostic": {
+          "status": "Active",
+          "attachment": "spot weld with inert gas shield",
+          "tcType": "K",
+          "location": [
+            18.065,
+            2.355,
+            23.0
+          ],
+          "areaType": "Circular",
+          "circleDiameter": 1.31,
+          "noiseFloor": "not captured - assume standard resolution"
         }
       }
     },
@@ -33,6 +46,88 @@
           "portID": "Port_6",
           "portDescription": "Bottom Port",
           "portSizeStandard": "CF63"
+        },
+        "diagnostic": {
+          "setupInformation": {
+            "configuration": "Stereo+IR",
+            "stereoAngle": 30.0,
+            "standOffDistance": 1.5,
+            "imagedSurfaceOnSpecimen": "XY plane"
+          },
+          "softwareInformation": {
+            "softwareName": "AcquisitionPro",
+            "softwareVersion": "v3.2.1"
+          },
+          "additionalInformation": {
+            "patternTechnique": "Digital Image Correlation",
+            "patternBackground": "Matte black",
+            "patternSpeckle": "White speckles",
+            "approxFeatureSize": 50.0,
+            "calTargetMake": "OptiCal",
+            "calTargetDims": [
+              100,
+              100
+            ],
+            "calTargetSpacing": 0.5
+          },
+          "cameraSetup": {
+            "cameras": [
+              {
+                "cameraInformation": {
+                  "make": "Canon",
+                  "model": "EOS 5D Mark IV",
+                  "serialNumber": "CN12345678",
+                  "resolution": [
+                    6720,
+                    4480
+                  ]
+                },
+                "lensInformation": {
+                  "make": "Canon",
+                  "model": "EF 50mm f/1.8",
+                  "serialNumber": "LN98765432",
+                  "focalLength": 50,
+                  "aperture": "f/1.8",
+                  "fieldOfView": [
+                    6720,
+                    4480
+                  ]
+                },
+                "captureSettings": {
+                  "imageAcquisitionRate": 30,
+                  "imageNoise": 0.02,
+                  "imageScale": 0.1
+                }
+              },
+              {
+                "cameraInformation": {
+                  "make": "Nikon",
+                  "model": "D850",
+                  "serialNumber": "NK87654321",
+                  "resolution": [
+                    8256,
+                    5504
+                  ]
+                },
+                "lensInformation": {
+                  "make": "Nikon",
+                  "model": "AF-S NIKKOR 24-70mm f/2.8E",
+                  "serialNumber": "LN12345678",
+                  "focalLength": 70,
+                  "aperture": "f/2.8",
+                  "fieldOfView": [
+                    8256,
+                    5504
+                  ]
+                },
+                "captureSettings": {
+                  "imageAcquisitionRate": 25,
+                  "imageNoise": 0.01,
+                  "imageScale": 0.12
+                }
+              }
+            ]
+          }
         }
       }
     }
