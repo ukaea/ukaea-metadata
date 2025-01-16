@@ -4,6 +4,8 @@
     "description": "Metadata schema for a HIVE diagnostic",
     "type": "object",
     "required": [
+        "diagnosticName",
+        "diagnosticType",
         "port",
         "diagnostic"
     ],
