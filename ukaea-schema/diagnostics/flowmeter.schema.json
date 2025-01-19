@@ -1,0 +1,32 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "urn:ukaea:experiment:hive:diagnostics:flowmeter-schema",
+    "description": "Metadata to describe flowmeter diagnostics",
+    "type": "object",
+    "properties": {
+        "deviceId": {
+            "type": "string",
+            "example": "uuid?"
+        },
+        "make": {
+            "type": "string"
+        },
+        "model": {
+            "type": "string"
+        },
+        "partNumber": {
+            "type": "integer"
+        },
+        "serialNumber": {
+            "type": "integer"
+        },
+        "flowRange": {
+            "type": "number"
+        },
+        "flowmeterType": {
+            "type": "string"
+        }
+    },
+    "required": ["deviceId", "make", "model", "partNumber", "serialNumber", 
+                "flowRange", "flowmeterType"] 
+}
