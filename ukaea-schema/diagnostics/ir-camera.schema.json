@@ -1,0 +1,43 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "urn:ukaea:experiment:hive:diagnostics:ir-camera-schema",
+    "description": "Metadata to describe ir-camera diagnostics",
+    "type": "object",
+    "properties": {
+        "cameraInformation": {
+            "type": "object",
+            "properties":{
+                "deviceId": {
+                    "type": "string",
+                    "example": "uuid?"
+                },
+                "make": {
+                    "type": "string"
+                },
+                "model": {
+                    "type": "string"
+                },
+                "partNumber": {
+                    "type": "integer"
+                },
+                "serialNumber": {
+                    "type": "integer"
+                },
+                "lens": {
+                    "type": "string"
+                } 
+            },
+            "required": ["deviceId", "make", "model", "partNumber",
+                            "serialNumber", "lens"]
+        },
+        "temperatureRange": {
+            "type": "number",
+            "unit": "qudt:DEG_C"
+        },
+        "wavelengthRange": {
+            "type": "number",
+            "unit": "qudt:M"
+        }
+    },
+    "required": ["cameraInformation", "temperatureRange", "wavelengthRange"]
+}
