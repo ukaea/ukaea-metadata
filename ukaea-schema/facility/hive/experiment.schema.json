@@ -48,7 +48,6 @@
             "format": "date-time"
         },
         "experimentType": {
-            "type": "string",
             "enum": [
                 "Induction",
                 "DC"

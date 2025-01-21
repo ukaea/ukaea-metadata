@@ -10,7 +10,6 @@
             "required": [ "configuration", "stereoAngle", "standOffDistance" ],
             "properties": {
                 "configuration": {
-                    "type": "string",
                     "enum": [ "2D", "Stereo", "Stereo+IR" ]
                 },
                 "stereoAngle": {
