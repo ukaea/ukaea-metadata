@@ -1,0 +1,112 @@
+{
+    "$id": "urn:ukaea:facility:mrf:diagnostic",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "description": "Metadata schema MRF experiments",
+    "type": "object",
+    "properties": {
+        "labLocation": {
+            "type": "string",
+            "example": "MRF",
+            "default": "MRF"
+        },
+        "SEID": {
+            "type": "string",
+            "pattern": "^//d{4}$",
+            "example": "0001"
+        },
+        "jobID": {
+            "type": "string",
+            "pattern": "^\\d{5}$",
+            "example": "23001",
+            "$comment": "First 2 digits represent year, last 3 digits represent incremental number"
+        },
+        "sessionID": {
+            "type": "string",
+            "example": "1",
+            "$comment": "Incremental session ID across a single job, not yet implemented in Booking System"
+        },
+        "sampleID": {
+            "type": "string",
+            "example": "S-0001370",
+            "$comment": "Unique identifier for the sample, not part of Salesforce MVP"
+        },
+        "bookingStart": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2024-07-31T07:30:00Z"
+        },
+        "bookingEnd": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2024-07-31T17:30:00Z"
+        },
+        "internalUser": {
+            "type": "object",
+            "properties": {
+                "firstName": {
+                    "type": "string"
+                },
+                "lastName": {
+                    "type": "string"
+                }
+            }
+        },
+        "externalUser": {
+            "type": "object",
+            "properties": {
+                "firstName": {
+                    "type": "string"
+                },
+                "lastName": {
+                    "type": "string"
+                }
+            },
+            "$comment": "Would lead to an institution"
+        },
+        "institution": {
+            "type": "string",
+            "example": "University of Oxford"
+        },
+        "scientificSupport": {
+            "type": "object",
+            "properties": {
+                "firstName": {
+                    "type": "string"
+                },
+                "lastName": {
+                    "type": "string"
+                }
+            }
+        },
+        "notes": {
+            "type": "string",
+            "example": "Leak on water line"
+        },
+        "workCategory": {
+            "type": "string",
+            "enum": [
+                "User",
+                "Engineering",
+                "Mainenance",
+                "Environment",
+                "Repair"
+            ]
+        },
+        "sampleSplit": {
+            "type": "boolean"
+        },
+        "splitSampleID": {
+            "type": "string"
+        },
+        "tritium": {
+            "type": "boolean"
+        },
+        "beryliyum": {
+            "type": "boolean"
+        },
+        "betaGamma": {
+            "type": "boolean"
+        }
+    }
+}
+
