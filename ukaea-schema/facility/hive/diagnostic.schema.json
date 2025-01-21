@@ -18,20 +18,12 @@
             "type": "string",
             "example": "Thermocouple"
         },
-        "port": {
-            "type": "object",
-            "properties": {
-                "$ref": "./port.schema.json#"
-            }
-        },
+        "port": { "$ref": "./port.schema.json#" },
         "diagnostic": {
-            "type": "object",
-            "properties": {
-                "oneOf": [
-                    { "$ref": "../../diagnostics/dic.schema.json#" },
-                    { "$ref": "../../diagnostics/tc.schema.json#" }
-                ]
-            }
+            "oneOf": [
+                { "$ref": "../../diagnostics/dic.schema.json#" },
+                { "$ref": "../../diagnostics/tc.schema.json#" }
+            ]
         }
     }
 }

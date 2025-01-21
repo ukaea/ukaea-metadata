@@ -1,0 +1,49 @@
+{
+    proposal : {
+            proposalID : .experimentID,
+            piFirstName : .leadInvestigator.firstName,
+            piLastName : .leadInvestigator.lastName,
+            piEmail : .leadInvestigator.email,
+            startTime : .experimentStart,
+            endTime : .experimentEnd,
+        metadata : {
+            campaignID : .campaignID,
+            customer : .customer,
+            experimentType : .experimentType,
+            sampleCooling : .sampleCooling,     
+            }
+    },
+  instruments : [
+     .pulse.diagnostics[] | 
+    {
+        uniqueName : .diagnosticName,
+        name : .diagnosticType,
+        customMetadata : {
+        port : .port,
+	diagnostic : .diagnostic
+        }
+    }
+  ],
+  
+    datasets :
+[
+    . as $root | .pulse.diagnostics[] |
+    {
+        experimentID : $root.experimentID,
+        instrumentId : .diagnosticName,
+        scientificMetadata : {
+            pulseID : {value:$root.pulse.pulseID},
+            firstOperator : {value : $root.pulse.firstOperator },
+            secondOperator : {value : $root.pulse.secondOperator },
+            pulseStart : { value : $root.pulse.pulseStart},
+            pulseDuration : { value : $root.pulse.pulseDuration},
+            dataCaptureStart : { value : $root.pulse.dataCaptureStart},
+            pulseQuality : {value : $root.pulse.pulseQuality},
+            coolantInformation : {value : $root.pulse.coolantInformation},
+            coilInformation : { value : $root.pulse.coilInformation}
+            },
+            comment : $root.pulse.operatorComment
+    }
+]
+}
+
