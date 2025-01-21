@@ -1,6 +1,6 @@
 {
+    "$id": " https://w3id.org/fuel/schemas/1.0.0/diagnostics/dic",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "urn:ukaea:experiment:hive:diagnostics:dic-schema",
     "description": "Digital Image Correlation (DIC) diagnostic metadata",
     "type": "object",
     "required": [ "setupInformation", "softwareInformation", "cameraSetup" ],
