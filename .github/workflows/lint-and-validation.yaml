@@ -19,10 +19,10 @@ jobs:
         uses: sourcemeta/jsonschema@v5.0.0
 
       - name: Validate JSON Schemas
-        run: jsonschema lint ukaea-schema/**/*.json
+        run: jsonschema lint ukaea-schema/**/*.schema.json
 
       - name: Verify JSON Schemas
-        run: jsonschema metaschema ukaea-schema/**/*.json
+        run: jsonschema metaschema ukaea-schema/**/*.schema.json
 
       - name: Report success
         if: success()
