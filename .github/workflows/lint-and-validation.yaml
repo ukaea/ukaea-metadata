@@ -5,8 +5,7 @@ on:
     branches:
       - main
       - develop
-      - feature/*
-      - bugfix/*
+      - repo-cleanup-refactor
 
 jobs:
   lint-and-validate-schemas:
