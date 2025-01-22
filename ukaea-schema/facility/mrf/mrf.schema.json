@@ -20,7 +20,7 @@
         },
         "seid": {
             "type": "string",
-            "pattern": "^//d{4}$"
+            "pattern": "^\\d{4}$"
         },
         "jobId": {
             "type": "string",
