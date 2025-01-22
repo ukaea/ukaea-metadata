@@ -108,11 +108,17 @@
             "type": "boolean"
         }
     },
-    "dependantRequired": {
-        "externalUser": ["institution"]
-    },
     "if": {
-        "properties": {"workCategory": {"const": "User"}}
+        "properties": {
+            "workCategory": {
+                "const": "User"
+            }
+        }
     },
-    "then": {"required": "jobId"}
+    "then": {
+        "required": ["jobId"]
+    },
+    "dependentRequired": {
+        "externalUser": ["institution"]
+    }
 }
