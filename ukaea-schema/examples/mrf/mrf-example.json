@@ -1,0 +1,29 @@
+{
+    "labLocation": "MRF",
+    "seid": "0001",
+    "jobId": "23001",
+    "sessionId": "1",
+    "sampleId": "S-0001370",
+    "bookingStart": "2024-07-31T07:30:00Z",
+    "bookingEnd": "2024-07-31T17:30:00Z",
+    "internalUser": {
+        "firstName": "Shep",
+        "lastName": "Lynch"
+    },
+    "externalUser": {
+        "firstName": "Kay",
+        "lastName": "Song"
+    },
+    "institution": "University of Oxford",
+    "scientificSupport": {
+        "firstName": "Gyula",
+        "lastName": "Zilahi"
+    },
+    "notes": "Leak on water line",
+    "workCategory": "User",
+    "sampleSplit": true,
+    "splitSamepleId": "S-0001711",
+    "tritium": false,
+    "beryllium": false,
+    "betaGamma": true
+}
