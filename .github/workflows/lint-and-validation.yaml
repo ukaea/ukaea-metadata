@@ -1,0 +1,30 @@
+name: Lint and Validate JSON Schemas
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+      - feature/*
+      - bugfix/*
+
+jobs:
+  lint-and-validate-schemas:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Use jsonschema Action
+        uses: sourcemeta/jsonschema@v5.0.0
+
+      - name: Validate JSON Schemas
+        run: jsonschema lint ukaea-schema/**/*.json
+
+      - name: Verify JSON Schemas
+        run: jsonschema metaschema ukaea-schema/**/*.json
+
+      - name: Report success
+        if: success()
+        run: echo "All JSON schemas have been successfully validated and linted!"
