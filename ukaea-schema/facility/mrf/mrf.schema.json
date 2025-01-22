@@ -3,6 +3,16 @@
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "description": "Metadata schema MRF experiments",
     "type": "object",
+    "required": [
+        "seid",
+        "bookingStart",
+        "bookingEnd",
+        "workCategory",
+        "sampleSplit",
+        "tritium",
+        "beryliyum",
+        "betaGamma"
+    ],
     "properties": {
         "labLocation": {
             "type": "string",
@@ -95,7 +105,7 @@
         "sampleSplit": {
             "type": "boolean"
         },
-        "splitSampleID": {
+        "splitSampleId": {
             "type": "string"
         },
         "tritium": {
@@ -107,6 +117,13 @@
         "betaGamma": {
             "type": "boolean"
         }
-    }
+    },
+    "dependantRequired": {
+        "externalUser": ["institution"]
+    },
+    "if": {
+        "properties": {"workCategory": {"const": "User"}}
+    },
+    "then": {"required": "jobId"}
 }
 
