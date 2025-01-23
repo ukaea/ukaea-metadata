@@ -51,6 +51,9 @@
                 },
                 "lastName": {
                     "type": "string"
+                },
+                "email": {
+                    "type": "string"
                 }
             }
         },
@@ -61,6 +64,9 @@
                     "type": "string"
                 },
                 "lastName": {
+                    "type": "string"
+                },
+                "email": {
                     "type": "string"
                 }
             },
@@ -76,6 +82,9 @@
                     "type": "string"
                 },
                 "lastName": {
+                    "type": "string"
+                },
+                "email": {
                     "type": "string"
                 }
             }
