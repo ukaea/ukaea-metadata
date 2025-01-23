@@ -1,6 +1,6 @@
 {
+    "$id": " https://w3id.org/fuel/schemas/1.0.0/diagnostics/camera",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "urn:ukaea:experiment:hive:diagnostics:camera-schema",
     "description": "Metadata to describe camera diagnostics",
     "type": "object",
     "required": ["cameraInformation", "lensInformation", "captureSettings"],
