@@ -36,7 +36,7 @@
             "example": "Circular"
         },
         "circleDiameter": {
-            "type": "float",
+            "type": "number",
             "description": "[mm]",
             "example": 1.31
         },
