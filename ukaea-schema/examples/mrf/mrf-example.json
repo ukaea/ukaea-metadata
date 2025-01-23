@@ -7,17 +7,17 @@
     "bookingStart": "2024-07-31T07:30:00Z",
     "bookingEnd": "2024-07-31T17:30:00Z",
     "internalUser": {
-        "firstName": "Shep",
-        "lastName": "Lynch"
+        "firstName": "John",
+        "lastName": "Doe"
     },
     "externalUser": {
-        "firstName": "Kay",
-        "lastName": "Song"
+        "firstName": "Jay",
+        "lastName": "Doe"
     },
     "institution": "University of Oxford",
     "scientificSupport": {
-        "firstName": "Gyula",
-        "lastName": "Zilahi"
+        "firstName": "Jane",
+        "lastName": "Doe"
     },
     "notes": "Leak on water line",
     "workCategory": "User",
