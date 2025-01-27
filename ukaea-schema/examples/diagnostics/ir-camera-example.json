@@ -1,0 +1,14 @@
+{
+    "cameraInformation": 
+        {
+            "deviceId": "f47ac10b-58cc-4372-a567-0e02b2c3d479",
+            "make": "PhotonX Labs",
+            "model": "PX-500 Quantum Capture",
+            "partNumber": 12334,
+            "serialNumber": 2234,
+            "lens": "PhotonX UltraSharp 50mm f/1.4 XR" 
+        },
+    "temperatureRange": 12.9,
+    "wavelengthRange": 21.2
+
+}
