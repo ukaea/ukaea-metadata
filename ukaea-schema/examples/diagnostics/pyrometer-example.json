@@ -1,0 +1,10 @@
+{
+        "deviceId": "f47ac10b-58cc-4372-a567-0e02b2c3d479",
+        "make": "PhotonX Labs",
+        "model": "PX-500 Quantum Capture",
+        "partNumber": 12343,
+        "serialNumber": 4354556,
+        "temperatureRange": 23.9,
+        "wavelengthRange": 12.1,
+        "aimingMethod": "camera"   
+}
