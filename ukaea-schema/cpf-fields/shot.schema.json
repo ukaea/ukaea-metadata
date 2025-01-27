@@ -1,0 +1,13 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "urn:ukaea:experiment:hive:diagnostics:cpf-schema",
+    "description": "Metadata to describe cpf-field",
+    "type": "object",
+    "properties": {
+        "shotAbort": {
+            "type": "number",
+            "unit": ""
+        },
+        
+    }
+}

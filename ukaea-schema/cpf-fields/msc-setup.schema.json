@@ -1,0 +1,122 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "urn:ukaea:experiment:hive:diagnostics:cpf-schema",
+    "description": "Metadata to describe cpf-field",
+    "type": "object",
+    "properties": {
+        "mcsGDCPriorShot": {
+            "type": "integer",
+            "unit": ""
+        },
+        "mcsTfRiseTimeValue": {
+            "type": "number",
+            "unit": ""
+        },
+        "mcsPlasmaDirection": {
+            "type": "string"
+        },
+        "mcsP2Config": {
+            "type": "number",
+            "unit": ""
+        },
+        "mcsGasPuffPressure": {
+            "type": "number",
+            "unit": ""
+        },
+        "mcsSsNbiGas": {
+            "type": "number",
+            "unit": ""
+        },
+        "mcsSwNbiGasMcs": {
+            "type": "number",
+            "unit": ""
+        },
+        "mcsAdditiveGasPressure": {
+            "type": "number",
+            "unit": ""
+        },
+        "mcsPlenumGasPressure": {
+            "type": "number",
+            "unit": ""
+        },
+        "mcsTg1BasePressure": {
+            "type": "number",
+            "unit": ""
+        },
+        "mcsPreShotGdcTime": {
+            "type": "number",
+            "unit": ""
+        },
+        "mcsSelectLvpsTfPowerSupply": {
+            "type": "integer",
+            "unit": ""
+        },
+        "mcsSelectCp3sStartBank": {
+            "type": "integer",
+            "unit": ""
+        },
+        "mcsSelectCp3cCounterpulseBank": {
+            "type": "number",
+            "unit": ""
+        },
+        "mcsSelectEcrh": {
+            "type": "number",
+            "unit": ""
+        }
+    },
+    "patternProperties": {
+        "mcsSelectGasGroupPv[1-5]?$": {
+            "type": "integer",
+            "unit": ""
+        },
+        "mcsSelectFa[0-5]?$": {
+            "type": "integer",
+            "unit": ""
+        },
+        "mcsSelect[a-zA-Z0-9]{4}$": {
+            "type": "integer",
+            "unit": ""
+        },
+        "mcsSelect(Cp[1-4]([a-zA-Z])?)StartBank": {
+            "type": "number",
+            "unit": ""
+        },
+        "mcsSelect(P[1-5]([a-z])?)": {
+            "type": "number",
+            "unit": ""
+        },
+        "mcsSelect([a-zA-Z]{3})Os9": {
+            "type": "number",
+            "unit": ""
+        },
+        "mcsCp([0-9][a-z])Volt": {
+            "type": "number",
+            "unit": ""
+        },
+        "mcsP([1-4])Direction": {
+            "type": "number",
+            "unit": ""
+        },
+        "mcs([a-zA-Z0-9]+)StartTime": {
+            "type": "number",
+            "unit": ""
+        },
+        "mcs([a-zA-Z]+)Duration": {
+            "type": "number",
+            "unit": ""
+        },
+        "mcsP2xo[a-zA-Z]*$": {
+            "type": "number",
+            "unit": ""
+        }, 
+        "mscTfFlatTop[a-zA-Z]+$": {
+            "type": "number",
+            "unit": ""
+        },
+        "mcs([a-zA-Z]+)CurrentLimit": {
+            "type": "number",
+            "unit": ""
+        }
+
+    }
+}

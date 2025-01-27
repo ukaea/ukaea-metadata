@@ -1,0 +1,102 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "urn:ukaea:experiment:hive:diagnostics:cpf-schema",
+    "description": "Metadata to describe cpf-field",
+    "type": "object",
+    "properties": {
+        "genericMaxPlasmaZeffTime": {
+            "type": "",
+            "unit": ""
+        },
+        "genericMinQ95Time": {
+            "type": "number",
+            "unit": ""
+        },
+        "genericMaxGeoMajorRadiusTime": {
+            "type": "number",
+            "unit": ""
+        }, 
+        "genericMaxPoloidalTime": {
+            "type": "",
+            "unit": ""
+        }
+    },
+    "patternProperties":{
+        "genericMinorRadius[a-zA-Z]$": {
+            "type": "number",
+            "unit": ""
+        },
+        "generic(Max)?PoloidalArea[a-zA-Z]*$": {
+            "type": "number",
+            "unit": ""
+        },
+        "generic(Max)?BetaPoloidal[a-zA-Z]*$": {
+            "type": "number",
+            "unit": ""
+        },
+        "generic(Max)?Beta[a-zA-Z]+$": {
+            "type": "number",
+            "unit": ""
+        },
+        "generic(Max)?Toroidal[a-zA-Z]*$": {
+            "type": "number",
+            "unit": ""
+        },
+        "generic(Max)?Dt(Mhd|Total)?Energy[a-zA-Z]*$": {
+            "type": "number",
+            "unit": ""
+        },
+        "generic(Max)?PlasmaElongation[a-zA-Z]+$": {
+            "type": "number",
+            "unit": ""
+        },
+        "generic(Max)?RadPowerLoss[a-zA-Z]*$":{
+            "type": "number",
+            "unit": ""
+        },
+        "generic(Min)?q95[a-zA-Z]*$": {
+            "type": "number",
+            "unit": ""
+        },
+        "generic(Max)?GeoRadius[a-zA-Z]*$": {
+            "type": "number",
+            "unit": ""
+        },
+        "generic(Max|Total)?SurfaceArea[a-zA-Z]*$": {
+            "type": "number",
+            "unit": ""
+        },
+        "generic(Max)?Energy([a-zA-Z]*)Time": {
+            "type": "number",
+            "unit": ""
+        },
+        "genericMaxBeta([a-zA-Z]*)Time": {
+            "type": "number",
+            "unit": ""
+        },
+        "genericMaxDtMhdEnergyTime": {
+            "type": "number",
+            "unit": ""
+        },
+        "genericMaxPlasma([a-zA-Z]+)Time": {
+            "type": "number",
+            "unit":""
+        },
+        "genericMax(Mhd|Total)EnergyTime": {
+            "type": "",
+            "unit": ""
+        },
+        "generic(Max)?PlasmaVol[a-zA-Z]*$": {
+            "type": "",
+            "unit": ""
+        },
+        "generic(Max)?StoredEnergy[a-zA-Z]*$": {
+            "type": "",
+            "unit": ""
+        }, 
+        "generic(Max)?PlasmaZeff[a-zA-Z]*$": {
+            "type": "",
+            "unit": ""
+        }
+    } 
+}
