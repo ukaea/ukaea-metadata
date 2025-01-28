@@ -18,11 +18,11 @@
             "type": "string",
             "example": "Thermocouple"
         },
-        "port": { "$ref": "./port.schema.json#" },
+        "port": { "$ref": "https://w3id.org/fuel/schemas/1.0.0/facility/hive/port" },
         "diagnostic": {
             "oneOf": [
-                { "$ref": "../../diagnostics/dic.schema.json#" },
-                { "$ref": "../../diagnostics/tc.schema.json#" }
+                { "$ref": "https://w3id.org/fuel/schemas/1.0.0/diagnostics/dic" },
+                { "$ref": "https://w3id.org/fuel/schemas/1.0.0/diagnostics/thermocouple" }
             ]
         }
     }

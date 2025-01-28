@@ -198,7 +198,7 @@
         "diagnostics": {
             "type": "array",
             "items": {
-                "$ref": "./diagnostic.schema.json#"
+                "$ref": "https://w3id.org/fuel/schemas/1.0.0/facility/hive/diagnostic"
             },
             "$comment": "diagnostic.schema.json is within HIVE directory, not to be confused with toplevel"
         }

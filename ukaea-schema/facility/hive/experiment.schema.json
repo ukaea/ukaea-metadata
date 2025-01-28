@@ -58,7 +58,7 @@
             "type": "boolean"
         },
         "pulse": {
-            "$ref": "./facility/hive/pulse.schema.json#"
+            "$ref": "https://w3id.org/fuel/schemas/1.0.0/facility/hive/pulse"
         }
     }
 }
