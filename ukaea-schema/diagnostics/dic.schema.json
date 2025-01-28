@@ -42,7 +42,6 @@
             }
         },
         "additionalInformation": {
-            "comment": "discuss again with Lloyd",
             "type": "object",
             "required": [ "patternTechnique", "patternBackground", "patternSpeckle" ],
             "properties": {
@@ -74,7 +73,6 @@
         "cameraSetup": {
             "type": "object",
             "properties": {
-                "comment": "can add additional properties for a camera setup if needed",
                 "cameras": {
                     "type": "array",
                     "items": {
