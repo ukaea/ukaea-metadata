@@ -1,0 +1,12 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "urn:ukaea:experiment:hive:diagnostics:cpf-schema",
+    "description": "Metadata to describe cpf-field",
+    "type": "object",
+    "properties": {
+        "radiiC2ratio": {"type": "number", "description": "(Radii) CII Line ratio averaged over Ip flat top from 150ms for MAST and MAST-U"},
+        "radO2ratio": {"type": "number", "description": "(Radii) OII Line Ratio averaged over Ip flat top from 150ms for MAST and MAST-U"},
+        "radFlatTopPowerRatAvgLineDensity": {"type": "number", "description": "(Radii) Flat Top Ratio of Power Radiated to Line Density squared averaged over Ip flat top from 150ms for MAST and MAST-U"},
+        "radMagneticHeightEfit": {"type": "number", "description": "(Radii) Magnetic Axis height above Mid-Plane from EFIT Equilibrium for MAST and MAST-U"}
+    }
+}

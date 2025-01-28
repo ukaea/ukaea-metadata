@@ -1,0 +1,14 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "urn:ukaea:experiment:hive:diagnostics:cpf-schema",
+    "description": "Metadata to describe cpf-field",
+    "type": "object",
+    "properties": {
+        "gasColTempIn": {"type": "number", "description": "(Gas) centre column inlet temperature for MAST only"},
+        "gasColTempOut": {"type": "number", "description": "(Gas) centre column outlet temperature for MAST only"},
+        "gasInboardPressurePrePulse": {"type": "number", "description": "Inboard gas pressure prior to pulse for MAST only"},
+        "gasTg1PressurePs": {"type": "number", "description": "(Gas) TG1 Base Pressure prior to Shot for MAST only"},
+        "gasPuffStartTime": {"type": "number", "description": "Inboard Gas Puff Start Time for MAST only"},
+
+    }
+}
