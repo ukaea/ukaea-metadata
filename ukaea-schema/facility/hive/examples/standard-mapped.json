@@ -1,0 +1,281 @@
+{
+  "proposal": {
+    "proposalID": "HIVE-E-20230905",
+    "piFirstName": "Alice",
+    "piLastName": "Johnson",
+    "piEmail": "alice.johnson@example.com",
+    "startTime": "2023-09-05T10:00:00Z",
+    "endTime": "2023-09-05T16:00:00Z",
+    "metadata": {
+      "campaignID": "HIVE-20230901",
+      "customer": "ACME Corp",
+      "experimentType": "Induction",
+      "sampleCooling": true
+    }
+  },
+  "instruments": [
+    {
+      "uniqueName": "TC01",
+      "name": "Thermocouple",
+      "customMetadata": {
+        "port": {
+          "portID": "Port_1",
+          "portDescription": "Front Port",
+          "portSizeStandard": "CF100"
+        },
+        "diagnostic": {
+          "status": "Active",
+          "attachment": "spot weld with inert gas shield",
+          "tcType": "K",
+          "location": [
+            18.065,
+            2.355,
+            23.0
+          ],
+          "areaType": "Circular",
+          "circleDiameter": 1.31,
+          "noiseFloor": "not captured - assume standard resolution"
+        }
+      }
+    },
+    {
+      "uniqueName": "Cam01",
+      "name": "Camera",
+      "customMetadata": {
+        "port": {
+          "portID": "Port_6",
+          "portDescription": "Bottom Port",
+          "portSizeStandard": "CF63"
+        },
+        "diagnostic": {
+          "setupInformation": {
+            "configuration": "Stereo+IR",
+            "stereoAngle": 30.0,
+            "standOffDistance": 1.5,
+            "imagedSurfaceOnSpecimen": "XY plane"
+          },
+          "softwareInformation": {
+            "softwareName": "AcquisitionPro",
+            "softwareVersion": "v3.2.1"
+          },
+          "additionalInformation": {
+            "patternTechnique": "Digital Image Correlation",
+            "patternBackground": "Matte black",
+            "patternSpeckle": "White speckles",
+            "approxFeatureSize": 50.0,
+            "calTargetMake": "OptiCal",
+            "calTargetDims": [
+              100,
+              100
+            ],
+            "calTargetSpacing": 0.5
+          },
+          "cameraSetup": {
+            "cameras": [
+              {
+                "cameraInformation": {
+                  "make": "Canon",
+                  "model": "EOS 5D Mark IV",
+                  "serialNumber": "CN12345678",
+                  "resolution": [
+                    6720,
+                    4480
+                  ]
+                },
+                "lensInformation": {
+                  "make": "Canon",
+                  "model": "EF 50mm f/1.8",
+                  "serialNumber": "LN98765432",
+                  "focalLength": 50,
+                  "aperture": "f/1.8",
+                  "fieldOfView": [
+                    6720,
+                    4480
+                  ]
+                },
+                "captureSettings": {
+                  "imageAcquisitionRate": 30,
+                  "imageNoise": 0.02,
+                  "imageScale": 0.1
+                }
+              },
+              {
+                "cameraInformation": {
+                  "make": "Nikon",
+                  "model": "D850",
+                  "serialNumber": "NK87654321",
+                  "resolution": [
+                    8256,
+                    5504
+                  ]
+                },
+                "lensInformation": {
+                  "make": "Nikon",
+                  "model": "AF-S NIKKOR 24-70mm f/2.8E",
+                  "serialNumber": "LN12345678",
+                  "focalLength": 70,
+                  "aperture": "f/2.8",
+                  "fieldOfView": [
+                    8256,
+                    5504
+                  ]
+                },
+                "captureSettings": {
+                  "imageAcquisitionRate": 25,
+                  "imageNoise": 0.01,
+                  "imageScale": 0.12
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "datasets": [
+    {
+      "experimentID": "HIVE-E-20230905",
+      "instrumentId": "TC01",
+      "scientificMetadata": {
+        "pulseID": {
+          "value": "123e4567-e89b-12d3-a456-426614174000"
+        },
+        "firstOperator": {
+          "value": {
+            "firstName": "Bob",
+            "lastName": "Smith",
+            "email": "bob.smith@example.com"
+          }
+        },
+        "secondOperator": {
+          "value": {
+            "firstName": "Carol",
+            "lastName": "Davis",
+            "email": "carol.davis@example.com"
+          }
+        },
+        "pulseStart": {
+          "value": "2023-09-05T12:00:00Z"
+        },
+        "pulseDuration": {
+          "value": 120
+        },
+        "dataCaptureStart": {
+          "value": "2023-09-05T12:00:10Z"
+        },
+        "pulseQuality": {
+          "value": "Success"
+        },
+        "coolantInformation": {
+          "value": {
+            "coolantType": "Demineralised Water",
+            "coolantFlow": {
+              "rate": "High",
+              "setpoint": 15.0,
+              "value": 14.8,
+              "variance": 0.2
+            },
+            "coolantTemperature": {
+              "setpoint": 25.0,
+              "in": 24.8,
+              "inVariance": 0.2,
+              "out": 24.5,
+              "outVariance": 0.3,
+              "delta": 0.3
+            },
+            "coolantPressure": {
+              "in": 3.0,
+              "out": 2.8,
+              "delta": 0.2
+            }
+          }
+        },
+        "coilInformation": {
+          "value": {
+            "currentType": "AC",
+            "inputPower": 50.0,
+            "inputVoltage": 400.0,
+            "inputCurrent": 125.0,
+            "outputFrequency": 60.0,
+            "outputPower": 48.0,
+            "outputVoltage": 380.0,
+            "outputCurrent": 126.0
+          }
+        }
+      },
+      "comment": "Pulse completed without issues. Slight delay in data capture start."
+    },
+    {
+      "experimentID": "HIVE-E-20230905",
+      "instrumentId": "Cam01",
+      "scientificMetadata": {
+        "pulseID": {
+          "value": "123e4567-e89b-12d3-a456-426614174000"
+        },
+        "firstOperator": {
+          "value": {
+            "firstName": "Bob",
+            "lastName": "Smith",
+            "email": "bob.smith@example.com"
+          }
+        },
+        "secondOperator": {
+          "value": {
+            "firstName": "Carol",
+            "lastName": "Davis",
+            "email": "carol.davis@example.com"
+          }
+        },
+        "pulseStart": {
+          "value": "2023-09-05T12:00:00Z"
+        },
+        "pulseDuration": {
+          "value": 120
+        },
+        "dataCaptureStart": {
+          "value": "2023-09-05T12:00:10Z"
+        },
+        "pulseQuality": {
+          "value": "Success"
+        },
+        "coolantInformation": {
+          "value": {
+            "coolantType": "Demineralised Water",
+            "coolantFlow": {
+              "rate": "High",
+              "setpoint": 15.0,
+              "value": 14.8,
+              "variance": 0.2
+            },
+            "coolantTemperature": {
+              "setpoint": 25.0,
+              "in": 24.8,
+              "inVariance": 0.2,
+              "out": 24.5,
+              "outVariance": 0.3,
+              "delta": 0.3
+            },
+            "coolantPressure": {
+              "in": 3.0,
+              "out": 2.8,
+              "delta": 0.2
+            }
+          }
+        },
+        "coilInformation": {
+          "value": {
+            "currentType": "AC",
+            "inputPower": 50.0,
+            "inputVoltage": 400.0,
+            "inputCurrent": 125.0,
+            "outputFrequency": 60.0,
+            "outputPower": 48.0,
+            "outputVoltage": 380.0,
+            "outputCurrent": 126.0
+          }
+        }
+      },
+      "comment": "Pulse completed without issues. Slight delay in data capture start."
+    }
+  ]
+}
