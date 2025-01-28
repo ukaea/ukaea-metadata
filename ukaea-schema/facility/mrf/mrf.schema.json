@@ -1,0 +1,133 @@
+{
+    "$id": "urn:ukaea:facility:mrf:diagnostic",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "description": "Metadata schema MRF experiments",
+    "type": "object",
+    "required": [
+        "seid",
+        "bookingStart",
+        "bookingEnd",
+        "workCategory",
+        "sampleSplit",
+        "tritium",
+        "beryllium",
+        "betaGamma"
+    ],
+    "properties": {
+        "labLocation": {
+            "type": "string",
+            "default": "MRF"
+        },
+        "seid": {
+            "type": "string",
+            "pattern": "^\\d{4}$"
+        },
+        "jobId": {
+            "type": "string",
+            "pattern": "^\\d{5}$",
+            "$comment": "First 2 digits represent year, last 3 digits represent incremental number"
+        },
+        "sessionId": {
+            "type": "string",
+            "$comment": "Incremental session ID across a single job, not yet implemented in Booking System"
+        },
+        "sampleId": {
+            "type": "string",
+            "$comment": "Unique identifier for the sample, not part of Salesforce MVP"
+        },
+        "bookingStart": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "bookingEnd": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "internalUser": {
+            "type": "object",
+            "properties": {
+                "firstName": {
+                    "type": "string"
+                },
+                "lastName": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string"
+                }
+            }
+        },
+        "externalUser": {
+            "type": "object",
+            "properties": {
+                "firstName": {
+                    "type": "string"
+                },
+                "lastName": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string"
+                }
+            },
+            "$comment": "Would lead to an institution"
+        },
+        "institution": {
+            "type": "string"
+        },
+        "scientificSupport": {
+            "type": "object",
+            "properties": {
+                "firstName": {
+                    "type": "string"
+                },
+                "lastName": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string"
+                }
+            }
+        },
+        "notes": {
+            "type": "string"
+        },
+        "workCategory": {
+            "enum": [
+                "User",
+                "Engineering",
+                "Mainenance",
+                "Environment",
+                "Repair"
+            ]
+        },
+        "sampleSplit": {
+            "type": "boolean"
+        },
+        "splitSampleId": {
+            "type": "string"
+        },
+        "tritium": {
+            "type": "boolean"
+        },
+        "beryllium": {
+            "type": "boolean"
+        },
+        "betaGamma": {
+            "type": "boolean"
+        }
+    },
+    "if": {
+        "properties": {
+            "workCategory": {
+                "const": "User"
+            }
+        }
+    },
+    "then": {
+        "required": ["jobId"]
+    },
+    "dependentRequired": {
+        "externalUser": ["institution"]
+    }
+}
