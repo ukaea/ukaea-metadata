@@ -1,5 +1,5 @@
 {
-    "$id": " https://w3id.org/fuel/schemas/1.0.0/diagnostics/thermocouple",
+    "$id": "https://w3id.org/fuel/schemas/1.0.0/diagnostics/thermocouple",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "description": "Metadata to describe thermocouple diagnostic",
     "type": "object",

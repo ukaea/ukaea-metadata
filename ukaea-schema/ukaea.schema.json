@@ -1,5 +1,5 @@
 {
-    "$id": " https://w3id.org/fuel/schemas/1.0.0/ukaea",
+    "$id": "https://w3id.org/fuel/schemas/1.0.0/ukaea",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "description": "UKAEA top-level metadata schema",
     "type": "object",
