@@ -1,5 +1,5 @@
 {
-    "$id": "urn:ukaea:facility-schema",
+    "$id": "https://w3id.org/fuel/schemas/1.0.0/facility/facility",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "description": "Metadata schema for UKAEA facilities",
     "type": "object",
@@ -10,7 +10,6 @@
     "properties": {
         "facilityId": {
             "description": "A unique identifier for the facility.",
-            "type": "string",
             "enum": [
                 "HIVE",
                 "MAST-U"

@@ -1,5 +1,5 @@
 {
-    "$id": "urn:ukaea:facility:hive:experiment",
+    "$id": "https://w3id.org/fuel/schemas/1.0.0/facility/hive/experiment",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "description": "Metadata schema for a HIVE campaign",
     "type": "object",
@@ -48,7 +48,6 @@
             "format": "date-time"
         },
         "experimentType": {
-            "type": "string",
             "enum": [
                 "Induction",
                 "DC"
@@ -59,7 +58,7 @@
             "type": "boolean"
         },
         "pulse": {
-            "$ref": "./facility/hive/pulse.schema.json#"
+            "$ref": "https://w3id.org/fuel/schemas/1.0.0/facility/hive/pulse"
         }
     }
 }

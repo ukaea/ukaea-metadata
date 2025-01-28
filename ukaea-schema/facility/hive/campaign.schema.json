@@ -1,5 +1,5 @@
 {
-    "$id": "urn:ukaea:facility:hive:campaign",
+    "$id": "https://w3id.org/fuel/schemas/1.0.0/facility/hive/campaign",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "description": "Metadata schema for a HIVE campaign",
     "type": "object",

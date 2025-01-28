@@ -1,5 +1,5 @@
 {
-    "$id": "urn:ukaea:facility:hive:pulse",
+    "$id": "https://w3id.org/fuel/schemas/1.0.0/facility/hive/pulse",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "description": "Metadata schema for a HIVE pulse",
     "type": "object",
@@ -67,7 +67,6 @@
             "type": "string"
         },
         "pulseQuality": {
-            "type": "string",
             "enum": [
                 "Success",
                 "Fail"
@@ -78,7 +77,6 @@
             "required": [ "coolantType", "coolantFlow", "coolantTemperature", "coolantPressure" ],
             "properties": {
                 "coolantType": { 
-                    "type": "string",
                     "enum": [
                         "Water",
                         "Demineralised Water",
@@ -90,7 +88,6 @@
                     "required": [ "rate", "setpoint", "value", "variance" ],
                     "properties": {
                         "rate": {
-                            "type": "string",
                             "enum": [
                                 "High",
                                 "Low"
@@ -166,7 +163,6 @@
             "required": [ "currentType", "inputPower", "inputCurrent", "inputVoltage", "outputFrequency", "outputPower", "outputCurrent", "outputVoltage" ],
             "properties": {
                 "currentType": {
-                    "type": "string",
                     "enum": [ "AC", "DC" ]
                 },
                 "inputPower": {
@@ -202,7 +198,7 @@
         "diagnostics": {
             "type": "array",
             "items": {
-                "$ref": "./diagnostic.schema.json#"
+                "$ref": "https://w3id.org/fuel/schemas/1.0.0/facility/hive/diagnostic"
             },
             "$comment": "diagnostic.schema.json is within HIVE directory, not to be confused with toplevel"
         }
