@@ -1,23 +1,68 @@
 {
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "urn:ukaea:experiment:hive:diagnostics:cpf-schema",
-    "description": "Metadata to describe cpf-field",
-    "type": "object",
-    "properties": {
-        "shotAbort": {"type":  "number", "description": "Shot aborted for MAST and MAST-U"},
-        "shotCreationDate": {"type": "datetime", "description": "(Shot metdata) data dictionary entry creation date for MAST and MAST-U"},
-        "shotExperimentDate": {"type": "datetime", "description": "MAST shot experiment pulse date for MAST and MAST-U"},
-        "shotExperimentNumber": {"type": "integer", "description": "MAST shot experiment pulse number for MAST and MAST-U"},
-        "shotExperimentTime": {"type": "time", "description": "MAST shot experiment pulse time for MAST and MAST-U"},
-        "shotGlowDischargeDuration": {"type": "number", "description": "Shot glow discharge duration for both"},
-        "shotGlowDischargeTime": {"type": "number", "description": "Shot glow discharge time for both"},
-        "shotObjective": {"type": "string", "description": "Shot Scientific Objective for MAST and MAST-U"},
-        "shotPhysicist": {"type": "string", "description": "(Shot) physicist in charge for MAST and MAST-U"},
-        "shotPostshotComment": {"type": "string", "description": "Session Leaders Post-Shot Comment for MAST and MAST-U"},
-        "shotPreshotComment": {"type": "string", "description": "Session Leaders Pre-Shot Comment for MAST and MAST-U"},
-        "shotProgram": {"type": "string", "description": "(Shot) Scientific Program for MAST and MAST-U"},
-        "shotPulseNumber": {"type": "number", "description": "(Ghot) MAST Experiment Pulse Number for MAST and MAST-U"},
-        "shotReference": {"type": "number", "description": "(Shot) Reference shot for MAST and MAST-U"},
-        "shotUseful": {"type": "number", "description": "Useful Shot for MAST and MAST-U"},
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ukaea:experiment:hive:diagnostics:cpf-schema",
+  "description": "Metadata to describe cpf-field",
+  "type": "object",
+  "properties": {
+    "shotAbort": {
+      "type": "number",
+      "description": "Shot aborted for MAST and MAST-U"
+    },
+    "shotCreationDate": {
+      "type": "datetime",
+      "description": "(Shot metdata) data dictionary entry creation date for MAST and MAST-U"
+    },
+    "shotExperimentDate": {
+      "type": "datetime",
+      "description": "MAST shot experiment pulse date for MAST and MAST-U"
+    },
+    "shotExperimentNumber": {
+      "type": "integer",
+      "description": "MAST shot experiment pulse number for MAST and MAST-U"
+    },
+    "shotExperimentTime": {
+      "type": "time",
+      "description": "MAST shot experiment pulse time for MAST and MAST-U"
+    },
+    "shotGlowDischargeDuration": {
+      "type": "number",
+      "description": "Shot glow discharge duration for both"
+    },
+    "shotGlowDischargeTime": {
+      "type": "number",
+      "description": "Shot glow discharge time for both"
+    },
+    "shotObjective": {
+      "type": "string",
+      "description": "Shot Scientific Objective for MAST and MAST-U"
+    },
+    "shotPhysicist": {
+      "type": "string",
+      "description": "(Shot) physicist in charge for MAST and MAST-U"
+    },
+    "shotPostshotComment": {
+      "type": "string",
+      "description": "Session Leaders Post-Shot Comment for MAST and MAST-U"
+    },
+    "shotPreshotComment": {
+      "type": "string",
+      "description": "Session Leaders Pre-Shot Comment for MAST and MAST-U"
+    },
+    "shotProgram": {
+      "type": "string",
+      "description": "(Shot) Scientific Program for MAST and MAST-U"
+    },
+    "shotPulseNumber": {
+      "type": "number",
+      "description": "(Ghot) MAST Experiment Pulse Number for MAST and MAST-U"
+    },
+    "shotReference": {
+      "type": "number",
+      "description": "(Shot) Reference shot for MAST and MAST-U"
+    },
+    "shotUseful": {
+      "type": "number",
+      "description": "Useful Shot for MAST and MAST-U"
     }
+  }
 }

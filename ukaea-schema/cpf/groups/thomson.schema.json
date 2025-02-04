@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ukaea:experiment:hive:diagnostics:cpf-schema",
+  "description": "Metadata to describe cpf-field",
+  "type": "object",
+  "properties": {
+    "thomsonDensityLineMaxCurrent": {
+      "type": "number",
+      "description": "(Thomson) Electron Density Line Integral at time of Peak Plasma Current for MAST and MAST-U",
+      "units": "qudt:PER-M2"
+    },
+    "thomsonMaxDensityLine": {
+      "type": "number",
+      "description": "(Thomson) Maximum Electron Density Line Integral observed by CO2 Interferometer for MAST and MAST-U"
+    },
+    "thomsonDensityLineRubyTime": {
+      "type": "number",
+      "description": "(Thomson) Electron Density Line Integral at time of Ruby TS for MAST only",
+      "units": "qudt:PER-M2"
+    },
+    "thomsonDensityMaxCurrent": {
+      "type": "number",
+      "description": "(Thomson) Core Electron Density (Nd.YAG) at time of Peak Current for MAST and MAST-U",
+      "units": "qudt:PER-M3"
+    },
+    "thomsonDensityMax": {
+      "type": "number",
+      "description": "(Thomson) Peak Core Electron Density (Nd.YAG) for MAST and MAST-U",
+      "units": "qudt:PER-M3"
+    },
+    "thomsonDensityRubyTime": {
+      "type": "number",
+      "description": "(Thomson) Core Electron Density (Nd.YAG) at time of Ruby TS for MAST only",
+      "units": "qudt:PER-M3"
+    },
+    "thomsonNe0RatLineAvgNe": {
+      "type": "number",
+      "description": "(Thomson) Ratio of ne0 to line average ne for MAST and MAST-U"
+    },
+    "thomsonLineAvgDensityCo2": {
+      "type": "number",
+      "description": "(Thomson) Mid-plane line average electron density from CO2 interferometer for MAST and MAST-U",
+      "units": "qudt:PER-M3"
+    },
+    "thomsonGreenwaldDensityLimit": {
+      "type": "number",
+      "description": "(Thomson) Greenwald Density Limit for MAST and MAST-U",
+      "unit": "qudt:N-PER-M3"
+    },
+    "thomsonGreenwaldRatLineAvgDensity": {
+      "type": "number",
+      "description": "(Thomson) Ratio of Greenwald density limit to mid-plane line averaged electron density for MAST and MAST-U"
+    },
+    "thomsonPressureMaxCurrent": {
+      "type": "number",
+      "description": "(Thomsom) Core Electron Pressure (Nd.YAG) at time of Peak Plasma Current for MAST and MAST-U",
+      "unit": "qudt:N-PER-M2"
+    },
+    "thomsonPressureMax": {
+      "type": "number",
+      "description": "(Thomsom) Maximum value of Core Electron Pressure (Nd.YAG) for MAST and MAST-U",
+      "unit": "qudt:N-PER-M2"
+    },
+    "thomsonPressureRubyTime": {
+      "type": "number",
+      "description": "(Thomsom) Core Electron Pressure (Nd.YAG) at time of Ruby TS for MAST only",
+      "unit": "qudt:N-PER-M2"
+    },
+    "thomsonRubyPressure": {
+      "type": "number",
+      "description": "(Thomsom) Ruby TS Core Electron Pressure for MAST only",
+      "unit": "qudt:N-PER-M2"
+    },
+    "thomsonRubyTime": {
+      "type": "number",
+      "description": "(Thomson) Ruby Thomson Scattering Time for MAST only",
+      "units":"qudt:S"
+    },
+    "thomsonMaxTempTime": {
+      "type": "number",
+      "description": "(Thomson) Time of Maximum Core Electron Temperature (from Nd.YAG TS) for MAST and MAST-U",
+      "units":"qudt:S"
+    }
+  }
+}
