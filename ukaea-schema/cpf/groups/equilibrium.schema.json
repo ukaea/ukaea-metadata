@@ -1,0 +1,32 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "urn:ukaea:experiment:hive:cpf-schema:equilibrium",
+    "description": "Metadata to describe equilibrium cpf-field",
+    "type": "object",
+    "properties": {
+      "equiLi2MaxCurrent": {
+        "type": "number",
+        "description": "(Equilibrium) li(2) at time of Peak Current for MAST and MAST-U"
+      },
+      "equiMaxLi2": {
+        "type": "number",
+        "description": "(Equilibrium) li(2) Maximum value for MAST and MAST-U"
+      },
+      "equiLi2RubyTime": {
+        "type": "number",
+        "description": "(Equilibrium) li(2) Maximum value for MAST and MAST-U"
+      },
+      "equiLi3MaxCurrent": {
+        "type": "number",
+        "description": "(Equilibrium) li(3) at time of Peak Current for MAST and MAST-U"
+      },
+      "equiMaxLi3": {
+        "type": "number",
+        "description": "(Equilibrium) li(3) Maximum value for MAST and MAST-U"
+      },
+      "equiLi3RubyTime": {
+        "type": "number",
+        "description": "(Equilibrium) li(3) at time of Ruby TS for MAST only"
+      }
+    }
+  }
