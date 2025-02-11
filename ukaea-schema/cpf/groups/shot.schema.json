@@ -26,11 +26,11 @@
     },
     "shotGlowDischargeDuration": {
       "type": "number",
-      "description": "Shot glow discharge duration for both"
+      "description": "Shot glow discharge duration for MAST and MAST-U"
     },
     "shotGlowDischargeTime": {
       "type": "number",
-      "description": "Shot glow discharge time for both"
+      "description": "Shot glow discharge time for MAST and MAST-U"
     },
     "shotObjective": {
       "type": "string",
@@ -63,6 +63,14 @@
     "shotUseful": {
       "type": "number",
       "description": "Useful Shot for MAST and MAST-U"
+    },
+    "shotSessionLeader": {
+      "type": "str",
+      "description": "(Shot) session leader for MAST and MAST-U"
+    },
+    "shotSummary": {
+      "type": "str",
+      "description": "session summary for MAST and MAST-U"
     }
   }
 }
