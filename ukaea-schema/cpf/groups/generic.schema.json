@@ -4,7 +4,7 @@
   "description": "Metadata to describe generic cpf-field",
   "type": "object",
   "properties": {
-    "genericMinorRadiusMaxCurrent": {
+    "genericMinorRadiusTmaxCurrent": {
       "type": "number",
       "description": "Minor radius at time of peak plasma current for MAST and MAST-U",
       "unit": "qudt:M"
@@ -14,12 +14,12 @@
       "description": "Maximum value of minor radius for MAST and MAST-U",
       "unit": "qudt:M"
     },
-    "genericMinorRadiusRuby": {
+    "genericMinorRadiusTruby": {
       "type": "number",
       "description": "Minor radius at time of Ruby TS for MAST only",
       "unit": "qudt:M"
     },
-    "genericPoloidalAreaMaxCurrent": {
+    "genericPoloidalAreaTmaxCurrent": {
       "type": "number",
       "description": "poloidal cross-sectional area at time of peak plasma current for MAST and MAST-U",
       "unit": "qudt:M2"
@@ -29,12 +29,12 @@
       "description": "Maximum Poloidal Cross-Sectional Area for MAST and MAST-U",
       "unit": "qudt:M2"
     },
-    "genericPoloidalAreaRuby": {
+    "genericPoloidalAreaTruby": {
       "type": "number",
       "description": "Poloidal Cross-Sectional Area at time of Ruby TS for MAST only",
       "unit": "qudt:M2"
     },
-    "genericBetaPoloidalMaxCurrent": {
+    "genericBetaPoloidalTmaxCurrent": {
       "type": "number",
       "description": "Beta poloidal at time of Peak Plasma Current for MAST and MAST-U"
     },
@@ -42,23 +42,23 @@
       "type": "number",
       "description": "Maximum Beta poloidal for MAST and MAST-U"
     },
-    "genericBetaPoloidalRubyTime": {
+    "genericBetaPoloidalTruby": {
       "type": "number",
       "description": "Beta poloidal at time of Ruby TS for MAST only"
     },
-    "genericBetaMaxCurrent": {
+    "genericBetaTmaxCurrent": {
       "type": "number",
       "description": "Beta at time of peak plasma current for MAST and MAST-U"
     },
-    "genericMaxBetaMaxCurrent": {
+    "genericMaxBetaTmaxCurrent": {
       "type": "number",
       "description": "Maximum beta at time of peak plasma current for MAST and MAST-U"
     },
-    "genericBetaRuby": {
+    "genericBetaTruby": {
       "type": "number",
       "description": "Beta at time of ruby TS for MAST only"
     },
-    "genericToroidalMaxCurrent": {
+    "genericToroidalTmaxCurrent": {
       "type": "number",
       "description": "Toroidal field strength at time of peak plasma current for MAST and MAST-U",
       "units": "qudt:T"
@@ -68,12 +68,12 @@
       "description": "Maximum Toroidal field strength for MAST and MAST-U",
       "units": "qudt:T"
     },
-    "genericToroidalRuby": {
+    "genericToroidalTruby": {
       "type": "number",
       "description": "Toroidal field strength at time of ruby TS for MAST only",
       "units": "qudt:T"
     },
-    "genericDtEnergyMaxCurrent": {
+    "genericDtEnergyTmaxCurrent": {
       "type": "number",
       "description": "rate of change of total stored energy at time of peak plasma current for MAST and MAST-U",
         "units": "qudt:W"
@@ -88,7 +88,7 @@
       "description": "rate of change of MHD stored energy at time of ruby TS for MAST only",
       "units": "qudt:W"
     },
-    "genericPlasmaElongationMaxCurrent": {
+    "genericPlasmaElongationTmaxCurrent": {
       "type": "number",
       "description": "Plasma Elongation at time of Peak Plasma Current for MAST and MAST-U"
     },
@@ -96,7 +96,7 @@
       "type": "number",
       "description": "Maximum value of Plasma Elongation for MAST and MAST-U"
     },
-    "genericPlasmaElongationRuby": {
+    "genericPlasmaElongationTruby": {
       "type": "number",
       "description": "Plasma Elongation at time of Ruby TS for MAST only"
     },
@@ -110,12 +110,12 @@
       "description": "Maximum Total Radiated Power Loss for MAST and MAST-U",
       "units": "qudt:W"
     },
-    "genericPowerLossRuby": {
+    "genericPowerLossTruby": {
       "type": "number",
       "description": "Total Radiated Power Loss at time of Ruby TS for MAST only",
       "units": "qudt:W"
     },
-    "genericQ95MaxCurrent": {
+    "genericQ95TmaxCurrent": {
       "type": "number",
       "description": "q-95 at time of Peak Plasma Current for MAST and MAST-U"
     },
@@ -123,7 +123,7 @@
       "type": "number",
       "description": "Minimum value of q-95 for MAST and MAST-U"
     },
-    "genericQ95Ruby": {
+    "genericQ95Truby": {
       "type": "number",
       "description": "q-95 at time of Ruby TS"
     },
@@ -137,22 +137,22 @@
       "description": "Maximum value of Geometrical Center Major Radius for MAST and MAST-U",
       "units": "qudt:M"
     },
-    "genericGeoRadiusRuby": {
+    "genericGeoRadiusTruby": {
       "type": "number",
       "description": "geometrical Center Major Radius at time of Ruby TS for MAST and MAST-U",
       "units": "qudt:M"
     },
-      "genericTotalSareaMaxCurrent": {
-      "type": "number",
-      "description": "Total Surface Area at time of Peak Plasma Current for MAST and MAST-U",
-      "units": "qudt:M2"
+    "genericTotalSareaTmaxCurrent": {
+    "type": "number",
+    "description": "Total Surface Area at time of Peak Plasma Current for MAST and MAST-U",
+    "units": "qudt:M2"
     },
     "genericMaxTotalSarea": {
       "type": "number",
       "description": "Maximum Total Surface Area for MAST and MAST-U",
       "units": "qudt:M2"
     },
-    "genericTotalSareaRuby": {
+    "genericTotalSareaTruby": {
       "type": "number",
       "description": "Total Surface Area at time of Ruby TS for MAST only",
       "units": "qudt:M2"
@@ -177,7 +177,7 @@
       "description": "Maximum value of Energy Confinement Time for MAST and MAST-U",
       "units": "qudt:SEC"
     },
-    "genericEnergyTimeRuby": {
+    "genericEnergyTimeTruby": {
       "type": "number",
       "description": "Energy Confinement Time at time of Ruby TS for MAST and MAST-U",
       "units": "qudt:SEC"
@@ -262,12 +262,12 @@
       "description": "Maximum Plasma Volume for MAST and MAST-U",
       "units": "qudt:M2"
     },
-    "genericPlasmaVolRuby": {
+    "genericPlasmaVolTruby": {
       "type": "number",
       "description": "Plasma Volume at time of Ruby TS for MAST only",
       "units": "qudt:M2"
     },
-    "genericEnergyCurrentMax": {
+    "genericEnergyTmaxCurrent": {
       "type": "number",
       "description": "Stored Energy at time of Peak Plasma Current for MAST and MAST-U",
       "units": "qudt:J"
@@ -277,12 +277,12 @@
       "description": "Maximum Stored Energy for MAST and MAST-U",
       "units": "qudt:J"
     },
-    "genericEnergyRuby": {
+    "genericEnergyTruby": {
       "type": "number",
       "description": "Stored Energy at time of Ruby TS for MAST only",
       "units": "qudt:J"
     },
-    "genericPlasmaZeffMaxCurrent": {
+    "genericPlasmaZeffTmaxCurrent": {
       "type": "number",
       "description": "Plasma Z-Effective at time of Peak Plasma Current for MAST and MAST-U"
     },
@@ -290,7 +290,7 @@
       "type": "number",
       "description": "Maximum Plasma Z-Effective for MAST and MAST-U"
     },
-    "genericPlasmaZeffRuby": {
+    "genericPlasmaZeffTruby": {
       "type": "number",
       "description": "Plasma Z-Effective at time of Ruby TS for MAST only"
     }

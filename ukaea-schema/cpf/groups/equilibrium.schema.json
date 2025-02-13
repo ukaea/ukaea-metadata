@@ -4,7 +4,7 @@
     "description": "Metadata to describe equilibrium cpf-field",
     "type": "object",
     "properties": {
-      "equiLi2MaxCurrent": {
+      "equiLi2TmaxCurrent": {
         "type": "number",
         "description": "li(2) at time of Peak Current for MAST and MAST-U"
       },
@@ -12,11 +12,11 @@
         "type": "number",
         "description": "li(2) Maximum value for MAST and MAST-U"
       },
-      "equiLi2RubyTime": {
+      "equiLi2Truby": {
         "type": "number",
-        "description": "li(2) Maximum value for MAST and MAST-U"
+        "description": "li(2) at time of Ruby TS for MAST only"
       },
-      "equiLi3MaxCurrent": {
+      "equiLi3TmaxCurrent": {
         "type": "number",
         "description": "li(3) at time of Peak Current for MAST and MAST-U"
       },
@@ -24,7 +24,7 @@
         "type": "number",
         "description": "li(3) Maximum value for MAST and MAST-U"
       },
-      "equiLi3RubyTime": {
+      "equiLi3Truby": {
         "type": "number",
         "description": "li(3) at time of Ruby TS for MAST only",
         "unit": "qudt:SEC"  

@@ -188,7 +188,7 @@
         "type": "number",
         "description": "Shot sequence number for MAST only"
       },
-      "mcsPshotGdcTime": {
+      "mcsPreshotGdcTime": {
         "type": "number",
         "description": "Pre-Shot GDC duration for MAST only"
       },
@@ -208,7 +208,7 @@
         "type": "number",
         "description": "Inboard Gas Puff Duration for MAST only"
       },
-      "mcsP2xo": {
+      "mcsP2xoMode": {
         "type": "number",
         "description": "Param mim430 - P2XO Mode (P2 Reversing Switch Mode: 0= +ve only, 1= -ve only, 2= +ve => -ve, 3= -ve => +ve) for MAST only"
       },
