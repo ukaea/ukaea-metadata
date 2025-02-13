@@ -4,40 +4,45 @@
   "description": "Metadata to describe cpf-field",
   "type": "object",
   "properties": {
-    "ohmnicEnergyMaxCurrent": {
+    "ohmicEnergyMaxCurrent": {
       "type": "number",
       "description": "Ohmic Heating Energy Input at time of Peak Current for MAST and MAST-U",
       "units": "qudt:MegaJ"
     },
-    "ohmnicEnergyMaxHeating": {
+    "ohmicEnergyMaxHeating": {
       "type": "number",
       "description": "Ohmic Heating Energy Input at time of Maximum Ohmic Heating for MAST and MAST-U",
       "units": "qudt:MegaJ"
     },
-    "ohmnicEnergyTotal": {
+    "ohmicTotalEnergy": {
       "type": "number",
       "description": "Total Ohmic Heating Energy Input for MAST and MAST-U",
       "units": "qudt:MegaJ"
     },
-    "ohmnicEnergyRubyTime": {
+    "ohmicEnergyRuby": {
       "type": "number",
       "description": "Ohmic Heat Energy Input at time of Ruby TS for MAST only",
       "units": "qudt:MegaJ"
     },
-    "ohmnicHeatingMaxCurrent": {
+    "ohmicHeatingMaxCurrent": {
       "type": "number",
       "description": "Ohmic Heating Rate at time of Peak Current for MAST and MAST-U",
       "units": "qudt:MegaW"
     },
-    "ohmnicMaxHeating": {
+    "ohmicMaxHeating": {
       "type": "number",
       "description": "Maximum Ohmic Heating Rate for MAST and MAST-U",
       "units": "qudt:MegaW"
     },
-    "ohmnicHeatingRubyTime": {
+    "ohmicHeatingRuby": {
       "type": "number",
       "description": "Ohmic Heating Rate at time of Ruby TS for MAST only",
       "units": "qudt:MegaW"
+    },
+    "ohmicMaxHeatingTime": {
+      "type": "number",
+      "description": "Time of Maximum Ohmic Heating for MAST and MAST-U",
+      "units": "qudt:SEC"
     }
   }
 }

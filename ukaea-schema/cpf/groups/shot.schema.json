@@ -24,13 +24,15 @@
       "type": "time",
       "description": "MAST shot experiment pulse time for MAST and MAST-U"
     },
-    "shotGlowDischargeDuration": {
+    "shotGdcDuration": {
       "type": "number",
-      "description": "Shot glow discharge duration for MAST and MAST-U"
+      "description": "Shot glow discharge duration for MAST and MAST-U",
+      "units": "None"
     },
-    "shotGlowDischargeTime": {
+    "shotGdcStartTime": {
       "type": "number",
-      "description": "Shot glow discharge time for MAST and MAST-U"
+      "description": "Shot glow discharge start time for MAST and MAST-U",
+      "units": "None"
     },
     "shotObjective": {
       "type": "string",
@@ -60,17 +62,23 @@
       "type": "number",
       "description": "(Shot) Reference shot for MAST and MAST-U"
     },
-    "shotUseful": {
-      "type": "number",
-      "description": "Useful Shot for MAST and MAST-U"
-    },
     "shotSessionLeader": {
       "type": "str",
       "description": "(Shot) session leader for MAST and MAST-U"
     },
     "shotSummary": {
       "type": "str",
-      "description": "session summary for MAST and MAST-U"
+      "description": "Session summary for MAST and MAST-U"
+    },
+    "shotTermCode": {
+      "type": "number",
+      "descripiton": "Plasma Termination Reason Code for MAST and MAST-U",
+      "units": "None"
+    },
+    "shotUseful": {
+      "type": "number",
+      "description": "Useful Shot for MAST and MAST-U",
+      "units": "None"
     }
   }
 }

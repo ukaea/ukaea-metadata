@@ -27,17 +27,17 @@
       "equiLi3RubyTime": {
         "type": "number",
         "description": "li(3) at time of Ruby TS for MAST only",
-        "units": "qudt:S"
+        "unit": "qudt:SEC"  
       },
       "equiMaxLi2Time": {
         "type": "number",
-        "description": "time of Maximum li(2) for MAST and MAST-U",
-        "units": "qudt:S"
+        "description": "Time of Maximum li(2) for MAST and MAST-U",
+        "unit": "qudt:SEC"  
       },
       "equiMaxLi3Time":{
         "type": "number",
-        "description": "time of Maximum li(3) for MAST and MAST-U",
-        "units": "qudt:S"
+        "description": "Time of Maximum li(3) for MAST and MAST-U",
+        "unit": "qudt:SEC"  
       }
     }
   }

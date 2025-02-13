@@ -7,12 +7,12 @@
     "gasColTempIn": {
       "type": "number",
       "units": "qudt:DEG_C",
-      "description": "(Gas) centre column inlet temperature for MAST only"
+      "description": "Centre column inlet temperature for MAST only"
     },
     "gasColTempOut": {
       "type": "number",
       "units": "qudt:DEG_C",
-      "description": "(Gas) centre column outlet temperature for MAST only"
+      "description": "Centre column outlet temperature for MAST only"
     },
     "gasInboardPressurePrePulse": {
       "type": "number",
@@ -20,11 +20,16 @@
     },
     "gasTg1PressurePreShot": {
       "type": "number",
-      "description": "(Gas) TG1 Base Pressure prior to Shot for MAST only"
+      "description": "TG1 Base Pressure prior to Shot for MAST only"
     },
     "gasPuffEndTime": {
       "type": "number",
       "description": "Inboard Gas Puff End Time for MAST only",
+      "unit": "qudt:SEC"
+    },
+    "gasPuffStartTime": {
+      "type": "number",
+      "description": "Inboard Gas Puff Start Time for MAST only",
       "unit": "qudt:SEC"
     }
   }
