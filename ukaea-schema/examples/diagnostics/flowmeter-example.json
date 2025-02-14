@@ -1,10 +1,12 @@
 {
-    "deviceId": "f47ac10b-58cc-4372-a567-0e02b2c3d479",
-    "make": "PhotonX Labs",
-    "model": "PX-500 Quantum Capture",
-    "partNumber": 12343,
-    "serialNumber": 4354556,
-    "flowRange": 12.9,
-    "flowmeterType": ""
-
+    "deviceInformation": {
+        "make": "Nixon",
+        "model": "NT13",
+        "serialNumber": "2942701",
+        "flowRange": {
+            "minimum": 8,
+            "maximum": 80
+        },
+        "flowmeterType": "Turbine"
+    }
 }

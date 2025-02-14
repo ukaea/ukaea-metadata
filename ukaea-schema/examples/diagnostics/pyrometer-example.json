@@ -1,10 +1,23 @@
 {
-    "deviceId": "f47ac10b-58cc-4372-a567-0e02b2c3d479",
-    "make": "PhotonX Labs",
-    "model": "PX-500 Quantum Capture",
-    "partNumber": 12343,
-    "serialNumber": 4354556,
-    "temperatureRange": 23.9,
-    "wavelengthRange": 12.1,
-    "aimingMethod": "camera"   
+    "deviceInformation": {
+        "make": "SensorTherm",
+        "model": "M322",
+        "serialNumber": "10319",
+        "temperatureRange": {
+            "minimum": 350,
+            "maximum": 1300
+        },
+        "spectralRange": {
+            "minimum": 1.45,
+            "maximum": 1.65
+        }
+    },
+    "deviceSettings": {
+        "emissivity": 0.45,
+        "framerate": 5
+    },
+    "location": {
+        "portID": "Port_1",
+        "viewportID": "VP_1"
+    }
 }
