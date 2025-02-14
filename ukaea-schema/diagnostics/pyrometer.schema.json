@@ -4,34 +4,78 @@
     "description": "Metadata to describe pyrometer diagnostics",
     "type": "object",
     "properties": {
-        "deviceId": {
-            "type": "string",
-            "example": "uuid?"
+        "deviceInformation": {
+            "type": "object",
+            "properties" : {
+                "make": {
+                    "type": "string"
+                },
+                "model": {
+                    "type": "string"
+                },
+                "serialNumber": {
+                    "type": "integer"
+                },
+                "spectralRange": {
+                    "type": "object",
+                    "properties": {
+                        "minimum": {
+                            "type": "number",
+                            "units": "qudt:MicroM"
+                        },
+                        "maximum": {
+                            "type": "number",
+                            "units": "qudt:MicroM"
+                        }
+                    },
+                    "required": ["minimum", "maximum"]
+                },
+                "temperatureRange": {
+                    "type": "object",
+                    "properties": {
+                        "minimum": {
+                            "type": "number",
+                            "units": "qudt:DEG_C"
+                        },
+                        "maximum": {
+                            "type": "number",
+                            "units": "qudt:DEG_C"
+                        }
+                    },
+                    "required": ["minimum", "maximum"]
+                }
+            },
+            "required": ["make", "model", "serialNumber",  
+            "temperatureRange", "spectralRange"]
         },
-        "make": {
-            "type": "string"
+        "deviceSettings": {
+            "type": "object",
+            "properties": {
+                "emissivity": {
+                    "type": "number"
+                },
+                "framerate": {
+                    "type": "number",
+                    "units": "qudt:HZ"
+                }
+            },
+            "required": ["emissivity", "framerate"]
         },
-        "model": {
-            "type": "string"
-        },
-        "partNumber": {
-            "type": "integer"
-        },
-        "serialNumber": {
-            "type": "integer"
-        },
-        "temperatureRange": {
-            "type": "number",
-            "unit": "qudt:DEG_C"
-        },
-        "wavelengthRange": {
-            "type": "number",
-            "unit": "qudt:M"
-        },
-        "aimingMethod": {
-            "enum": ["camera", "laser"]
+        "location": {
+            "type": "object",
+            "properties": {
+                "type": "object",
+                "properties": {
+                    "portID": {
+                        "type": "str"
+                    },
+                    "viewportID": {
+                        "type": "str"
+                    }
+                },
+                "required": ["portID", "viewportID"]
+            }
         }
-    }, 
-    "required": ["deviceId", "make", "model", "partNumber", "serialNumber", 
-                "temperatureRange", "wavelengthRange", "aimingMethod"] 
+    },
+    "required": ["deviceInformation", "deviceSettings", "location"]
 }

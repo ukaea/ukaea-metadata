@@ -5,45 +5,35 @@
     "type": "object",
     "required": [ "insertRequired" ],
     "properties": {
-        "status": {
-            "type": "string",
-            "description": "[-]",
-            "example": "Active / Failed before test"
-        },
-        "attachment": {
-            "type": "string",
-            "description": "[-]",
-            "example": "spot weld with inert gas shield"
-        },
-        "tcType": {
-            "type": "string",
-            "description": "[-]",
-            "example": "K"
-        },
-        "location": {
-            "type": "array",
-            "description": "[X,Y,Z] [mm]",
-            "example": [18.065, 2.355, 23.0],
-            "items": {
-                "type": "number"
+        "deviceInformation": {
+            "type": "object",
+            "properties": {
+                "required": ["insertRequired"],
+                "attachmentType": {
+                    "type": "string",
+                    "description": "[-]",
+                    "example": "spot weld with inert gas shield"
+                },
+                "tcType": {
+                    "type": "string",
+                    "description": "[-]",
+                    "example": "K"
+                }
             },
-            "minItems": 3,
-            "maxItems": 3
-        },
-        "areaType": {
-            "type": "string",
-            "description": "[-]",
-            "example": "Circular"
-        },
-        "circleDiameter": {
-            "type": "number",
-            "description": "[mm]",
-            "example": 1.31
-        },
-        "noiseFloor": {
-            "type": "string",
-            "description": "[-]",
-            "example": "not captured - assume standard resolution"
+            "deviceSetup": {
+                "required": ["insertRequired"],
+                "type": "object",
+                "properties": {
+                    "dataChannel": {
+                        "type": "str",
+                        "descripiton": "[-]"
+                    },
+                    "location": {
+                        "type": "str",
+                        "descripiton": "[-]"
+                    }
+                }
+            }
         }
     }
 }

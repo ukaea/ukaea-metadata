@@ -4,29 +4,38 @@
     "description": "Metadata to describe flowmeter diagnostics",
     "type": "object",
     "properties": {
-        "deviceId": {
-            "type": "string",
-            "example": "uuid?"
-        },
-        "make": {
-            "type": "string"
-        },
-        "model": {
-            "type": "string"
-        },
-        "partNumber": {
-            "type": "integer"
-        },
-        "serialNumber": {
-            "type": "integer"
-        },
-        "flowRange": {
-            "type": "number"
-        },
-        "flowmeterType": {
-            "type": "string"
+        "deviceInformation": {
+            "type": "object",
+            "properties" : {
+                "make": {
+                    "type": "string"
+                },
+                "model": {
+                    "type": "string"
+                },
+                "serialNumber": {
+                    "type": "integer"
+                },
+                "flowRange": {
+                    "type": "object",
+                    "properties": {
+                        "minimum": {
+                            "type": "number",
+                            "units": "qudt:MicroM"
+                        },
+                        "maximum": {
+                            "type": "number",
+                            "units": "qudt:MicroM"
+                        }
+                    },
+                    "required": ["minimum", "maximum"]
+                },
+                "flowmeterType": {
+                    "type": "str"
+                }
+            },
+            "required": ["make", "model", "serialNumber",
+                            "flowRange, flowmeterType"]
         }
-    },
-    "required": ["deviceId", "make", "model", "partNumber", "serialNumber", 
-                "flowRange", "flowmeterType"] 
+    }
 }
