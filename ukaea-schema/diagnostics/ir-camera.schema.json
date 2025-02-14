@@ -1,0 +1,94 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "urn:ukaea:experiment:hive:diagnostics:ir-camera-schema",
+    "description": "Metadata to describe ir-camera diagnostics",
+    "type": "object",
+    "properties": {
+        "deviceInformation": {
+            "type": "object",
+            "properties":{
+                "make": {
+                    "type": "string"
+                },
+                "model": {
+                    "type": "string"
+                },
+                "serialNumber": {
+                    "type": "integer"
+                },
+                "resolution": {
+                    "resolutionX": {
+                        "type": "integer",
+                        "units": "qudt:px",
+                        "description": "The camera resolution in pixels, represented as width."
+                    },
+                    "resolutionY": {
+                        "type": "integer",
+                        "units": "qudt:px",
+                        "description": "The camera resolution in pixels, represented as height."
+                    }
+                },
+                "spectralRange": {
+                    "type": "object",
+                    "properties": {
+                        "minimum": {
+                            "type": "number",
+                            "units": "qudt:MicroM"
+                        },
+                        "maximum": {
+                            "type": "number",
+                            "units": "qudt:MicroM"
+                        }
+                    },
+                    "required": ["minimum", "maximum"]
+                },
+                "temperatureRange": {
+                    "type": "object",
+                    "properties": {
+                        "minimum": {
+                            "type": "number",
+                            "units": "qudt:DEG_C"
+                        },
+                        "maximum": {
+                            "type": "number",
+                            "units": "qudt:DEG_C"
+                        }
+                    },
+                    "required": ["minimum", "maximum"]
+                },
+            "required": ["make", "model", "resolutionX",
+                          "resolutionY", "serialNumber",
+                        "spectralRange", "temperatureRange"]
+        },
+        "deviceSettings": {
+            "type": "object",
+            "properties": {
+                "emissivity": {
+                    "type": "number"
+                },
+                "framerate": {
+                    "type": "number",
+                    "units": "qudt:HZ"
+                }
+            },
+            "required": ["emissivity", "framerate"]
+        },
+        "location": {
+            "type": "object",
+            "properties": {
+                "type": "object",
+                "properties": {
+                    "portID": {
+                        "type": "str"
+                    },
+                    "viewportID": {
+                        "type": "str"
+                    }
+                },
+                "required": ["portID", "viewportID"]
+            }
+        }
+    },
+    "required": ["deviceInformation", "deviceSettings", "location"]
+    }
+}

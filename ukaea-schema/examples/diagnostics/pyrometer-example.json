@@ -1,0 +1,23 @@
+{
+    "deviceInformation": {
+        "make": "SensorTherm",
+        "model": "M322",
+        "serialNumber": "10319",
+        "temperatureRange": {
+            "minimum": 350,
+            "maximum": 1300
+        },
+        "spectralRange": {
+            "minimum": 1.45,
+            "maximum": 1.65
+        }
+    },
+    "deviceSettings": {
+        "emissivity": 0.45,
+        "framerate": 5
+    },
+    "location": {
+        "portID": "Port_1",
+        "viewportID": "VP_1"
+    }
+}
