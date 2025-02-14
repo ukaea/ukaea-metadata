@@ -1,0 +1,36 @@
+
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ukaea:cpf-schema:cpf-field",
+  "description": "Metadata to describe cpf-fields",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "./groups/equilibrium.schema.json"
+    },
+    {
+      "$ref": "./groups/gas.schema.json"
+    },
+    {
+      "$ref": "./groups/generic.schema.json"
+    },
+    {
+      "$ref": "./groups/msc-setup.schema.json"
+    },
+    {
+      "$ref": "./groups/nbi.schema.json"
+    },
+    {
+      "$ref": "./groups/ohmnic.schema.json"
+    },
+    {
+      "$ref": "./groups/radii.schema.json"
+    },
+    {
+      "$ref": "./groups/shot.schema.json"
+    },
+    {
+      "$ref": "./groups/thomson.schema.json"
+    }
+  ]
+}

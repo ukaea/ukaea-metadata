@@ -1,0 +1,369 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "urn:ukaea:experiment:hive:diagnostics:cpf-schema",
+    "description": "Metadata to describe cpf-field",
+    "type": "object",
+    "properties": {
+      "mcsGdcPreShot": {
+        "type": "number",
+        "description": "GDC completed prior to shot for MAST only"
+      },
+      "mcsSelectGasGroupPv1": {
+        "type": "number",
+        "description": "select gas group 1 for MAST only"
+      },
+      "mcsSelectGasGroupPv2": {
+        "type": "number",
+        "description": "select gas group 2 for MAST only"
+      },
+      "mcsSelectGasGroupPv3": {
+        "type": "number",
+        "description": "select gas group 3 for MAST only"
+      },
+      "mcsSelectGasGroupPv4": {
+        "type": "number",
+        "description": "select gas group 4 for MAST only"
+      },
+      "mcsSelectGasGroupPv5": {
+        "type": "number",
+        "description": "select gas group 5 for MAST only"
+      },
+      "mcsSelectGasGroupPv6": {
+        "type": "number",
+        "description": "select gas group 6 for MAST only"
+      },
+      "mcsSelectGasGroupPv7": {
+        "type": "number",
+        "description": "select gas group 7 for MAST only"
+      },
+      "mcsSelectGasGroupPv8": {
+        "type": "number",
+        "description": "select gas group 8 for MAST only"
+      },
+      "mcsSelectGasGroupPv9": {
+        "type": "number",
+        "description": "select gas group 9 for MAST only"
+      },
+      "mcsSelectLvpsTfPowerSupply": {
+        "type": "number",
+        "description": "select TF power supply for MAST only"
+      },
+      "mcsSelectCp3sStartBank": {
+        "type": "number",
+        "description": "select P3 start bank for MAST only"
+      },
+      "mcsSelectFa1": {
+        "type": "number",
+        "description": "Select FA1 for MAST only"
+      },
+      "mcsSelectFa2": {
+        "type": "number",
+        "description": "Select FA2 for MAST only"
+      },
+      "mcsSelectMfps": {
+        "type": "number",
+        "description": "Select MFPS for MAST only"
+      },
+      "mcsSelectEfps": {
+        "type": "number",
+        "description": "Select EFPS for MAST only"
+      },
+      "mcsSelectSfps": {
+        "type": "number",
+        "description": "Select SFPS for MAST only"
+      },
+      "mcsSelectScs4": {
+        "type": "number",
+        "description": "Select SCS4 for MAST only"
+      },
+      "mcsSelectFa3": {
+        "type": "number",
+        "description": "Select FA3 for MAST only"
+      },
+      "mcsSelectFa4": {
+        "type": "number",
+        "description": "Select FA4 for MAST only"
+      },
+      "mcsSelectP1ps": {
+        "type": "number",
+        "description": "Select P1Ps for MAST only"
+      },
+      "mcsSelectCp3cCounterpulseBank": {
+        "type": "number",
+        "description": "select P3 counterpulse bank for MAST only"
+      },
+      "mcsSelectCp4StartBank": {
+        "type": "number",
+        "description": "select P4 start bank for MAST only"
+      },
+      "mcsSelectCp5StartBank": {
+        "type": "number",
+        "description": "select P3 start bank for MAST only"
+      },
+      "mcsSelectP3p": {
+        "type": "number",
+        "description": "select Siemens & GEC switches for P3 plasma Initiation for MAST only"
+      },
+      "mcsSelectP4": {
+        "type": "number",
+        "description": "select P4 Ignitron and Thyristor circuit for MAST only"
+      },
+      "mcsSelectP5": {
+        "type": "number",
+        "description": "select P5 Ignitron and Thyristor circuit for MAST only"
+      },
+      "mcsSelectEcrh": {
+        "type": "number",
+        "description": "Select ECRH for MAST only"
+      },
+      "mcsSelectXmmOs9": {
+        "type": "number",
+        "description": "Select XMM OS9 (Flags a Critical DATACQ System,causes shot to Abort if not ready) for MAST only"
+      },
+      "mcsSelectXpcOs9": {
+        "type": "number",
+        "description": "Select XPC OS9 for MAST only"
+      },
+      "mcsSelectXcmOs9": {
+        "type": "number",
+        "description": "Select XCM OS9 for MAST only"
+      },
+      "mcsSelectXmwOs9": {
+        "type": "number",
+        "description": "Select XMW OS9 for MAST only"
+      },
+      "mcsSelectXmaOs9": {
+        "type": "number",
+        "description": "Select XMA OS9 for MAST only"
+      },
+      "mcsSsNbiGas": {
+        "type": "number",
+        "description": "MCS_SS_NBI_gas_species for MAST only"
+      },
+      "mcsSwNbiGasMcs": {
+        "type": "number",
+        "description": "MCS_SW_NBI_gas_species for MAST only"
+      },
+      "mcsCp3sVolt": {
+        "type": "number",
+        "description": "CP3 set volts for MAST only"
+      },
+      "mcsCp3cVolt": {
+        "type": "number",
+        "description": "CP3c Set Volts for MAST only"
+      },
+      "mcsCp4sVolt": {
+        "type": "number",
+        "description": "CP4 set volts for MAST only"
+      },
+      "mcsCp5sVolt": {
+        "type": "number",
+        "description": "CP5 set volts for MAST only"
+      },
+      "mcsAdditiveGasPressure": {
+        "type": "number",
+        "description": "Additive gas pressure of main fueling plenum for MAST only"
+      },
+      "mcsPlenumGasPressure": {
+        "type": "number",
+        "description": "Latest gas pressure of main fueling plenum for MAST only"
+      },
+      "mcsTg1BasePressure": {
+        "type": "number",
+        "description": "TG1 Base Pressure for MAST only"
+      },
+      "mcsP3Direction": {
+        "type": "number",
+        "description": "P3 Direction Monitored state of Polarity-reversing/isolation switches for MAST only"
+      },
+      "mcsP4Direction": {
+        "type": "number",
+        "description": "P4 direction: 1= Normal Direction (Positive Ip), 3= Open Circuit for MAST only"
+      },
+      "mcsP5Direction": {
+        "type": "number",
+        "description": "P5 direction: 2= Reverse Direction (Positive Ip) for MAST only"
+      },
+      "mcsSsNumber": {
+        "type": "number",
+        "description": "Shot sequence number for MAST only"
+      },
+      "mcsPshotGdcTime": {
+        "type": "number",
+        "description": "Pre-Shot GDC duration for MAST only"
+      },
+      "mcsGdcStartTime": {
+        "type": "number",
+        "description": "Last GDC start time for MAST only"
+      },
+      "mcsGasPuffPressure": {
+        "type": "number",
+        "description": "Inboard Gas Puff Pressure for MAST only"
+      },
+      "mcsGasPuffStartTime": {
+        "type": "number",
+        "description": "Inboard Gas Puff Start Time Relative to 10s for MAST only"
+      },
+      "mcsGasPuffDuration": {
+        "type": "number",
+        "description": "Inboard Gas Puff Duration for MAST only"
+      },
+      "mcsP2xo": {
+        "type": "number",
+        "description": "Param mim430 - P2XO Mode (P2 Reversing Switch Mode: 0= +ve only, 1= -ve only, 2= +ve => -ve, 3= -ve => +ve) for MAST only"
+      },
+      "mcsP2xoStartForward": {
+        "type": "number",
+        "description": "Param mim430 - P2XO Start Forward (Offset by 5s: enable +ve polarity at time-5s) for MAST only"
+      },
+      "mcsP2xoStartReverse": {
+        "type": "number",
+        "description": "Param mim430 - P2XO Start Reverse (Enable -ve polarity at 5s + time) for MAST only"
+      },
+      "mcsTfFlatTopValue": {
+        "type": "number",
+        "description": "Param mim421 - TF Flat Top set value (Tesla @ R=0.7m) for MAST only"
+      },
+      "mcsTfFlatTopTime": {
+        "type": "number",
+        "description": "Param mim421 - TF Flat Top set time for MAST only"
+      },
+      "mcsTfRiseTimeValue": {
+        "type": "number",
+        "description": "Param mim421 - TF Rise Time set value for MAST only"
+      },
+      "mcsPlasmaDirection": {
+        "type": "number",
+        "description": "(MCS  Setup) Plasma Direction (1.0 => Positive: Dervived from P3/P4/P5 switch settings (P15659-P15661)) for MAST only"
+      },
+      "mcsP2Config": {
+        "type": "number",
+        "description": "Required P2 Linkboard config number (must match setting in PLC) for MAST only"
+      },
+      "mcsCp3sStartTime": {
+        "type": "number",
+        "description": "CP3s start time (Offset by 5s) for MAST only"
+      },
+      "mcsCp3cStartTime": {
+        "type": "number",
+        "description": "CP3c start time (Offset by 5s) for MAST only"
+      },
+      "mcsCp4StartTime": {
+        "type": "number",
+        "description": "CP4 start time (Offset by 5s) for MAST only"
+      },
+      "mcsP4IgnitronStartTime": {
+        "type": "number",
+        "description": "Close P4 circuit ignitron start time (Offset by 5s) for MAST only"
+      },
+      "mcsP4ThyristorStartTime": {
+        "type": "number",
+        "description": "P4 Circuit thyristor start time (Offset by 5s) for MAST only"
+      },
+      "mcsCp5StartTime": {
+        "type": "number",
+        "description": "CP5 Start time (Offset by 5s) for MAST only"
+      },
+      "mcsP5IgnitronStartTime": {
+        "type": "number",
+        "description": "P5 ignitron start time (Offset by 5s) for MAST only"
+      },
+      "mcsP5ThyristorStartTime": {
+        "type": "number",
+        "description": "P5 thyristor start time (Offset by 5s) for MAST only"
+      },
+      "mcsMfpsCurrentLimit": {
+        "type": "number",
+        "description": "MFPS Power supply current limit for MAST only"
+      },
+      "mcsMfpsStartTime": {
+        "type": "number",
+        "description": "MFPS set enable start time (Offset by 5s) for MAST only"
+      },
+      "mcsEfpsCurrentLimit": {
+        "type": "number",
+        "description": "EFPS Power supply current limit for MAST only"
+      },
+      "mcsEfpsStartTime": {
+        "type": "number",
+        "description": "EFPS set enable start time (Offset by 5s) for MAST only"
+      },
+      "mcsSfpsCurrentLimit": {
+        "type": "number",
+        "description": "SFPS power supply current limit for MAST only"
+      },
+      "mcsSfpsStartTime": {
+        "type": "number",
+        "description": "SFPS set enable start time (Offset by 5s) for MAST only"
+      },
+      "mcsMfpsDuration": {
+        "type": "number",
+        "description": "MFPS enable duration for MAST only"
+      },
+      "mcsEfpsDuration": {
+        "type": "number",
+        "description": "EFPS enable duration for MAST only"
+      },
+      "mcsSfpsDuration": {
+        "type": "number",
+        "description": "SFPS enable duration for MAST only"
+      },
+      "mcsP1psPosCurrentLimit": {
+        "type": "number",
+        "description": "P1PS maximum positive current limit for MAST only"
+      },
+      "mcsP1psNegativeCurrentLimit": {
+        "type": "number",
+        "description": "P1PS maximum negative current limit for MAST only"
+      },
+      "mcsP1psStartTime": {
+        "type": "number",
+        "description": "P1PS enable start time (offset by 5s) for MAST only"
+      },
+      "mcsP1psDuration": {
+        "type": "number",
+        "description": "P1PS enable duration for MAST only"
+      },
+      "mcsFa1StartTime": {
+        "type": "number",
+        "description": "FA1 enable start time (offset by 5s) for MAST only"
+      },
+      "mcsFa1Duration": {
+        "type": "number",
+        "description": "FA1 enable duration for MAST only"
+      },
+      "mcsFa2StartTime": {
+        "type": "number",
+        "description": "FA2 enable start time (offset by 5s) for MAST only"
+      },
+      "mcsFa2Duration": {
+        "type": "number",
+        "description": "FA2 enable duration for MAST only"
+      },
+      "mcsFa3StartTime": {
+        "type": "number",
+        "description": "FA3 enable start time (offset by 5s) for MAST only"
+      },
+      "mcsFa3Duration": {
+        "type": "number",
+        "description": "FA3 enable duration for MAST only"
+      },
+      "mcsFa4StartTime": {
+        "type": "number",
+        "description": "FA4 enable start time (offset by 5s) for MAST only"
+      },
+      "mcsFa4Duration": {
+        "type": "number",
+        "description": "FA4 enable duration for MAST only"
+      },
+      "mcsScs4StartTime": {
+        "type": "number",
+        "description": "SCS4 enabled start time used by MBD for MAST only"
+      },
+      "mcsScs4Duration": {
+        "type": "number",
+        "description": "SCS4 enabled duration for MAST only"
+      }
+    }
+  }
+  

@@ -1,0 +1,158 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ukaea:experiment:hive:diagnostics:cpf-schema",
+  "description": "Metadata to describe cpf-field",
+  "type": "object",
+  "properties": {
+    "nbiEnergySsMaxPower": {
+      "type": "number",
+      "description": "Injection energy from SS beam at time of peak power for MAST and MAST-U",
+      "units": "qudt:MegaJ"
+    },
+    "nbiEnergySwMaxPower": {
+      "type": "number",
+      "description": "Injection energy from SW beam at time of peak power for MAST and MAST-U",
+      "units": "qudt:MegaJ"
+    },
+    "nbiInjectedEnergyMaxCurrent": {
+      "type": "number",
+      "description": "Injected energy from SS+SW beams at time of peak current for MAST and MAST-U",
+      "units": "qudt:MegaJ"
+    },
+    "nbiInjectedEnergySsMaxCurrent": {
+      "type": "number",
+      "description": "Injected energy from SS beams at time of peak current for MAST and MAST-U",
+      "units": "qudt:MegaJ"
+    },
+    "nbiInjectedEnergySwMaxCurrent": {
+      "type": "number",
+      "description": "Injected energy from SW beams at time of peak current for MAST and MAST-U",
+      "units": "qudt:MegaJ"
+    },
+    "nbiInjectedEnergyMaxPower": {
+      "type": "number",
+      "description": "Injected energy from SS+SW beams at time of peak power for MAST and MAST-U",
+      "units": "qudt:MegaJ"
+    },
+    "nbiTotalInjectedEnergy": {
+      "type": "number",
+      "description": "Total NBI injected energy from SS+SW beams for MAST and MAST-U",
+      "units": "qudt:MegaJ"
+    },
+    "nbiTotalInjectedEnergySs": {
+      "type": "number",
+      "description": "Total NBI Injected Energy from SS Beam for MAST and MAST-U",
+      "units": "qudt:MegaJ"
+    },
+    "nbiTotalInjectedEnergySw": {
+      "type": "number",
+      "description": "Total NBI Injected Energy from SW Beam for MAST and MAST-U",
+      "units": "qudt:MegaJ"
+    },
+    "nbiInjectedEnergyRuby": {
+      "type": "number",
+      "description": "Injected Energy from SS+SW Beams at time of Ruby TS for MAST only",
+      "units": "qudt:MegaJ"
+    },
+    "nbiInjectedEnergySsRuby": {
+      "type": "number",
+      "description": "NBI Injected Energy from SS Beam at time of Ruby TS for MAST only",
+      "units": "qudt:MegaJ"
+    },
+    "nbiInjectedEnergySwRuby": {
+      "type": "number",
+      "description": "Injected Energy from SW Beam at time of Ruby TS for MAST only",
+      "units": "qudt:MegaJ"
+    },
+    "nbiPowerMaxCurrent": {
+      "type": "number",
+      "description": "Power from SS+SW Beams at time of Peak Current for MAST and MAST-U",
+      "units": "qudt:MegaW"
+    },
+    "nbiPowerSsMaxCurrent": {
+      "type": "number",
+      "description": "Power from SS Beam at time of Peak Current for MAST and MAST-U",
+      "units": "qudt:MegaW"
+    },
+    "nbiPowerSwMaxCurrent": {
+      "type": "number",
+      "description": "Power from SW Beam at time of Peak Current for MAST and MAST-U",
+      "units": "qudt:MegaW"
+    },
+    "nbiPowerMaxPower": {
+      "type": "number",
+      "description": "Power from SS+SW Beams at time of Peak power for MAST and MAST-U",
+      "units": "qudt:MegaW"      
+    },
+    "nbiMaxPowerSs": {
+      "type": "number",
+      "description": "Peak NBI Power from SS Beam for MAST and MAST-U",
+      "units": "qudt:MegaW"
+    },
+    "nbiMaxPowerSw": {
+      "type": "number",
+      "description": "Peak NBI Power from SW Beam for MAST and MAST-U",
+      "units": "qudt:MegaW"
+    },
+    "nbiPowerRuby": {
+      "type": "number",
+      "description": "Power from SS+SW Beams at time of Ruby TS for MAST and MAST-U",
+      "units": "qudt:MegaW"
+    },
+    "nbiPowerRubySs": {
+      "type": "number",
+      "description": "Power from SS Beam at time of Ruby TS for MAST and MAST-U",
+      "units": "qudt:MegaW"
+    },
+    "nbiPowerRubySw": {
+      "type": "number",
+      "description": "Power from SW Beam at time of Ruby TS for MAST and MAST-U",
+      "units": "qudt:MegaW"
+    },
+    "nbiEndTime": {
+      "type": "number",
+      "descripiton": "Current end time for MAST and MAST-U",
+      "units": "qudt:SEC"
+    },
+    "nbiSsEndTime": {
+      "type": "number",
+      "descripiton": "SS end time for MAST and MAST-U",
+      "units": "qudt:SEC"
+    },
+    "nbiSwEndTime": {
+      "type": "number",
+      "descripiton": "SW end time for MAST and MAST-U",
+      "units": "qudt:SEC"
+    },
+    "nbiMaxPowerTime": {
+      "type": "number",
+      "description": "Time of Maximum NBI Power for MAST and MAST-U",
+      "units": "qudt:SEC"
+    },
+    "nbiMaxSsPowerTime": {
+      "type": "number",
+      "description": "Time of Maximum SS NBI Power for MAST and MAST-U",
+      "units": "qudt:SEC"
+    },
+    "nbiMaxSwPowerTime": {
+      "type": "number",
+      "description": "Time of Maximum SW NBI Power for MAST and MAST-U",
+      "units": "qudt:SEC"
+    },
+    "nbiStartTime": {
+      "type": "number",
+      "description": "Start Time for MAST and MAST-U",
+      "units": "qudt:SEC"
+    },
+    "nbiSsStartTime": {
+      "type": "number",
+      "description": "SS NBI Start Time for MAST and MAST-U",
+      "units": "qudt:SEC"
+    },
+    "nbiSwStartTime": {
+      "type": "number",
+      "description": "SW NBI Start Time for MAST and MAST-U",
+      "units": "qudt:SEC"
+    }
+  }
+}

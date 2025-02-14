@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ukaea:cpf-schema:gas",
+  "description": "Metadata to describe gas cpf-field",
+  "type": "object",
+  "properties": {
+    "gasColTempIn": {
+      "type": "number",
+      "units": "qudt:DEG_C",
+      "description": "Centre column inlet temperature for MAST only"
+    },
+    "gasColTempOut": {
+      "type": "number",
+      "units": "qudt:DEG_C",
+      "description": "Centre column outlet temperature for MAST only"
+    },
+    "gasInboardPressurePrePulse": {
+      "type": "number",
+      "description": "Inboard gas pressure prior to pulse for MAST only"
+    },
+    "gasTg1PressurePreShot": {
+      "type": "number",
+      "description": "TG1 Base Pressure prior to Shot for MAST only"
+    },
+    "gasPuffEndTime": {
+      "type": "number",
+      "description": "Inboard Gas Puff End Time for MAST only",
+      "unit": "qudt:SEC"
+    },
+    "gasPuffStartTime": {
+      "type": "number",
+      "description": "Inboard Gas Puff Start Time for MAST only",
+      "unit": "qudt:SEC"
+    }
+  }
+}
+
