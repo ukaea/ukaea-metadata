@@ -1,0 +1,12 @@
+{
+    "deviceInformation": {
+        "make": "Nixon",
+        "model": "NT13",
+        "serialNumber": "2942701",
+        "flowRange": {
+            "minimum": 8,
+            "maximum": 80
+        },
+        "flowmeterType": "Turbine"
+    }
+}

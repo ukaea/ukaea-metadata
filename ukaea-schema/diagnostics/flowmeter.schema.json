@@ -1,0 +1,41 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "urn:ukaea:experiment:hive:diagnostics:flowmeter-schema",
+    "description": "Metadata to describe flowmeter diagnostics",
+    "type": "object",
+    "properties": {
+        "deviceInformation": {
+            "type": "object",
+            "properties" : {
+                "make": {
+                    "type": "string"
+                },
+                "model": {
+                    "type": "string"
+                },
+                "serialNumber": {
+                    "type": "integer"
+                },
+                "flowRange": {
+                    "type": "object",
+                    "properties": {
+                        "minimum": {
+                            "type": "number",
+                            "units": "qudt:MicroM"
+                        },
+                        "maximum": {
+                            "type": "number",
+                            "units": "qudt:MicroM"
+                        }
+                    },
+                    "required": ["minimum", "maximum"]
+                },
+                "flowmeterType": {
+                    "type": "str"
+                }
+            },
+            "required": ["make", "model", "serialNumber",
+                            "flowRange, flowmeterType"]
+        }
+    }
+}
