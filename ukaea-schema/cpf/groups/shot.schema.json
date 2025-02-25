@@ -9,11 +9,13 @@
       "description": "Shot aborted for MAST and MAST-U"
     },
     "shotCreationDate": {
-      "type": "datetime",
+      "type": "string",
+      "format": "date-time",
       "description": "(Shot metdata) data dictionary entry creation date for MAST and MAST-U"
     },
     "shotExperimentDate": {
-      "type": "datetime",
+      "type": "string",
+      "format": "date-time",
       "description": "MAST shot experiment pulse date for MAST and MAST-U"
     },
     "shotExperimentNumber": {
@@ -21,7 +23,8 @@
       "description": "MAST shot experiment pulse number for MAST and MAST-U"
     },
     "shotExperimentTime": {
-      "type": "time",
+      "type": "string",
+      "format": "date-time",
       "description": "MAST shot experiment pulse time for MAST and MAST-U"
     },
     "shotGdcDuration": {
