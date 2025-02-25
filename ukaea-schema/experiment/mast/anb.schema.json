@@ -1,0 +1,297 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "anb",
+    "description": "Neutral Beam Injection data",
+    "type": "object",
+    "properties": {
+        "passnumber": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {}
+            }
+        },
+        "ss_full_power": {
+            "type": "object",
+            "description": "Calculated power, full energy fraction, south",
+            "units": {
+                "type": "string",
+                "const": "MW"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "ss_full_power_error": {
+            "type": "object",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "ss_half_power": {
+            "type": "object",
+            "description": "Calculated power, half energy fraction, south",
+            "units": {
+                "type": "string",
+                "const": "MW"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "ss_half_power_error": {
+            "type": "object",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "ss_sum_power": {
+            "type": "object",
+            "description": "Calculated total power injected into MAST, south",
+            "units": {
+                "type": "string",
+                "const": "MW"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "ss_sum_power_error": {
+            "type": "object",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "ss_third_power": {
+            "type": "object",
+            "description": "Calculated power, third energy fraction, south",
+            "units": {
+                "type": "string",
+                "const": "MW"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "ss_third_power_error": {
+            "type": "object",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "status": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {}
+            }
+        },
+        "sw_full_power": {
+            "type": "object",
+            "description": "Calculated power, full energy fraction, south west",
+            "units": {
+                "type": "string",
+                "const": "MW"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "sw_full_power_error": {
+            "type": "object",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "sw_half_power": {
+            "type": "object",
+            "description": "Calculated power, half energy fraction, south west",
+            "units": {
+                "type": "string",
+                "const": "MW"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "sw_half_power_error": {
+            "type": "object",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "sw_sum_power": {
+            "type": "object",
+            "description": "Calculated total power injected into MAST, south west",
+            "units": {
+                "type": "string",
+                "const": "MW"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "sw_sum_power_error": {
+            "type": "object",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "sw_third_power": {
+            "type": "object",
+            "description": "Calculated power, third energy fraction, south west",
+            "units": {
+                "type": "string",
+                "const": "MW"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "sw_third_power_error": {
+            "type": "object",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "tot_sum_power": {
+            "type": "object",
+            "description": "Summation of the power from both beams (XNB_SW_BEAM_CURRENT)",
+            "units": {
+                "type": "string",
+                "const": "MW"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "tot_sum_power_error": {
+            "type": "object",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        }
+    },
+    "required": [
+        "passnumber",
+        "ss_full_power",
+        "ss_full_power_error",
+        "ss_half_power",
+        "ss_half_power_error",
+        "ss_sum_power",
+        "ss_sum_power_error",
+        "ss_third_power",
+        "ss_third_power_error",
+        "status",
+        "sw_full_power",
+        "sw_full_power_error",
+        "sw_half_power",
+        "sw_half_power_error",
+        "sw_sum_power",
+        "sw_sum_power_error",
+        "sw_third_power",
+        "sw_third_power_error",
+        "tot_sum_power",
+        "tot_sum_power_error"
+    ]
+}

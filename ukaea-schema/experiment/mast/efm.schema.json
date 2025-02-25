@@ -1,0 +1,2282 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "efm",
+    "description": "Basic EFIT",
+    "type": "object",
+    "properties": {
+        "all_times": {
+            "type": "object",
+            "description": "All times of attempted reconstruction (time base A)",
+            "units": {
+                "type": "string",
+                "const": "s"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "areap_c": {
+            "type": "object",
+            "description": "Poloidal area enclosed by flux surface; f(psin, B)",
+            "units": {
+                "type": "string",
+                "const": "m ** 2"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "psi_norm": "number"
+                }
+            }
+        },
+        "betan": {
+            "type": "object",
+            "description": "Normalised beta, efm_betat * | plasma minor radius (m) *  vacuum toroidal B field at magnetic axis (T) / plasma current (MA) |; f(B)",
+            "units": {
+                "type": "string",
+                "const": "T"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "betap": {
+            "type": "object",
+            "description": "Poloidal beta, volume-averaged pressure * 2 * mu_0 / <Bp>^2, Bp = averaged poloidal B field around LCFS (T), mu_0*I_plasma/integral(dl); f(B)",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "betapd": {
+            "type": "object",
+            "description": "Poloidal beta computed using diamagnetic flux; f(B)",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "betat": {
+            "type": "object",
+            "description": "Toroidal beta, volume-averaged pressure * 2 * mu_0 / Bphi^2, Bphi = vacuum toroidal B field at magnetic axis (T); f(B)",
+            "units": {
+                "type": "string",
+                "const": "%"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "betatd": {
+            "type": "object",
+            "description": "Toroidal beta computed using diamagnetic flux; f(B)",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "bphi_rgeom": {
+            "type": "object",
+            "description": "Toroidal B field (total) at geometric axis; f(B)",
+            "units": {
+                "type": "string",
+                "const": "T"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "bphi_rmag": {
+            "type": "object",
+            "description": "Toroidal B field (total) at magnetic axis; f(B)",
+            "units": {
+                "type": "string",
+                "const": "T"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "bphi_squared": {
+            "type": "object",
+            "description": "plasma volume integral of (total toroidal B field squared); f(B)",
+            "units": {
+                "type": "string",
+                "const": "T ** 2 * m ** 3"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "bpol_squared": {
+            "type": "object",
+            "description": "plasma volume integral of (total poloidal B field squared); f(B)",
+            "units": {
+                "type": "string",
+                "const": "T ** 2 * m ** 3"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "bvac_r": {
+            "type": "object",
+            "description": "Reference radius for efm_bvac_val; f(A)",
+            "units": {
+                "type": "string",
+                "const": "m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "bvac_rgeom": {
+            "type": "object",
+            "description": "Vacuum toroidal B field at geometric axis; f(B)",
+            "units": {
+                "type": "string",
+                "const": "T"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "bvac_rmag": {
+            "type": "object",
+            "description": "Vacuum toroidal B field at magnetic axis; f(B)",
+            "units": {
+                "type": "string",
+                "const": "T"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "bvac_val": {
+            "type": "object",
+            "description": "Reference vacuum toroidal B field at efm_bvac_r; f(A)",
+            "units": {
+                "type": "string",
+                "const": "T"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "chisq_magnetic": {
+            "type": "object",
+            "description": "Magnetic fit total chi-squared for each iteration; f(num_iterations, A)",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "n_iterations": "number"
+                }
+            }
+        },
+        "cm_bdry": {
+            "type": "object",
+            "description": "Normalised psi at detected boundary surface; f(B)",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "cnvrgd_times": {
+            "type": "object",
+            "description": "All times of converged reconstruction (time base B) - identical to EFM_TIME",
+            "units": {
+                "type": "string",
+                "const": "s"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "current_centrd_r": {
+            "type": "object",
+            "description": "R co-ordinate of current centroid; f(B)",
+            "units": {
+                "type": "string",
+                "const": "m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "current_centrd_z": {
+            "type": "object",
+            "description": "Z co-ordinate of current centroid; f(B)",
+            "units": {
+                "type": "string",
+                "const": "m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "cutip": {
+            "type": "object",
+            "description": "Plasma current cut-off; currents below this imply vacuum reconstruction",
+            "units": {
+                "type": "string",
+                "const": "A"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {}
+            }
+        },
+        "diamag_fluxc": {
+            "type": "object",
+            "description": "Output (computed) diamagnetic flux; f(B)",
+            "units": {
+                "type": "string",
+                "const": "Wb"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "diamag_fluxx": {
+            "type": "object",
+            "description": "Input (experimental) diamagnetic flux; f(A)",
+            "units": {
+                "type": "string",
+                "const": "Wb"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "elongation": {
+            "type": "object",
+            "description": "Elongation of LCFS; (Zmax-Zmin)/(Rmax-Rmin); f(B)",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "elongation_axis": {
+            "type": "object",
+            "description": "Limit of elongation at magnetic axis, from flux differentials; f(B)",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "elongpsi_c": {
+            "type": "object",
+            "description": "Elongation of flux surfaces; f(psin, B)",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "psi_norm": "number"
+                }
+            }
+        },
+        "fcoil_ang1": {
+            "type": "object",
+            "description": "Defining angular skew of first type for each f-coil element; f(fcoil_segs_n)",
+            "units": {
+                "type": "string",
+                "const": "deg"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "fcoil_seg_n": "number"
+                }
+            }
+        },
+        "fcoil_ang2": {
+            "type": "object",
+            "description": "Defining angular skew of second type for each f-coil element; f(fcoil_segs_n)",
+            "units": {
+                "type": "string",
+                "const": "deg"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "fcoil_seg_n": "number"
+                }
+            }
+        },
+        "fcoil_c": {
+            "type": "object",
+            "description": "Output (computed) fitted toroidal currents; f(nfcoil, A)",
+            "units": {
+                "type": "string",
+                "const": "A"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "fcoil_n": "number"
+                }
+            }
+        },
+        "fcoil_chisq": {
+            "type": "object",
+            "description": "Chi-squared of each fitted f-coil; f(nfcoil, A)",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "fcoil_n": "number"
+                }
+            }
+        },
+        "fcoil_circ": {
+            "type": "object",
+            "description": "Circuit number of each f-coil element; f(fcoil_segs_n)",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "fcoil_seg_n": "number"
+                }
+            }
+        },
+        "fcoil_height": {
+            "type": "object",
+            "description": "Z extent of each f-coil element; f(fcoil_segs_n)",
+            "units": {
+                "type": "string",
+                "const": "m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "fcoil_seg_n": "number"
+                }
+            }
+        },
+        "fcoil_r": {
+            "type": "object",
+            "description": "R centroid of each f-coil element; f(fcoil_segs_n)",
+            "units": {
+                "type": "string",
+                "const": "m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "fcoil_seg_n": "number"
+                }
+            }
+        },
+        "fcoil_turns": {
+            "type": "object",
+            "description": "Number of turns represented by each f-coil elements; f(fcoil_segs_n)",
+            "units": {
+                "type": "string",
+                "const": "deg"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "fcoil_seg_n": "number"
+                }
+            }
+        },
+        "fcoil_width": {
+            "type": "object",
+            "description": "R extent of each f-coil element; f(fcoil_segs_n)",
+            "units": {
+                "type": "string",
+                "const": "m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "fcoil_seg_n": "number"
+                }
+            }
+        },
+        "fcoil_x": {
+            "type": "object",
+            "description": "Input (experimental) fitted toroidal currents; f(nfcoil, A)",
+            "units": {
+                "type": "string",
+                "const": "A"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "fcoil_n": "number"
+                }
+            }
+        },
+        "fcoil_xmult": {
+            "type": "object",
+            "description": "Multiplier for each f-coil element to weight current within coil, e.g. by area; f(fcoil_segs_n)",
+            "units": {
+                "type": "string",
+                "const": "deg"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "fcoil_seg_n": "number"
+                }
+            }
+        },
+        "fcoil_z": {
+            "type": "object",
+            "description": "Z centroid of each f-coil element; f(fcoil_segs_n)",
+            "units": {
+                "type": "string",
+                "const": "m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "fcoil_seg_n": "number"
+                }
+            }
+        },
+        "fcurbd": {
+            "type": "object",
+            "description": "ff' polynomial fit boundary condition; 1 for zero at psin=1, 0 for free",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {}
+            }
+        },
+        "ffprime": {
+            "type": "object",
+            "description": "ff' profile; f(npsi, B)",
+            "units": {
+                "type": "string",
+                "const": "T-rad"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "psi_norm": "number"
+                }
+            }
+        },
+        "ffprime_coefs": {
+            "type": "object",
+            "description": "Coefficients of ff' profile representation",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "ffprime_coefs_n": "number"
+                }
+            }
+        },
+        "final_chisq": {
+            "type": "object",
+            "description": "Total chi-squared of fit; f(A)",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "fpsi_c": {
+            "type": "object",
+            "description": "Poloidal current flux function, f=R*Bphi; f(psin, B)",
+            "units": {
+                "type": "string",
+                "const": "T-m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "psi_norm": "number"
+                }
+            }
+        },
+        "fwtbdry": {
+            "type": "object",
+            "description": "Fit weights for LCFS position constraint",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "fwtbp": {
+            "type": "object",
+            "description": "Flag to make p' and ff' proportional",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {}
+            }
+        },
+        "fwtfc": {
+            "type": "object",
+            "description": "f-coil circuit fit weights; f(fcoil_n)",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "fcoil_n": "number"
+                }
+            }
+        },
+        "fwtmp": {
+            "type": "object",
+            "description": "Magnetic detector fit weights; f(magpr_n)",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "mag_probe_n": "number"
+                }
+            }
+        },
+        "fwtsi": {
+            "type": "object",
+            "description": "Flux loop fit weights; f(silop_n)",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "psi_loop_n": "number"
+                }
+            }
+        },
+        "geom_axis_rc": {
+            "type": "object",
+            "description": "R of geometric axis of plasma; f(B)",
+            "units": {
+                "type": "string",
+                "const": "m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "geom_axis_zc": {
+            "type": "object",
+            "description": "Z of geometric axis of plasma; f(B)",
+            "units": {
+                "type": "string",
+                "const": "m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "gridr": {
+            "type": "object",
+            "description": "R grid for 2D outputs; f(nr)",
+            "units": {
+                "type": "string",
+                "const": "m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "r": "number"
+                }
+            }
+        },
+        "gridz": {
+            "type": "object",
+            "description": "Z grid for 2D outputs; f(nz)",
+            "units": {
+                "type": "string",
+                "const": "m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "z": "number"
+                }
+            }
+        },
+        "ip_times": {
+            "type": "object",
+            "description": "All times of attempted reconstruction for which plasma is present (time base C)",
+            "units": {
+                "type": "string",
+                "const": "s"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "irod": {
+            "type": "object",
+            "description": "Toroidal rod current; f(A)",
+            "units": {
+                "type": "string",
+                "const": "A-T"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "iteration_error": {
+            "type": "object",
+            "description": "Goodness of convergence criterion for each iteration; f(num_iterations, B)",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "n_iterations": "number"
+                }
+            }
+        },
+        "jr": {
+            "type": "object",
+            "description": "Toroidal plasma current density at Z=0 running from inboard to outboard in R; f(nr, B)",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "profile_r": "number"
+                }
+            }
+        },
+        "kffcur": {
+            "type": "object",
+            "description": "Number of ff' coefficients",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {}
+            }
+        },
+        "kfffnc": {
+            "type": "object",
+            "description": "ff' basis function type",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {}
+            }
+        },
+        "kppcur": {
+            "type": "object",
+            "description": "Number of p' coefficients",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {}
+            }
+        },
+        "kppfnc": {
+            "type": "object",
+            "description": "p' basis function type",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {}
+            }
+        },
+        "kwwcur": {
+            "type": "object",
+            "description": "Number of pw' coefficients",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {}
+            }
+        },
+        "kwwfnc": {
+            "type": "object",
+            "description": "pw' basis function type",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {}
+            }
+        },
+        "lcfs_length": {
+            "type": "object",
+            "description": "Length of poloidal cross-section of LCFS; f(B)",
+            "units": {
+                "type": "string",
+                "const": "m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "lcfs_r": {
+            "type": "object",
+            "description": "LCFS R coordinate values; f(nlcfs, B)",
+            "units": {
+                "type": "string",
+                "const": "m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "lcfs_coords": "number"
+                }
+            }
+        },
+        "lcfs_z": {
+            "type": "object",
+            "description": "LCFS Z coordinate values; f(nlcfs, B)",
+            "units": {
+                "type": "string",
+                "const": "m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "lcfs_coords": "number"
+                }
+            }
+        },
+        "lcfsn_c": {
+            "type": "object",
+            "description": "Number of LCFS coordinate points; f(B)",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "li": {
+            "type": "object",
+            "description": "Plasma internal inductance, vol avg (Bp^2) / surf avg (Bp)^2; f(B)",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "limiterr": {
+            "type": "object",
+            "description": "R co-ordinates of limiter; f(nlimiter)",
+            "units": {
+                "type": "string",
+                "const": "m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "limiter_n": "number"
+                }
+            }
+        },
+        "limiterz": {
+            "type": "object",
+            "description": "Z co-ordinates of limiter; f(nlimiter)",
+            "units": {
+                "type": "string",
+                "const": "m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "limiter_n": "number"
+                }
+            }
+        },
+        "magnetic_axis_r": {
+            "type": "object",
+            "description": "R co-ordinate of magnetic axis; f(B)",
+            "units": {
+                "type": "string",
+                "const": "m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "magnetic_axis_z": {
+            "type": "object",
+            "description": "Z co-ordinate of magnetic axis; f(B)",
+            "units": {
+                "type": "string",
+                "const": "m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "magpr_ang": {
+            "type": "object",
+            "description": "Defining angular skew of each magnetic field probe; f(magpr_n_n)",
+            "units": {
+                "type": "string",
+                "const": "deg"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "mag_probe_n": "number"
+                }
+            }
+        },
+        "magpr_c": {
+            "type": "object",
+            "description": "Output (computed) fitted magnetic field probes; f(magpr_n, A)",
+            "units": {
+                "type": "string",
+                "const": "T"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "mag_probe_n": "number"
+                }
+            }
+        },
+        "magpr_len": {
+            "type": "object",
+            "description": "Defining length of each magnetic field probe; f(magpr_n_n)",
+            "units": {
+                "type": "string",
+                "const": "m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "mag_probe_n": "number"
+                }
+            }
+        },
+        "magpr_r": {
+            "type": "object",
+            "description": "R of each magnetic field probe; f(magpr_n)",
+            "units": {
+                "type": "string",
+                "const": "m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "mag_probe_n": "number"
+                }
+            }
+        },
+        "magpr_x": {
+            "type": "object",
+            "description": "Input (experimental) fitted magnetic field probes; f(magpr_n, A)",
+            "units": {
+                "type": "string",
+                "const": "T"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "mag_probe_n": "number"
+                }
+            }
+        },
+        "magpr_z": {
+            "type": "object",
+            "description": "Z of each magnetic field probe; f(magpr_n)",
+            "units": {
+                "type": "string",
+                "const": "m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "mag_probe_n": "number"
+                }
+            }
+        },
+        "magpri_chisq": {
+            "type": "object",
+            "description": "Chi-squared of each fitted magnetic field probe; f(magpr_n, A)",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "mag_probe_n": "number"
+                }
+            }
+        },
+        "minor_radius": {
+            "type": "object",
+            "description": "Minor radius of plasma; f(B)",
+            "units": {
+                "type": "string",
+                "const": "m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "nh": {
+            "type": "object",
+            "description": "Number of vertical grid points",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {}
+            }
+        },
+        "npress": {
+            "type": "object",
+            "description": "Number of pressure constraints",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {}
+            }
+        },
+        "num_iterations": {
+            "type": "object",
+            "description": "Number of iterations; f(B)",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "nw": {
+            "type": "object",
+            "description": "Number of horizontal grid points",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {}
+            }
+        },
+        "p2ar_c": {
+            "type": "object",
+            "description": "Non-rotational pressure contribution as a function of radius at Z=0; f(nw, B)",
+            "units": {
+                "type": "string",
+                "const": "Pa"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "profile_r": "number"
+                }
+            }
+        },
+        "p2br_c": {
+            "type": "object",
+            "description": "Coefficient of rotational pressure contribution as a function of radius at Z=0; f(nw, B)",
+            "units": {
+                "type": "string",
+                "const": "Pa"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "profile_r": "number"
+                }
+            }
+        },
+        "p2cr_c": {
+            "type": "object",
+            "description": "Rotational pressure contribution as a function of radius at Z=0; f(nw, B)",
+            "units": {
+                "type": "string",
+                "const": "Pa"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "profile_r": "number"
+                }
+            }
+        },
+        "passnumber": {
+            "type": "object",
+            "description": "MAST scheduler pass number",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {}
+            }
+        },
+        "pcurbd": {
+            "type": "object",
+            "description": "p' polynomial fit boundary condition; 1 for zero at psin=1, 0 for free",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {}
+            }
+        },
+        "plasma_area": {
+            "type": "object",
+            "description": "Area of poloidal cross-section of plasma; f(B)",
+            "units": {
+                "type": "string",
+                "const": "m ** 2"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "plasma_current_c": {
+            "type": "object",
+            "description": "Output (computed) fitted total plasma current; f(B)",
+            "units": {
+                "type": "string",
+                "const": "A"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "plasma_current_rz": {
+            "type": "object",
+            "description": "Plasma current density as a function of R and Z; f(nw, nh, B)",
+            "units": {
+                "type": "string",
+                "const": "A / m ** 2"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "z": "number",
+                    "r": "number"
+                }
+            }
+        },
+        "plasma_current_x": {
+            "type": "object",
+            "description": "Input (experimental) fitted total plasma current; f(A)",
+            "units": {
+                "type": "string",
+                "const": "A"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "plasma_energy": {
+            "type": "object",
+            "description": "Plasma thermal energy; f(B)",
+            "units": {
+                "type": "string",
+                "const": "J"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "plasma_volume": {
+            "type": "object",
+            "description": "Plasma volume; f(B)",
+            "units": {
+                "type": "string",
+                "const": "m ** 3"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "pol_length": {
+            "type": "object",
+            "description": "Poloidal lengths of flux surfaces as a function of flux; f(psin, B)",
+            "units": {
+                "type": "string",
+                "const": "m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "psi_norm": "number"
+                }
+            }
+        },
+        "pprime": {
+            "type": "object",
+            "description": "p' profile; f(npsi, B)",
+            "units": {
+                "type": "string",
+                "const": "Pa-rad/Wb"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "psi_norm": "number"
+                }
+            }
+        },
+        "pprime_coefs": {
+            "type": "object",
+            "description": "p' polynomial coefficients",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "pprime_coefs_n": "number"
+                }
+            }
+        },
+        "pprimew": {
+            "type": "object",
+            "description": "Rotational pressure contribution profile; f(nw, B)",
+            "units": {
+                "type": "string",
+                "const": "Pa-ra/Wb"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "psi_norm": "number"
+                }
+            }
+        },
+        "ppsi_c": {
+            "type": "object",
+            "description": "Pressure as a function of flux surface; f(psin, B)",
+            "units": {
+                "type": "string",
+                "const": "Pa"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "psi_norm": "number"
+                }
+            }
+        },
+        "pr_c": {
+            "type": "object",
+            "description": "Pressure as a function of radius at Z=0; f(nw, B)",
+            "units": {
+                "type": "string",
+                "const": "Pa"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "profile_r": "number"
+                }
+            }
+        },
+        "psi_axis": {
+            "type": "object",
+            "description": "Poloidal magnetic flux per toroidal radian at the magnetic axis; f(B)",
+            "units": {
+                "type": "string",
+                "const": "Wb / rad"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "psi_boundary": {
+            "type": "object",
+            "description": "Poloidal magnetic flux per toroidal radian at the plasma boundary; f(B)",
+            "units": {
+                "type": "string",
+                "const": "Wb / rad"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "psir": {
+            "type": "object",
+            "description": "Poloidal magnetic flux per toroidal radian as a function of radius at Z=0; f(nw, B)",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "profile_r": "number"
+                }
+            }
+        },
+        "psirz": {
+            "type": "object",
+            "description": "Poloidal magnetic flux per toroidal radian as a function of radius and height; f(nw, nh, B)",
+            "units": {
+                "type": "string",
+                "const": "Wb / rad"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "profile_z": "number",
+                    "profile_r": "number"
+                }
+            }
+        },
+        "pwpsi_c": {
+            "type": "object",
+            "description": "Rotational pressure flux function p_omega as a function of magnetic flux; f(npsi, B)",
+            "units": {
+                "type": "string",
+                "const": "Pa"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "psi_norm": "number"
+                }
+            }
+        },
+        "q=1_radius": {
+            "type": "object",
+            "description": "For q=1 surface: (R_max-R_min)/2 at Z=Z_mag; f(B)",
+            "units": {
+                "type": "string",
+                "const": "m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "q=2_radius": {
+            "type": "object",
+            "description": "For q=2 surface: (R_max-R_min)/2 at Z=Z_mag; f(B)",
+            "units": {
+                "type": "string",
+                "const": "m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "q=3_radius": {
+            "type": "object",
+            "description": "For q=3 surface: (R_max-R_min)/2 at Z=Z_mag; f(B)",
+            "units": {
+                "type": "string",
+                "const": "m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "q_100": {
+            "type": "object",
+            "description": "Safety factor at 100% normalised magnetic flux; f(B)",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "q_90": {
+            "type": "object",
+            "description": "Safety factor at 90% normalised magnetic flux; f(B)",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "q_95": {
+            "type": "object",
+            "description": "Safety factor at 95% normalised magnetic flux; f(B)",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "q_axis": {
+            "type": "object",
+            "description": "Safety factor at the magnetic axis; f(B)",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "qpsi_c": {
+            "type": "object",
+            "description": "Safety factor as a function of magnetic flux; f(npsi, B)",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "psi_norm": "number"
+                }
+            }
+        },
+        "qr": {
+            "type": "object",
+            "description": "Safety factor as a function of radius at Z=0; f(npsi, B)",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "profile_r": "number"
+                }
+            }
+        },
+        "qstar": {
+            "type": "object",
+            "description": "qstar = fvac*(kappa^2+1)/(4e-7 I_p A^2)*(1.24-0.54*kappa+0.3*(kappa^2+triangn^2)+0.13*triangn )*(1 + (1+0.5*(betap+li/2)^2)/A^2); f(B)",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "rbdry": {
+            "type": "object",
+            "description": "Radius of boundary position constraints; f(nbdry, A)",
+            "units": {
+                "type": "string",
+                "const": "m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "rpsi100_in": {
+            "type": "object",
+            "description": "Inboard radius of 100% normalised magnetic flux; f(B)",
+            "units": {
+                "type": "string",
+                "const": "m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "rpsi100_out": {
+            "type": "object",
+            "description": "Outboard radius of 100% normalised magnetic flux; f(B)",
+            "units": {
+                "type": "string",
+                "const": "m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "rpsi90_in": {
+            "type": "object",
+            "description": "Inboard radius of 90% normalised magnetic flux; f(B)",
+            "units": {
+                "type": "string",
+                "const": "m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "rpsi90_out": {
+            "type": "object",
+            "description": "Outboard radius of 90% normalised magnetic flux; f(B)",
+            "units": {
+                "type": "string",
+                "const": "m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "rpsi95_in": {
+            "type": "object",
+            "description": "Inboard radius of 95% normalised magnetic flux; f(B)",
+            "units": {
+                "type": "string",
+                "const": "m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "rpsi95_out": {
+            "type": "object",
+            "description": "Outboard radius of 95% normalised magnetic flux; f(B)",
+            "units": {
+                "type": "string",
+                "const": "m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "rt": {
+            "type": "object",
+            "description": "Shafranov integral RT",
+            "units": {
+                "type": "string",
+                "const": "m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "rvals": {
+            "type": "object",
+            "description": "Radial co-ordinates used for radial profiles; f(nw)",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "profile_r": "number"
+                }
+            }
+        },
+        "rvtor": {
+            "type": "object",
+            "description": "Rotational pressure parameter",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {}
+            }
+        },
+        "scalepr": {
+            "type": "object",
+            "description": "Constant to scale input pressure by",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {}
+            }
+        },
+        "shaf_integral_1": {
+            "type": "object",
+            "description": "Shafranov integral 1",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "shaf_integral_2": {
+            "type": "object",
+            "description": "Shafranov integral 2",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "shaf_integral_3": {
+            "type": "object",
+            "description": "Shafranov integral 3",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "sigbdry": {
+            "type": "object",
+            "description": "Relative position error on boundary position constraints; f(nbdry, A)",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "silop_c": {
+            "type": "object",
+            "description": "Output (computed) fitted magnetic flux probes; f(silop_n, A)",
+            "units": {
+                "type": "string",
+                "const": "Wb"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "psi_loop_n": "number"
+                }
+            }
+        },
+        "silop_chisq": {
+            "type": "object",
+            "description": "Chi-squared of each fitted magnetic flux probe; f(silop_n, A)",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "psi_loop_n": "number"
+                }
+            }
+        },
+        "silop_dphi": {
+            "type": "object",
+            "description": "Toroidal angular extent of each magnetic flux probe; f(magpr_n)",
+            "units": {
+                "type": "string",
+                "const": "m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "psi_loop_n": "number"
+                }
+            }
+        },
+        "silop_r": {
+            "type": "object",
+            "description": "R of each magnetic flux probe; f(magpr_n)",
+            "units": {
+                "type": "string",
+                "const": "m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "psi_loop_n": "number"
+                }
+            }
+        },
+        "silop_x": {
+            "type": "object",
+            "description": "Input (experimental) fitted magnetic flux probes; f(silop_n, A)",
+            "units": {
+                "type": "string",
+                "const": "Wb"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "psi_loop_n": "number"
+                }
+            }
+        },
+        "silop_z": {
+            "type": "object",
+            "description": "Z of each magnetic flux probe; f(magpr_n)",
+            "units": {
+                "type": "string",
+                "const": "m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "psi_loop_n": "number"
+                }
+            }
+        },
+        "status": {
+            "type": "object",
+            "description": "MAST scheduler status",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {}
+            }
+        },
+        "time_": {
+            "type": "object",
+            "description": "All times of converged reconstruction (time base B) - identical to EFM_CNVRGD_TIMES",
+            "units": {
+                "type": "string",
+                "const": "s"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "triang_lower": {
+            "type": "object",
+            "description": "Lower plasma triangularity; f(B)",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "triang_lpsi_c": {
+            "type": "object",
+            "description": "Lower plasma triangularity as a function of magnetic flux; f(npsi, B)",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "psi_norm": "number"
+                }
+            }
+        },
+        "triang_upper": {
+            "type": "object",
+            "description": "Upper plasma triangularity; f(B)",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "triang_upsi_c": {
+            "type": "object",
+            "description": "Upper plasma triangularity as a function of magnetic flux; f(npsi, B)",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "psi_norm": "number"
+                }
+            }
+        },
+        "volp_c": {
+            "type": "object",
+            "description": "Plasma volume enclosed by flux surfaces as a function of magnetic flux; f(npsi, B)",
+            "units": {
+                "type": "string",
+                "const": "m ** 3"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "psi_norm": "number"
+                }
+            }
+        },
+        "wcurbd": {
+            "type": "object",
+            "description": "pw' polynomial fit boundary condition; 1 for zero at psin=1, 0 for free",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {}
+            }
+        },
+        "wplasmd": {
+            "type": "object",
+            "description": "Plasma energy computed using diamagnetic energy, as in betapd",
+            "units": {
+                "type": "string",
+                "const": "J"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "wpol": {
+            "type": "object",
+            "description": "Poloidal part of magnetic energy in plasma; vol avg Bp^2 / 2 mu0; f(B)",
+            "units": {
+                "type": "string",
+                "const": "J"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "xpoint1_rc": {
+            "type": "object",
+            "description": "Radius of first X-point; f(B)",
+            "units": {
+                "type": "string",
+                "const": "m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "xpoint1_zc": {
+            "type": "object",
+            "description": "Height of first X-point; f(B)",
+            "units": {
+                "type": "string",
+                "const": "m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "xpoint2_rc": {
+            "type": "object",
+            "description": "Radius of second X-point; f(B)",
+            "units": {
+                "type": "string",
+                "const": "m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "xpoint2_zc": {
+            "type": "object",
+            "description": "Height of second X-point; f(B)",
+            "units": {
+                "type": "string",
+                "const": "m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "zbdry": {
+            "type": "object",
+            "description": "Height of boundary position constraints; f(nbdry, A)",
+            "units": {
+                "type": "string",
+                "const": "m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        }
+    },
+    "required": [
+        "all_times",
+        "areap_c",
+        "betan",
+        "betap",
+        "betapd",
+        "betat",
+        "betatd",
+        "bphi_rgeom",
+        "bphi_rmag",
+        "bphi_squared",
+        "bpol_squared",
+        "bvac_r",
+        "bvac_rgeom",
+        "bvac_rmag",
+        "bvac_val",
+        "chisq_magnetic",
+        "cm_bdry",
+        "cnvrgd_times",
+        "current_centrd_r",
+        "current_centrd_z",
+        "cutip",
+        "diamag_fluxc",
+        "diamag_fluxx",
+        "elongation",
+        "elongation_axis",
+        "elongpsi_c",
+        "fcoil_ang1",
+        "fcoil_ang2",
+        "fcoil_c",
+        "fcoil_chisq",
+        "fcoil_circ",
+        "fcoil_height",
+        "fcoil_r",
+        "fcoil_turns",
+        "fcoil_width",
+        "fcoil_x",
+        "fcoil_xmult",
+        "fcoil_z",
+        "fcurbd",
+        "ffprime",
+        "ffprime_coefs",
+        "final_chisq",
+        "fpsi_c",
+        "fwtbdry",
+        "fwtbp",
+        "fwtfc",
+        "fwtmp",
+        "fwtsi",
+        "geom_axis_rc",
+        "geom_axis_zc",
+        "gridr",
+        "gridz",
+        "ip_times",
+        "irod",
+        "iteration_error",
+        "jr",
+        "kffcur",
+        "kfffnc",
+        "kppcur",
+        "kppfnc",
+        "kwwcur",
+        "kwwfnc",
+        "lcfs_length",
+        "lcfs_r",
+        "lcfs_z",
+        "lcfsn_c",
+        "li",
+        "limiterr",
+        "limiterz",
+        "magnetic_axis_r",
+        "magnetic_axis_z",
+        "magpr_ang",
+        "magpr_c",
+        "magpr_len",
+        "magpr_r",
+        "magpr_x",
+        "magpr_z",
+        "magpri_chisq",
+        "minor_radius",
+        "nh",
+        "npress",
+        "num_iterations",
+        "nw",
+        "p2ar_c",
+        "p2br_c",
+        "p2cr_c",
+        "passnumber",
+        "pcurbd",
+        "plasma_area",
+        "plasma_current_c",
+        "plasma_current_rz",
+        "plasma_current_x",
+        "plasma_energy",
+        "plasma_volume",
+        "pol_length",
+        "pprime",
+        "pprime_coefs",
+        "pprimew",
+        "ppsi_c",
+        "pr_c",
+        "psi_axis",
+        "psi_boundary",
+        "psir",
+        "psirz",
+        "pwpsi_c",
+        "q=1_radius",
+        "q=2_radius",
+        "q=3_radius",
+        "q_100",
+        "q_90",
+        "q_95",
+        "q_axis",
+        "qpsi_c",
+        "qr",
+        "qstar",
+        "rbdry",
+        "rpsi100_in",
+        "rpsi100_out",
+        "rpsi90_in",
+        "rpsi90_out",
+        "rpsi95_in",
+        "rpsi95_out",
+        "rt",
+        "rvals",
+        "rvtor",
+        "scalepr",
+        "shaf_integral_1",
+        "shaf_integral_2",
+        "shaf_integral_3",
+        "sigbdry",
+        "silop_c",
+        "silop_chisq",
+        "silop_dphi",
+        "silop_r",
+        "silop_x",
+        "silop_z",
+        "status",
+        "time_",
+        "triang_lower",
+        "triang_lpsi_c",
+        "triang_upper",
+        "triang_upsi_c",
+        "volp_c",
+        "wcurbd",
+        "wplasmd",
+        "wpol",
+        "xpoint1_rc",
+        "xpoint1_zc",
+        "xpoint2_rc",
+        "xpoint2_zc",
+        "zbdry"
+    ]
+}

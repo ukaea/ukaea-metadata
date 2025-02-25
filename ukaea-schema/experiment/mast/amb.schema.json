@@ -1,0 +1,116 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "amb",
+    "description": "Magnetic Field Measurements: Center column vertical Bv array (CCBV), Outboard discrete B-field coils (OBV/OBR), Flux loops (FL),",
+    "type": "object",
+    "properties": {
+        "ccbv": {
+            "type": "object",
+            "description": "Centre Column Vertical Bv Array r=0.186, z= 1.449\nCentre Column Vertical Bv Array r=0.186, z= 1.296\nCentre Column Vertical Bv Array r=0.186, z= 1.220\nCentre Column Vertical Bv Array r=0.186, z= 1.144\nCentre Column Vertical Bv Array r=0.186, z= 1.067\nCentre Column Vertical Bv Array r=0.186, z= 0.991\nCentre Column Vertical Bv Array r=0.186, z= 0.915\nCentre Column Vertical Bv Array r=0.186, z= 0.839\nCentre Column Vertical Bv Array r=0.186, z= 0.762\nCentre Column Vertical Bv Array r=0.186, z= 0.686\nCentre Column Vertical Bv Array r=0.186, z= 0.610\nCentre Column Vertical Bv Array r=0.186, z= 0.534\nCentre Column Vertical Bv Array r=0.186, z= 0.457\nCentre Column Vertical Bv Array r=0.186, z= 0.381\nCentre Column Vertical Bv Array r=0.186, z= 0.305\nCentre Column Vertical Bv Array r=0.186, z= 0.229\nCentre Column Vertical Bv Array r=0.186, z= 0.153\nCentre Column Vertical Bv Array r=0.186, z= 0.076\nCentre Column Vertical Bv Array r=0.186, z= 0.000\nCentre Column Vertical Bv Array r=0.186, z=-0.153\nCentre Column Vertical Bv Array r=0.186, z=-0.229\nCentre Column Vertical Bv Array r=0.186, z=-0.305\nCentre Column Vertical Bv Array r=0.186, z=-0.381\nCentre Column Vertical Bv Array r=0.186, z=-0.457\nCentre Column Vertical Bv Array r=0.186, z=-0.534\nCentre Column Vertical Bv Array r=0.186, z=-0.610\nCentre Column Vertical Bv Array r=0.186, z=-0.686\nCentre Column Vertical Bv Array r=0.186, z=-0.762\nCentre Column Vertical Bv Array r=0.186, z=-0.839\nCentre Column Vertical Bv Array r=0.186, z=-0.991\nCentre Column Vertical Bv Array r=0.186, z=-1.067\nCentre Column Vertical Bv Array r=0.186, z=-1.220\nCentre Column Vertical Bv Array r=0.186, z=-1.296\nCentre Column Vertical Bv Array r=0.186, z=-1.372\nCentre Column Vertical Bv Array r=0.186, z=-1.449\nCentre Column Vertical Bv Array r=0.186, z=-1.525",
+            "units": {
+                "type": "string",
+                "const": "T"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "ccbv_channel": "number",
+                    "time": "number"
+                }
+            }
+        },
+        "fl_cc": {
+            "type": "object",
+            "description": "Flux Loops: Centre Column r=0.180, z= 1.215\nFlux Loops: Centre Column r=0.180, z= 1.215\nFlux Loops: Centre Column r=0.180, z= 1.215\nFlux Loops: Centre Column r=0.180, z= 1.215\nFlux Loops: Centre Column r=0.180, z= 1.215",
+            "units": {
+                "type": "string",
+                "const": "Wb"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "fl_cc_channel": "number",
+                    "time": "number"
+                }
+            }
+        },
+        "fl_p": {
+            "type": "object",
+            "description": "Flux Loops: Poloidal Coils r=1.035, z=-1.089\nFlux Loops: Poloidal Coils r=1.163, z= 1.083\nFlux Loops: Poloidal Coils r=1.035, z= 1.083\nFlux Loops: Poloidal Coils r=1.163, z=-1.089\nFlux Loops: Poloidal Coils r=1.035, z=-1.089\nFlux Loops: Poloidal Coils r=1.163, z= 1.083\nFlux Loops: Poloidal Coils r=1.163, z=-1.089\nFlux Loops: Poloidal Coils r=1.035, z=-1.089\nFlux Loops: Poloidal Coils r=1.163, z= 1.083\nFlux Loops: Poloidal Coils r=1.035, z=-1.104",
+            "units": {
+                "type": "string",
+                "const": "Wb"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "fl_p_channel": "number",
+                    "time": "number"
+                }
+            }
+        },
+        "obr": {
+            "type": "object",
+            "description": "Outer discrete Br magnetic coil array r=1.440, z= 1.321\nOuter discrete Br magnetic coil array r=1.590, z= 0.725\nOuter discrete Br magnetic coil array r=1.590, z= 0.650\nOuter discrete Br magnetic coil array r=1.850, z= 0.300\nOuter discrete Br magnetic coil array r=1.850, z= 0.150\nOuter discrete Br magnetic coil array r=1.850, z= 0.075\nOuter discrete Br magnetic coil array r=1.850, z= 0.000\nOuter discrete Br magnetic coil array r=1.850, z=-0.150\nOuter discrete Br magnetic coil array r=1.850, z=-0.225\nOuter discrete Br magnetic coil array r=1.850, z=-0.300\nOuter discrete Br magnetic coil array r=1.590, z=-0.650\nOuter discrete Br magnetic coil array r=1.590, z=-0.725\nOuter discrete Br magnetic coil array r=1.590, z=-0.800\nOuter discrete Br magnetic coil array r=1.440, z=-1.250",
+            "units": {
+                "type": "string",
+                "const": "T"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "obr_channel": "number",
+                    "time": "number"
+                }
+            }
+        },
+        "obv": {
+            "type": "object",
+            "description": "Outer discrete Br magnetic coil array r=1.590, z= 0.800\nOuter discrete Br magnetic coil array r=1.590, z= 0.725\nOuter discrete Br magnetic coil array r=1.590, z= 0.650\nOuter discrete Br magnetic coil array r=1.850, z= 0.300\nOuter discrete Br magnetic coil array r=1.850, z= 0.075\nOuter discrete Br magnetic coil array r=1.850, z=-0.075\nOuter discrete Br magnetic coil array r=1.590, z=-0.800\nOuter discrete Br magnetic coil array r=1.440, z=-1.250",
+            "units": {
+                "type": "string",
+                "const": "T"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "obv_channel": "number",
+                    "time": "number"
+                }
+            }
+        },
+        "status": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {}
+            }
+        },
+        "version": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {}
+            }
+        }
+    },
+    "required": [
+        "ccbv",
+        "fl_cc",
+        "fl_p",
+        "obr",
+        "obv",
+        "status",
+        "version"
+    ]
+}

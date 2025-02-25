@@ -1,0 +1,1081 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "esm",
+    "description": "post-Efit Summary file for MAST. See https://users.mastu.ukaea.uk/sites/default/files/uploads/ESMcode.pdf for details of the analysis.",
+    "type": "object",
+    "properties": {
+        "area_outin_ratio": {
+            "type": "object",
+            "description": "Ratio of outboard to inboard plasma surface area.",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "av_t": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "s"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {}
+            }
+        },
+        "dr_sep_in": {
+            "type": "object",
+            "description": "drsep - the distance between the two separatrices on the inboard midplane (taken at Z=Z0) of the plasma.",
+            "units": {
+                "type": "string",
+                "const": "m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "dr_sep_out": {
+            "type": "object",
+            "description": "drsep - the distance between the two separatrices on the outboard midplane (taken at Z=Z0) of the plasma.",
+            "units": {
+                "type": "string",
+                "const": "m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "efm_comb_ratingav": {
+            "type": "object",
+            "description": "Combined EFIT quality rating for each time slice, being the geometric mean of the Da, Ip , diamagnetic flux and Te isoflux ratings. This should be used as a personal guide to the quality of EFIT data, and should not be taken to imply that EFIT data is of publishable quality.",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "fit_quality_n": "number"
+                }
+            }
+        },
+        "efm_rating_da": {
+            "type": "object",
+            "description": "EFIT quality rating for each time slice, based on a comparison between EFM_r(psi100)_out and ADA_Dalpha peak radius.",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "efm_rating_daadg": {
+            "type": "object",
+            "description": "EFIT quality rating for each time slice, based on a comparison between EFM_r(psi100)_out and ADG_GRADIENT_POSITION.",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "fit_quality_n": "number"
+                }
+            }
+        },
+        "efm_rating_dia_flux": {
+            "type": "object",
+            "description": "EFIT quality rating for each time slice, based on a comparison between EFM_diamag_flux(C) and amd_dia flux.",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "fit_quality_n": "number"
+                }
+            }
+        },
+        "efm_rating_ip": {
+            "type": "object",
+            "description": "EFIT quality rating for each time slice, based on a comparison between EFM_plasma_curr(C) and EFM_plasma_curr(X).",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "flux_exp_il": {
+            "type": "object",
+            "description": "Flux expansion at the inner lower strike point of the plasma.",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "flux_exp_iu": {
+            "type": "object",
+            "description": "Flux expansion at the inner upper strike point of the plasma.",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "flux_exp_ol": {
+            "type": "object",
+            "description": "Flux expansion at the outer lower strike point of the plasma.",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "flux_exp_ou": {
+            "type": "object",
+            "description": "Flux expansion at the outer upper strike point of the plasma.",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "g_iss95": {
+            "type": "object",
+            "description": "G factor for stellarator scaling ISS95, defined as bN * H / q952.",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "g_iter89p": {
+            "type": "object",
+            "description": "G factor for L-mode tokamak scaling ITER 89-P, defined as bN * H / q952.",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "g_iter98pby2": {
+            "type": "object",
+            "description": "G factor for H-mode tokamak scaling ITER98pby2, defined as bN * H / q952.",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "g_ne_8a": {
+            "type": "object",
+            "description": "Greenwald fraction calculated with ESM_NE_8A.",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "g_ne_bar": {
+            "type": "object",
+            "description": "Greenwald fraction calculated with ESM_NE_BAR.",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "g_neoalc": {
+            "type": "object",
+            "description": "G factor for the low-aspect-ratio-adjusted Neo-Alcator scaling, defined as bN * H / q952.",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "h_iss95": {
+            "type": "object",
+            "description": "H factor for stellarator scaling ISS95.",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "h_iter89p": {
+            "type": "object",
+            "description": "H factor for L-mode tokamak scaling ITER 89-P.",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "h_iter98pby2": {
+            "type": "object",
+            "description": "H factor for H-mode tokamak scaling ITER98pby2.",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "h_ne_8a": {
+            "type": "object",
+            "description": "Hugill fraction calculated with ESM_NE_8A.",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "h_ne_bar": {
+            "type": "object",
+            "description": "Hugill fraction calculated with ESM_NE_BAR.",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "h_neoalc": {
+            "type": "object",
+            "description": "H factor for the low-aspect-ratio-adjusted Neo-Alcator scaling.",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "ibmp1_r_larmor": {
+            "type": "object",
+            "description": "Ion Larmor radius on the inboard side of the plasma at Z=Z0 on the separatrix passing through the lower X-point; output at the Thomson ruby time. Assumes Ti=1.5*Te. Function of total B-field.",
+            "units": {
+                "type": "string",
+                "const": "m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {}
+            }
+        },
+        "ibmp2_r_larmor": {
+            "type": "object",
+            "description": "Ion Larmor radius on the inboard side of the plasma at Z=Z0 on the separatrix passing through the upper X-point; output at the Thomson ruby time. Assumes Ti=1.5*Te. Function of total B-field.",
+            "units": {
+                "type": "string",
+                "const": "m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {}
+            }
+        },
+        "ilspz": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "iss95": {
+            "type": "object",
+            "description": "Predicted confinement time, from stellarator scaling ISS95.",
+            "units": {
+                "type": "string",
+                "const": "s"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "iter89p": {
+            "type": "object",
+            "description": "Predicted confinement time, from L-mode tokamak scaling ITER 89-P.",
+            "units": {
+                "type": "string",
+                "const": "s"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "iter98pby2": {
+            "type": "object",
+            "description": "Predicted confinement time, from H-mode tokamak scaling ITER98pby2.",
+            "units": {
+                "type": "string",
+                "const": "s"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "iuspz": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "multi_ts_time": {
+            "type": "object",
+            "description": "Thomson Scattering NdYAG laser system times.",
+            "units": {
+                "type": "string",
+                "const": "s"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "n_greenwald": {
+            "type": "object",
+            "description": "Greenwald density limit.",
+            "units": {
+                "type": "string",
+                "const": "1 / m ** 3"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "n_hugill": {
+            "type": "object",
+            "description": "Hugill density limit.",
+            "units": {
+                "type": "string",
+                "const": "1 / m ** 3"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "ne_8a": {
+            "type": "object",
+            "description": "Line averaged density calculated using 8 times the minor radius of the plasma as the approximate path length; output on the ANE time base.",
+            "units": {
+                "type": "string",
+                "const": "1 / m ** 3"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "ne_bar": {
+            "type": "object",
+            "description": "Line averaged density calculated using the exact path length of the interferometer chord; output on the ANE time base.",
+            "units": {
+                "type": "string",
+                "const": "1 / m ** 3"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "neo-alcator_low_a": {
+            "type": "object",
+            "description": "Predicted confinement time, from the low-aspect-ratio-adjusted Neo-Alcator scaling.",
+            "units": {
+                "type": "string",
+                "const": "s"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "obmp1_r_larmor": {
+            "type": "object",
+            "description": "Ion Larmor radius on the outboard side of the plasma at Z=Z0 on the separatrix passing through the lower X-point; output at the Thomson ruby time. Assumes Ti=1.5*Te. Function of total B-field.",
+            "units": {
+                "type": "string",
+                "const": "m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {}
+            }
+        },
+        "obmp2_r_larmor": {
+            "type": "object",
+            "description": "Ion Larmor radius on the outboard side of the plasma at Z=Z0 on the separatrix passing through the lower X-point; output at the Thomson ruby time. Assumes Ti=1.5*Te. Function of total B-field.",
+            "units": {
+                "type": "string",
+                "const": "m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {}
+            }
+        },
+        "olspr": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "ouspr": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "p_aux": {
+            "type": "object",
+            "description": "Auxiliary power to the plasma, adjusted from ANB_TOT_SUM_POWER.",
+            "units": {
+                "type": "string",
+                "const": "W"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "p_aux_error": {
+            "type": "object",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "p_aux_guess": {
+            "type": "object",
+            "description": "Estimated version of ESM_P_AUX, taken from various XNB traces.",
+            "units": {
+                "type": "string",
+                "const": "W"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "p_aux_guess_error": {
+            "type": "object",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "p_loss": {
+            "type": "object",
+            "description": "Power crossing the separatrix, given as Paux + Pf - dW/dt - X. The auxiliary power is taken as ESM_P_AUX.",
+            "units": {
+                "type": "string",
+                "const": "W"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "p_loss_error": {
+            "type": "object",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "p_loss_guess": {
+            "type": "object",
+            "description": "As ESM_P_LOSS, but taking Paux as ESM_P_AUX_GUESS.",
+            "units": {
+                "type": "string",
+                "const": "W"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "p_loss_guess_error": {
+            "type": "object",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "p_phi": {
+            "type": "object",
+            "description": "Pf, defined as plasma current, Ip, multiplied by dynamic Vloop.",
+            "units": {
+                "type": "string",
+                "const": "W"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "passnumber": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {}
+            }
+        },
+        "pphix": {
+            "type": "object",
+            "description": "ESM_P_PHI - ESM_X.",
+            "units": {
+                "type": "string",
+                "const": "W"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "primary_x_pt": {
+            "type": "object",
+            "description": "Indicates which of the two X-points (if either) has a lower value of normalised y; +1 for upper, -1 for lower, 0 for unclear/undecided.",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "r": {
+            "type": "object",
+            "description": "Radial base for ESM_R_LARMOR and ESM_V_ION; as ATS_R.",
+            "units": {
+                "type": "string",
+                "const": "m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {}
+            }
+        },
+        "r_ibmp_x1_psi": {
+            "type": "object",
+            "description": "Major radial value, R, of the separatrix passing through the lower X-point on the inboard side of the plasma at Z=Z0.",
+            "units": {
+                "type": "string",
+                "const": "m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "r_ibmp_x2_psi": {
+            "type": "object",
+            "description": "Major radial value, R, of the separatrix passing through the upper X-point on the inboard side of the plasma at Z=Z0.",
+            "units": {
+                "type": "string",
+                "const": "m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "r_larmor": {
+            "type": "object",
+            "description": "Radial ion Larmor radius profile at the Thomson ruby time, with base ESM_R. Assumes Ti=1.5*Te. Function of total B-field.",
+            "units": {
+                "type": "string",
+                "const": "m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {}
+            }
+        },
+        "r_larmor_multi": {
+            "type": "object",
+            "description": "Radial ion Larmor radius profile at the Thomson NdYAG times, with bases ESM_R_MULTI and ESM_MULTI_TS_TIME. Assumes Ti=1.5*Te. Function of total B-field.",
+            "units": {
+                "type": "string",
+                "const": "m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "radius": "number"
+                }
+            }
+        },
+        "r_multi": {
+            "type": "object",
+            "description": "Radial base for ESM_R_LARMOR_MULTI and ESM_V_ION_MULTI; as ATM_R.",
+            "units": {
+                "type": "string",
+                "const": "m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "r_obmp_x1_psi": {
+            "type": "object",
+            "description": "Major radial value, R, of the separatrix passing through the lower X-point on the outboard side of the plasma at Z=Z0.",
+            "units": {
+                "type": "string",
+                "const": "m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "r_obmp_x2_psi": {
+            "type": "object",
+            "description": "Major radial value, R, of the separatrix passing through the upper X-point on the outboard side of the plasma at Z=Z0.",
+            "units": {
+                "type": "string",
+                "const": "m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "sp_valid": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "status": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {}
+            }
+        },
+        "surface_area": {
+            "type": "object",
+            "description": "Plasma surface area.",
+            "units": {
+                "type": "string",
+                "const": "m ** 2"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "tau_e_guess": {
+            "type": "object",
+            "description": "Estimated confinement time, tE, taken as EFM_PLASMA_ENERGY divided by the best available of ESM_P_LOSS and ESM_P_LOSS_GUESS.",
+            "units": {
+                "type": "string",
+                "const": "s"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "ts_time": {
+            "type": "object",
+            "description": "Thomson Scattering ruby laser time; similar to ATS_TIME.",
+            "units": {
+                "type": "string",
+                "const": "s"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {}
+            }
+        },
+        "v_ion": {
+            "type": "object",
+            "description": "Radial ion velocity profile at the Thomson ruby time, with base ESM_R. Assumes Ti=1.5*Te.",
+            "units": {
+                "type": "string",
+                "const": "1 / ms"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {}
+            }
+        },
+        "v_ion_multi": {
+            "type": "object",
+            "description": "Radial ion velocity profile at the Thomson NdYAG times, with bases ESM_R_MULTI and ESM_MULTI_TS_TIME. Assumes Ti=1.5*Te.",
+            "units": {
+                "type": "string",
+                "const": "1 / ms"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "radius": "number"
+                }
+            }
+        },
+        "v_loop_dynamic": {
+            "type": "object",
+            "description": "Plasma surface Vloop, calculated allowing for the movement of the LCFS; i.e. in the observer's frame of reference.",
+            "units": {
+                "type": "string",
+                "const": "V"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "v_loop_static": {
+            "type": "object",
+            "description": "Plasma surface Vloop, calculated without allowing for the movement of the LCFS; i.e. in the frame of reference of the plasma boundary.",
+            "units": {
+                "type": "string",
+                "const": "V"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "w_dot": {
+            "type": "object",
+            "description": "Rate of change of stored plasma energy, W.",
+            "units": {
+                "type": "string",
+                "const": "W"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "x": {
+            "type": "object",
+            "description": "Stored magnetic power, X, as defined by Per Helander in MAST ops note 00.28.",
+            "units": {
+                "type": "string",
+                "const": "W"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        }
+    },
+    "required": [
+        "area_outin_ratio",
+        "av_t",
+        "dr_sep_in",
+        "dr_sep_out",
+        "efm_comb_ratingav",
+        "efm_rating_da",
+        "efm_rating_daadg",
+        "efm_rating_dia_flux",
+        "efm_rating_ip",
+        "flux_exp_il",
+        "flux_exp_iu",
+        "flux_exp_ol",
+        "flux_exp_ou",
+        "g_iss95",
+        "g_iter89p",
+        "g_iter98pby2",
+        "g_ne_8a",
+        "g_ne_bar",
+        "g_neoalc",
+        "h_iss95",
+        "h_iter89p",
+        "h_iter98pby2",
+        "h_ne_8a",
+        "h_ne_bar",
+        "h_neoalc",
+        "ibmp1_r_larmor",
+        "ibmp2_r_larmor",
+        "ilspz",
+        "iss95",
+        "iter89p",
+        "iter98pby2",
+        "iuspz",
+        "multi_ts_time",
+        "n_greenwald",
+        "n_hugill",
+        "ne_8a",
+        "ne_bar",
+        "neo-alcator_low_a",
+        "obmp1_r_larmor",
+        "obmp2_r_larmor",
+        "olspr",
+        "ouspr",
+        "p_aux",
+        "p_aux_error",
+        "p_aux_guess",
+        "p_aux_guess_error",
+        "p_loss",
+        "p_loss_error",
+        "p_loss_guess",
+        "p_loss_guess_error",
+        "p_phi",
+        "passnumber",
+        "pphix",
+        "primary_x_pt",
+        "r",
+        "r_ibmp_x1_psi",
+        "r_ibmp_x2_psi",
+        "r_larmor",
+        "r_larmor_multi",
+        "r_multi",
+        "r_obmp_x1_psi",
+        "r_obmp_x2_psi",
+        "sp_valid",
+        "status",
+        "surface_area",
+        "tau_e_guess",
+        "ts_time",
+        "v_ion",
+        "v_ion_multi",
+        "v_loop_dynamic",
+        "v_loop_static",
+        "w_dot",
+        "x"
+    ]
+}

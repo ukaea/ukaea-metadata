@@ -1,0 +1,375 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "xsx",
+    "description": "SRX Camera",
+    "type": "object",
+    "properties": {
+        "acq196_061_ch01": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "V"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "acq196_147_96": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "V"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "devices_d112_acq196_061_channel": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "dim_0": "number"
+                }
+            }
+        },
+        "devices_d112_acq196_061_range": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "dim_0": "number",
+                    "dim_1": "number"
+                }
+            }
+        },
+        "devices_d2_acq196_147_channel": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "dim_0": "number"
+                }
+            }
+        },
+        "devices_d2_acq196_147_range": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "dim_0": "number",
+                    "dim_1": "number"
+                }
+            }
+        },
+        "devices_limit": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "dim_0": "number"
+                }
+            }
+        },
+        "hcam_l": {
+            "type": "object",
+            "description": "Soft X-ray camera: lower horizontal. Channel viewing slightly below midplane.\nSoft X-ray camera: lower horizontal.\nSoft X-ray camera: lower horizontal.\nSoft X-ray camera: lower horizontal.\nSoft X-ray camera: lower horizontal.\nSoft X-ray camera: lower horizontal.\nSoft X-ray camera: lower horizontal.\nSoft X-ray camera: lower horizontal.\nSoft X-ray camera: lower horizontal.\nSoft X-ray camera: lower horizontal.\nSoft X-ray camera: lower horizontal.\nSoft X-ray camera: lower horizontal.\nSoft X-ray camera: lower horizontal.\nSoft X-ray camera: lower horizontal.\nSoft X-ray camera: lower horizontal.\nSoft X-ray camera: lower horizontal.\nSoft X-ray camera: lower horizontal. Extreme upper channel.\nSoft X-ray camera: lower horizontal. Blanked passive channel.",
+            "units": {
+                "type": "string",
+                "const": "V"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "hcam_l_channel": "number",
+                    "time": "number"
+                }
+            }
+        },
+        "hcam_l_p_mm": {
+            "type": "object",
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "hcam_l_channel": "number"
+                }
+            }
+        },
+        "hcam_l_r1": {
+            "type": "object",
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "hcam_l_channel": "number"
+                }
+            }
+        },
+        "hcam_l_r2": {
+            "type": "object",
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "hcam_l_channel": "number"
+                }
+            }
+        },
+        "hcam_l_theta_rad": {
+            "type": "object",
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "hcam_l_channel": "number"
+                }
+            }
+        },
+        "hcam_l_z1": {
+            "type": "object",
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "hcam_l_channel": "number"
+                }
+            }
+        },
+        "hcam_l_z2": {
+            "type": "object",
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "hcam_l_channel": "number"
+                }
+            }
+        },
+        "hcam_u": {
+            "type": "object",
+            "description": "Soft X-ray camera: upper horizontal. Channel viewing slightly above midplane.\nSoft X-ray camera: upper horizontal\nSoft X-ray camera: upper horizontal\nSoft X-ray camera: upper horizontal\nSoft X-ray camera: upper horizontal\nSoft X-ray camera: upper horizontal\nSoft X-ray camera: upper horizontal\nSoft X-ray camera: upper horizontal\nSoft X-ray camera: upper horizontal\nSoft X-ray camera: upper horizontal\nSoft X-ray camera: upper horizontal\nSoft X-ray camera: upper horizontal\nSoft X-ray camera: upper horizontal\nSoft X-ray camera: upper horizontal\nSoft X-ray camera: upper horizontal\nSoft X-ray camera: upper horizontal\nSoft X-ray camera: upper horizontal. Extreme lower channel.\nSoft X-ray camera: upper horizontal. Blanked passive channel",
+            "units": {
+                "type": "string",
+                "const": "V"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "hcam_u_channel": "number",
+                    "time": "number"
+                }
+            }
+        },
+        "hcam_u_p_mm": {
+            "type": "object",
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "hcam_u_channel": "number"
+                }
+            }
+        },
+        "hcam_u_r1": {
+            "type": "object",
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "hcam_u_channel": "number"
+                }
+            }
+        },
+        "hcam_u_r2": {
+            "type": "object",
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "hcam_u_channel": "number"
+                }
+            }
+        },
+        "hcam_u_theta_rad": {
+            "type": "object",
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "hcam_u_channel": "number"
+                }
+            }
+        },
+        "hcam_u_z1": {
+            "type": "object",
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "hcam_u_channel": "number"
+                }
+            }
+        },
+        "hcam_u_z2": {
+            "type": "object",
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "hcam_u_channel": "number"
+                }
+            }
+        },
+        "relay_monitor": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "V"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "tcam": {
+            "type": "object",
+            "description": "Soft X-ray camera: tangential camera. Extreme Inner channel (central column)\nSoft X-ray camera: tangential camera.\nSoft X-ray camera: tangential camera.\nSoft X-ray camera: tangential camera.\nSoft X-ray camera: tangential camera.\nSoft X-ray camera: tangential camera.\nSoft X-ray camera: tangential camera.\nSoft X-ray camera: tangential camera.\nSoft X-ray camera: tangential camera.\nSoft X-ray camera: tangential camera.\nSoft X-ray camera: tangential camera.\nSoft X-ray camera: tangential camera.\nSoft X-ray camera: tangential camera.\nSoft X-ray camera: tangential camera.\nSoft X-ray camera: tangential camera.\nSoft X-ray camera: tangential camera.\nSoft X-ray camera: tangential camera.\nSoft X-ray camera: tangential camera. Extreme outer channel (plasma edge).",
+            "units": {
+                "type": "string",
+                "const": "V"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "tcam_channel": "number",
+                    "time": "number"
+                }
+            }
+        },
+        "tcam_p_mm": {
+            "type": "object",
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "tcam_channel": "number"
+                }
+            }
+        },
+        "tcam_r1": {
+            "type": "object",
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "tcam_channel": "number"
+                }
+            }
+        },
+        "tcam_r2": {
+            "type": "object",
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "tcam_channel": "number"
+                }
+            }
+        },
+        "tcam_theta_rad": {
+            "type": "object",
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "tcam_channel": "number"
+                }
+            }
+        },
+        "tcam_z1": {
+            "type": "object",
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "tcam_channel": "number"
+                }
+            }
+        },
+        "tcam_z2": {
+            "type": "object",
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "tcam_channel": "number"
+                }
+            }
+        },
+        "time1": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "s"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        }
+    },
+    "required": [
+        "acq196_061_ch01",
+        "acq196_147_96",
+        "devices_d112_acq196_061_channel",
+        "devices_d112_acq196_061_range",
+        "devices_d2_acq196_147_channel",
+        "devices_d2_acq196_147_range",
+        "devices_limit",
+        "hcam_l",
+        "hcam_l_p_mm",
+        "hcam_l_r1",
+        "hcam_l_r2",
+        "hcam_l_theta_rad",
+        "hcam_l_z1",
+        "hcam_l_z2",
+        "hcam_u",
+        "hcam_u_p_mm",
+        "hcam_u_r1",
+        "hcam_u_r2",
+        "hcam_u_theta_rad",
+        "hcam_u_z1",
+        "hcam_u_z2",
+        "relay_monitor",
+        "tcam",
+        "tcam_p_mm",
+        "tcam_r1",
+        "tcam_r2",
+        "tcam_theta_rad",
+        "tcam_z1",
+        "tcam_z2",
+        "time1"
+    ]
+}

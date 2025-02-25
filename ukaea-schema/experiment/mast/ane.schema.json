@@ -1,0 +1,107 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "ane",
+    "description": "CO2 Interferometry",
+    "type": "object",
+    "properties": {
+        "co2": {
+            "type": "object",
+            "description": "integrated electron density  determined from co2 laser interference fringes",
+            "units": {
+                "type": "string",
+                "const": "1 / m ** 2"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "density": {
+            "type": "object",
+            "description": "integrated electron density including vibration correction",
+            "units": {
+                "type": "string",
+                "const": "1 / m ** 2"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "hene": {
+            "type": "object",
+            "description": "electron density from HeNe fringes correspondes to  vibrations in interferometer",
+            "units": {
+                "type": "string",
+                "const": "1 / m ** 2"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "passnumber": {
+            "type": "object",
+            "description": "Pass number of data",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {}
+            }
+        },
+        "status": {
+            "type": "object",
+            "description": "status flag",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {}
+            }
+        },
+        "status_detail": {
+            "type": "object",
+            "description": "status detail",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {}
+            }
+        },
+        "version": {
+            "type": "object",
+            "description": "version of analysis code",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {}
+            }
+        }
+    },
+    "required": [
+        "co2",
+        "density",
+        "hene",
+        "passnumber",
+        "status",
+        "status_detail",
+        "version"
+    ]
+}

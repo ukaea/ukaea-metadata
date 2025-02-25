@@ -1,0 +1,22 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "urn:ukaea:experiment:mast:source-schema",
+    "description": "Metadata to describe from diagnostic sources",
+    "type": "object",
+    "required": [ "name", "description", "source_type"],
+    "properties": {
+        "name": {
+            "type": "string",
+            "example": "Short name of the source"
+        },
+        "description": {
+            "type": "string",
+            "example": "Description of the data captured from this source."
+        },
+        "source_type": {
+            "type": "enum[string]",
+            "example": "The type of this source e.g. 'Analysed'"
+
+        }
+    }
+}

@@ -1,0 +1,696 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "amc",
+    "description": "Plasma Current and PF/TF Coil Currents",
+    "type": "object",
+    "properties": {
+        "efps_current": {
+            "type": "object",
+            "description": "EFPS current measured at input to P2 link board",
+            "units": {
+                "type": "string",
+                "const": "kA"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "error_field_02": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "kA * turn"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "error_field_05": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "kA * turn"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "p2il_coil_current": {
+            "type": "object",
+            "description": "P2 inner lower current (pseudo coil current signal used by EFIT)",
+            "units": {
+                "type": "string",
+                "const": "kA * turn"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "p2il_feed_current": {
+            "type": "object",
+            "description": "P2L inner winding current - measured at P2 link board",
+            "units": {
+                "type": "string",
+                "const": "kA"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "p2iu_coil_current": {
+            "type": "object",
+            "description": "P2 inner upper feed current (pseudo coil current signal used by EFIT)",
+            "units": {
+                "type": "string",
+                "const": "kA * turn"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "p2iu_feed_current": {
+            "type": "object",
+            "description": "P2U inner winding current - measured at P2 link board",
+            "units": {
+                "type": "string",
+                "const": "kA"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "p2l_case_current": {
+            "type": "object",
+            "description": "P2 lower case current (pseudo coil current signal used by EFIT)",
+            "units": {
+                "type": "string",
+                "const": "kA"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "p2l_current": {
+            "type": "object",
+            "description": "Internal P2L current",
+            "units": {
+                "type": "string",
+                "const": "kA * turn"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "p2ol_coil_current": {
+            "type": "object",
+            "description": "P2 outer lower current (pseudo coil current signal used by EFIT)",
+            "units": {
+                "type": "string",
+                "const": "kA * turn"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "p2ol_feed_current": {
+            "type": "object",
+            "description": "P2L outer winding current - measured at P2 link board",
+            "units": {
+                "type": "string",
+                "const": "kA"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "p2ou_coil_current": {
+            "type": "object",
+            "description": "P2 outer upper feed current (pseudo coil current signal used by EFIT)",
+            "units": {
+                "type": "string",
+                "const": "kA * turn"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "p2ou_feed_current": {
+            "type": "object",
+            "description": "P2U outer winding current - measured at P2 link board",
+            "units": {
+                "type": "string",
+                "const": "kA"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "p2u_case_current": {
+            "type": "object",
+            "description": "P2 upper case current (pseudo coil current signal used by EFIT)",
+            "units": {
+                "type": "string",
+                "const": "kA"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "p2u_current": {
+            "type": "object",
+            "description": "Internal P2U current",
+            "units": {
+                "type": "string",
+                "const": "kA * turn"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "p3l_case_current": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "kA"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "p3l_coil_current": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "kA * turn"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "p3l_current": {
+            "type": "object",
+            "description": "Internal P3L current",
+            "units": {
+                "type": "string",
+                "const": "kA * turn"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "p3l_feed_current": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "kA"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "p3u_case_current": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "kA"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "p3u_coil_current": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "kA * turn"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "p3u_current": {
+            "type": "object",
+            "description": "Internal P3U current",
+            "units": {
+                "type": "string",
+                "const": "kA * turn"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "p3u_feed_current": {
+            "type": "object",
+            "description": "P3U winding current - measured at P3/4/5 link board",
+            "units": {
+                "type": "string",
+                "const": "kA"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "p4l_case_current": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "kA"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "p4l_coil_current": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "kA * turn"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "p4l_current": {
+            "type": "object",
+            "description": "Internal P4L current",
+            "units": {
+                "type": "string",
+                "const": "kA * turn"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "p4l_feed_current": {
+            "type": "object",
+            "description": "P4L winding current - measured at P3/4/5 link board",
+            "units": {
+                "type": "string",
+                "const": "kA"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "p4u_case_current": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "kA"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "p4u_coil_current": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "kA * turn"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "p4u_current": {
+            "type": "object",
+            "description": "Internal P4U current",
+            "units": {
+                "type": "string",
+                "const": "kA * turn"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "p4u_feed_current": {
+            "type": "object",
+            "description": "P4U winding current - measured at P3/4/5 link board",
+            "units": {
+                "type": "string",
+                "const": "kA"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "p5l_case_current": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "kA"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "p5l_coil_current": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "kA * turn"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "p5l_current": {
+            "type": "object",
+            "description": "Internal P5L current",
+            "units": {
+                "type": "string",
+                "const": "kA * turn"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "p5l_feed_current": {
+            "type": "object",
+            "description": "P5L winding current - measured at P3/4/5 link board",
+            "units": {
+                "type": "string",
+                "const": "kA"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "p5u_case_current": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "kA"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "p5u_coil_current": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "kA * turn"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "p5u_current": {
+            "type": "object",
+            "description": "Internal P5U current",
+            "units": {
+                "type": "string",
+                "const": "kA * turn"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "p5u_feed_current": {
+            "type": "object",
+            "description": "P5U winding current - measured at P3/4/5 link board",
+            "units": {
+                "type": "string",
+                "const": "kA"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "p6l_current": {
+            "type": "object",
+            "description": "Internal P6L current",
+            "units": {
+                "type": "string",
+                "const": "kA * turn"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "p6u_current": {
+            "type": "object",
+            "description": "Internal P6U current",
+            "units": {
+                "type": "string",
+                "const": "kA * turn"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "plasma_current": {
+            "type": "object",
+            "description": "Plasma Current",
+            "units": {
+                "type": "string",
+                "const": "kA"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "sol_current": {
+            "type": "object",
+            "description": "P1PS - Solenoid Feed Current",
+            "units": {
+                "type": "string",
+                "const": "kA"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "status": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {}
+            }
+        },
+        "tf_current": {
+            "type": "object",
+            "description": "TF feed current measured in north duct",
+            "units": {
+                "type": "string",
+                "const": "kA"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "version": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {}
+            }
+        }
+    },
+    "required": [
+        "efps_current",
+        "error_field_02",
+        "error_field_05",
+        "p2il_coil_current",
+        "p2il_feed_current",
+        "p2iu_coil_current",
+        "p2iu_feed_current",
+        "p2l_case_current",
+        "p2l_current",
+        "p2ol_coil_current",
+        "p2ol_feed_current",
+        "p2ou_coil_current",
+        "p2ou_feed_current",
+        "p2u_case_current",
+        "p2u_current",
+        "p3l_case_current",
+        "p3l_coil_current",
+        "p3l_current",
+        "p3l_feed_current",
+        "p3u_case_current",
+        "p3u_coil_current",
+        "p3u_current",
+        "p3u_feed_current",
+        "p4l_case_current",
+        "p4l_coil_current",
+        "p4l_current",
+        "p4l_feed_current",
+        "p4u_case_current",
+        "p4u_coil_current",
+        "p4u_current",
+        "p4u_feed_current",
+        "p5l_case_current",
+        "p5l_coil_current",
+        "p5l_current",
+        "p5l_feed_current",
+        "p5u_case_current",
+        "p5u_coil_current",
+        "p5u_current",
+        "p5u_feed_current",
+        "p6l_current",
+        "p6u_current",
+        "plasma_current",
+        "sol_current",
+        "status",
+        "tf_current",
+        "version"
+    ]
+}

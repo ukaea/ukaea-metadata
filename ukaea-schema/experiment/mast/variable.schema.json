@@ -1,0 +1,41 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "urn:ukaea:experiment:mast:signal-schema",
+    "description": "Metadata to describe signals captured from a diagnostic",
+    "type": "object",
+    "required": [ "quality", "shape", "units", "description", "signal_type", "dimensions"],
+    "properties": {
+        "quality": {
+            "type": "enum[string]",
+            "description": "Quality flag for this signal."
+        },
+        "shape": {
+            "type": "array",
+            "description": "Shape of each dimension of this signal. e.g. [10, 100, 3]",
+            "items": {
+                "type": "number"
+            }
+        },
+        "units": {
+            "type": "string",
+            "description": "The units of the data contained within this dataset."
+        },
+        "decription": {
+            "type": "string",
+            "description": "The description of this signal."
+        },
+        "signal_type": {
+            "type": "enum[string]",
+            "description": "The type of the signal dataset. e.g. 'Raw', 'Analysed'"
+        },
+        "dimensions": {
+            "type": "array",
+            "uniqueItems": true,
+            "description": "The dimension names of the dataset, in order. e.g. ['time', 'radius']",
+            "items": {
+                "$ref": "/dimension",
+                "type": "string"
+            }
+        }
+    }
+}

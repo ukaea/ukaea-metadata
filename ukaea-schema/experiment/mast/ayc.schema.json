@@ -1,0 +1,558 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "ayc",
+    "description": "Core Thomson scattering data",
+    "type": "object",
+    "properties": {
+        "acqiris_time_": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "s"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "acqiris_time": "number"
+                }
+            }
+        },
+        "angle": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "radial_index": "number"
+                }
+            }
+        },
+        "aspectra": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "V"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "radial_index": "number",
+                    "spectral_index": "number"
+                }
+            }
+        },
+        "chi2": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "radial_index": "number"
+                }
+            }
+        },
+        "covariance_ne_te": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "eV / m ** 3"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "radial_index": "number"
+                }
+            }
+        },
+        "instrument_dr": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "instrument_time": "number",
+                    "radial_index": "number"
+                }
+            }
+        },
+        "interferometer_corr": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": " - "
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "laser_energy": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "J"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "laser_track": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "ne": {
+            "type": "object",
+            "description": "Electron Density",
+            "units": {
+                "type": "string",
+                "const": "1 / m ** 3"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "radial_index": "number"
+                }
+            }
+        },
+        "ne_core": {
+            "type": "object",
+            "description": "Peak electron density (t)",
+            "units": {
+                "type": "string",
+                "const": "1 / m ** 3"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "ne_error": {
+            "type": "object",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "radial_index": "number"
+                }
+            }
+        },
+        "passnumber": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {}
+            }
+        },
+        "pe": {
+            "type": "object",
+            "description": "Electron Pressure",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "radial_index": "number"
+                }
+            }
+        },
+        "pe_error": {
+            "type": "object",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "radial_index": "number"
+                }
+            }
+        },
+        "plasmalight_error": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "V"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "radial_index": "number",
+                    "spectral_index": "number"
+                }
+            }
+        },
+        "poisson_error": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "V"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "radial_index": "number",
+                    "spectral_index": "number"
+                }
+            }
+        },
+        "polyname": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "arb": "number"
+                }
+            }
+        },
+        "pulse": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "arb": "number"
+                }
+            }
+        },
+        "r_core": {
+            "type": "object",
+            "description": "Peak position (t)",
+            "units": {
+                "type": "string",
+                "const": "m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "r_error": {
+            "type": "object",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "radial_index": "number"
+                }
+            }
+        },
+        "radius": {
+            "type": "object",
+            "description": "Radial basis (x,t)",
+            "units": {
+                "type": "string",
+                "const": "m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "radial_index": "number"
+                }
+            }
+        },
+        "scat_length": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "m"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "arb": "number"
+                }
+            }
+        },
+        "segment_number": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "spectra": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "V"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "radial_index": "number",
+                    "spectral_index": "number"
+                }
+            }
+        },
+        "spectra_error": {
+            "type": "object",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "radial_index": "number",
+                    "spectral_index": "number"
+                }
+            }
+        },
+        "spectra_stray_light": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "V"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "radial_index": "number",
+                    "spectral_index": "number"
+                }
+            }
+        },
+        "status": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {}
+            }
+        },
+        "te": {
+            "type": "object",
+            "description": "Electron Temperature",
+            "units": {
+                "type": "string",
+                "const": "eV"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "radial_index": "number"
+                }
+            }
+        },
+        "te_core": {
+            "type": "object",
+            "description": "Peak electron temperature (t)",
+            "units": {
+                "type": "string",
+                "const": "eV"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        },
+        "te_error": {
+            "type": "object",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number",
+                    "radial_index": "number"
+                }
+            }
+        },
+        "version_fibre": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {}
+            }
+        },
+        "version_poly": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {}
+            }
+        },
+        "version_raman": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": ""
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {}
+            }
+        },
+        "xyc_time_": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "s"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "xyc_time": "number"
+                }
+            }
+        },
+        "yag_nelint": {
+            "type": "object",
+            "description": "",
+            "units": {
+                "type": "string",
+                "const": "e- / m2"
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "time": "number"
+                }
+            }
+        }
+    },
+    "required": [
+        "acqiris_time_",
+        "angle",
+        "aspectra",
+        "chi2",
+        "covariance_ne_te",
+        "instrument_dr",
+        "interferometer_corr",
+        "laser_energy",
+        "laser_track",
+        "ne",
+        "ne_core",
+        "ne_error",
+        "passnumber",
+        "pe",
+        "pe_error",
+        "plasmalight_error",
+        "poisson_error",
+        "polyname",
+        "pulse",
+        "r_core",
+        "r_error",
+        "radius",
+        "scat_length",
+        "segment_number",
+        "spectra",
+        "spectra_error",
+        "spectra_stray_light",
+        "status",
+        "te",
+        "te_core",
+        "te_error",
+        "version_fibre",
+        "version_poly",
+        "version_raman",
+        "xyc_time_",
+        "yag_nelint"
+    ]
+}
