@@ -5,17 +5,27 @@
   "type": "object",
   "properties": {
     "radiiC2ratio": {
-      "type": "number",
-      "description": "(Radii) CII Line ratio averaged over Ip flat top from 150ms for MAST and MAST-U"
-    },
-    "radiiO2ratio": {
-      "type": "number",
-      "description": "(Radii) OII Line Ratio averaged over Ip flat top from 150ms for MAST and MAST-U"
+      "description": "(Radii) CII Line ratio averaged over Ip flat top from 150ms for MAST and MAST-U",
+      "type": "number"
     },
     "radiiFlatTopPowerRatAvgLineDensity": {
-      "type": "number",
       "description": "(Radii) Flat Top Ratio of Power Radiated to Line Density squared averaged over Ip flat top from 150ms for MAST and MAST-U",
+      "type": "number",
       "units": "qudt:MegaW"
+    },
+    "radiiMagneticHeightEfit": {
+      "description": "(Radii) Magnetic Axis height above Mid-Plane from EFIT Equilibrium for MAST and MAST-U",
+      "type": "number",
+      "unit": "qudt:M"
+    },
+    "radiiMagneticRadiusEfit": {
+      "type": "number",
+      "descripiton": "Magnetic Axis major Radius from EFIT Equilibrium for MAST and MAST-U",
+      "units": "qudt:M"
+    },
+    "radiiO2ratio": {
+      "description": "(Radii) OII Line Ratio averaged over Ip flat top from 150ms for MAST and MAST-U",
+      "type": "number"
     },
     "radiiRinnerRadiusDAlpha": {
       "type": "number",
@@ -23,13 +33,8 @@
       "units": "qudt:M"
     },
     "radiiRinnerRadiusEfit": {
-      "type": "number",
       "description": "Rinner major Radius from EFIT Equilibrium for MAST and MAST-U",
-      "units": "qudt:M"
-    },
-    "radiiMagneticRadiusEfit": {
       "type": "number",
-      "descripiton": "Magnetic Axis major Radius from EFIT Equilibrium for MAST and MAST-U",
       "units": "qudt:M"
     },
     "radiiRouterRadiusDAlpha": {
@@ -41,11 +46,6 @@
       "type": "number",
       "descripiton": "router major Radius from EFIT Equilibrium for MAST and MAST-U",
       "units": "qudt:M"
-    },
-    "radiiMagneticHeightEfit": {
-      "type": "number",
-      "description": "(Radii) Magnetic Axis height above Mid-Plane from EFIT Equilibrium for MAST and MAST-U",
-      "unit": "qudt:M"
     }
   }
 }

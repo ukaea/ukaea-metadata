@@ -63,11 +63,11 @@
       "description": "(Shot) Reference shot for MAST and MAST-U"
     },
     "shotSessionLeader": {
-      "type": "str",
+      "type": "string",
       "description": "(Shot) session leader for MAST and MAST-U"
     },
     "shotSummary": {
-      "type": "str",
+      "type": "string",
       "description": "Session summary for MAST and MAST-U"
     },
     "shotTermCode": {

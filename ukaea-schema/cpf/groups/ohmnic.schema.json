@@ -5,44 +5,44 @@
   "type": "object",
   "properties": {
     "ohmicEnergyTmaxCurrent": {
-      "type": "number",
       "description": "Ohmic Heating Energy Input at time of Peak Current for MAST and MAST-U",
+      "type": "number",
       "units": "qudt:MegaJ"
     },
     "ohmicEnergyTmaxHeating": {
-      "type": "number",
       "description": "Ohmic Heating Energy Input at time of Maximum Ohmic Heating for MAST and MAST-U",
-      "units": "qudt:MegaJ"
-    },
-    "ohmicTotalEnergy": {
       "type": "number",
-      "description": "Total Ohmic Heating Energy Input for MAST and MAST-U",
       "units": "qudt:MegaJ"
     },
     "ohmicEnergyTruby": {
-      "type": "number",
       "description": "Ohmic Heat Energy Input at time of Ruby TS for MAST only",
+      "type": "number",
       "units": "qudt:MegaJ"
     },
     "ohmicHeatingTmaxCurrent": {
-      "type": "number",
       "description": "Ohmic Heating Rate at time of Peak Current for MAST and MAST-U",
-      "units": "qudt:MegaW"
-    },
-    "ohmicMaxHeating": {
       "type": "number",
-      "description": "Maximum Ohmic Heating Rate for MAST and MAST-U",
       "units": "qudt:MegaW"
     },
     "ohmicHeatingTruby": {
-      "type": "number",
       "description": "Ohmic Heating Rate at time of Ruby TS for MAST only",
+      "type": "number",
+      "units": "qudt:MegaW"
+    },
+    "ohmicMaxHeating": {
+      "description": "Maximum Ohmic Heating Rate for MAST and MAST-U",
+      "type": "number",
       "units": "qudt:MegaW"
     },
     "ohmicMaxHeatingTime": {
-      "type": "number",
       "description": "Time of Maximum Ohmic Heating for MAST and MAST-U",
+      "type": "number",
       "units": "qudt:SEC"
+    },
+    "ohmicTotalEnergy": {
+      "description": "Total Ohmic Heating Energy Input for MAST and MAST-U",
+      "type": "number",
+      "units": "qudt:MegaJ"
     }
   }
 }

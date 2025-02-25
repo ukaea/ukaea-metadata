@@ -1,43 +1,43 @@
 {
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "urn:ukaea:experiment:hive:cpf-schema:equilibrium",
-    "description": "Metadata to describe equilibrium cpf-field",
-    "type": "object",
-    "properties": {
-      "equiLi2TmaxCurrent": {
-        "type": "number",
-        "description": "li(2) at time of Peak Current for MAST and MAST-U"
-      },
-      "equiMaxLi2": {
-        "type": "number",
-        "description": "li(2) Maximum value for MAST and MAST-U"
-      },
-      "equiLi2Truby": {
-        "type": "number",
-        "description": "li(2) at time of Ruby TS for MAST only"
-      },
-      "equiLi3TmaxCurrent": {
-        "type": "number",
-        "description": "li(3) at time of Peak Current for MAST and MAST-U"
-      },
-      "equiMaxLi3": {
-        "type": "number",
-        "description": "li(3) Maximum value for MAST and MAST-U"
-      },
-      "equiLi3Truby": {
-        "type": "number",
-        "description": "li(3) at time of Ruby TS for MAST only",
-        "unit": "qudt:SEC"  
-      },
-      "equiMaxLi2Time": {
-        "type": "number",
-        "description": "Time of Maximum li(2) for MAST and MAST-U",
-        "unit": "qudt:SEC"  
-      },
-      "equiMaxLi3Time":{
-        "type": "number",
-        "description": "Time of Maximum li(3) for MAST and MAST-U",
-        "unit": "qudt:SEC"  
-      }
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ukaea:experiment:hive:cpf-schema:equilibrium",
+  "description": "Metadata to describe equilibrium cpf-field",
+  "type": "object",
+  "properties": {
+    "equiLi2TmaxCurrent": {
+      "description": "li(2) at time of Peak Current for MAST and MAST-U",
+      "type": "number"
+    },
+    "equiLi2Truby": {
+      "description": "li(2) at time of Ruby TS for MAST only",
+      "type": "number"
+    },
+    "equiLi3TmaxCurrent": {
+      "description": "li(3) at time of Peak Current for MAST and MAST-U",
+      "type": "number"
+    },
+    "equiLi3Truby": {
+      "description": "li(3) at time of Ruby TS for MAST only",
+      "type": "number",
+      "unit": "qudt:SEC"
+    },
+    "equiMaxLi2": {
+      "description": "li(2) Maximum value for MAST and MAST-U",
+      "type": "number"
+    },
+    "equiMaxLi2Time": {
+      "description": "Time of Maximum li(2) for MAST and MAST-U",
+      "type": "number",
+      "unit": "qudt:SEC"
+    },
+    "equiMaxLi3": {
+      "description": "li(3) Maximum value for MAST and MAST-U",
+      "type": "number"
+    },
+    "equiMaxLi3Time": {
+      "description": "Time of Maximum li(3) for MAST and MAST-U",
+      "type": "number",
+      "unit": "qudt:SEC"
     }
   }
+}
