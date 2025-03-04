@@ -1,0 +1,35 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "urn:ukaea:process-schema",
+    "description": "Metadata schema for PROCESS simulations",
+    "type": "object",
+    "properties": {
+        "runInformation": {
+            "type": "object",
+            "properties": {
+                "runTitle": {
+                    "type": "string"
+                }
+            }
+        },
+        "constraintEquations": {
+            "type": "object",
+            "properties": {
+                "consistencyEquations": {
+                    "type": "array"
+                },
+                "limitEquations": {
+                    "type": "array"
+                }
+            }
+        },
+        "iterationVariables": {
+            "type": "array"
+        },
+        "required": [
+            "runInformation",
+            "constraint_Equations",
+            "iterationVariables"
+        ]
+    }
+}
