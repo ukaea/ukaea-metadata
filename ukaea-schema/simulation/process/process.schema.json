@@ -28,7 +28,7 @@
         },
         "required": [
             "runInformation",
-            "constraint_Equations",
+            "constraintEquations",
             "iterationVariables"
         ]
     }
