@@ -9,8 +9,12 @@
             "properties": {
                 "runTitle": {
                     "type": "string"
+                },
+                "author": {
+                    "type": "string"
                 }
-            }
+            },
+            "required": ["runTitle", "author"]
         },
         "constraintEquations": {
             "type": "object",
