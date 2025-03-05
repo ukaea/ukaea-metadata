@@ -18,19 +18,19 @@
                     "format": "date-time"
                 },
                 "Pfus": {
-                    "type": "string"
+                    "type": "number"
                 },
                 "Pnet": {
-                    "type": "string"
+                    "type": "number"
                 },
                 "R": {
-                    "type": "string"
+                    "type": "number"
                 },
                 "A": {
-                    "type": "string"
+                    "type": "number"
                 },
                 "B": {
-                    "type": "string"
+                    "type": "number"
                 }
             },
             "required": [
