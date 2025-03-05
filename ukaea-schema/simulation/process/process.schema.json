@@ -16,9 +16,33 @@
                 "dateTime": {
                     "type": "string",
                     "format": "date-time"
+                },
+                "Pfus": {
+                    "type": "string"
+                },
+                "Pnet": {
+                    "type": "string"
+                },
+                "R": {
+                    "type": "string"
+                },
+                "A": {
+                    "type": "string"
+                },
+                "B": {
+                    "type": "string"
                 }
             },
-            "required": ["runTitle", "author", "dateTime"]
+            "required": [
+                "runTitle",
+                "author",
+                "dateTime",
+                "Pfus",
+                "Pnet",
+                "R",
+                "A",
+                "B"
+            ]
         }
     }
 }
