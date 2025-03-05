@@ -32,7 +32,6 @@
             "required": [
                 "runTitle",
                 "author",
-                "dateTime",
                 "Pfus",
                 "Pnet",
                 "R",
