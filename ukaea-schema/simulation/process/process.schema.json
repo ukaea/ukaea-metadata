@@ -12,28 +12,13 @@
                 },
                 "author": {
                     "type": "string"
+                },
+                "dateTime": {
+                    "type": "string",
+                    "format": "date-time"
                 }
             },
-            "required": ["runTitle", "author"]
-        },
-        "constraintEquations": {
-            "type": "object",
-            "properties": {
-                "consistencyEquations": {
-                    "type": "array"
-                },
-                "limitEquations": {
-                    "type": "array"
-                }
-            }
-        },
-        "iterationVariables": {
-            "type": "array"
-        },
-        "required": [
-            "runInformation",
-            "constraintEquations",
-            "iterationVariables"
-        ]
+            "required": ["runTitle", "author", "dateTime"]
+        }
     }
 }
