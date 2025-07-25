@@ -21,6 +21,7 @@
         "seid": {
             "type": "string",
             "pattern": "^\\d{4}$",
+            "readOnly": true,
             "$comment": "4 digits of the SEID (equipment identity number)"
         },
         "seidDescription": {
@@ -30,10 +31,12 @@
         "jobId": {
             "type": "string",
             "pattern": "^\\d{5}$",
+            "readOnly": true,
             "$comment": "First 2 digits represent year, last 3 digits represent incremental number"
         },
         "sessionId": {
             "type": "string",
+            "readOnly": true,
             "$comment": "Incremental session ID across a single job"
         },
         "sampleId": {
