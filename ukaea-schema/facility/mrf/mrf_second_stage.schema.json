@@ -1,7 +1,7 @@
 {
-    "$id": "urn:ukaea:facility:mrf:diagnostic",
+    "$id": "urn:ukaea:facility:mrf:stagetwo",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "description": "Metadata schema MRF experiments",
+    "description": "Metadata schema MRF experiments after directory creation",
     "type": "object",
     "required": [
         "seid",
