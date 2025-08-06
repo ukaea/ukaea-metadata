@@ -1,27 +1,21 @@
 {
-    "$id": "https://w3id.org/fuel/schemas/1.0.0/facility/facility",
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "description": "Metadata schema for UKAEA facilities",
-    "type": "object",
-    "required": [
-        "facilityId",
-        "location"
-    ],
-    "properties": {
-        "facilityId": {
-            "description": "A unique identifier for the facility.",
-            "enum": [
-                "HIVE",
-                "MAST-U"
-            ]
-        },
-        "description": {
-            "description": "A brief summary of the facility's purpose and objectives.",
-            "type": "string"
-        },
-        "location": {
-            "description": "Location where the experiment was conducted.",
-            "type": "string"
-        }
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://w3id.org/fuel/schemas/1.0.0/facility/facility",
+  "description": "Metadata schema for UKAEA facilities",
+  "type": "object",
+  "required": [ "facilityId", "location" ],
+  "properties": {
+    "description": {
+      "description": "A brief summary of the facility's purpose and objectives.",
+      "type": "string"
+    },
+    "facilityId": {
+      "description": "A unique identifier for the facility.",
+      "enum": [ "HIVE", "MAST-U" ]
+    },
+    "location": {
+      "description": "Location where the experiment was conducted.",
+      "type": "string"
     }
+  }
 }

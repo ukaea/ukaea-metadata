@@ -1,39 +1,39 @@
 {
-    "$id": "https://w3id.org/fuel/schemas/1.0.0/diagnostics/thermocouple",
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "description": "Metadata to describe thermocouple diagnostic",
-    "type": "object",
-    "required": [ "insertRequired" ],
-    "properties": {
-        "deviceInformation": {
-            "type": "object",
-            "properties": {
-                "required": ["insertRequired"],
-                "attachmentType": {
-                    "type": "string",
-                    "description": "[-]",
-                    "example": "spot weld with inert gas shield"
-                },
-                "tcType": {
-                    "type": "string",
-                    "description": "[-]",
-                    "example": "K"
-                }
-            },
-            "deviceSetup": {
-                "required": ["insertRequired"],
-                "type": "object",
-                "properties": {
-                    "dataChannel": {
-                        "type": "str",
-                        "descripiton": "[-]"
-                    },
-                    "location": {
-                        "type": "str",
-                        "descripiton": "[-]"
-                    }
-                }
-            }
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://w3id.org/fuel/schemas/1.0.0/diagnostics/thermocouple",
+  "description": "Metadata to describe thermocouple diagnostic",
+  "type": "object",
+  "required": [ "deviceInformation", "deviceSetup" ],
+  "properties": {
+    "deviceInformation": {
+      "type": "object",
+      "required": [ "attachmentType", "tcType" ],
+      "properties": {
+        "attachmentType": {
+          "description": "[-]",
+          "type": "string",
+          "example": "spot weld with inert gas shield"
+        },
+        "tcType": {
+          "description": "[-]",
+          "type": "string",
+          "example": "K"
         }
+      }
+    },
+    "deviceSetup": {
+      "type": "object",
+      "required": [ "dataChannel", "location" ],
+      "properties": {
+        "dataChannel": {
+          "type": "string",
+          "descripiton": "[-]"
+        },
+        "location": {
+          "type": "string",
+          "descripiton": "[-]"
+        }
+      }
     }
+  }
 }

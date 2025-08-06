@@ -1,24 +1,21 @@
 {
-    "$id": "https://w3id.org/fuel/schemas/1.0.0/facility/hive/campaign",
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "description": "Metadata schema for a HIVE campaign",
-    "type": "object",
-    "required": [
-        "campaignID",
-        "campaignStart"
-    ],
-    "properties": {
-        "campaignID": {
-            "type": "string",
-            "example": "HIVE-XXXXXX"
-        },
-        "campaignStart": {
-            "type": "string",
-            "format": "date-time"
-        },
-        "campaignEnd": {
-            "type": "string",
-            "format": "date-time"
-        }
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://w3id.org/fuel/schemas/1.0.0/facility/hive/campaign",
+  "description": "Metadata schema for a HIVE campaign",
+  "type": "object",
+  "required": [ "campaignID", "campaignStart" ],
+  "properties": {
+    "campaignEnd": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "campaignID": {
+      "type": "string",
+      "example": "HIVE-XXXXXX"
+    },
+    "campaignStart": {
+      "type": "string",
+      "format": "date-time"
     }
+  }
 }

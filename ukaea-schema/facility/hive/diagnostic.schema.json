@@ -1,29 +1,30 @@
 {
-    "$id": "https://w3id.org/fuel/schemas/1.0.0/facility/hive/diagnostic",
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "description": "Metadata schema for a HIVE diagnostic",
-    "type": "object",
-    "required": [
-        "diagnosticName",
-        "diagnosticType",
-        "port",
-        "diagnostic"
-    ],
-    "properties": {
-        "diagnosticName": {
-            "type": "string",
-            "example": "TC01"
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://w3id.org/fuel/schemas/1.0.0/facility/hive/diagnostic",
+  "description": "Metadata schema for a HIVE diagnostic",
+  "type": "object",
+  "required": [ "diagnosticName", "diagnosticType", "port", "diagnostic" ],
+  "properties": {
+    "diagnostic": {
+      "oneOf": [
+        {
+          "$ref": "https://w3id.org/fuel/schemas/1.0.0/diagnostics/dic"
         },
-        "diagnosticType": {
-            "type": "string",
-            "example": "Thermocouple"
-        },
-        "port": { "$ref": "https://w3id.org/fuel/schemas/1.0.0/facility/hive/port" },
-        "diagnostic": {
-            "oneOf": [
-                { "$ref": "https://w3id.org/fuel/schemas/1.0.0/diagnostics/dic" },
-                { "$ref": "https://w3id.org/fuel/schemas/1.0.0/diagnostics/thermocouple" }
-            ]
+        {
+          "$ref": "https://w3id.org/fuel/schemas/1.0.0/diagnostics/thermocouple"
         }
+      ]
+    },
+    "diagnosticName": {
+      "type": "string",
+      "example": "TC01"
+    },
+    "diagnosticType": {
+      "type": "string",
+      "example": "Thermocouple"
+    },
+    "port": {
+      "$ref": "https://w3id.org/fuel/schemas/1.0.0/facility/hive/port"
     }
+  }
 }

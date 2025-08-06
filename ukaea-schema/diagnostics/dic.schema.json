@@ -1,85 +1,85 @@
 {
-    "$id": "https://w3id.org/fuel/schemas/1.0.0/diagnostics/dic",
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "description": "Digital Image Correlation (DIC) diagnostic metadata",
-    "type": "object",
-    "required": [ "setupInformation", "softwareInformation", "cameraSetup" ],
-    "properties": {
-        "setupInformation": {
-            "type": "object",
-            "required": [ "configuration", "stereoAngle", "standOffDistance" ],
-            "properties": {
-                "configuration": {
-                    "enum": [ "2D", "Stereo", "Stereo+IR" ]
-                },
-                "stereoAngle": {
-                    "type": "number",
-                    "unit": "qudt:DEG"
-                },
-                "standOffDistance": {
-                    "type": "number",
-                    "unit": "qudt:M"
-                },
-                "imagedSurfaceOnSpecimen": {
-                    "type": "string",
-                    "example": "XY plane"
-                }
-            }
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://w3id.org/fuel/schemas/1.0.0/diagnostics/dic",
+  "description": "Digital Image Correlation (DIC) diagnostic metadata",
+  "type": "object",
+  "required": [ "setupInformation", "softwareInformation", "cameraSetup" ],
+  "properties": {
+    "additionalInformation": {
+      "type": "object",
+      "required": [ "patternTechnique", "patternBackground", "patternSpeckle" ],
+      "properties": {
+        "approxFeatureSize": {
+          "type": "number",
+          "units": "qudt:MicroM"
         },
-        "softwareInformation": {
-            "type": "object",
-            "required": [ "softwareName", "softwareVersion" ],
-            "properties": {
-                "softwareName": {
-                    "type": "string",
-                    "description": "Name of the acquisition software used"
-                },
-                "softwareVersion": {
-                    "type": "string",
-                    "description": "Version of the acquisition software used",
-                    "comment": "versioning to be improved"
-                }
-            }
+        "calTargetDims": {
+          "type": "string",
+          "example": "9 x 12 dots with 5 mm spacing"
         },
-        "additionalInformation": {
-            "type": "object",
-            "required": [ "patternTechnique", "patternBackground", "patternSpeckle" ],
-            "properties": {
-                "patternTechnique": {
-                    "type": "string"
-                },
-                "patternBackground": {
-                    "type": "string"
-                },
-                "patternSpeckle": {
-                    "type": "string"
-                },
-                "approxFeatureSize": {
-                    "type": "number",
-                    "units": "qudt:MicroM"
-                },
-                "calTargetMake": {
-                    "type": "string"
-                },
-                "calTargetDims": {
-                    "type": "string",
-                    "example": "9 x 12 dots with 5 mm spacing"
-                },
-                "calTargetSpacing": {
-                    "type": "number"
-                }
-            }
+        "calTargetMake": {
+          "type": "string"
         },
-        "cameraSetup": {
-            "type": "object",
-            "properties": {
-                "cameras": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "https://w3id.org/fuel/schemas/1.0.0/diagnostics/camera"
-                    }
-                } 
-            }
+        "calTargetSpacing": {
+          "type": "number"
+        },
+        "patternBackground": {
+          "type": "string"
+        },
+        "patternSpeckle": {
+          "type": "string"
+        },
+        "patternTechnique": {
+          "type": "string"
         }
+      }
+    },
+    "cameraSetup": {
+      "type": "object",
+      "properties": {
+        "cameras": {
+          "type": "array",
+          "items": {
+            "$ref": "https://w3id.org/fuel/schemas/1.0.0/diagnostics/camera"
+          }
+        }
+      }
+    },
+    "setupInformation": {
+      "type": "object",
+      "required": [ "configuration", "stereoAngle", "standOffDistance" ],
+      "properties": {
+        "configuration": {
+          "enum": [ "2D", "Stereo", "Stereo+IR" ]
+        },
+        "imagedSurfaceOnSpecimen": {
+          "type": "string",
+          "example": "XY plane"
+        },
+        "standOffDistance": {
+          "type": "number",
+          "unit": "qudt:M"
+        },
+        "stereoAngle": {
+          "type": "number",
+          "unit": "qudt:DEG"
+        }
+      }
+    },
+    "softwareInformation": {
+      "type": "object",
+      "required": [ "softwareName", "softwareVersion" ],
+      "properties": {
+        "softwareName": {
+          "description": "Name of the acquisition software used",
+          "type": "string"
+        },
+        "softwareVersion": {
+          "description": "Version of the acquisition software used",
+          "type": "string",
+          "comment": "versioning to be improved"
+        }
+      }
     }
+  }
 }

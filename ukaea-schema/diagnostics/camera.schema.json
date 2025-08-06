@@ -1,70 +1,85 @@
 {
-    "$id": "https://w3id.org/fuel/schemas/1.0.0/diagnostics/camera",
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "description": "Metadata to describe camera diagnostics",
-    "type": "object",
-    "required": ["cameraInformation", "lensInformation", "captureSettings"],
-    "properties": {
-        "cameraInformation": {
-            "type": "object",
-            "properties": {
-                "make": { "type": "string" },
-                "model": { "type": "string" },
-                "serialNumber": { "type": "string" },
-                "resolutionX": {
-                    "type": "integer",
-                    "units": "qudt:px",
-                    "description": "The camera resolution in pixels, represented as width."
-                },
-                "resolutionY": {
-                    "type": "integer",
-                    "units": "qudt:px",
-                    "description": "The camera resolution in pixels, represented as height."
-                }
-            },
-            "required": ["make", "model", "resolutionX", "resolutionY"]
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://w3id.org/fuel/schemas/1.0.0/diagnostics/camera",
+  "description": "Metadata to describe camera diagnostics",
+  "type": "object",
+  "required": [ "cameraInformation", "lensInformation", "captureSettings" ],
+  "properties": {
+    "cameraInformation": {
+      "type": "object",
+      "required": [ "make", "model", "resolutionX", "resolutionY" ],
+      "properties": {
+        "make": {
+          "type": "string"
         },
-        "lensInformation": {
-            "type": "object",
-            "properties": {
-                "make": { "type": "string" },
-                "model": { "type": "string" },
-                "serialNumber": { "type": "string" },
-                "focalLength": { "type": "number" },
-                "aperture": { "type": "string" },
-                "fieldOfViewX": {
-                    "type": "integer",
-                    "units": "qudt:px",
-                    "description": "The field of view in pixels, represented as width."
-                },
-                "fieldOfViewY": {
-                    "type": "integer",
-                    "units": "qudt:px",
-                    "description": "The field of view in pixels, represented as height."
-                }
-            },
-            "required": ["make", "model", "focalLength", "aperture"]
+        "model": {
+          "type": "string"
         },
-        "captureSettings": {
-            "type": "object",
-            "properties": {
-                "imageAcquisitionRate": {
-                    "type": "number",
-                    "description": "The rate at which images are acquired, measured in Hertz.",
-                    "unit": "qudt:Hertz"
-                },
-                "imageNoise": {
-                    "type": "number",
-                    "description": "The noise level in the image, typically measured as a signal-to-noise ratio."
-                },
-                "imageScale": {
-                    "type": "number",
-                    "description": "The scale of the image in millimeters per pixel (mm/pixel) or similar.",
-                    "unit": "qudt:MilliM-PER-Pixel"
-                }
-            },
-            "required": ["imageAcquisitionRate", "imageNoise"]
+        "resolutionX": {
+          "description": "The camera resolution in pixels, represented as width.",
+          "type": "integer",
+          "units": "qudt:px"
+        },
+        "resolutionY": {
+          "description": "The camera resolution in pixels, represented as height.",
+          "type": "integer",
+          "units": "qudt:px"
+        },
+        "serialNumber": {
+          "type": "string"
         }
+      }
+    },
+    "captureSettings": {
+      "type": "object",
+      "required": [ "imageAcquisitionRate", "imageNoise" ],
+      "properties": {
+        "imageAcquisitionRate": {
+          "description": "The rate at which images are acquired, measured in Hertz.",
+          "type": "number",
+          "unit": "qudt:Hertz"
+        },
+        "imageNoise": {
+          "description": "The noise level in the image, typically measured as a signal-to-noise ratio.",
+          "type": "number"
+        },
+        "imageScale": {
+          "description": "The scale of the image in millimeters per pixel (mm/pixel) or similar.",
+          "type": "number",
+          "unit": "qudt:MilliM-PER-Pixel"
+        }
+      }
+    },
+    "lensInformation": {
+      "type": "object",
+      "required": [ "make", "model", "focalLength", "aperture" ],
+      "properties": {
+        "aperture": {
+          "type": "string"
+        },
+        "fieldOfViewX": {
+          "description": "The field of view in pixels, represented as width.",
+          "type": "integer",
+          "units": "qudt:px"
+        },
+        "fieldOfViewY": {
+          "description": "The field of view in pixels, represented as height.",
+          "type": "integer",
+          "units": "qudt:px"
+        },
+        "focalLength": {
+          "type": "number"
+        },
+        "make": {
+          "type": "string"
+        },
+        "model": {
+          "type": "string"
+        },
+        "serialNumber": {
+          "type": "string"
+        }
+      }
     }
+  }
 }
-

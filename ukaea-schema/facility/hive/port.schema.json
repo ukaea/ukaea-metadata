@@ -1,25 +1,21 @@
 {
-    "$id": "https://w3id.org/fuel/schemas/1.0.0/facility/hive/port",
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "description": "Metadata schema for a HIVE port",
-    "type": "object",
-    "required": [
-        "portID",
-        "portDescription",
-        "portSizeStandard"
-    ],
-    "properties": {
-        "portID": {
-            "type": "string",
-            "example": "Port_1"
-        },
-        "portDescription": {
-            "type": "string",
-            "example": "Front Port"
-        },
-        "portSizeStandard": {
-            "type": "string",
-            "example": "CF100"
-        }
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://w3id.org/fuel/schemas/1.0.0/facility/hive/port",
+  "description": "Metadata schema for a HIVE port",
+  "type": "object",
+  "required": [ "portID", "portDescription", "portSizeStandard" ],
+  "properties": {
+    "portDescription": {
+      "type": "string",
+      "example": "Front Port"
+    },
+    "portID": {
+      "type": "string",
+      "example": "Port_1"
+    },
+    "portSizeStandard": {
+      "type": "string",
+      "example": "CF100"
     }
+  }
 }
