@@ -3,6 +3,8 @@ on:
   push:
     branches: 
       - main
+      - develop
+      - repo-cleanup-refactor
   pull_request: 
     branches: 
       - main

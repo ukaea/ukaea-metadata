@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Use jsonschema Action
-        uses: sourcemeta/jsonschema@v5.0.0
+        uses: sourcemeta/jsonschema@v11.0.0
 
       - name: Validate JSON Schemas
         run: jsonschema lint ukaea-schema/**/*.schema.json
