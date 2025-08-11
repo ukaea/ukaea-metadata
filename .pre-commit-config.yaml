@@ -1,0 +1,14 @@
+repos:
+  - repo: local
+    hooks:
+      - id: jsonschema-fmt
+        name: format jsonschema files
+        entry: jsonschema fmt 
+        language: system
+        files: ^ukaea-schema/.*\.schema.json
+
+      - id: jsonschema-validate
+        name: validate json schema files
+        entry: jsonschema metaschema
+        language: system
+        files: ^ukaea-schema/.*\.schema.json
