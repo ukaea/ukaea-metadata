@@ -1,45 +1,45 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "urn:ukaea:experiment:hive:diagnostics:flowmeter-schema",
+  "$id": "https://w3id.org/fuel/schemas/1.0.0/diagnostics/flowmeter-schema",
   "description": "Metadata to describe flowmeter diagnostics",
   "type": "object",
   "properties": {
     "deviceInformation": {
-      "type": "object",
-      "required": [
-        "make",
-        "model",
-        "serialNumber",
-        "flowRange, flowmeterType"
-      ],
-      "properties": {
-        "flowRange": {
+      "allOf": [
+        {
+          "$ref": "https://w3id.org/fuel/schemas/1.0.0/diagnostics/base-device"
+        },
+        {
           "type": "object",
-          "required": [ "minimum", "maximum" ],
           "properties": {
-            "maximum": {
-              "type": "number",
-              "units": "qudt:MicroM"
+            "flowRange": {
+              "type": "object",
+              "required": [ "minimum", "maximum" ],
+              "properties": {
+                "maximum": {
+                  "type": "number",
+                  "units": "qudt:MicroM"
+                },
+                "minimum": {
+                  "type": "number",
+                  "units": "qudt:MicroM"
+                }
+              }
             },
-            "minimum": {
-              "type": "number",
-              "units": "qudt:MicroM"
+            "flowmeterType": {
+              "type": "string"
             }
           }
         },
-        "flowmeterType": {
-          "type": "string"
-        },
-        "make": {
-          "type": "string"
-        },
-        "model": {
-          "type": "string"
-        },
-        "serialNumber": {
-          "type": "integer"
+        {
+          "required": [
+            "make",
+            "model",
+            "serialNumber",
+            "flowRange, flowmeterType"
+          ]
         }
-      }
+      ]
     }
   }
 }

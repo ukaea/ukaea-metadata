@@ -6,29 +6,14 @@
   "required": [ "cameraInformation", "lensInformation", "captureSettings" ],
   "properties": {
     "cameraInformation": {
-      "type": "object",
-      "required": [ "make", "model", "resolutionX", "resolutionY" ],
-      "properties": {
-        "make": {
-          "type": "string"
+      "allOf": [
+        {
+          "$ref": "https://w3id.org/fuel/schemas/1.0.0/diagnostics/base-device"
         },
-        "model": {
-          "type": "string"
-        },
-        "resolutionX": {
-          "description": "The camera resolution in pixels, represented as width.",
-          "type": "integer",
-          "units": "qudt:px"
-        },
-        "resolutionY": {
-          "description": "The camera resolution in pixels, represented as height.",
-          "type": "integer",
-          "units": "qudt:px"
-        },
-        "serialNumber": {
-          "type": "string"
+        {
+          "required": [ "make", "model", "resolutionX", "resolutionY" ]
         }
-      }
+      ]
     },
     "captureSettings": {
       "type": "object",

@@ -1,75 +1,26 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "urn:ukaea:experiment:hive:diagnostics:ir-camera-schema",
+  "$id": "https://w3id.org/fuel/schemas/1.0.0/diagnostics/ir-camera-schema",
   "description": "Metadata to describe ir-camera diagnostics",
   "type": "object",
   "required": [ "deviceInformation", "deviceSettings", "location" ],
   "properties": {
     "deviceInformation": {
-      "type": "object",
-      "required": [
-        "make",
-        "model",
-        "resolution",
-        "serialNumber",
-        "spectralRange",
-        "temperatureRange"
-      ],
-      "properties": {
-        "make": {
-          "type": "string"
+      "allOf": [
+        {
+          "$ref": "https://w3id.org/fuel/schemas/1.0.0/diagnostics/base-device"
         },
-        "model": {
-          "type": "string"
-        },
-        "resolution": {
-          "type": "object",
-          "required": [ "resolutionY", "resolutionX" ],
-          "properties": {
-            "resolutionX": {
-              "description": "The camera resolution in pixels, represented as width.",
-              "type": "integer",
-              "units": "qudt:px"
-            },
-            "resolutionY": {
-              "description": "The camera resolution in pixels, represented as height.",
-              "type": "integer",
-              "units": "qudt:px"
-            }
-          }
-        },
-        "serialNumber": {
-          "type": "integer"
-        },
-        "spectralRange": {
-          "type": "object",
-          "required": [ "minimum", "maximum" ],
-          "properties": {
-            "maximum": {
-              "type": "number",
-              "units": "qudt:MicroM"
-            },
-            "minimum": {
-              "type": "number",
-              "units": "qudt:MicroM"
-            }
-          }
-        },
-        "temperatureRange": {
-          "type": "object",
-          "required": [ "minimum", "maximum" ],
-          "properties": {
-            "maximum": {
-              "type": "number",
-              "units": "qudt:DEG_C"
-            },
-            "minimum": {
-              "type": "number",
-              "units": "qudt:DEG_C"
-            }
-          }
+        {
+          "required": [
+            "make",
+            "model",
+            "resolution",
+            "serialNumber",
+            "spectralRange",
+            "temperatureRange"
+          ]
         }
-      }
+      ]
     },
     "deviceSettings": {
       "type": "object",
