@@ -7,7 +7,7 @@
   "properties": {
     "cameraInformation": { "$anchor": "CameraInformation",
       "type": "object",
-      "required": [ "make", "model"],
+      "required": [ "make", "model", "resolution" ],
       "properties": {
         "make": {
           "type": "string"
@@ -17,14 +17,14 @@
         },
         "resolution": {
           "type": "object",
-          "required": [ "Y", "X" ],
+          "required": [ "y", "x" ],
           "properties": {
-            "X": {
+            "x": {
               "description": "The camera resolution in pixels, represented as width.",
               "type": "integer",
               "units": "qudt:px"
             },
-            "Y": {
+            "y": {
               "description": "The camera resolution in pixels, represented as height.",
               "type": "integer",
               "units": "qudt:px"

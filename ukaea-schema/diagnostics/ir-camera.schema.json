@@ -26,12 +26,12 @@
           "type": "object",
           "required": [ "Y", "X" ],
           "properties": {
-            "X": {
+            "x": {
               "description": "The camera resolution in pixels, represented as width.",
               "type": "integer",
               "units": "qudt:px"
             },
-            "Y": {
+            "y": {
               "description": "The camera resolution in pixels, represented as height.",
               "type": "integer",
               "units": "qudt:px"
