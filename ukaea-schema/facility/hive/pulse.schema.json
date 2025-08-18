@@ -11,51 +11,70 @@
     "pulseDuration",
     "dataCaptureStart",
     "pulseQuality",
-    "coilInformation",
+    "heatingInformation",
     "coolantInformation"
   ],
   "properties": {
-    "coilInformation": {
+    "pulseInformation": {
       "type": "object",
-      "required": [
-        "currentType",
-        "inputPower",
-        "inputCurrent",
-        "inputVoltage",
-        "outputFrequency",
-        "outputPower",
-        "outputCurrent",
-        "outputVoltage"
-      ],
+      "properties": {
+        "pulseID": {
+          "type": "string"
+        },
+        "experiment": {
+          "type": "string"
+        },
+        "configuration": {
+          "type": "string"
+        },
+        "pulseStart": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "dataCaptureStart": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "pulseDuration": {
+          "$comment": "To be updated automatically post-pulse",
+          "type": "integer",
+          "minimum": 0,
+          "unit": "qudt:SEC"
+        }
+      }
+    },
+    "operator1": {
+      "$ref": "https://w3id.org/fuel/schemas/1.0.0/diagnostics/person"
+    },
+    "operator2": {
+      "$ref": "https://w3id.org/fuel/schemas/1.0.0/diagnostics/person"
+    },
+    "pulseDetails": {
+      "type": "object",
+      "properties": {
+        "comment": {
+          "type": "string"
+        },
+        "pulseQuality": {
+          "enum": [ "Success", "Fail" ]
+        }
+      }
+    },
+    "heatingInformation": {
+      "type": "object",
       "properties": {
         "currentType": {
           "enum": [ "AC", "DC" ]
-        },
-        "inputCurrent": {
-          "type": "number",
-          "unit": "qudt:A"
-        },
+        }, 
         "inputPower": {
           "type": "number",
           "unit": "qudt:KiloW"
         },
-        "inputVoltage": {
-          "type": "number",
-          "unit": "qudt:V"
-        },
-        "outputCurrent": {
+        "inputCurrent": {
           "type": "number",
           "unit": "qudt:A"
-        },
-        "outputFrequency": {
-          "type": "number",
-          "unit": "qudt:KiloHZ"
-        },
-        "outputPower": {
-          "type": "number",
-          "unit": "qudt:KiloW"
-        },
-        "outputVoltage": {
+        }, 
+        "inputVoltage": {
           "type": "number",
           "unit": "qudt:V"
         }
@@ -65,150 +84,17 @@
       "type": "object",
       "required": [
         "coolantType",
-        "coolantFlow",
-        "coolantTemperature",
-        "coolantPressure"
+        "targetCoolantFlow",
+        "targetCoolantTemperature"
       ],
       "properties": {
-        "coolantFlow": {
-          "type": "object",
-          "required": [ "rate", "setpoint", "value", "variance" ],
-          "properties": {
-            "rate": {
-              "enum": [ "High", "Low" ]
-            },
-            "setpoint": {
-              "type": "number",
-              "unit": "qudt:L-PER-MIN"
-            },
-            "value": {
-              "type": "number",
-              "unit": "qudt:L-PER-MIN"
-            },
-            "variance": {
-              "type": "number",
-              "unit": "qudt:L-PER-MIN"
-            }
-          }
-        },
-        "coolantPressure": {
-          "type": "object",
-          "required": [ "in", "out", "delta" ],
-          "properties": {
-            "delta": {
-              "$comment": "Not necessarily needed if can be calculated from in and out",
-              "type": "number",
-              "unit": "qudt:BAR"
-            },
-            "in": {
-              "type": "number",
-              "unit": "qudt:BAR"
-            },
-            "out": {
-              "type": "number",
-              "unit": "qudt:BAR"
-            }
-          }
-        },
-        "coolantTemperature": {
-          "type": "object",
-          "required": [
-            "setpoint",
-            "in",
-            "inVariance",
-            "out",
-            "outVariance",
-            "delta"
-          ],
-          "properties": {
-            "delta": {
-              "type": "number",
-              "unit": "qudt:DEG_C"
-            },
-            "in": {
-              "type": "number",
-              "unit": "qudt:DEG_C"
-            },
-            "inVariance": {
-              "type": "number",
-              "unit": "qudt:DEG_C"
-            },
-            "out": {
-              "type": "number",
-              "unit": "qudt:DEG_C"
-            },
-            "outVariance": {
-              "type": "number",
-              "unit": "qudt:DEG_C"
-            },
-            "setpoint": {
-              "type": "number",
-              "unit": "qudt:DEG_C"
-            }
-          }
-        },
         "coolantType": {
-          "enum": [ "Water", "Demineralised Water", "Treated Water" ]
-        }
-      }
-    },
-    "dataCaptureStart": {
-      "type": "string",
-      "format": "date-time"
-    },
-    "diagnostics": {
-      "$comment": "diagnostic.schema.json is within HIVE directory, not to be confused with toplevel",
-      "type": "array",
-      "items": {
-        "$ref": "https://w3id.org/fuel/schemas/1.0.0/facility/hive/diagnostic"
-      }
-    },
-    "firstOperator": {
-      "$comment": "Link to type @person",
-      "type": "object",
-      "properties": {
-        "email": {
           "type": "string"
         },
-        "firstName": {
+        "targetCoolantFlow": {
           "type": "string"
         },
-        "lastName": {
-          "type": "string"
-        }
-      }
-    },
-    "operatorComment": {
-      "type": "string"
-    },
-    "pulseDuration": {
-      "$comment": "To be updated automatically post-pulse",
-      "type": "integer",
-      "minimum": 0,
-      "unit": "qudt:SEC"
-    },
-    "pulseID": {
-      "type": "string",
-      "example": "uuid?"
-    },
-    "pulseQuality": {
-      "enum": [ "Success", "Fail" ]
-    },
-    "pulseStart": {
-      "type": "string",
-      "format": "date-time"
-    },
-    "secondOperator": {
-      "$comment": "Link to type @person",
-      "type": "object",
-      "properties": {
-        "email": {
-          "type": "string"
-        },
-        "firstName": {
-          "type": "string"
-        },
-        "lastName": {
+        "targetCoolantTemperature": {
           "type": "string"
         }
       }

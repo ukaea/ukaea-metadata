@@ -7,7 +7,7 @@
     "campaignID",
     "experimentID",
     "leadInvestigator",
-    "experimentType",
+    "heatingType",
     "sampleCooling",
     "pulse"
   ],
@@ -17,7 +17,7 @@
       "type": "string",
       "example": "HIVE-XXXX"
     },
-    "customer": {
+    "campaignTitle": {
       "type": "string"
     },
     "experimentEnd": {
@@ -28,31 +28,36 @@
       "type": "string",
       "example": "HIVE-E-XXXX"
     },
+    "experimentTitle": {
+      "type": "string"
+    },
     "experimentStart": {
       "type": "string",
       "format": "date-time"
     },
-    "experimentType": {
+    "heatingType": {
       "$comment": "Discuss with JP and SC if this can move to the pulse level.",
       "enum": [ "Induction", "DC" ]
     },
+    "inductionCoilID": {
+      "type": "string"
+    },
     "leadInvestigator": {
       "$comment": "Link to type @person",
-      "type": "object",
-      "properties": {
-        "email": {
-          "type": "string"
-        },
-        "firstName": {
-          "type": "string"
-        },
-        "lastName": {
-          "type": "string"
-        }
+      "$ref": "https://w3id.org/fuel/schemas/1.0.0/diagnostics/person"
       }
     },
-    "pulse": {
-      "$ref": "https://w3id.org/fuel/schemas/1.0.0/facility/hive/pulse"
+    "customer": {
+      "$comment": "Customer's (organization) name and contact person's details",
+      "type": "object",
+      "properties": {
+        "organisation": {
+          "$comment": "organisation / group / company's name",
+          "type": "string"
+        },
+        "contactPerson": {
+          "$ref": "https://w3id.org/fuel/schemas/1.0.0/diagnostics/person"
+        }
     },
     "sampleCooling": {
       "type": "boolean"
