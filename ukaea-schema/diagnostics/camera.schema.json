@@ -5,9 +5,9 @@
   "type": "object",
   "required": [ "cameraInformation", "lensInformation", "captureSettings" ],
   "properties": {
-    "cameraInformation": {
+    "cameraInformation": { "$anchor": "CameraInformation",
       "type": "object",
-      "required": [ "make", "model", "resolutionX", "resolutionY" ],
+      "required": [ "make", "model"],
       "properties": {
         "make": {
           "type": "string"
@@ -15,18 +15,52 @@
         "model": {
           "type": "string"
         },
-        "resolutionX": {
-          "description": "The camera resolution in pixels, represented as width.",
-          "type": "integer",
-          "units": "qudt:px"
-        },
-        "resolutionY": {
-          "description": "The camera resolution in pixels, represented as height.",
-          "type": "integer",
-          "units": "qudt:px"
+        "resolution": {
+          "type": "object",
+          "required": [ "Y", "X" ],
+          "properties": {
+            "X": {
+              "description": "The camera resolution in pixels, represented as width.",
+              "type": "integer",
+              "units": "qudt:px"
+            },
+            "Y": {
+              "description": "The camera resolution in pixels, represented as height.",
+              "type": "integer",
+              "units": "qudt:px"
+            }
+          }
         },
         "serialNumber": {
           "type": "string"
+        },
+                "spectralRange": {
+          "type": "object",
+          "required": [ "minimum", "maximum" ],
+          "properties": {
+            "maximum": {
+              "type": "number",
+              "units": "qudt:MicroM"
+            },
+            "minimum": {
+              "type": "number",
+              "units": "qudt:MicroM"
+            }
+          }
+        },
+        "temperatureRange": {
+          "type": "object",
+          "required": [ "minimum", "maximum" ],
+          "properties": {
+            "maximum": {
+              "type": "number",
+              "units": "qudt:DEG_C"
+            },
+            "minimum": {
+              "type": "number",
+              "units": "qudt:DEG_C"
+            }
+          }
         }
       }
     },

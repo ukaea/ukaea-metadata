@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "urn:ukaea:experiment:hive:diagnostics:ir-camera-schema",
+  "$id": "https://w3id.org/fuel/schemas/1.0.0/diagnostics/ir-camera-schema",
   "description": "Metadata to describe ir-camera diagnostics",
   "type": "object",
   "required": [ "deviceInformation", "deviceSettings", "location" ],
@@ -24,14 +24,14 @@
         },
         "resolution": {
           "type": "object",
-          "required": [ "resolutionY", "resolutionX" ],
+          "required": [ "Y", "X" ],
           "properties": {
-            "resolutionX": {
+            "X": {
               "description": "The camera resolution in pixels, represented as width.",
               "type": "integer",
               "units": "qudt:px"
             },
-            "resolutionY": {
+            "Y": {
               "description": "The camera resolution in pixels, represented as height.",
               "type": "integer",
               "units": "qudt:px"

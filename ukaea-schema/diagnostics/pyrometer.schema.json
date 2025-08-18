@@ -1,19 +1,12 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "urn:ukaea:experiment:hive:diagnostics:pyrometer-schema",
+  "$id": "https://w3id.org/fuel/schemas/1.0.0/diagnostics/pyrometer-schema",
   "description": "Metadata to describe pyrometer diagnostics",
   "type": "object",
   "required": [ "deviceInformation", "deviceSettings", "location" ],
   "properties": {
     "deviceInformation": {
       "type": "object",
-      "required": [
-        "make",
-        "model",
-        "serialNumber",
-        "temperatureRange",
-        "spectralRange"
-      ],
       "properties": {
         "make": {
           "type": "string"
@@ -52,7 +45,14 @@
             }
           }
         }
-      }
+      },
+          "required": [
+            "make",
+            "model",
+            "serialNumber",
+            "spectralRange",
+            "temperatureRange"
+          ]
     },
     "deviceSettings": {
       "type": "object",
