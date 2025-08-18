@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://w3id.org/fuel/schemas/1.0.0/diagnostics/person",
+  "description": "Metadata to describe person",
+  "type": "object",
+  "properties": { 
+    "person":{ 
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string"
+        },
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        }
+      },
+    "required": ["email", "firstName", "lastName"]
+    }
+  }
+}
