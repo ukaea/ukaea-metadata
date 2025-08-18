@@ -3,43 +3,38 @@
   "$id": "https://w3id.org/fuel/schemas/1.0.0/diagnostics/flowmeter-schema",
   "description": "Metadata to describe flowmeter diagnostics",
   "type": "object",
+  "required": [ "make", "model", "serialNumber", "flowRange, flowmeterType" ],
   "properties": {
     "deviceInformation": {
-      "allOf": [
-        {
-          "$ref": "https://w3id.org/fuel/schemas/1.0.0/diagnostics/base-device"
-        },
-        {
+      "type": "object",
+      "properties": {
+        "flowRange": {
           "type": "object",
+          "required": [ "minimum", "maximum" ],
           "properties": {
-            "flowRange": {
-              "type": "object",
-              "required": [ "minimum", "maximum" ],
-              "properties": {
-                "maximum": {
-                  "type": "number",
-                  "units": "qudt:MicroM"
-                },
-                "minimum": {
-                  "type": "number",
-                  "units": "qudt:MicroM"
-                }
-              }
+            "maximum": {
+              "type": "number",
+              "units": "qudt:MicroM"
             },
-            "flowmeterType": {
-              "type": "string"
+            "minimum": {
+              "type": "number",
+              "units": "qudt:MicroM"
             }
           }
         },
-        {
-          "required": [
-            "make",
-            "model",
-            "serialNumber",
-            "flowRange, flowmeterType"
-          ]
+        "flowmeterType": {
+          "type": "string"
+        },
+        "make": {
+          "type": "string"
+        },
+        "model": {
+          "type": "string"
+        },
+        "serialNumber": {
+          "type": "integer"
         }
-      ]
+      }
     }
   }
 }

@@ -3,11 +3,11 @@
   "$id": "https://w3id.org/fuel/schemas/1.0.0/diagnostics/thermocouple",
   "description": "Metadata to describe thermocouple diagnostic",
   "type": "object",
-  "required": [ "deviceInformation", "deviceSetup" ],
+  "required": [ "diagnosticInformation", "thermocoupleTC" ],
   "properties": {
-    "deviceInformation": {
+    "thermocoupleTC": {
       "type": "object",
-      "required": [ "attachmentType", "tcType" ],
+      "required": [ "attachmentType", "tcType", "circleDiameter", "noiseFloor"],
       "properties": {
         "attachmentType": {
           "description": "[-]",
@@ -18,18 +18,20 @@
           "description": "[-]",
           "type": "string",
           "example": "K"
+        },
+        "circleDiameter": {
+          "type": "number"
+        },
+        "noiseFloor": {
+          "type": "string"
         }
       }
     },
-    "deviceSetup": {
+    "diagnosticInformation": {
       "type": "object",
-      "required": [ "dataChannel", "location" ],
+      "required": [ "diagnosticID"],
       "properties": {
-        "dataChannel": {
-          "type": "string",
-          "descripiton": "[-]"
-        },
-        "location": {
+        "diagnosticID": {
           "type": "string",
           "descripiton": "[-]"
         }

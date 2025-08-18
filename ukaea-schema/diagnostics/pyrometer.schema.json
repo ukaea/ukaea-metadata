@@ -6,11 +6,46 @@
   "required": [ "deviceInformation", "deviceSettings", "location" ],
   "properties": {
     "deviceInformation": {
-      "allOf": [
-        {
-          "$ref": "https://w3id.org/fuel/schemas/1.0.0/diagnostics/base-device"
+      "type": "object",
+      "properties": {
+        "make": {
+          "type": "string"
         },
-        {
+        "model": {
+          "type": "string"
+        },
+        "serialNumber": {
+          "type": "integer"
+        },
+        "spectralRange": {
+          "type": "object",
+          "required": [ "minimum", "maximum" ],
+          "properties": {
+            "maximum": {
+              "type": "number",
+              "units": "qudt:MicroM"
+            },
+            "minimum": {
+              "type": "number",
+              "units": "qudt:MicroM"
+            }
+          }
+        },
+        "temperatureRange": {
+          "type": "object",
+          "required": [ "minimum", "maximum" ],
+          "properties": {
+            "maximum": {
+              "type": "number",
+              "units": "qudt:DEG_C"
+            },
+            "minimum": {
+              "type": "number",
+              "units": "qudt:DEG_C"
+            }
+          }
+        }
+      },
           "required": [
             "make",
             "model",
@@ -18,8 +53,6 @@
             "spectralRange",
             "temperatureRange"
           ]
-        }
-      ]
     },
     "deviceSettings": {
       "type": "object",
