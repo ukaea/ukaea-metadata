@@ -1,39 +1,31 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://w3id.org/fuel/schemas/1.0.0/diagnostics/thermocouple",
+  "$id": "https://w3id.org/fusion/schemas/1.0.0/diagnostics/thermocouple",
   "description": "Metadata to describe thermocouple diagnostic",
   "type": "object",
-  "required": [ "diagnosticInformation", "thermocoupleTC" ],
+  "required": [ "thermocouple" ],
   "properties": {
-    "thermocoupleTC": {
+    "thermocouple": {
       "type": "object",
       "required": [ "attachmentType", "tcType", "circleDiameter", "noiseFloor"],
       "properties": {
         "attachmentType": {
-          "description": "[-]",
           "type": "string",
+          "description": "method used to physically attach thermocouple to its target",
           "example": "spot weld with inert gas shield"
         },
         "tcType": {
-          "description": "[-]",
           "type": "string",
+          "description": "material composition of the thermocouple",
           "example": "K"
         },
         "circleDiameter": {
-          "type": "number"
+          "type": "number",
+          "description": "thermocouple sensitive tip diameter"
         },
         "noiseFloor": {
-          "type": "string"
-        }
-      }
-    },
-    "diagnosticInformation": {
-      "type": "object",
-      "required": [ "diagnosticID"],
-      "properties": {
-        "diagnosticID": {
           "type": "string",
-          "descripiton": "[-]"
+          "description": "minimum measurable signal level"
         }
       }
     }

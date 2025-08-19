@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://w3id.org/fuel/schemas/1.0.0/facility/hive/diagnostic",
+  "$id": "https://w3id.org/fusion/schemas/1.0.0/facility/hive/diagnostic",
   "description": "Metadata schema for a HIVE diagnostic",
   "type": "object",
   "required": [ "diagnosticName", "diagnosticType", "port", "diagnostic" ],
@@ -8,12 +8,16 @@
     "diagnostic": {
       "oneOf": [
         {
-          "$ref": "https://w3id.org/fuel/schemas/1.0.0/diagnostics/dic"
+          "$ref": "https://w3id.org/fusion/schemas/1.0.0/diagnostics/dic"
         },
         {
-          "$ref": "https://w3id.org/fuel/schemas/1.0.0/diagnostics/thermocouple"
+          "$ref": "https://w3id.org/fusion/schemas/1.0.0/diagnostics/thermocouple"
         }
       ]
+    },
+    "diagnosticID": {
+      "type": "string",
+      "format": "uuid"
     },
     "diagnosticName": {
       "type": "string",
@@ -22,9 +26,6 @@
     "diagnosticType": {
       "type": "string",
       "example": "Thermocouple"
-    },
-    "port": {
-      "$ref": "https://w3id.org/fuel/schemas/1.0.0/facility/hive/port"
     }
   }
 }

@@ -39,7 +39,8 @@
           "$comment": "To be updated automatically post-pulse",
           "type": "integer",
           "minimum": 0,
-          "unit": "qudt:SEC"
+          "unit": "qudt:SEC",
+          "format": "duration"
         }
       }
     },
@@ -92,10 +93,10 @@
           "type": "string"
         },
         "targetCoolantFlow": {
-          "type": "string"
+          "type": "number"
         },
         "targetCoolantTemperature": {
-          "type": "string"
+          "type": "number"
         }
       }
     }
