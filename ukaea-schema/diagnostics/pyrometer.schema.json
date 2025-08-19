@@ -1,76 +1,76 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://w3id.org/fusion/schemas/1.0.0/diagnostics/pyrometer-schema",
-  "description": "Metadata to describe pyrometer diagnostics",
-  "type": "object",
-  "required": [ "deviceInformation", "deviceSettings", "location" ],
-  "properties": {
-    "deviceInformation": {
-      "type": "object",
-      "properties": {
-        "make": {
-          "type": "string"
-        },
-        "model": {
-          "type": "string"
-        },
-        "serialNumber": {
-          "type": "integer"
-        },
-        "spectralRange": {
-          "type": "object",
-          "required": [ "minimum", "maximum" ],
-          "properties": {
-            "maximum": {
-              "type": "number",
-              "describe": "Maximum thermal radiation wavelengths that the pyrometer's detector is sensitive to.",
-              "units": "qudt:MicroM"
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://w3id.org/fusion/schemas/1.0.0/diagnostics/pyrometer-schema",
+    "description": "Metadata to describe pyrometer diagnostics",
+    "type": "object",
+    "required": [ "deviceInformation", "deviceSettings" ],
+    "properties": {
+        "deviceInformation": {
+            "type": "object",
+            "properties": {
+                "make": {
+                    "type": "string"
+                },
+                "model": {
+                    "type": "string"
+                },
+                "serialNumber": {
+                    "type": "integer"
+                },
+                "spectralRange": {
+                    "type": "object",
+                    "required": [ "minimum", "maximum" ],
+                    "properties": {
+                        "maximum": {
+                            "type": "number",
+                            "describe": "Maximum thermal radiation wavelengths that the pyrometer's detector is sensitive to.",
+                            "unit": "qudt:MicroM"
+                        },
+                        "minimum": {
+                            "type": "number",
+                            "unit": "qudt:MicroM"
+                        }
+                    }
+                },
+                "temperatureRange": {
+                    "type": "object",
+                    "required": [ "minimum", "maximum" ],
+                    "properties": {
+                        "maximum": {
+                            "type": "number",
+                            "describe": "Maximum temperature the pyrometer is calibrated to measure accurately (e.g. 500°C to 2500°C)",
+                            "unit": "qudt:DEG_C"
+                        },
+                        "minimum": {
+                            "type": "number",
+                            "describe": "Minimum temperature the pyrometer is calibrated to measure accurately (e.g. 500°C to 2500°C)",
+                            "unit": "qudt:DEG_C"
+                        }
+                    }
+                }
             },
-            "minimum": {
-              "type": "number",
-              "units": "qudt:MicroM"
-            }
-          }
+            "required": [
+                "make",
+                "model",
+                "serialNumber",
+                "spectralRange",
+                "temperatureRange"
+            ]
         },
-        "temperatureRange": {
-          "type": "object",
-          "required": [ "minimum", "maximum" ],
-          "properties": {
-            "maximum": {
-              "type": "number",
-              "describe": "Maximum temperature the pyrometer is calibrated to measure accurately (e.g. 500°C to 2500°C)",
-              "units": "qudt:DEG_C"
-            },
-            "minimum": {
-              "type": "number",
-              "describe": "Minimum temperature the pyrometer is calibrated to measure accurately (e.g. 500°C to 2500°C)",
-              "units": "qudt:DEG_C"
+        "deviceSettings": {
+            "type": "object",
+            "required": [ "emissivity", "framerate" ],
+            "properties": {
+                "emissivity": {
+                    "type": "number",
+                    "description": "The emissivity value used for temperature calculations, representing the efficiency with which a surface emits thermal radiation."
+                },
+                "framerate": {
+                    "type": "number",
+                    "description": "The rate at which the pyrometer acquires thermal data, typically measured in Hertz (Hz) or frames per second (fps)",
+                    "unit": "qudt:HZ"
+                }
             }
-          }
         }
-      },
-          "required": [
-            "make",
-            "model",
-            "serialNumber",
-            "spectralRange",
-            "temperatureRange"
-          ]
-    },
-    "deviceSettings": {
-      "type": "object",
-      "required": [ "emissivity", "framerate" ],
-      "properties": {
-        "emissivity": {
-          "type": "number",
-          "description": "The emissivity value used for temperature calculations, representing the efficiency with which a surface emits thermal radiation."
-        },
-        "framerate": {
-          "type": "number",
-          "description": "The rate at which the pyrometer acquires thermal data, typically measured in Hertz (Hz) or frames per second (fps)",
-          "units": "qudt:HZ"
-        }
-      }
     }
-  }
 }
