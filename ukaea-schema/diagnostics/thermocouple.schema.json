@@ -19,12 +19,12 @@
                 },
                 "circleDiameter": {
                     "type": "number",
-                    "unit": "unit:MilliM",
+                    "unit": "qudt:MilliM",
                     "description": "Diameter (mm) of the circular surface used to attach the thermocouple to the measurement point, can be used to give an area."
                 },
                 "noiseFloor": {
                     "type": "number",
-                    "unit": "unit:PERCENT",
+                    "unit": "qudt:PERCENT",
                     "description": "The minimum measurable signal level above background electrical noise, expressed as a percentage"
                 }
             }

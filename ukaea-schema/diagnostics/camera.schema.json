@@ -27,12 +27,12 @@
                     "properties": {
                         "x": {
                             "type": "integer",
-                            "units": "qudt:px",
+                            "unit": "qudt:px",
                             "description": "The camera resolution in pixels, represented as width."
                         },
                         "y": {
                             "type": "integer",
-                            "units": "qudt:px",
+                            "unit": "qudt:px",
                             "description": "The camera resolution in pixels, represented as height."
                         }
                     }
@@ -71,12 +71,12 @@
                         "x": {
                             "description": "The field of view in pixels, represented as width.",
                             "type": "integer",
-                            "units": "qudt:px"
+                            "unit": "qudt:px"
                         },
                         "y": {
                             "description": "The field of view in pixels, represented as height.",
                             "type": "integer",
-                            "units": "qudt:px"
+                            "unit": "qudt:px"
                         }
                     }
                 }
