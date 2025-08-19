@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://w3id.org/fuel/schemas/1.0.0/diagnostics/pyrometer-schema",
+  "$id": "https://w3id.org/fusion/schemas/1.0.0/diagnostics/pyrometer-schema",
   "description": "Metadata to describe pyrometer diagnostics",
   "type": "object",
   "required": [ "deviceInformation", "deviceSettings", "location" ],
@@ -23,6 +23,7 @@
           "properties": {
             "maximum": {
               "type": "number",
+              "describe": "Maximum thermal radiation wavelengths that the pyrometer's detector is sensitive to.",
               "units": "qudt:MicroM"
             },
             "minimum": {
@@ -37,10 +38,12 @@
           "properties": {
             "maximum": {
               "type": "number",
+              "describe": "Maximum temperature the pyrometer is calibrated to measure accurately (e.g. 500°C to 2500°C)",
               "units": "qudt:DEG_C"
             },
             "minimum": {
               "type": "number",
+              "describe": "Minimum temperature the pyrometer is calibrated to measure accurately (e.g. 500°C to 2500°C)",
               "units": "qudt:DEG_C"
             }
           }
@@ -59,23 +62,13 @@
       "required": [ "emissivity", "framerate" ],
       "properties": {
         "emissivity": {
-          "type": "number"
+          "type": "number",
+          "description": "The emissivity value used for temperature calculations, representing the efficiency with which a surface emits thermal radiation."
         },
         "framerate": {
           "type": "number",
+          "description": "The rate at which the pyrometer acquires thermal data, typically measured in Hertz (Hz) or frames per second (fps)",
           "units": "qudt:HZ"
-        }
-      }
-    },
-    "location": {
-      "type": "object",
-      "required": [ "portID", "viewportID" ],
-      "properties": {
-        "portID": {
-          "type": "string"
-        },
-        "viewportID": {
-          "type": "string"
         }
       }
     }

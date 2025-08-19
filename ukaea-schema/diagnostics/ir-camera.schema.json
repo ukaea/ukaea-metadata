@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://w3id.org/fuel/schemas/1.0.0/diagnostics/ir-camera-schema",
+  "$id": "https://w3id.org/fusion/schemas/1.0.0/diagnostics/ir-camera-schema",
   "description": "Metadata to describe ir-camera diagnostics",
   "type": "object",
   "required": [ "deviceInformation", "deviceSettings", "location" ],
@@ -47,10 +47,12 @@
           "properties": {
             "maximum": {
               "type": "number",
+              "description": "Maximum wavelength measured by camera's sensor, which determines the type of thermal radiation it can detect",
               "units": "qudt:MicroM"
             },
             "minimum": {
               "type": "number",
+              "description": "Minimum wavelength measured by camera's sensor, which determines the type of thermal radiation it can detect",
               "units": "qudt:MicroM"
             }
           }
@@ -61,10 +63,12 @@
           "properties": {
             "maximum": {
               "type": "number",
+              "description": "Maximum temperature measured by the camera",
               "units": "qudt:DEG_C"
             },
             "minimum": {
               "type": "number",
+              "description": "Minimum temperature measured by the camera",
               "units": "qudt:DEG_C"
             }
           }
@@ -76,23 +80,13 @@
       "required": [ "emissivity", "framerate" ],
       "properties": {
         "emissivity": {
-          "type": "number"
+          "type": "number",
+          "description": "The emissivity value used for temperature calculations, representing the efficiency with which a surface emits thermal radiation."
         },
         "framerate": {
           "type": "number",
+          "description": "The rate at which the camera acquires thermal data, typically measured in Hertz (Hz) or frames per second (fps)",
           "units": "qudt:HZ"
-        }
-      }
-    },
-    "location": {
-      "type": "object",
-      "required": [ "portID", "viewportID" ],
-      "properties": {
-        "portID": {
-          "type": "string"
-        },
-        "viewportID": {
-          "type": "string"
         }
       }
     }
