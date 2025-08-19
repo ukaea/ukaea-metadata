@@ -3,7 +3,7 @@
   "$id": "https://w3id.org/fusion/schemas/1.0.0/facility/hive/diagnostic",
   "description": "Metadata schema for a HIVE diagnostic",
   "type": "object",
-  "required": [ "diagnosticName", "diagnosticType", "port", "diagnostic" ],
+  "required": [ "diagnosticName", "diagnosticType", "diagnostic" ],
   "properties": {
     "diagnostic": {
       "oneOf": [
