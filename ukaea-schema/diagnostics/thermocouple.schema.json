@@ -7,9 +7,9 @@
     "properties": {
         "thermocouple": {
             "type": "object",
-            "required": [ "attachmentType", "thermocoupleType", "circleDiameter", "noiseFloor"],
+            "required": [ "attachment", "thermocoupleType", "circleDiameter", "noiseFloor"],
             "properties": {
-                "attachmentType": {
+                "attachment": {
                     "type": "string",
                     "description": "The method or mechanism used to attach or secure the thermocouple to the measurement point (e.g., clamp, adhesive, probe, screw-in)."
                 },

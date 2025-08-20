@@ -1,5 +1,5 @@
 {
-    "diagnosticID": "",
+    "diagnosticID": "TC_01",
     "thermocouple": {
         "attachment": "weld",
         "thermocoupleType": "K-type",
