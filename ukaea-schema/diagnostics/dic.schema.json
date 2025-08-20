@@ -11,7 +11,7 @@
       "properties": {
         "approxFeatureSize": {
           "type": "number",
-          "units": "qudt:MicroM"
+          "unit": "qudt:MicroM"
         },
         "calTargetDims": {
           "type": "string",

@@ -29,12 +29,12 @@
             "x": {
               "description": "The camera resolution in pixels, represented as width.",
               "type": "integer",
-              "units": "qudt:px"
+              "unit": "qudt:px"
             },
             "y": {
               "description": "The camera resolution in pixels, represented as height.",
               "type": "integer",
-              "units": "qudt:px"
+              "unit": "qudt:px"
             }
           }
         },
@@ -48,12 +48,12 @@
             "maximum": {
               "type": "number",
               "description": "Maximum wavelength measured by camera's sensor, which determines the type of thermal radiation it can detect",
-              "units": "qudt:MicroM"
+              "unit": "qudt:MicroM"
             },
             "minimum": {
               "type": "number",
               "description": "Minimum wavelength measured by camera's sensor, which determines the type of thermal radiation it can detect",
-              "units": "qudt:MicroM"
+              "unit": "qudt:MicroM"
             }
           }
         },
@@ -64,12 +64,12 @@
             "maximum": {
               "type": "number",
               "description": "Maximum temperature measured by the camera",
-              "units": "qudt:DEG_C"
+              "unit": "qudt:DEG_C"
             },
             "minimum": {
               "type": "number",
               "description": "Minimum temperature measured by the camera",
-              "units": "qudt:DEG_C"
+              "unit": "qudt:DEG_C"
             }
           }
         }
@@ -86,7 +86,7 @@
         "framerate": {
           "type": "number",
           "description": "The rate at which the camera acquires thermal data, typically measured in Hertz (Hz) or frames per second (fps)",
-          "units": "qudt:HZ"
+          "unit": "qudt:HZ"
         }
       }
     }
