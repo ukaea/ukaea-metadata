@@ -12,16 +12,12 @@
             "maximum": 5.1
         },
         "resolution": {
-            "resolutionX": "320",
-            "resolutionY": 256
+            "x": 320,
+            "y": 256
         }
     },
     "deviceSettings": {
         "emissivity": 0.6,
         "framerate": 5
-    },
-    "location": {
-        "portID": "Port_1",
-        "viewportID": "VP_1"
     }
 }

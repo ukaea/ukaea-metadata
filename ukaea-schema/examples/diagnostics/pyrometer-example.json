@@ -15,9 +15,5 @@
     "deviceSettings": {
         "emissivity": 0.45,
         "framerate": 5
-    },
-    "location": {
-        "portID": "Port_1",
-        "viewportID": "VP_1"
     }
 }
