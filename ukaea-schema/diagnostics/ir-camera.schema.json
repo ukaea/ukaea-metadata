@@ -24,7 +24,7 @@
         },
         "resolution": {
           "type": "object",
-          "required": [ "Y", "X" ],
+          "required": [ "x", "y" ],
           "properties": {
             "x": {
               "description": "The camera resolution in pixels, represented as width.",
