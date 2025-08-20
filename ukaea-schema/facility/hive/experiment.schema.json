@@ -39,28 +39,51 @@
       "$comment": "Discuss with JP and SC if this can move to the pulse level.",
       "enum": [ "Induction", "DC" ]
     },
-    "inductionCoilID": {
-      "type": "string"
-    },
     "leadInvestigator": {
+      "type": "object",
       "$comment": "Link to type @person",
-      "$ref": "https://w3id.org/fuel/schemas/1.0.0/diagnostics/person"
+      "description": "Information about the principal scientist or researcher leading the experiment",
+      "properties": {
+        "email": {
+          "type": "string",
+          "format": "email"
+        },
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        }
       }
     },
     "customer": {
-      "$comment": "Customer's (organization) name and contact person's details",
       "type": "object",
       "properties": {
         "organisation": {
-          "$comment": "organisation / group / company's name",
-          "type": "string"
+          "type": "string",
+          "description": "Name of organisation / group / company conducting the experiment"
         },
         "contactPerson": {
-          "$ref": "https://w3id.org/fuel/schemas/1.0.0/diagnostics/person"
+          "type": "object",
+          "description": "Information about teh designated person someone from the customer leading the experiment",
+          "properties": {
+            "email": {
+              "type": "string",
+              "format": "email"
+            },
+            "firstName": {
+              "type": "string"
+            },
+            "lastName": {
+              "type": "string"
+            }
+          }
         }
+      }
     },
     "sampleCooling": {
       "type": "boolean"
     }
   }
 }
+
