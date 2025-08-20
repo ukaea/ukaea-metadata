@@ -3,20 +3,13 @@
   "$id": "https://w3id.org/fuel/schemas/1.0.0/facility/hive/pulse",
   "description": "Metadata schema for a HIVE pulse",
   "type": "object",
-  "required": [
-    "pulseID",
-    "firstOperator",
-    "secondOperator",
-    "pulseStart",
-    "pulseDuration",
-    "dataCaptureStart",
-    "pulseQuality",
-    "heatingInformation",
-    "coolantInformation"
-  ],
+  "required": ["pulseInformation", "operator1", "operator2", "pulseDetails", "heatingInformation", 
+                "coolantInformation"],
   "properties": {
     "pulseInformation": {
       "type": "object",
+      "required": [ "pulseID", "experiment", "configuration", "pulseStart", "pulseDuration", 
+              "dataCaptureStart"],
       "properties": {
         "pulseID": {
           "type": "string"
@@ -56,7 +49,8 @@
         "lastName": {
           "type": "string"
         }
-      }
+      }, 
+      "required": ["email", "firstName", "lastName"]
     },
     "operator2": {
       "type": "object",
@@ -71,7 +65,8 @@
         "lastName": {
           "type": "string"
         }
-      }
+      },
+      "required": ["email", "firstName", "lastName"]
     },
     "pulseDetails": {
       "type": "object",

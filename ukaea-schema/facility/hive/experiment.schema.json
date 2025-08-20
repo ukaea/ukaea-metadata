@@ -8,8 +8,7 @@
     "experimentID",
     "leadInvestigator",
     "heatingType",
-    "sampleCooling",
-    "pulse"
+    "sampleCooling"
   ],
   "properties": {
     "campaignID": {
