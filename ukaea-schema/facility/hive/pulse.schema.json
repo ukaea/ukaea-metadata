@@ -39,16 +39,39 @@
           "$comment": "To be updated automatically post-pulse",
           "type": "integer",
           "minimum": 0,
-          "unit": "qudt:SEC",
-          "format": "duration"
+          "unit": "qudt:SEC"
         }
       }
     },
     "operator1": {
-      "$ref": "https://w3id.org/fuel/schemas/1.0.0/diagnostics/person"
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string",
+          "format": "email"
+        },
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        }
+      }
     },
     "operator2": {
-      "$ref": "https://w3id.org/fuel/schemas/1.0.0/diagnostics/person"
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string",
+          "format": "email"
+        },
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        }
+      }
     },
     "pulseDetails": {
       "type": "object",
