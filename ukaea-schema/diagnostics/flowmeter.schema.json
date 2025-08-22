@@ -3,6 +3,7 @@
     "$id": "https://w3id.org/fusion/schemas/1.0.0/diagnostics/flowmeter-schema",
     "description": "Metadata to describe flowmeter diagnostics",
     "type": "object",
+    "required": [ "deviceInformation" ],
     "properties": {
         "deviceInformation": {
             "type": "object",
