@@ -12,6 +12,18 @@
                 },
                 {
                     "$ref": "https://w3id.org/fusion/schemas/1.0.0/diagnostics/thermocouple"
+                },
+                {
+                    "$ref": "https://w3id.org/fusion/schemas/1.0.0/diagnostics/camera"
+                },
+                {
+                    "$ref": "https://w3id.org/fusion/schemas/1.0.0/diagnostics/flowmeter"
+                },
+                {
+                    "$ref": "https://w3id.org/fusion/schemas/1.0.0/diagnostics/pyrometer"
+                },
+                {
+                    "$ref": "https://w3id.org/fusion/schemas/1.0.0/diagnostics/ir-camera"
                 }
             ]
         },
