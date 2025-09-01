@@ -3,7 +3,7 @@ repos:
     hooks:
       - id: jsonschema-fmt
         name: format jsonschema files
-        entry: jsonschema fmt 
+        entry: jsonschema lint 
         language: system
         files: ^ukaea-schema/.*\.schema.json
 
