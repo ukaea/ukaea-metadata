@@ -32,12 +32,10 @@
             "format": "uuid"
         },
         "diagnosticName": {
-            "type": "string",
-            "example": "TC01"
+            "type": "string"
         },
         "diagnosticType": {
-            "type": "string",
-            "example": "Thermocouple"
+            "type": "string"
         }
     }
 }
