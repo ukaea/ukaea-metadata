@@ -1,14 +1,13 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://w3id.org/fuel/schemas/1.0.0/facility/hive/experiment",
+    "$id": "https://w3id.org/fusion/schemas/1.0.0/facility/hive/experiment",
     "description": "Metadata schema for a HIVE experiment",
     "type": "object",
     "required": [ "campaignID", "experimentID", "leadInvestigator", "heatingType", "sampleCooling" ],
     "properties": {
         "campaignID": {
             "$comment": "Can be refd to the campaign.schema.json#campaignID?",
-            "type": "string",
-            "example": "HIVE-XXXX"
+            "type": "string"
         },
         "campaignTitle": {
             "type": "string"
@@ -18,8 +17,7 @@
             "format": "date-time"
         },
         "experimentID": {
-            "type": "string",
-            "example": "HIVE-E-XXXX"
+            "type": "string"
         },
         "experimentTitle": {
             "type": "string"
@@ -79,4 +77,3 @@
         }
     }
 }
-
