@@ -5,11 +5,11 @@
     "type": "object",
     "properties": {
       "stageOne": {
-        "$ref": "mrf.schema.json",
+        "$ref": "mrf-stageone.schema.json",
         "description": "Stage one metadata for formation of directories"
       },
       "stageTwo": {
-        "$ref": "mrf_second_stage.schema.json",
+        "$ref": "mrf-stagetwo.schema.json",
         "description": "Stage two metadata after directory creation"
       }
     },
