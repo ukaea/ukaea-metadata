@@ -1,57 +1,95 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "urn:ukaea:experiment:hive:diagnostics:camera-schema",
+    "$id": "https://w3id.org/fusion/schemas/1.0.0/diagnostics/camera",
     "description": "Metadata to describe camera diagnostics",
     "type": "object",
-    "required": ["cameraInformation", "lensInformation", "captureSettings"],
+    "required": [ "cameraInformation", "lensInformation" ],
     "properties": {
         "cameraInformation": {
             "type": "object",
+            "required": [ "make", "model", "resolution" ],
             "properties": {
-                "make": { "type": "string" },
-                "model": { "type": "string" },
-                "serialNumber": { "type": "string" },
-                "resolutionX": {
-                    "type": "integer",
-                    "units": "qudt:px",
-                    "description": "The camera resolution in pixels, represented as width."
+                "make": {
+                    "type": "string",
+                    "description": "The manufacturer or brand of the camera (e.g., Canon, Nikon, Sony)."
                 },
-                "resolutionY": {
-                    "type": "integer",
-                    "units": "qudt:px",
-                    "description": "The camera resolution in pixels, represented as height."
+                "model": {
+                    "type": "string",
+                    "description": "The specific product designation given by the manufacturer, which identifies the version or type of the camera (e.g., EOS 5D Mark IV, Alpha 7R IV)."
+                },
+                "serialNumber": {
+                    "type": "string",
+                    "description": "A unique identifier assigned by the manufacturer to distinguish an individual camera unit from others of the same make and model."
+                },
+                "resolution": {
+                    "type": "object",
+                    "required": [ "x", "y" ],
+                    "properties": {
+                        "x": {
+                            "type": "integer",
+                            "unit": "qudt:px",
+                            "description": "The camera resolution in pixels, represented as width."
+                        },
+                        "y": {
+                            "type": "integer",
+                            "unit": "qudt:px",
+                            "description": "The camera resolution in pixels, represented as height."
+                        }
+                    }
                 }
-            },
-            "required": ["make", "model", "resolutionX", "resolutionY"]
+            }
         },
         "lensInformation": {
             "type": "object",
+            "required": [ "make", "model", "aperture", "focalLength" ],
             "properties": {
-                "make": { "type": "string" },
-                "model": { "type": "string" },
-                "serialNumber": { "type": "string" },
-                "focalLength": { "type": "number" },
-                "aperture": { "type": "string" },
-                "fieldOfViewX": {
-                    "type": "integer",
-                    "units": "qudt:px",
-                    "description": "The field of view in pixels, represented as width."
+                "make": {
+                    "type": "string",
+                    "description": "The manufacturer or brand of the lens (e.g., Canon, Nikon, Sigma, Tamron)."
                 },
-                "fieldOfViewY": {
-                    "type": "integer",
-                    "units": "qudt:px",
-                    "description": "The field of view in pixels, represented as height."
+                "model": {
+                    "type": "string",
+                    "description": "The specific product designation given by the manufacturer, identifying the lens type or version (e.g., EF 24–70mm f/2.8L II USM)."
+                },
+                "serialNumber": {
+                    "type": "string",
+                    "description": "A unique identifier assigned by the manufacturer to distinguish an individual lens unit."
+                },
+                "aperture": {
+                    "type": "string",
+                    "description": "The maximum aperture size of the lens, usually expressed as an f-number (e.g., f/1.8, f/2.8)."
+                },
+                "focalLength": {
+                    "type": "number",
+                    "unit": "qudt:MilliM",
+                    "description": "The focal length or range of the lens in millimeters, determining its angle of view (e.g., 50)."
+                },
+                "fieldOfView": {
+                    "type": "object",
+                    "required": [ "x", "y" ],
+                    "properties": {
+                        "x": {
+                            "description": "The field of view in pixels, represented as width.",
+                            "type": "integer",
+                            "unit": "qudt:px"
+                        },
+                        "y": {
+                            "description": "The field of view in pixels, represented as height.",
+                            "type": "integer",
+                            "unit": "qudt:px"
+                        }
+                    }
                 }
-            },
-            "required": ["make", "model", "focalLength", "aperture"]
+            }
         },
         "captureSettings": {
             "type": "object",
+            "required": [ "imageAcquisitionRate", "imageNoise" ],
             "properties": {
                 "imageAcquisitionRate": {
                     "type": "number",
-                    "description": "The rate at which images are acquired, measured in Hertz.",
-                    "unit": "qudt:Hertz"
+                    "unit": "qudt:Hertz",
+                    "description": "The rate at which images are acquired, measured in Hertz."
                 },
                 "imageNoise": {
                     "type": "number",
@@ -59,12 +97,10 @@
                 },
                 "imageScale": {
                     "type": "number",
-                    "description": "The scale of the image in millimeters per pixel (mm/pixel) or similar.",
-                    "unit": "qudt:MilliM-PER-Pixel"
+                    "unit": "qudt:MilliM-PER-Pixel",
+                    "description": "The scale of the image in millimeters per pixel (mm/pixel) or similar."
                 }
-            },
-            "required": ["imageAcquisitionRate", "imageNoise"]
+            }
         }
     }
 }
-

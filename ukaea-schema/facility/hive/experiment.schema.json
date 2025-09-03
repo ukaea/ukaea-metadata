@@ -1,65 +1,79 @@
 {
-    "$id": "urn:ukaea:facility:hive:experiment",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "description": "Metadata schema for a HIVE campaign",
+    "$id": "https://w3id.org/fusion/schemas/1.0.0/facility/hive/experiment",
+    "description": "Metadata schema for a HIVE experiment",
     "type": "object",
-    "required": [
-        "campaignID",
-        "experimentID",
-        "leadInvestigator",
-        "experimentType",
-        "sampleCooling",
-        "pulse"
-    ],
+    "required": [ "campaignID", "experimentID", "leadInvestigator", "heatingType", "sampleCooling" ],
     "properties": {
         "campaignID": {
+            "$comment": "Can be refd to the campaign.schema.json#campaignID?",
+            "type": "string"
+        },
+        "campaignTitle": {
+            "type": "string"
+        },
+        "experimentEnd": {
             "type": "string",
-            "example": "HIVE-XXXX",
-            "$comment": "Can be refd to the campaign.schema.json#campaignID?"
+            "format": "date-time"
         },
         "experimentID": {
-            "type": "string",
-            "example": "HIVE-E-XXXX"
+            "type": "string"
         },
-        "leadInvestigator": {
-            "type": "object",
-            "properties": {
-                "firstName": {
-                    "type": "string"
-                },
-                "lastName": {
-                    "type": "string"
-                },
-                "email": {
-                    "type": "string"
-                }
-            },
-            "$comment": "Link to type @person"
-        },
-        "customer": {
+        "experimentTitle": {
             "type": "string"
         },
         "experimentStart": {
             "type": "string",
             "format": "date-time"
         },
-        "experimentEnd": {
-            "type": "string",
-            "format": "date-time"
+        "heatingType": {
+            "$comment": "Discuss with JP and SC if this can move to the pulse level.",
+            "enum": [ "Induction", "DC" ]
         },
-        "experimentType": {
-            "type": "string",
-            "enum": [
-                "Induction",
-                "DC"
-            ],
-            "$comment": "Discuss with JP and SC if this can move to the pulse level."
+        "leadInvestigator": {
+            "type": "object",
+            "$comment": "Link to type @person",
+            "description": "Information about the principal scientist or researcher leading the experiment",
+            "properties": {
+                "email": {
+                    "type": "string",
+                    "format": "email"
+                },
+                "firstName": {
+                    "type": "string"
+                },
+                "lastName": {
+                    "type": "string"
+                }
+            }
+        },
+        "customer": {
+            "type": "object",
+            "properties": {
+                "organisation": {
+                    "type": "string",
+                    "description": "Name of organisation / group / company conducting the experiment"
+                },
+                "contactPerson": {
+                    "type": "object",
+                    "description": "Information about teh designated person someone from the customer leading the experiment",
+                    "properties": {
+                        "email": {
+                            "type": "string",
+                            "format": "email"
+                        },
+                        "firstName": {
+                            "type": "string"
+                        },
+                        "lastName": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
         },
         "sampleCooling": {
             "type": "boolean"
-        },
-        "pulse": {
-            "$ref": "./facility/hive/pulse.schema.json#"
         }
     }
 }

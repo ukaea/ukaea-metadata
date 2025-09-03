@@ -1,0 +1,35 @@
+{
+  "pulseInformation": {
+    "pulseID": "pulse1",
+    "pulseStart": "2025-03-06T10:33:00.000Z",
+    "pulseDuration": 120,
+    "dataCaptureStart": "2025-03-04T03:00:00.000Z",
+    "experiment": "EXP_01",
+    "configuration": "Camera1"
+    },
+    "operator1": {
+      "firstName": "Bob",
+      "lastName": "Smith",
+      "email": "john.smith@facility.org"
+    },
+    "operator2": {
+      "firstName": "Jone",
+      "lastName": "Doe",
+      "email": "jane.doe@facility.org"
+    },
+    "pulseDetails": {
+        "comment": "This is a test comment",
+        "pulseQuality": "Success"
+    },
+    "heatingInformation": {
+      "currentType": "AC",
+      "inputPower": 500,
+      "inputCurrent": 100,
+      "inputVoltage": 5000
+    },
+    "coolantInformation": {
+      "coolantType": "Demineralised Water",
+      "targetCoolantFlow": 19.3,
+      "targetCoolantTemperature": 22.3
+    }
+}
