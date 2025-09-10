@@ -1,7 +1,7 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://w3id.org/fusion/schemas/1.0.0/diagnostics/pyrometer-schema",
-    "description": "Metadata to describe pyrometer diagnostics",
+    "$id": "https://w3id.org/fusion/schemas/1.0.0/instruments/pyrometer-schema",
+    "description": "Metadata to describe pyrometer instruments",
     "type": "object",
     "required": [ "deviceInformation", "deviceSettings" ],
     "properties": {

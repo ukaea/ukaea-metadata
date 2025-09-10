@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://w3id.org/fusion/schemas/1.0.0/diagnostics/dic",
-  "description": "Digital Image Correlation (DIC) diagnostic metadata",
+  "$id": "https://w3id.org/fusion/schemas/1.0.0/instruments/dic",
+  "description": "Digital Image Correlation (DIC) instrument metadata",
   "type": "object",
   "required": [ "setupInformation", "softwareInformation", "cameraSetup" ],
   "properties": {
@@ -40,7 +40,7 @@
         "cameras": {
           "type": "array",
           "items": {
-            "$ref": "https://w3id.org/fuel/schemas/1.0.0/diagnostics/camera"
+            "$ref": "https://w3id.org/fuel/schemas/1.0.0/instruments/camera"
           }
         }
       }
