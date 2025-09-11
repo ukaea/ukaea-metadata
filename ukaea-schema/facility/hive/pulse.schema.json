@@ -15,22 +15,25 @@
         "pulseInformation": {
             "type": "object",
             "required": [
-                "pulseID",
-                "experiment",
-                "configuration",
+                "pulseUUID",
+                "experimentUUID",
+                "configurationUUID",
                 "pulseStart",
                 "pulseDuration",
                 "dataCaptureStart"
             ],
             "properties": {
-                "pulseID": {
-                    "type": "string"
+                "pulseUUID": {
+                    "type": "string",
+                    "format": "uuid"
                 },
-                "experiment": {
-                    "type": "string"
+                "experimentUUID": {
+                    "type": "string",
+                    "format": "uuid"
                 },
-                "configuration": {
-                    "type": "string"
+                "configurationUUID": {
+                    "type": "string",
+                    "format": "uuid"
                 },
                 "pulseStart": {
                     "type": "string",

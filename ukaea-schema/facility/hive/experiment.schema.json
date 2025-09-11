@@ -4,41 +4,43 @@
     "description": "Metadata schema for a HIVE experiment",
     "type": "object",
     "required": [
-        "campaignID",
-        "experimentID",
+        "campaignUUID",
+        "experimentUUID",
         "leadInvestigator",
         "heatingType",
         "sampleCooling"
     ],
     "properties": {
-        "campaignID": {
-            "$comment": "Can be refd to the campaign.schema.json#campaignID?",
-            "type": "string"
+        "campaignUUID": {
+            "type": "string",
+            "format": "uuid"
         },
         "campaignTitle": {
             "type": "string"
         },
-        "experimentEnd": {
+        "experimentUUID": {
             "type": "string",
-            "format": "date-time"
-        },
-        "experimentID": {
-            "type": "string"
-        },
-        "experimentTitle": {
-            "type": "string"
+            "format": "uuid"
         },
         "experimentStart": {
             "type": "string",
             "format": "date-time"
         },
+        "experimentEnd": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "experimentTitle": {
+            "type": "string"
+        },
         "heatingType": {
-            "$comment": "Discuss with JP and SC if this can move to the pulse level.",
             "enum": [ "Induction", "DC" ]
+        },
+        "sampleCooling": {
+            "type": "boolean"
         },
         "leadInvestigator": {
             "type": "object",
-            "$comment": "Link to type @person",
             "description": "Information about the principal scientist or researcher leading the experiment",
             "properties": {
                 "email": {
@@ -77,9 +79,6 @@
                     }
                 }
             }
-        },
-        "sampleCooling": {
-            "type": "boolean"
         }
     }
 }

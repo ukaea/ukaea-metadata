@@ -1,8 +1,8 @@
 {
-    "campaignID": "HIVE-20230901",
-    "experimentID": "HIVE-E-20230905",
-    "experimentTitle": "",
+    "campaignUUID": "4c7e8d7-6291-4a9f-9c27-0f8339c5f0a7",
     "campaignTitle": "",
+    "experimentUUID": "07cf92f4-5e1b-4fc3-96d1-6e6e527c3b39",
+    "experimentTitle": "",
     "leadInvestigator": {
         "firstName": "Alice",
         "lastName": "Johnson",
