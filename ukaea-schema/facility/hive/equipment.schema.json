@@ -39,6 +39,9 @@
                 },
                 {
                     "$ref": "https://w3id.org/fusion/schemas/1.0.0/equipment/ir-camera"
+                },
+                {
+                    "$ref": "https://w3id.org/fusion/schemas/1.0.0/equipment/lens"
                 }
             ]
         }
