@@ -3,7 +3,12 @@
     "$id": "https://w3id.org/fusion/schemas/1.0.0/facility/hive/instrument",
     "description": "Metadata schema for a HIVE instrument",
     "type": "object",
-    "required": [ "instrumentID", "instrumentName", "instrumentType", "instrument" ],
+    "required": [
+        "instrumentID",
+        "instrumentName",
+        "instrumentType",
+        "instrument"
+    ],
     "properties": {
         "instrumentID": {
             "type": "string",

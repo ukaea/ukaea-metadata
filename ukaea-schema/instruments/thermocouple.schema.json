@@ -7,7 +7,12 @@
     "properties": {
         "thermocouple": {
             "type": "object",
-            "required": [ "attachment", "thermocoupleType", "circleDiameter", "noiseFloor"],
+            "required": [
+                "attachment",
+                "thermocoupleType",
+                "circleDiameter",
+                "noiseFloor"
+            ],
             "properties": {
                 "attachment": {
                     "type": "string",

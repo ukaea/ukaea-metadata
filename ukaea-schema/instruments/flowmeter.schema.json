@@ -7,7 +7,13 @@
     "properties": {
         "deviceInformation": {
             "type": "object",
-            "required": [ "make", "model", "serialNumber", "flowmeterType", "flowRange" ],
+            "required": [
+                "make",
+                "model",
+                "serialNumber",
+                "flowmeterType",
+                "flowRange"
+            ],
             "properties": {
                 "make": {
                     "type": "string",

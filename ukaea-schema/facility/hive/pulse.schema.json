@@ -3,11 +3,25 @@
     "$id": "https://w3id.org/fuel/schemas/1.0.0/facility/hive/pulse",
     "description": "Metadata schema for a HIVE pulse",
     "type": "object",
-    "required": ["pulseInformation", "operator1", "operator2", "pulseDetails", "heatingInformation", "coolantInformation"],
+    "required": [
+        "pulseInformation",
+        "operator1",
+        "operator2",
+        "pulseDetails",
+        "heatingInformation",
+        "coolantInformation"
+    ],
     "properties": {
         "pulseInformation": {
             "type": "object",
-            "required": [ "pulseID", "experiment", "configuration", "pulseStart", "pulseDuration", "dataCaptureStart"],
+            "required": [
+                "pulseID",
+                "experiment",
+                "configuration",
+                "pulseStart",
+                "pulseDuration",
+                "dataCaptureStart"
+            ],
             "properties": {
                 "pulseID": {
                     "type": "string"
@@ -47,8 +61,8 @@
                 "lastName": {
                     "type": "string"
                 }
-            }, 
-            "required": ["email", "firstName", "lastName"]
+            },
+            "required": [ "email", "firstName", "lastName" ]
         },
         "operator2": {
             "type": "object",
@@ -64,7 +78,7 @@
                     "type": "string"
                 }
             },
-            "required": ["email", "firstName", "lastName"]
+            "required": [ "email", "firstName", "lastName" ]
         },
         "pulseDetails": {
             "type": "object",
@@ -82,7 +96,7 @@
             "properties": {
                 "currentType": {
                     "enum": [ "AC", "DC" ]
-                }, 
+                },
                 "inputPower": {
                     "type": "number",
                     "unit": "qudt:KiloW"
@@ -90,7 +104,7 @@
                 "inputCurrent": {
                     "type": "number",
                     "unit": "qudt:A"
-                }, 
+                },
                 "inputVoltage": {
                     "type": "number",
                     "unit": "qudt:V"

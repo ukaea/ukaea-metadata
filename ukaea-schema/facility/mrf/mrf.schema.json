@@ -125,9 +125,9 @@
         }
     },
     "then": {
-        "required": ["jobId"]
+        "required": [ "jobId" ]
     },
     "dependentRequired": {
-        "externalUser": ["institution"]
+        "externalUser": [ "institution" ]
     }
 }
