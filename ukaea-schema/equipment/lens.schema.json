@@ -1,7 +1,7 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://w3id.org/fusion/schemas/1.0.0/instruments/lens",
-    "description": "Metadata to describe lens instruments",
+    "$id": "https://w3id.org/fusion/schemas/1.0.0/equipment/lens",
+    "description": "Metadata to describe lens equipment",
     "type": "object",
     "required": [ "deviceInformation" ],
     "properties": {
