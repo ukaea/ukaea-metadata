@@ -13,30 +13,39 @@
                 "author": {
                     "type": "string"
                 },
-                "Pfus": {
-                    "type": "number"
+                "version": {
+                    "type": "string",
+                    "description": "Version of the simulation code used"
                 },
-                "Pnet": {
-                    "type": "number"
+                "fusionPower": {
+                    "type": "number",
+                    "description": "Fusion power in MW"
                 },
-                "R": {
-                    "type": "number"
+                "netPower": {
+                    "type": "number",
+                    "description": "Net power in MW"
                 },
-                "A": {
-                    "type": "number"
+                "majorRadius": {
+                    "type": "number",
+                    "description": "Major radius in m"
                 },
-                "B": {
-                    "type": "number"
+                "aspectRatio": {
+                    "type": "number",
+                    "description": "Aspect ratio"
+                },
+                "B_tor": {
+                    "type": "number",
+                    "description": "Vacuum torodial field on-axis in T"
                 }
             },
             "required": [
                 "runTitle",
                 "author",
-                "Pfus",
-                "Pnet",
-                "R",
-                "A",
-                "B"
+                "fusionPower",
+                "netPower",
+                "majorRadius",
+                "aspectRatio",
+                "B_tor"
             ]
         }
     }
