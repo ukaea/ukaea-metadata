@@ -7,7 +7,8 @@
         "pulseInformation",
         "operator1",
         "operator2",
-        "pulseDetails",
+        "comment",
+        "pulseQuality",
         "heatingInformation",
         "coolantInformation"
     ],
@@ -48,6 +49,15 @@
                     "unit": "qudt:SEC",
                     "minimum": 0,
                     "$comment": "To be updated automatically post-pulse"
+                },
+                "comment": {
+                    "type": "string"
+                },
+                "pulseQuality": {
+                    "enum": [
+                        "Success",
+                        "Fail"
+                    ]
                 }
             }
         },
@@ -81,18 +91,7 @@
                     "type": "string"
                 }
             },
-            "required": [ "email", "firstName", "lastName" ]
-        },
-        "pulseDetails": {
-            "type": "object",
-            "properties": {
-                "comment": {
-                    "type": "string"
-                },
-                "pulseQuality": {
-                    "enum": [ "Success", "Fail" ]
-                }
-            }
+            "required": ["email", "firstName", "lastName"]
         },
         "heatingInformation": {
             "type": "object",
