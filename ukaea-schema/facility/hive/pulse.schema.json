@@ -7,8 +7,6 @@
         "pulseInformation",
         "operator1",
         "operator2",
-        "comment",
-        "pulseQuality",
         "heatingInformation",
         "coolantInformation"
     ],
@@ -21,7 +19,9 @@
                 "configurationUUID",
                 "pulseStart",
                 "pulseDuration",
-                "dataCaptureStart"
+                "dataCaptureStart",
+                "comment",
+                "pulseQuality"
             ],
             "properties": {
                 "pulseUUID": {
