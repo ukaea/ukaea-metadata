@@ -80,7 +80,11 @@
                     "type": "string"
                 }
             },
-            "required": [ "email", "firstName", "lastName" ],
+            "required": [
+                "email",
+                "firstName",
+                "lastName"
+            ],
             "pre-pulse": true
         },
         "operator2": {
@@ -97,14 +101,21 @@
                     "type": "string"
                 }
             },
-            "required": ["email", "firstName", "lastName"],
+            "required": [
+                "email",
+                "firstName",
+                "lastName"
+            ],
             "pre-pulse": true
         },
         "coilInformation": {
             "type": "object",
             "properties": {
                 "currentType": {
-                    "enum": [ "AC", "DC" ],
+                    "enum": [
+                        "AC",
+                        "DC"
+                    ],
                     "pre-pulse": true
                 },
                 "inputPower": {
@@ -121,6 +132,18 @@
                     "type": "number",
                     "unit": "qudt:V",
                     "pre-pulse": true
+                },
+                "measuredPower": {
+                    "type": "number"
+                },
+                "outputFrequency": {
+                    "type": "number"
+                },
+                "outputVoltage": {
+                    "type": "number"
+                },
+                "ouputCurrent": {
+                    "type": "number"
                 }
             },
             "required": [
@@ -149,6 +172,36 @@
                 "targetCoolantTemperature": {
                     "type": "number",
                     "pre-pulse": true
+                },
+                "measuredCoolantFlow": {
+                    "type": "number"
+                },
+                "coolantFlowVariance": {
+                    "type": "number"
+                },
+                "coolantPressureIn": {
+                    "type": "number"
+                },
+                "coolantPressureOut": {
+                    "type": "number"
+                },
+                "deltaPressure": {
+                    "type": "number"
+                },
+                "coolantTemperatureIn": {
+                    "type": "number"
+                },
+                "coolantTemperatureInVariance": {
+                    "type": "number"
+                },
+                "coolantTemperatureOut": {
+                    "type": "number"
+                },
+                "coolantTemperatureOutVariance": {
+                    "type": "number"
+                },
+                "deltaTemperature": {
+                    "type": "number"
                 }
             }
         }
