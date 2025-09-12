@@ -26,23 +26,28 @@
             "properties": {
                 "pulseUUID": {
                     "type": "string",
-                    "format": "uuid"
+                    "format": "uuid",
+                    "pre-pulse": true
                 },
                 "experimentUUID": {
                     "type": "string",
-                    "format": "uuid"
+                    "format": "uuid",
+                    "pre-pulse": true
                 },
                 "configurationUUID": {
                     "type": "string",
-                    "format": "uuid"
+                    "format": "uuid",
+                    "pre-pulse": true
                 },
                 "pulseStart": {
                     "type": "string",
-                    "format": "date-time"
+                    "format": "date-time",
+                    "pre-pulse": true
                 },
                 "dataCaptureStart": {
                     "type": "string",
-                    "format": "date-time"
+                    "format": "date-time",
+                    "pre-pulse": true
                 },
                 "pulseDuration": {
                     "type": "integer",
@@ -75,7 +80,8 @@
                     "type": "string"
                 }
             },
-            "required": [ "email", "firstName", "lastName" ]
+            "required": [ "email", "firstName", "lastName" ],
+            "pre-pulse": true
         },
         "operator2": {
             "type": "object",
@@ -91,25 +97,30 @@
                     "type": "string"
                 }
             },
-            "required": ["email", "firstName", "lastName"]
+            "required": ["email", "firstName", "lastName"],
+            "pre-pulse": true
         },
         "heatingInformation": {
             "type": "object",
             "properties": {
                 "currentType": {
-                    "enum": [ "AC", "DC" ]
+                    "enum": [ "AC", "DC" ],
+                    "pre-pulse": true
                 },
                 "inputPower": {
                     "type": "number",
-                    "unit": "qudt:KiloW"
+                    "unit": "qudt:KiloW",
+                    "pre-pulse": true
                 },
                 "inputCurrent": {
                     "type": "number",
-                    "unit": "qudt:A"
+                    "unit": "qudt:A",
+                    "pre-pulse": true
                 },
                 "inputVoltage": {
                     "type": "number",
-                    "unit": "qudt:V"
+                    "unit": "qudt:V",
+                    "pre-pulse": true
                 }
             }
         },
@@ -122,13 +133,16 @@
             ],
             "properties": {
                 "coolantType": {
-                    "type": "string"
+                    "type": "string",
+                    "pre-pulse": true
                 },
                 "targetCoolantFlow": {
-                    "type": "number"
+                    "type": "number",
+                    "pre-pulse": true
                 },
                 "targetCoolantTemperature": {
-                    "type": "number"
+                    "type": "number",
+                    "pre-pulse": true
                 }
             }
         }
