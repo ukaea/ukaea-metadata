@@ -11,6 +11,24 @@
         "coolantInformation"
     ],
     "properties": {
+        "pulseID": {
+            "type": "number"
+        },
+        "date": {
+            "type": "string"
+        },
+        "dataCaptureStartTimestamp": {
+            "type": "string"
+        },
+        "pulseStartTimestamp": {
+            "type": "string"
+        },
+        "pulseEndTimestamp": {
+            "type": "string"
+        },
+        "pulseDuration": {
+            "type": "number"
+        },
         "pulseInformation": {
             "type": "object",
             "required": [
