@@ -100,7 +100,7 @@
             "required": ["email", "firstName", "lastName"],
             "pre-pulse": true
         },
-        "heatingInformation": {
+        "coilInformation": {
             "type": "object",
             "properties": {
                 "currentType": {
@@ -122,7 +122,13 @@
                     "unit": "qudt:V",
                     "pre-pulse": true
                 }
-            }
+            },
+            "required": [
+                "currentType",
+                "inputPower",
+                "inputCurrent",
+                "inputVoltage"
+            ]
         },
         "coolantInformation": {
             "type": "object",
