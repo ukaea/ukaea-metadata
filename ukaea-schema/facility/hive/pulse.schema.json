@@ -178,6 +178,24 @@
                 "deltaTemperature"
             ]
         },
+        "thermocoupleInformation": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "thermocoupleID": {
+                        "type": "number"
+                    },
+                    "maxValue": {
+                        "type": "number"
+                    }
+                },
+                "required": [
+                    "thermocoupleID",
+                    "maxValue"
+                ]
+            }
+        },
         "comment": {
             "type": "string"
         },
@@ -211,6 +229,7 @@
         "operator2",
         "heatingInformation",
         "coolantInformation",
+        "thermocoupleInformation",
         "comment",
         "pulseQuality",
         "pulseUUID",
