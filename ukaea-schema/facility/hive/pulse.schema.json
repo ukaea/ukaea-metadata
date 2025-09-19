@@ -7,70 +7,21 @@
         "pulseID": {
             "type": "number"
         },
-        "date": {
-            "type": "string"
+        "dataCaptureStart": {
+            "type": "string",
+            "format": "date-time"
         },
-        "dataCaptureStartTimestamp": {
-            "type": "string"
+        "pulseStart": {
+            "type": "string",
+            "format": "date-time"
         },
-        "pulseStartTimestamp": {
-            "type": "string"
-        },
-        "pulseEndTimestamp": {
-            "type": "string"
+        "pulseEnd": {
+            "type": "string",
+            "format": "date-time"
         },
         "pulseDuration": {
-            "type": "number"
-        },
-        "pulseInformation": {
-            "type": "object",
-            "required": [
-                "pulseUUID",
-                "experimentUUID",
-                "configurationUUID",
-                "pulseStart",
-                "pulseDuration",
-                "dataCaptureStart",
-                "comment",
-                "pulseQuality"
-            ],
-            "properties": {
-                "pulseUUID": {
-                    "type": "string",
-                    "format": "uuid"
-                },
-                "experimentUUID": {
-                    "type": "string",
-                    "format": "uuid"
-                },
-                "configurationUUID": {
-                    "type": "string",
-                    "format": "uuid"
-                },
-                "pulseStart": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "dataCaptureStart": {
-                    "type": "string",
-                    "format": "date-time"
-                },
-                "pulseDuration": {
-                    "type": "integer",
-                    "unit": "qudt:SEC",
-                    "minimum": 0,
-                    "$comment": "To be updated automatically post-pulse"
-                },
-                "comment": {
-                    "type": "string"
-                },
-                "pulseQuality": {
-                    "enum": [
-                        "Success",
-                        "Fail"
-                    ]
-                }
-            }
+            "type": "number",
+            "unit": "qudt:SEC"
         },
         "operator1": {
             "type": "object",
@@ -112,7 +63,7 @@
                 "lastName"
             ]
         },
-        "coilInformation": {
+        "heatingInformation": {
             "type": "object",
             "properties": {
                 "currentType": {
@@ -226,13 +177,44 @@
                 "coolantTemperatureOutVariance",
                 "deltaTemperature"
             ]
+        },
+        "comment": {
+            "type": "string"
+        },
+        "pulseQuality": {
+            "enum": [
+                "Success",
+                "Fail"
+            ]
+        },
+        "pulseUUID": {
+            "type": "string",
+            "format": "uuid"
+        },
+        "experimentUUID": {
+            "type": "string",
+            "format": "uuid"
+        },
+        "configurationUUID": {
+            "type": "string",
+            "format": "uuid"
         }
     },
     "required": [
-        "pulseInformation",
+        "pulseID",
+        "date",
+        "dataCaptureStart",
+        "pulseStart",
+        "pulseEnd",
+        "pulseDuration",
         "operator1",
         "operator2",
-        "coilInformation",
-        "coolantInformation"
+        "heatingInformation",
+        "coolantInformation",
+        "comment",
+        "pulseQuality",
+        "pulseUUID",
+        "experimentUUID",
+        "configurationUUID"
     ]
 }
