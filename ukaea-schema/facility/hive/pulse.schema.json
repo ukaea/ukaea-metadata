@@ -3,13 +3,6 @@
     "$id": "https://w3id.org/fuel/schemas/1.0.0/facility/hive/pulse",
     "description": "Metadata schema for a HIVE pulse",
     "type": "object",
-    "required": [
-        "pulseInformation",
-        "operator1",
-        "operator2",
-        "heatingInformation",
-        "coolantInformation"
-    ],
     "properties": {
         "pulseID": {
             "type": "number"
@@ -44,28 +37,23 @@
             "properties": {
                 "pulseUUID": {
                     "type": "string",
-                    "format": "uuid",
-                    "pre-pulse": true
+                    "format": "uuid"
                 },
                 "experimentUUID": {
                     "type": "string",
-                    "format": "uuid",
-                    "pre-pulse": true
+                    "format": "uuid"
                 },
                 "configurationUUID": {
                     "type": "string",
-                    "format": "uuid",
-                    "pre-pulse": true
+                    "format": "uuid"
                 },
                 "pulseStart": {
                     "type": "string",
-                    "format": "date-time",
-                    "pre-pulse": true
+                    "format": "date-time"
                 },
                 "dataCaptureStart": {
                     "type": "string",
-                    "format": "date-time",
-                    "pre-pulse": true
+                    "format": "date-time"
                 },
                 "pulseDuration": {
                     "type": "integer",
@@ -102,8 +90,7 @@
                 "email",
                 "firstName",
                 "lastName"
-            ],
-            "pre-pulse": true
+            ]
         },
         "operator2": {
             "type": "object",
@@ -123,8 +110,7 @@
                 "email",
                 "firstName",
                 "lastName"
-            ],
-            "pre-pulse": true
+            ]
         },
         "coilInformation": {
             "type": "object",
@@ -133,23 +119,19 @@
                     "enum": [
                         "AC",
                         "DC"
-                    ],
-                    "pre-pulse": true
+                    ]
                 },
                 "inputPower": {
                     "type": "number",
-                    "unit": "qudt:KiloW",
-                    "pre-pulse": true
+                    "unit": "qudt:KiloW"
                 },
                 "inputCurrent": {
                     "type": "number",
-                    "unit": "qudt:A",
-                    "pre-pulse": true
+                    "unit": "qudt:A"
                 },
                 "inputVoltage": {
                     "type": "number",
-                    "unit": "qudt:V",
-                    "pre-pulse": true
+                    "unit": "qudt:V"
                 },
                 "measuredPower": {
                     "type": "number"
@@ -166,10 +148,25 @@
             },
             "required": [
                 "currentType",
-                "inputPower",
-                "inputCurrent",
-                "inputVoltage"
-            ]
+                "measuredPower",
+                "outputFrequency",
+                "outputVoltage",
+                "outputCurrent"
+            ],
+            "if": {
+                "properties": {
+                    "currentType": {
+                        "const": "DC"
+                    }
+                }
+            },
+            "then": {
+                "required": [
+                    "inputPower",
+                    "inputCurrent",
+                    "inputVoltage"
+                ]
+            }
         },
         "coolantInformation": {
             "type": "object",
@@ -180,16 +177,13 @@
             ],
             "properties": {
                 "coolantType": {
-                    "type": "string",
-                    "pre-pulse": true
+                    "type": "string"
                 },
                 "targetCoolantFlow": {
-                    "type": "number",
-                    "pre-pulse": true
+                    "type": "number"
                 },
                 "targetCoolantTemperature": {
-                    "type": "number",
-                    "pre-pulse": true
+                    "type": "number"
                 },
                 "measuredCoolantFlow": {
                     "type": "number"
@@ -223,5 +217,12 @@
                 }
             }
         }
-    }
+    },
+    "required": [
+        "pulseInformation",
+        "operator1",
+        "operator2",
+        "heatingInformation",
+        "coolantInformation"
+    ]
 }
