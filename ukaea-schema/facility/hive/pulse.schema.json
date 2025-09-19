@@ -170,11 +170,6 @@
         },
         "coolantInformation": {
             "type": "object",
-            "required": [
-                "coolantType",
-                "targetCoolantFlow",
-                "targetCoolantTemperature"
-            ],
             "properties": {
                 "coolantType": {
                     "type": "string"
@@ -215,14 +210,29 @@
                 "deltaTemperature": {
                     "type": "number"
                 }
-            }
+            },
+            "required": [
+                "coolantType",
+                "targetCoolantFlow",
+                "targetCoolantTemperature",
+                "measuredCoolantFlow",
+                "coolantFlowVariance",
+                "coolantPressureIn",
+                "coolantPressureOut",
+                "deltaPressure",
+                "coolantTemperatureIn",
+                "coolantTemperatureInVariance",
+                "coolantTemperatureOut",
+                "coolantTemperatureOutVariance",
+                "deltaTemperature"
+            ]
         }
     },
     "required": [
         "pulseInformation",
         "operator1",
         "operator2",
-        "heatingInformation",
+        "coilInformation",
         "coolantInformation"
     ]
 }
