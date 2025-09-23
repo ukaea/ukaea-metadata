@@ -1,0 +1,42 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "UKAEA Dataset Schema",
+    "type": "object",
+    "properties": {
+        "contactEmail": {
+            "type": "string",
+            "format": "email"
+        },
+        "creationTime": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "owner": {
+            "type": "string"
+        },
+        "type": {
+            "type": "string"
+        },
+        "sourceFolder": {
+            "type": "string"
+        },
+        "description": {
+            "type": "string"
+        },
+        "experimentID": {
+            "type": "string"
+        },
+        "additional": {
+            "type": "object",
+            "additionalProperties": true
+        }
+    },
+    "required": [
+        "contactEmail",
+        "creationTime",
+        "owner",
+        "type",
+        "sourceFolder",
+        "description"
+    ]
+}

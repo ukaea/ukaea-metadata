@@ -209,9 +209,31 @@
             "type": "string",
             "format": "uuid"
         },
-        "experimentUUID": {
-            "type": "string",
-            "format": "uuid"
+        "experimentInfo": {
+            "experimentID": {
+                "type": "string",
+                "format": "uuid"
+            },
+            "leadInvestigator": {
+                "type": "object",
+                "description": "Information about the principal scientist or researcher leading the experiment",
+                "properties": {
+                    "email": {
+                        "type": "string",
+                        "format": "email"
+                    },
+                    "firstName": {
+                        "type": "string"
+                    },
+                    "lastName": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": [
+                "experimentID",
+                "leadInvestigator"
+            ]
         },
         "configurationUUID": {
             "type": "string",
@@ -220,7 +242,6 @@
     },
     "required": [
         "pulseID",
-        "date",
         "dataCaptureStart",
         "pulseStart",
         "pulseEnd",
@@ -233,7 +254,7 @@
         "comment",
         "pulseQuality",
         "pulseUUID",
-        "experimentUUID",
+        "experimentInfo",
         "configurationUUID"
     ]
 }
