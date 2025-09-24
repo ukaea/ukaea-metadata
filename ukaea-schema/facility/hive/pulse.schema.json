@@ -66,6 +66,12 @@
         "heatingInformation": {
             "type": "object",
             "properties": {
+                "heatingType": {
+                    "enum": [
+                        "Induction",
+                        "DC"
+                    ]
+                },
                 "currentType": {
                     "enum": [
                         "AC",
@@ -98,6 +104,7 @@
                 }
             },
             "required": [
+                "heatingType",
                 "currentType",
                 "measuredPower",
                 "outputFrequency",
@@ -122,6 +129,9 @@
         "coolantInformation": {
             "type": "object",
             "properties": {
+                "sampleCooling": {
+                    "type": "boolean"
+                },
                 "coolantType": {
                     "type": "string"
                 },
@@ -163,6 +173,7 @@
                 }
             },
             "required": [
+                "sampleCooling",
                 "coolantType",
                 "targetCoolantFlow",
                 "targetCoolantTemperature",
@@ -205,35 +216,9 @@
                 "Fail"
             ]
         },
-        "pulseUUID": {
+        "experimentID": {
             "type": "string",
             "format": "uuid"
-        },
-        "experimentInfo": {
-            "experimentID": {
-                "type": "string",
-                "format": "uuid"
-            },
-            "leadInvestigator": {
-                "type": "object",
-                "description": "Information about the principal scientist or researcher leading the experiment",
-                "properties": {
-                    "email": {
-                        "type": "string",
-                        "format": "email"
-                    },
-                    "firstName": {
-                        "type": "string"
-                    },
-                    "lastName": {
-                        "type": "string"
-                    }
-                }
-            },
-            "required": [
-                "experimentID",
-                "leadInvestigator"
-            ]
         },
         "configurationUUID": {
             "type": "string",
@@ -253,8 +238,7 @@
         "thermocoupleInformation",
         "comment",
         "pulseQuality",
-        "pulseUUID",
-        "experimentInfo",
+        "experimentID",
         "configurationUUID"
     ]
 }

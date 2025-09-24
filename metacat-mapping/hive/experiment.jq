@@ -1,5 +1,4 @@
 {
-    "proposalId": "experiment.experimentTitle",
-    "email": :experiment.leadInvestigator.email",
-    "title": "experiment.experimentTitle"
+    "ID": "ID",
+    "email": :leadInvestigator.email"
 }

@@ -32,9 +32,7 @@
         }
     },
     "required": [
-        "contactEmail",
         "creationTime",
-        "owner",
         "type",
         "sourceFolder",
         "description"
