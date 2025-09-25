@@ -1,8 +1,8 @@
 {
-    "creationTime" : "pulseStart",
+    "creationTime" : .pulseStart,
     "type": "raw",
-    "sourceFolder": "",
-    "description": "comment",
-    "experimentID": "experimentID",
-    "additional": ""
+    "sourceFolder": "/mnt/HIVE/\(.experimentID)/\(.sampleID)/\(.pulseID)",
+    "description": .comment,
+    "experimentID": .experimentID,
+    "additional": (del(.comment, .experimentID))
 }
