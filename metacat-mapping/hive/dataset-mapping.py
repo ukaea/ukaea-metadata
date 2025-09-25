@@ -1,4 +1,3 @@
-# Read in pulse json file
 import json
 
 import jq
@@ -6,6 +5,7 @@ import requests
 from jsonschema import validate, ValidationError
 
 
+# Read in pulse json file
 with open("pulse.json") as file:
     pulse_data = json.load(file)
 
