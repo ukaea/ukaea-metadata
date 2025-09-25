@@ -7,6 +7,9 @@
         "pulseID": {
             "type": "number"
         },
+        "sampleID": {
+            "type": "string"
+        },
         "dataCaptureStart": {
             "type": "string",
             "format": "date-time"
@@ -227,6 +230,7 @@
     },
     "required": [
         "pulseID",
+        "sampleID",
         "dataCaptureStart",
         "pulseStart",
         "pulseEnd",
