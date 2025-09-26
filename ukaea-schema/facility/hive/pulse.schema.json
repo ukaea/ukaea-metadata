@@ -226,6 +226,20 @@
         "configurationUUID": {
             "type": "string",
             "format": "uuid"
+        },
+        "diagnostics": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "diagnosticID": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "diagnosticID"
+                ]
+            }
         }
     },
     "required": [
