@@ -8,13 +8,13 @@
             "type": "string",
             "description": "A unique identifier for the experiment"
         },
-        "start": {
+        "startDate": {
             "type": "string",
-            "format": "date-time"
+            "format": "date"
         },
-        "end": {
+        "endDate": {
             "type": "string",
-            "format": "date-time"
+            "format": "date"
         },
         "description": {
             "type": "string"
@@ -63,8 +63,7 @@
     },
     "required": [
         "ID",
-        "start",
-        "end",
+        "startDate",
         "description",
         "leadInvestigator"
     ]
