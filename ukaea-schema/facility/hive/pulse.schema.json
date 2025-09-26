@@ -229,34 +229,53 @@
         },
         "diagnostics": {
             "type": "array",
-            "items": {
-                "type": "object",
-                "properties": {
-                    "diagnosticID": {
-                        "type": "string"
+            "anyOf": [
+                {
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "diagnosticID": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "diagnosticID"
+                        ]
                     }
                 },
-                "required": [
-                    "diagnosticID"
-                ]
-            }
-        }
-    },
-    "required": [
-        "pulseID",
-        "sampleID",
-        "dataCaptureStart",
-        "pulseStart",
-        "pulseEnd",
-        "pulseDuration",
-        "operator1",
-        "operator2",
-        "heatingInformation",
-        "coolantInformation",
-        "thermocoupleInformation",
-        "comment",
-        "pulseQuality",
-        "experimentID",
-        "configurationUUID"
-    ]
+                {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "diagnosticID": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "diagnosticID"
+                        ]
+                    }
+                }
+            ]
+        },
+        "required": [
+            "pulseID",
+            "sampleID",
+            "dataCaptureStart",
+            "pulseStart",
+            "pulseEnd",
+            "pulseDuration",
+            "operator1",
+            "operator2",
+            "heatingInformation",
+            "coolantInformation",
+            "thermocoupleInformation",
+            "comment",
+            "pulseQuality",
+            "experimentID",
+            "configurationUUID",
+            "diagnostics"
+        ]
+    }
 }
