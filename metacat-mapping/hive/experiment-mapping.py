@@ -10,13 +10,13 @@ with open("experiment.json") as file:
     experiment_data = json.load(file)
 
 # Map data to ukaea-dataset schema using dataset.jq
-jq_url = "https://raw.githubusercontent.com/ukaea/ukaea-metadata/main/metacat-mapping/hive/experiment.jq"
+jq_url = "https://ukaea.github.io/ukaea-metadata/metacat-mapping/hive/experiment.jq"
 jq_spec = requests.get(jq_url).text
 
 hive_experiment = jq.compile(jq_spec).input(experiment_data).first()
 
 # Validate against ukaea-dataset.schema.json
-schema_url = "https://raw.githubusercontent.com/ukaea/ukaea-metadata/main/ukaea-schema/ukaea-experiment.schema.json"
+schema_url = "https://ukaea.github.io/ukaea-metadata/ukaea-schema/ukaea-experiment.schema.json"
 schema = requests.get(schema_url).json()
 
 try:

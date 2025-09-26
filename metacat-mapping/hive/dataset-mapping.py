@@ -10,18 +10,18 @@ with open("pulse.json") as file:
     pulse_data = json.load(file)
 
 # Map data to ukaea-dataset schema using dataset.jq
-jq_url = "https://raw.githubusercontent.com/ukaea/ukaea-metadata/main/metacat-mapping/hive/dataset.jq"
+jq_url = "https://ukaea.github.io/ukaea-metadata/metacat-mapping/hive/dataset.jq"
 jq_spec = requests.get(jq_url).text
 
 hive_dataset = jq.compile(jq_spec).input(pulse_data).first()
 
-# Query scicat using experimentID to get contactEmail, ownerGroup and owner
+# Query metacat using experimentID to get contactEmail, ownerGroup and owner
 hive_dataset["contactEmail"] = "<contactEmail>"
 hive_dataset["ownerGroup"] = "<ownerGroup>"
 hive_dataset["owner"] = "<owner>"
 
 # Validate against ukaea-dataset.schema.json
-schema_url = "https://raw.githubusercontent.com/ukaea/ukaea-metadata/main/ukaea-schema/ukaea-dataset.schema.json"
+schema_url = "https://ukaea.github.io/ukaea-metadata/ukaea-schema/ukaea-dataset.schema.json"
 schema = requests.get(schema_url).json()
 
 try:
