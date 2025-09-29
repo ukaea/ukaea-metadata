@@ -44,7 +44,7 @@
                 },
                 "contactPerson": {
                     "type": "object",
-                    "description": "Information about teh designated person someone from the customer leading the experiment",
+                    "description": "Information about the designated person from the customer leading the experiment",
                     "properties": {
                         "email": {
                             "type": "string",
