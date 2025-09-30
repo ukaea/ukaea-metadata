@@ -258,24 +258,24 @@
                     }
                 }
             ]
-        },
-        "required": [
-            "pulseID",
-            "sampleID",
-            "dataCaptureStart",
-            "pulseStart",
-            "pulseEnd",
-            "pulseDuration",
-            "operator1",
-            "operator2",
-            "heatingInformation",
-            "coolantInformation",
-            "thermocoupleInformation",
-            "comment",
-            "pulseQuality",
-            "experimentID",
-            "configurationUUID",
-            "diagnostics"
-        ]
-    }
+        }
+    },
+    "required": [
+        "pulseID",
+        "sampleID",
+        "dataCaptureStart",
+        "pulseStart",
+        "pulseEnd",
+        "pulseDuration",
+        "operator1",
+        "operator2",
+        "heatingInformation",
+        "coolantInformation",
+        "thermocoupleInformation",
+        "comment",
+        "pulseQuality",
+        "experimentID",
+        "configurationUUID",
+        "diagnostics"
+    ]
 }
