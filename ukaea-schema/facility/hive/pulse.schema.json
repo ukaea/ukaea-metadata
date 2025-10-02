@@ -102,7 +102,7 @@
                 "outputVoltage": {
                     "type": "number"
                 },
-                "ouputCurrent": {
+                "outputCurrent": {
                     "type": "number"
                 }
             },
