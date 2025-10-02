@@ -1,68 +1,68 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "UKAEA Experiment Schema",
-  "type": "object",
-  "properties": {
-    "facility": {
-      "type": "string"
-    },
-    "facilityExperimentID": {
-      "type": "string"
-    },
-    "startDate": {
-      "type": "string",
-      "format": "date"
-    },
-    "endDate": {
-      "type": "string",
-      "format": "date"
-    },
-    "description": {
-      "type": "string"
-    },
-    "leadInvestigator": {
-      "type": "object",
-      "properties": {
-        "email": {
-          "type": "string",
-          "format": "email"
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "UKAEA Experiment Schema",
+    "type": "object",
+    "properties": {
+        "facility": {
+            "type": "string"
         },
-        "firstName": {
-          "type": "string"
+        "facilityExperimentID": {
+            "type": "string"
         },
-        "lastName": {
-          "type": "string"
-        }
-      }
-    },
-    "customer": {
-      "type": "object",
-      "properties": {
-        "organisation": {
-          "type": "string"
+        "startDate": {
+            "type": "string",
+            "format": "date"
         },
-        "contactPerson": {
-          "type": "object",
-          "properties": {
-            "email": {
-              "type": "string",
-              "format": "email"
-            },
-            "firstName": {
-              "type": "string"
-            },
-            "lastName": {
-              "type": "string"
+        "endDate": {
+            "type": "string",
+            "format": "date"
+        },
+        "description": {
+            "type": "string"
+        },
+        "leadInvestigator": {
+            "type": "object",
+            "properties": {
+                "email": {
+                    "type": "string",
+                    "format": "email"
+                },
+                "firstName": {
+                    "type": "string"
+                },
+                "lastName": {
+                    "type": "string"
+                }
             }
-          }
+        },
+        "customer": {
+            "type": "object",
+            "properties": {
+                "organisation": {
+                    "type": "string"
+                },
+                "contactPerson": {
+                    "type": "object",
+                    "properties": {
+                        "email": {
+                            "type": "string",
+                            "format": "email"
+                        },
+                        "firstName": {
+                            "type": "string"
+                        },
+                        "lastName": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
         }
-      }
-    }
-  },
-  "required": [
-    "facility",
-    "facilityExperimentID",
-    "startDate",
-    "description"
-  ]
+    },
+    "required": [
+        "facility",
+        "facilityExperimentID",
+        "startDate",
+        "description"
+    ]
 }

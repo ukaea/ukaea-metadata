@@ -61,10 +61,5 @@
             }
         }
     },
-    "required": [
-        "ID",
-        "startDate",
-        "description",
-        "leadInvestigator"
-    ]
+    "required": [ "ID", "startDate", "description", "leadInvestigator" ]
 }

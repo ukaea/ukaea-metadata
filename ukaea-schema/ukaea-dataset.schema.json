@@ -31,10 +31,5 @@
             "type": "object"
         }
     },
-    "required": [
-        "creationTime",
-        "type",
-        "sourceFolder",
-        "description"
-    ]
+    "required": [ "creationTime", "type", "sourceFolder", "description" ]
 }
