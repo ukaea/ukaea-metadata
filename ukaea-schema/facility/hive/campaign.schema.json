@@ -3,16 +3,17 @@
     "$id": "https://w3id.org/fusion/schemas/1.0.0/facility/hive/campaign",
     "description": "Metadata schema for a HIVE campaign",
     "type": "object",
-    "required": [ "campaignID", "campaignStart" ],
+    "required": [ "campaignUUID", "campaignStart" ],
     "properties": {
-        "campaignEnd": {
+        "campaignUUID": {
+            "type": "string",
+            "format": "uuid"
+        },
+        "campaignStart": {
             "type": "string",
             "format": "date-time"
         },
-        "campaignID": {
-            "type": "string"
-        },
-        "campaignStart": {
+        "campaignEnd": {
             "type": "string",
             "format": "date-time"
         }

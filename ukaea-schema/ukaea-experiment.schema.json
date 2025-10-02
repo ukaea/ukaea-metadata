@@ -1,12 +1,13 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://w3id.org/fusion/schemas/1.0.0/facility/hive/experiment",
-    "description": "Metadata schema for a HIVE experiment",
+    "title": "UKAEA Experiment Schema",
     "type": "object",
     "properties": {
-        "ID": {
-            "type": "string",
-            "description": "A unique identifier for the experiment"
+        "facility": {
+            "type": "string"
+        },
+        "facilityExperimentID": {
+            "type": "string"
         },
         "startDate": {
             "type": "string",
@@ -21,7 +22,6 @@
         },
         "leadInvestigator": {
             "type": "object",
-            "description": "Information about the principal scientist or researcher leading the experiment",
             "properties": {
                 "email": {
                     "type": "string",
@@ -39,12 +39,10 @@
             "type": "object",
             "properties": {
                 "organisation": {
-                    "type": "string",
-                    "description": "Name of organisation / group / company conducting the experiment"
+                    "type": "string"
                 },
                 "contactPerson": {
                     "type": "object",
-                    "description": "Information about the designated person from the customer leading the experiment",
                     "properties": {
                         "email": {
                             "type": "string",
@@ -61,5 +59,10 @@
             }
         }
     },
-    "required": [ "ID", "startDate", "description", "leadInvestigator" ]
+    "required": [
+        "facility",
+        "facilityExperimentID",
+        "startDate",
+        "description"
+    ]
 }

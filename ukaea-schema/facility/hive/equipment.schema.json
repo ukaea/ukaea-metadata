@@ -1,0 +1,49 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://w3id.org/fusion/schemas/1.0.0/facility/hive/equipment",
+    "description": "Metadata schema for a HIVE equipment",
+    "type": "object",
+    "required": [
+        "equipmentUUID",
+        "equipmentName",
+        "equipmentType",
+        "equipment"
+    ],
+    "properties": {
+        "equipmentUUID": {
+            "type": "string",
+            "format": "uuid"
+        },
+        "equipmentName": {
+            "type": "string"
+        },
+        "equipmentType": {
+            "type": "string"
+        },
+        "equipment": {
+            "oneOf": [
+                {
+                    "$ref": "https://w3id.org/fusion/schemas/1.0.0/equipment/dic"
+                },
+                {
+                    "$ref": "https://w3id.org/fusion/schemas/1.0.0/equipment/thermocouple"
+                },
+                {
+                    "$ref": "https://w3id.org/fusion/schemas/1.0.0/equipment/camera"
+                },
+                {
+                    "$ref": "https://w3id.org/fusion/schemas/1.0.0/equipment/flowmeter"
+                },
+                {
+                    "$ref": "https://w3id.org/fusion/schemas/1.0.0/equipment/pyrometer"
+                },
+                {
+                    "$ref": "https://w3id.org/fusion/schemas/1.0.0/equipment/ir-camera"
+                },
+                {
+                    "$ref": "https://w3id.org/fusion/schemas/1.0.0/equipment/lens"
+                }
+            ]
+        }
+    }
+}
