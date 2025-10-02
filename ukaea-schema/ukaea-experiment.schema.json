@@ -6,7 +6,7 @@
         "facility": {
             "type": "string"
         },
-        "facilityExperimentID": {
+        "facilityExperimentId": {
             "type": "string"
         },
         "startDate": {
@@ -61,7 +61,7 @@
     },
     "required": [
         "facility",
-        "facilityExperimentID",
+        "facilityExperimentId",
         "startDate",
         "description"
     ]
