@@ -196,8 +196,7 @@
             "enum": [ "Success", "Fail" ]
         },
         "experimentId": {
-            "type": "string",
-            "format": "uuid"
+            "type": "string"
         },
         "configurationUUID": {
             "type": "string",
@@ -205,9 +204,9 @@
         },
         "diagnostics": {
             "type": "array",
-            "anyOf": [
-                {
-                    "items": {
+            "items": {
+                "oneOf": [
+                    {
                         "type": "object",
                         "properties": {
                             "diagnosticId": {
@@ -215,21 +214,21 @@
                             }
                         },
                         "required": [ "diagnosticId" ]
+                    },
+                    {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "diagnosticId": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [ "diagnosticId" ]
+                        }
                     }
-                },
-                {
-                    "type": "array",
-                    "items": {
-                        "type": "object",
-                        "properties": {
-                            "diagnosticId": {
-                                "type": "string"
-                            }
-                        },
-                        "required": [ "diagnosticId" ]
-                    }
-                }
-            ]
+                ]
+            }
         }
     },
     "required": [
