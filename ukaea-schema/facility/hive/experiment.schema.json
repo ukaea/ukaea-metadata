@@ -4,7 +4,7 @@
     "description": "Metadata schema for a HIVE experiment",
     "type": "object",
     "properties": {
-        "ID": {
+        "experimentId": {
             "type": "string",
             "description": "A unique identifier for the experiment"
         },
@@ -61,5 +61,10 @@
             }
         }
     },
-    "required": [ "ID", "startDate", "description", "leadInvestigator" ]
+    "required": [
+        "experimentId",
+        "startDate",
+        "description",
+        "leadInvestigator"
+    ]
 }

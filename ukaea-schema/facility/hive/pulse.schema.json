@@ -4,10 +4,10 @@
     "description": "Metadata schema for a HIVE pulse",
     "type": "object",
     "properties": {
-        "pulseID": {
+        "pulseId": {
             "type": "number"
         },
-        "sampleID": {
+        "sampleId": {
             "type": "string"
         },
         "dataCaptureStart": {
@@ -40,7 +40,11 @@
                     "type": "string"
                 }
             },
-            "required": [ "email", "firstName", "lastName" ]
+            "required": [
+                "email",
+                "firstName",
+                "lastName"
+            ]
         },
         "operator2": {
             "type": "object",
@@ -56,16 +60,26 @@
                     "type": "string"
                 }
             },
-            "required": [ "email", "firstName", "lastName" ]
+            "required": [
+                "email",
+                "firstName",
+                "lastName"
+            ]
         },
         "heatingInformation": {
             "type": "object",
             "properties": {
                 "heatingType": {
-                    "enum": [ "Induction", "DC" ]
+                    "enum": [
+                        "Induction",
+                        "DC"
+                    ]
                 },
                 "currentType": {
-                    "enum": [ "AC", "DC" ]
+                    "enum": [
+                        "AC",
+                        "DC"
+                    ]
                 },
                 "inputPower": {
                     "type": "number",
@@ -108,7 +122,11 @@
                 }
             },
             "then": {
-                "required": [ "inputPower", "inputCurrent", "inputVoltage" ]
+                "required": [
+                    "inputPower",
+                    "inputCurrent",
+                    "inputVoltage"
+                ]
             }
         },
         "coolantInformation": {
@@ -179,23 +197,29 @@
             "items": {
                 "type": "object",
                 "properties": {
-                    "thermocoupleID": {
+                    "thermocoupleId": {
                         "type": "number"
                     },
                     "maxValue": {
                         "type": "number"
                     }
                 },
-                "required": [ "thermocoupleID", "maxValue" ]
+                "required": [
+                    "thermocoupleId",
+                    "maxValue"
+                ]
             }
         },
         "comment": {
             "type": "string"
         },
         "pulseQuality": {
-            "enum": [ "Success", "Fail" ]
+            "enum": [
+                "Success",
+                "Fail"
+            ]
         },
-        "experimentID": {
+        "experimentId": {
             "type": "string",
             "format": "uuid"
         },
@@ -210,11 +234,13 @@
                     "items": {
                         "type": "object",
                         "properties": {
-                            "diagnosticID": {
+                            "diagnosticId": {
                                 "type": "string"
                             }
                         },
-                        "required": [ "diagnosticID" ]
+                        "required": [
+                            "diagnosticId"
+                        ]
                     }
                 },
                 {
@@ -222,19 +248,21 @@
                     "items": {
                         "type": "object",
                         "properties": {
-                            "diagnosticID": {
+                            "diagnosticId": {
                                 "type": "string"
                             }
                         },
-                        "required": [ "diagnosticID" ]
+                        "required": [
+                            "diagnosticId"
+                        ]
                     }
                 }
             ]
         }
     },
     "required": [
-        "pulseID",
-        "sampleID",
+        "pulseId",
+        "sampleId",
         "dataCaptureStart",
         "pulseStart",
         "pulseEnd",
@@ -246,7 +274,7 @@
         "thermocoupleInformation",
         "comment",
         "pulseQuality",
-        "experimentID",
+        "experimentId",
         "configurationUUID",
         "diagnostics"
     ]
