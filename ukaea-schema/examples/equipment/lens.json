@@ -1,0 +1,13 @@
+{
+    "deviceInformation": {
+        "make": "Canon",
+        "model": "EF 24-70mm f/2.8L II USM",
+        "serialNumber": "987654321",
+        "aperture": "f/2.8",
+        "focalLength": 50,
+        "fieldOfView": {
+            "x": 1920,
+            "y": 1080
+        }
+    }
+}

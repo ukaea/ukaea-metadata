@@ -1,0 +1,89 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://w3id.org/fusion/schemas/1.0.0/equipment/dic",
+    "description": "Digital Image Correlation (DIC) equipment metadata",
+    "type": "object",
+    "required": [ "setupInformation", "softwareInformation", "cameraSetup" ],
+    "properties": {
+        "additionalInformation": {
+            "type": "object",
+            "required": [
+                "patternTechnique",
+                "patternBackground",
+                "patternSpeckle"
+            ],
+            "properties": {
+                "approxFeatureSize": {
+                    "type": "number",
+                    "unit": "qudt:MicroM"
+                },
+                "calTargetDims": {
+                    "type": "string",
+                    "example": "9 x 12 dots with 5 mm spacing"
+                },
+                "calTargetMake": {
+                    "type": "string"
+                },
+                "calTargetSpacing": {
+                    "type": "number"
+                },
+                "patternBackground": {
+                    "type": "string"
+                },
+                "patternSpeckle": {
+                    "type": "string"
+                },
+                "patternTechnique": {
+                    "type": "string"
+                }
+            }
+        },
+        "cameraSetup": {
+            "type": "object",
+            "properties": {
+                "cameras": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "https://w3id.org/fuel/schemas/1.0.0/equipment/camera"
+                    }
+                }
+            }
+        },
+        "setupInformation": {
+            "type": "object",
+            "required": [ "configuration", "stereoAngle", "standOffDistance" ],
+            "properties": {
+                "configuration": {
+                    "enum": [ "2D", "Stereo", "Stereo+IR" ]
+                },
+                "imagedSurfaceOnSpecimen": {
+                    "type": "string",
+                    "example": "XY plane"
+                },
+                "standOffDistance": {
+                    "type": "number",
+                    "unit": "qudt:M"
+                },
+                "stereoAngle": {
+                    "type": "number",
+                    "unit": "qudt:DEG"
+                }
+            }
+        },
+        "softwareInformation": {
+            "type": "object",
+            "required": [ "softwareName", "softwareVersion" ],
+            "properties": {
+                "softwareName": {
+                    "description": "Name of the acquisition software used",
+                    "type": "string"
+                },
+                "softwareVersion": {
+                    "description": "Version of the acquisition software used",
+                    "type": "string",
+                    "comment": "versioning to be improved"
+                }
+            }
+        }
+    }
+}

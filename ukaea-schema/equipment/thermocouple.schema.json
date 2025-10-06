@@ -1,13 +1,18 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://w3id.org/fusion/schemas/1.0.0/diagnostics/thermocouple",
-    "description": "Metadata to describe thermocouple diagnostic",
+    "$id": "https://w3id.org/fusion/schemas/1.0.0/equipment/thermocouple",
+    "description": "Metadata to describe thermocouple equipment",
     "type": "object",
     "required": [ "thermocouple" ],
     "properties": {
         "thermocouple": {
             "type": "object",
-            "required": [ "attachment", "thermocoupleType", "circleDiameter", "noiseFloor"],
+            "required": [
+                "attachment",
+                "thermocoupleType",
+                "circleDiameter",
+                "noiseFloor"
+            ],
             "properties": {
                 "attachment": {
                     "type": "string",
