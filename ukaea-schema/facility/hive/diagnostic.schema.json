@@ -1,37 +1,41 @@
 {
-    "$id": "urn:ukaea:facility:hive:diagnostic",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://w3id.org/fusion/schemas/1.0.0/facility/hive/diagnostic",
     "description": "Metadata schema for a HIVE diagnostic",
     "type": "object",
-    "required": [
-        "diagnosticName",
-        "diagnosticType",
-        "port",
-        "diagnostic"
-    ],
+    "required": [ "diagnosticName", "diagnosticType", "diagnostic" ],
     "properties": {
-        "diagnosticName": {
+        "diagnostic": {
+            "oneOf": [
+                {
+                    "$ref": "https://w3id.org/fusion/schemas/1.0.0/diagnostics/dic"
+                },
+                {
+                    "$ref": "https://w3id.org/fusion/schemas/1.0.0/diagnostics/thermocouple"
+                },
+                {
+                    "$ref": "https://w3id.org/fusion/schemas/1.0.0/diagnostics/camera"
+                },
+                {
+                    "$ref": "https://w3id.org/fusion/schemas/1.0.0/diagnostics/flowmeter"
+                },
+                {
+                    "$ref": "https://w3id.org/fusion/schemas/1.0.0/diagnostics/pyrometer"
+                },
+                {
+                    "$ref": "https://w3id.org/fusion/schemas/1.0.0/diagnostics/ir-camera"
+                }
+            ]
+        },
+        "diagnosticID": {
             "type": "string",
-            "example": "TC01"
+            "format": "uuid"
+        },
+        "diagnosticName": {
+            "type": "string"
         },
         "diagnosticType": {
-            "type": "string",
-            "example": "Thermocouple"
-        },
-        "port": {
-            "type": "object",
-            "properties": {
-                "$ref": "./port.schema.json#"
-            }
-        },
-        "diagnostic": {
-            "type": "object",
-            "properties": {
-                "oneOf": [
-                    { "$ref": "../../diagnostics/dic.schema.json#" },
-                    { "$ref": "../../diagnostics/tc.schema.json#" }
-                ]
-            }
+            "type": "string"
         }
     }
 }

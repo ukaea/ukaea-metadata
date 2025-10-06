@@ -1,0 +1,80 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://w3id.org/fusion/schemas/1.0.0/diagnostics/pyrometer-schema",
+    "description": "Metadata to describe pyrometer diagnostics",
+    "type": "object",
+    "required": [ "deviceInformation", "deviceSettings" ],
+    "properties": {
+        "deviceInformation": {
+            "type": "object",
+            "properties": {
+                "make": {
+                    "type": "string",
+                    "description": "The manufacturer or brand of the pyrometer (e.g., Optris, Fluke, Raytek)."
+                },
+                "model": {
+                    "type": "string",
+                    "description": "The specific product designation given by the manufacturer, identifying the pyrometer type or version (e.g., Optris CTlaser 3M, Fluke 568)."
+                },
+                "serialNumber": {
+                    "type": "string",
+                    "description": "A unique identifier assigned by the manufacturer to distinguish an individual pyrometer unit from others of the same make and model."
+                },
+                "spectralRange": {
+                    "type": "object",
+                    "required": [ "minimum", "maximum" ],
+                    "properties": {
+                        "maximum": {
+                            "type": "number",
+                            "unit": "qudt:MicroM",
+                            "description": "Maximum thermal radiation wavelength that the pyrometer's detector is sensitive to."
+                        },
+                        "minimum": {
+                            "type": "number",
+                            "unit": "qudt:MicroM",
+                            "description": "Minimum thermal radiation wavelength that the pyrometer's detector is sensitive to."
+                        }
+                    }
+                },
+                "temperatureRange": {
+                    "type": "object",
+                    "required": [ "minimum", "maximum" ],
+                    "properties": {
+                        "maximum": {
+                            "type": "number",
+                            "unit": "qudt:DEG_C",
+                            "description": "Maximum temperature the pyrometer is calibrated to measure accurately (e.g. 500°C to 2500°C)"
+                        },
+                        "minimum": {
+                            "type": "number",
+                            "unit": "qudt:DEG_C",
+                            "description": "Minimum temperature the pyrometer is calibrated to measure accurately (e.g. 500°C to 2500°C)"
+                        }
+                    }
+                }
+            },
+            "required": [
+                "make",
+                "model",
+                "serialNumber",
+                "spectralRange",
+                "temperatureRange"
+            ]
+        },
+        "deviceSettings": {
+            "type": "object",
+            "required": [ "emissivity", "framerate" ],
+            "properties": {
+                "emissivity": {
+                    "type": "number",
+                    "description": "The emissivity value used for temperature calculations, representing the efficiency with which a surface emits thermal radiation."
+                },
+                "framerate": {
+                    "type": "number",
+                    "description": "The rate at which the pyrometer acquires thermal data, typically measured in Hertz (Hz) or frames per second (fps)",
+                    "unit": "qudt:HZ"
+                }
+            }
+        }
+    }
+}

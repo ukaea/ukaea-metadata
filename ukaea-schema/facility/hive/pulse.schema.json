@@ -1,210 +1,120 @@
 {
-    "$id": "urn:ukaea:facility:hive:pulse",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://w3id.org/fuel/schemas/1.0.0/facility/hive/pulse",
     "description": "Metadata schema for a HIVE pulse",
     "type": "object",
-    "required": [
-        "pulseID",
-        "firstOperator",
-        "secondOperator",
-        "pulseStart",
-        "pulseDuration",
-        "dataCaptureStart",
-        "pulseQuality",
-        "coilInformation",
-        "coolantInformation"
-    ],
+    "required": ["pulseInformation", "operator1", "operator2", "pulseDetails", "heatingInformation", "coolantInformation"],
     "properties": {
-        "pulseID": {
-            "type": "string",
-            "example": "uuid?"
-        },
-        "firstOperator": {
+        "pulseInformation": {
             "type": "object",
+            "required": [ "pulseID", "experiment", "configuration", "pulseStart", "pulseDuration", "dataCaptureStart"],
             "properties": {
-                "firstName": {
+                "pulseID": {
                     "type": "string"
                 },
-                "lastName": {
+                "experiment": {
                     "type": "string"
                 },
-                "email": {
-                    "type": "string"
-                }
-            },
-            "$comment": "Link to type @person"
-        },
-        "secondOperator": {
-            "type": "object",
-            "properties": {
-                "firstName": {
+                "configuration": {
                     "type": "string"
                 },
-                "lastName": {
-                    "type": "string"
-                },
-                "email": {
-                    "type": "string"
-                }
-            },
-            "$comment": "Link to type @person"
-        },
-        "pulseStart": {
-            "type": "string",
-            "format": "date-time"
-        },
-        "pulseDuration": {
-            "type": "integer",
-            "minimum": 0,
-            "unit": "qudt:SEC",
-            "$comment": "To be updated automatically post-pulse"
-        },
-        "dataCaptureStart": {
-            "type": "string",
-            "format": "date-time"
-        },
-        "operatorComment": {
-            "type": "string"
-        },
-        "pulseQuality": {
-            "type": "string",
-            "enum": [
-                "Success",
-                "Fail"
-            ]
-        },
-        "coolantInformation": {
-            "type": "object",
-            "required": [ "coolantType", "coolantFlow", "coolantTemperature", "coolantPressure" ],
-            "properties": {
-                "coolantType": { 
+                "pulseStart": {
                     "type": "string",
-                    "enum": [
-                        "Water",
-                        "Demineralised Water",
-                        "Treated Water"
-                    ]
+                    "format": "date-time"
                 },
-                "coolantFlow": {
-                    "type": "object",
-                    "required": [ "rate", "setpoint", "value", "variance" ],
-                    "properties": {
-                        "rate": {
-                            "type": "string",
-                            "enum": [
-                                "High",
-                                "Low"
-                            ]
-                        },
-                        "setpoint": {
-                            "type": "number",
-                            "unit": "qudt:L-PER-MIN"
-                        },
-                        "value": {
-                            "type": "number",
-                            "unit": "qudt:L-PER-MIN"
-                        },
-                        "variance": {
-                            "type": "number",
-                            "unit": "qudt:L-PER-MIN"
-                        }
-                    }
+                "dataCaptureStart": {
+                    "type": "string",
+                    "format": "date-time"
                 },
-                "coolantTemperature": {
-                    "type": "object",
-                    "required": [ "setpoint", "in", "inVariance", "out", "outVariance", "delta" ],
-                    "properties": {
-                        "setpoint": {
-                            "type": "number",
-                            "unit": "qudt:DEG_C"
-                        },
-                        "in": {
-                            "type": "number",
-                            "unit": "qudt:DEG_C"
-                        },
-                        "inVariance": {
-                            "type": "number",
-                            "unit": "qudt:DEG_C"
-                        },
-                        "out": {
-                            "type": "number",
-                            "unit": "qudt:DEG_C"
-                        },
-                        "outVariance": {
-                            "type": "number",
-                            "unit": "qudt:DEG_C"
-                        },
-                        "delta": {
-                            "type": "number",
-                            "unit": "qudt:DEG_C"
-                        }
-                    }
-                },
-                "coolantPressure": {
-                    "type": "object",
-                    "required": [ "in", "out", "delta" ],
-                    "properties": {
-                        "in": { 
-                            "type": "number",
-                            "unit": "qudt:BAR"
-                        },
-                        "out": { 
-                            "type": "number",
-                            "unit": "qudt:BAR"
-                        },
-                        "delta": {
-                            "type": "number",
-                            "unit": "qudt:BAR",
-                            "$comment": "Not necessarily needed if can be calculated from in and out"
-                        }
-                    }
+                "pulseDuration": {
+                    "type": "integer",
+                    "unit": "qudt:SEC",
+                    "minimum": 0,
+                    "$comment": "To be updated automatically post-pulse"
                 }
             }
         },
-        "coilInformation": {
+        "operator1": {
             "type": "object",
-            "required": [ "currentType", "inputPower", "inputCurrent", "inputVoltage", "outputFrequency", "outputPower", "outputCurrent", "outputVoltage" ],
+            "properties": {
+                "email": {
+                    "type": "string",
+                    "format": "email"
+                },
+                "firstName": {
+                    "type": "string"
+                },
+                "lastName": {
+                    "type": "string"
+                }
+            }, 
+            "required": ["email", "firstName", "lastName"]
+        },
+        "operator2": {
+            "type": "object",
+            "properties": {
+                "email": {
+                    "type": "string",
+                    "format": "email"
+                },
+                "firstName": {
+                    "type": "string"
+                },
+                "lastName": {
+                    "type": "string"
+                }
+            },
+            "required": ["email", "firstName", "lastName"]
+        },
+        "pulseDetails": {
+            "type": "object",
+            "properties": {
+                "comment": {
+                    "type": "string"
+                },
+                "pulseQuality": {
+                    "enum": [ "Success", "Fail" ]
+                }
+            }
+        },
+        "heatingInformation": {
+            "type": "object",
             "properties": {
                 "currentType": {
-                    "type": "string",
                     "enum": [ "AC", "DC" ]
-                },
+                }, 
                 "inputPower": {
                     "type": "number",
                     "unit": "qudt:KiloW"
                 },
-                "inputVoltage": {
-                    "type": "number",
-                    "unit": "qudt:V"
-                },
                 "inputCurrent": {
                     "type": "number",
                     "unit": "qudt:A"
-                },
-                "outputFrequency": {
-                    "type": "number",
-                    "unit": "qudt:KiloHZ"
-                },
-                "outputPower": {
-                    "type": "number",
-                    "unit": "qudt:KiloW"
-                },
-                "outputVoltage": {
+                }, 
+                "inputVoltage": {
                     "type": "number",
                     "unit": "qudt:V"
-                },
-                "outputCurrent": {
-                    "type": "number",
-                    "unit": "qudt:A"
                 }
             }
         },
-        "diagnostics": {
-            "type": "array",
-            "items": {
-                "$ref": "./diagnostic.schema.json#"
-            },
-            "$comment": "diagnostic.schema.json is within HIVE directory, not to be confused with toplevel"
+        "coolantInformation": {
+            "type": "object",
+            "required": [
+                "coolantType",
+                "targetCoolantFlow",
+                "targetCoolantTemperature"
+            ],
+            "properties": {
+                "coolantType": {
+                    "type": "string"
+                },
+                "targetCoolantFlow": {
+                    "type": "number"
+                },
+                "targetCoolantTemperature": {
+                    "type": "number"
+                }
+            }
         }
     }
 }
