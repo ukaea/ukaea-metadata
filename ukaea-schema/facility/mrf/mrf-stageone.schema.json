@@ -1,6 +1,6 @@
 {
-    "$id": "urn:ukaea:facility:mrf:stageone",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://w3id.org/fusion/schemas/1.0.0/facility/mrf/mrf-stageone",
     "description": "Metadata schema MRF experiments before directory creation",
     "type": "object",
     "required": [
@@ -37,8 +37,11 @@
             "$comment": "Incremental session ID across a single job"
         },
         "sampleId": {
-            "type": "string",
-            "$comment": "Unique identifier for the sample, not part of Salesforce MVP"
+            "type": ["string", "array"],
+            "items": {
+                "type": "string"
+            },
+            "$comment": "Unique identifier for the sample(s), not part of Salesforce MVP"
         },
         "bookingStart": {
             "type": "string",
@@ -48,52 +51,79 @@
             "type": "string",
             "format": "date-time"
         },
-        "internalUser": {
+    "internalUser": {
+        "oneOf": [
+            {
             "type": "object",
             "properties": {
-                "firstName": {
-                    "type": "string"
-                },
-                "lastName": {
-                    "type": "string"
-                },
-                "email": {
-                    "type": "string"
+                "firstName": { "type": "string" },
+                "lastName": { "type": "string" },
+                "email": { "type": "string" }
+            }
+            },
+            {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "firstName": { "type": "string" },
+                    "lastName": { "type": "string" },
+                    "email": { "type": "string" }
                 }
             }
-        },
-        "externalUser": {
+            }
+        ]
+    },
+    "externalUser": {
+        "oneOf": [
+            {
             "type": "object",
             "properties": {
-                "firstName": {
-                    "type": "string"
-                },
-                "lastName": {
-                    "type": "string"
-                },
-                "email": {
-                    "type": "string"
-                }
+                "firstName": { "type": "string" },
+                "lastName": { "type": "string" },
+                "email": { "type": "string" }
+            }
             },
-            "$comment": "Would lead to an institution"
-        },
+            {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "firstName": { "type": "string" },
+                    "lastName": { "type": "string" },
+                    "email": { "type": "string" }
+                }
+            }
+            }
+        ],
+        "$comment": "Would lead to an institution"
+    },
         "institution": {
             "type": "string"
         },
-        "scientificSupport": {
+    "scientificSupport": {
+        "oneOf": [
+            {
             "type": "object",
             "properties": {
-                "firstName": {
-                    "type": "string"
-                },
-                "lastName": {
-                    "type": "string"
-                },
-                "email": {
-                    "type": "string"
+                "firstName": { "type": "string" },
+                "lastName": { "type": "string" },
+                "email": { "type": "string" }
+            }
+            },
+            {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "firstName": { "type": "string" },
+                    "lastName": { "type": "string" },
+                    "email": { "type": "string" }
                 }
             }
-        },
+            }
+        ]
+    },
         "notes": {
             "type": "string"
         },
@@ -110,7 +140,10 @@
             "type": "boolean"
         },
         "splitSampleId": {
-            "type": "string"
+            "type": ["string", "array"],
+            "items": {
+                "type": "string"
+            }
         },
         "tritium": {
             "type": "boolean"

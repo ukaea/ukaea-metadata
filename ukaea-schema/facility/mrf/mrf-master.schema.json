@@ -1,6 +1,6 @@
 {
-    "$id": "urn:ukaea:facility:mrf:master",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://w3id.org/fusion/schemas/1.0.0/facility/mrf/master",
     "description": "Master metadata schema for MRF experiments combining stage one and stage two",
     "type": "object",
     "properties": {
