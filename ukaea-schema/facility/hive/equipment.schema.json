@@ -4,16 +4,11 @@
     "description": "Metadata schema for a HIVE equipment",
     "type": "object",
     "required": [
-        "equipmentUUID",
         "equipmentName",
         "equipmentType",
         "equipment"
     ],
     "properties": {
-        "equipmentUUID": {
-            "type": "string",
-            "format": "uuid"
-        },
         "equipmentName": {
             "type": "string"
         },
