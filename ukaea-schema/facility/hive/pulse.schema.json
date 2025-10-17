@@ -40,11 +40,7 @@
                     "type": "string"
                 }
             },
-            "required": [
-                "email",
-                "firstName",
-                "lastName"
-            ]
+            "required": [ "email", "firstName", "lastName" ]
         },
         "operator2": {
             "type": "object",
@@ -60,26 +56,16 @@
                     "type": "string"
                 }
             },
-            "required": [
-                "email",
-                "firstName",
-                "lastName"
-            ]
+            "required": [ "email", "firstName", "lastName" ]
         },
         "heatingInformation": {
             "type": "object",
             "properties": {
                 "heatingType": {
-                    "enum": [
-                        "Induction",
-                        "DC"
-                    ]
+                    "enum": [ "Induction", "DC" ]
                 },
                 "currentType": {
-                    "enum": [
-                        "AC",
-                        "DC"
-                    ]
+                    "enum": [ "AC", "DC" ]
                 },
                 "inputPower": {
                     "type": "number",
@@ -122,11 +108,7 @@
                 }
             },
             "then": {
-                "required": [
-                    "inputPower",
-                    "inputCurrent",
-                    "inputVoltage"
-                ]
+                "required": [ "inputPower", "inputCurrent", "inputVoltage" ]
             }
         },
         "coolantInformation": {
@@ -204,20 +186,14 @@
                         "type": "number"
                     }
                 },
-                "required": [
-                    "thermocoupleID",
-                    "maxValue"
-                ]
+                "required": [ "thermocoupleID", "maxValue" ]
             }
         },
         "comment": {
             "type": "string"
         },
         "pulseQuality": {
-            "enum": [
-                "Success",
-                "Fail"
-            ]
+            "enum": [ "Success", "Fail" ]
         },
         "experimentID": {
             "type": "string",
@@ -238,9 +214,7 @@
                                 "type": "string"
                             }
                         },
-                        "required": [
-                            "diagnosticID"
-                        ]
+                        "required": [ "diagnosticID" ]
                     }
                 },
                 {
@@ -252,9 +226,7 @@
                                 "type": "string"
                             }
                         },
-                        "required": [
-                            "diagnosticID"
-                        ]
+                        "required": [ "diagnosticID" ]
                     }
                 }
             ]

@@ -10,7 +10,5 @@
             "type": "object"
         }
     },
-    "required": [
-        "instrumentID"
-    ]
+    "required": [ "instrumentID" ]
 }
