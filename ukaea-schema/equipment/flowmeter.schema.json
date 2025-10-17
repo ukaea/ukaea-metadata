@@ -3,47 +3,49 @@
     "$id": "https://w3id.org/fusion/schemas/1.0.0/equipment/flowmeter-schema",
     "description": "Metadata to describe flowmeter equipment",
     "type": "object",
-    "required": [
-        "make",
-        "model",
-        "serialNumber",
-        "flowmeterType",
-        "flowRange"
-    ],
+    "required": [ "deviceInformation" ],
     "properties": {
-        "make": {
-            "type": "string",
-            "description": "The manufacturer or brand of the flowmeter (e.g., Siemens, Yokogawa, Emerson)."
-        },
-        "model": {
-            "type": "string",
-            "description": "The specific product designation given by the manufacturer, identifying the flowmeter type or version (e.g., SITRANS F M MAG 5100W)."
-        },
-        "serialNumber": {
-            "type": "string",
-            "description": "A unique identifier assigned by the manufacturer to distinguish an individual flowmeter unit."
-        },
-        "assetId": {
-            "type": "string",
-            "description": "A unique identifier assigned to each asset in the organisation’s asset registry"
-        },
-        "flowmeterType": {
-            "type": "string",
-            "description": "The measurement basis or principle of operation of the flowmeter (e.g., turbine)."
-        },
-        "flowRange": {
+        "deviceInformation": {
             "type": "object",
-            "required": [ "minimum", "maximum" ],
+            "required": [
+                "make",
+                "model",
+                "serialNumber",
+                "flowmeterType",
+                "flowRange"
+            ],
             "properties": {
-                "maximum": {
-                    "type": "number",
-                    "unit": "qudt:L-PER-MIN",
-                    "description": "The highest flow value that the flowmeter is designed to measure accurately."
+                "make": {
+                    "type": "string",
+                    "description": "The manufacturer or brand of the flowmeter (e.g., Siemens, Yokogawa, Emerson)."
                 },
-                "minimum": {
-                    "type": "number",
-                    "unit": "qudt:L-PER-MIN",
-                    "description": "The lowest flow value that the flowmeter is designed to measure accurately."
+                "model": {
+                    "type": "string",
+                    "description": "The specific product designation given by the manufacturer, identifying the flowmeter type or version (e.g., SITRANS F M MAG 5100W)."
+                },
+                "serialNumber": {
+                    "type": "string",
+                    "description": "A unique identifier assigned by the manufacturer to distinguish an individual flowmeter unit."
+                },
+                "flowmeterType": {
+                    "type": "string",
+                    "description": "The measurement basis or principle of operation of the flowmeter (e.g., turbine)."
+                },
+                "flowRange": {
+                    "type": "object",
+                    "required": [ "minimum", "maximum" ],
+                    "properties": {
+                        "maximum": {
+                            "type": "number",
+                            "unit": "qudt:L-PER-MIN",
+                            "description": "The highest flow value that the flowmeter is designed to measure accurately."
+                        },
+                        "minimum": {
+                            "type": "number",
+                            "unit": "qudt:L-PER-MIN",
+                            "description": "The lowest flow value that the flowmeter is designed to measure accurately."
+                        }
+                    }
                 }
             }
         }

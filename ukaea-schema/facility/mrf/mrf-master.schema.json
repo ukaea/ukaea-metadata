@@ -1,0 +1,18 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://w3id.org/fusion/schemas/1.0.0/facility/mrf/master",
+    "description": "Master metadata schema for MRF experiments combining stage one and stage two",
+    "type": "object",
+    "properties": {
+        "stageOne": {
+            "$ref": "https://w3id.org/fusion/schemas/1.0.0/facility/mrf/mrf-stageone",
+            "description": "Stage one metadata for formation of directories"
+        },
+        "stageTwo": {
+            "$ref": "https://w3id.org/fusion/schemas/1.0.0/facility/mrf/mrf-stagetwo",
+            "description": "Stage two metadata after directory creation"
+        }
+    },
+    "required": [ "stageOne" ],
+    "additionalProperties": false
+}
