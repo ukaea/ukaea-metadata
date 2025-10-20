@@ -1,0 +1,78 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://w3id.org/fusion/schemas/1.0.0/elsa",
+    "title": "ELSA-schema",
+    "description": "Metadata to describe ELSA data",
+    "type": "object",
+    "required": [ "datatype", "description", "displaytype", "Measurement_Range",
+                    "Measurement_Rate__Hz_", "Measurement_Source", "monotony",
+                    "novaluekey", "Units", "wf_increment", "wf_samples", 
+                    "wf_start_offset", "wf_start_time", "wf_time_pref", "wf_xname",
+                    "wf_xunit_string" ],
+    "properties": {
+        "datatype": {
+            "type": "string",
+            "description": ""
+        },
+        "description": {
+            "type": "string",
+            "description": ""
+        },
+        "displaytype": {
+            "type": "string",
+            "description": ""
+        },
+        "Measurement_Range": {
+            "type": "boolean",
+            "description": ""
+        },
+        "Measurement_Rate__Hz_": {
+            "type": "integer",
+            "description": ""
+        },
+        "Measurement_Source": {
+            "type": "string",
+            "description": ""
+        },
+        "monotony": {
+            "type": "string",
+            "description": ""
+        },
+        "novaluekey": {
+            "type": "string",
+            "description": ""
+        },
+        "Units": {
+            "type": "string",
+            "description": ""
+        },
+        "wf_increment": {
+            "type": "number",
+            "description": ""
+        },
+        "wf_samples": {
+            "type": "integer",
+            "description": ""
+        },
+        "wf_start_offset": {
+            "type": "number",
+            "description": ""
+        },
+        "wf_start_time": {
+            "type": "date",
+            "description": ""
+        },
+        "wf_time_pref": {
+            "type": "string",
+            "description": ""
+        },
+        "wf_xname": {
+            "type": "string",
+            "description": ""
+        },
+        "wf_xunit_string": {
+            "type": "string",
+            "description": ""
+        }
+    }
+}
