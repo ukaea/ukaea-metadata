@@ -37,7 +37,7 @@
             "$comment": "Incremental session ID across a single job"
         },
         "sampleId": {
-            "type": ["string", "array"],
+            "type": "array",
             "items": {
                 "type": "string"
             },
@@ -51,17 +51,7 @@
             "type": "string",
             "format": "date-time"
         },
-    "internalUser": {
-        "oneOf": [
-            {
-            "type": "object",
-            "properties": {
-                "firstName": { "type": "string" },
-                "lastName": { "type": "string" },
-                "email": { "type": "string" }
-            }
-            },
-            {
+        "internalUser": {
             "type": "array",
             "items": {
                 "type": "object",
@@ -71,47 +61,23 @@
                     "email": { "type": "string" }
                 }
             }
-            }
-        ]
-    },
-    "externalUser": {
-        "oneOf": [
-            {
-            "type": "object",
-            "properties": {
-                "firstName": { "type": "string" },
-                "lastName": { "type": "string" },
-                "email": { "type": "string" }
-            }
-            },
-            {
-            "type": "array",
-            "items": {
-                "type": "object",
-                "properties": {
-                    "firstName": { "type": "string" },
-                    "lastName": { "type": "string" },
-                    "email": { "type": "string" }
-                }
-            }
-            }
-        ],
-        "$comment": "Would lead to an institution"
-    },
-        "institution": {
-            "type": "string"
         },
-    "scientificSupport": {
-        "oneOf": [
-            {
-            "type": "object",
-            "properties": {
-                "firstName": { "type": "string" },
-                "lastName": { "type": "string" },
-                "email": { "type": "string" }
-            }
+        "externalUser": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "firstName": { "type": "string" },
+                    "lastName": { "type": "string" },
+                    "email": { "type": "string" }
+                }
             },
-            {
+            "$comment": "Would lead to an institution"
+        },
+            "institution": {
+                "type": "string"
+            },
+        "scientificSupport": {
             "type": "array",
             "items": {
                 "type": "object",
@@ -121,9 +87,7 @@
                     "email": { "type": "string" }
                 }
             }
-            }
-        ]
-    },
+        },
         "notes": {
             "type": "string"
         },
