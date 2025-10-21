@@ -4,10 +4,10 @@
     "description": "Metadata schema for a HIVE pulse",
     "type": "object",
     "properties": {
-        "pulseId": {
+        "pulseID": {
             "type": "number"
         },
-        "sampleId": {
+        "sampleID": {
             "type": "string"
         },
         "dataCaptureStart": {
@@ -88,7 +88,7 @@
                 "outputVoltage": {
                     "type": "number"
                 },
-                "outputCurrent": {
+                "ouputCurrent": {
                     "type": "number"
                 }
             },
@@ -179,14 +179,14 @@
             "items": {
                 "type": "object",
                 "properties": {
-                    "thermocoupleId": {
+                    "thermocoupleID": {
                         "type": "number"
                     },
                     "maxValue": {
                         "type": "number"
                     }
                 },
-                "required": [ "thermocoupleId", "maxValue" ]
+                "required": [ "thermocoupleID", "maxValue" ]
             }
         },
         "comment": {
@@ -195,8 +195,9 @@
         "pulseQuality": {
             "enum": [ "Success", "Fail" ]
         },
-        "experimentId": {
-            "type": "string"
+        "experimentID": {
+            "type": "string",
+            "format": "uuid"
         },
         "configurationUUID": {
             "type": "string",
@@ -204,49 +205,49 @@
         },
         "diagnostics": {
             "type": "array",
-            "items": {
-                "oneOf": [
-                    {
+            "anyOf": [
+                {
+                    "items": {
                         "type": "object",
                         "properties": {
-                            "diagnosticId": {
+                            "diagnosticID": {
                                 "type": "string"
                             }
                         },
-                        "required": [ "diagnosticId" ]
-                    },
-                    {
-                        "type": "array",
-                        "items": {
-                            "type": "object",
-                            "properties": {
-                                "diagnosticId": {
-                                    "type": "string"
-                                }
-                            },
-                            "required": [ "diagnosticId" ]
-                        }
+                        "required": [ "diagnosticID" ]
                     }
-                ]
-            }
-        }
-    },
-    "required": [
-        "pulseId",
-        "sampleId",
-        "dataCaptureStart",
-        "pulseStart",
-        "pulseEnd",
-        "pulseDuration",
-        "operator1",
-        "operator2",
-        "heatingInformation",
-        "coolantInformation",
-        "thermocoupleInformation",
-        "comment",
-        "pulseQuality",
-        "experimentId",
-        "configurationUUID",
-        "diagnostics"
-    ]
+                },
+                {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "diagnosticID": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [ "diagnosticID" ]
+                    }
+                }
+            ]
+        },
+        "required": [
+            "pulseID",
+            "sampleID",
+            "dataCaptureStart",
+            "pulseStart",
+            "pulseEnd",
+            "pulseDuration",
+            "operator1",
+            "operator2",
+            "heatingInformation",
+            "coolantInformation",
+            "thermocoupleInformation",
+            "comment",
+            "pulseQuality",
+            "experimentID",
+            "configurationUUID",
+            "diagnostics"
+        ]
+    }
 }
