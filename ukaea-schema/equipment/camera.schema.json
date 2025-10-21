@@ -3,7 +3,6 @@
     "$id": "https://w3id.org/fusion/schemas/1.0.0/equipment/camera",
     "description": "Metadata to describe camera equipment",
     "type": "object",
-<<<<<<< HEAD
     "required": [ "make", "model", "resolution" ],
     "properties": {
         "make": {
@@ -35,61 +34,6 @@
                     "type": "integer",
                     "unit": "qudt:px",
                     "description": "The camera resolution in pixels, represented as height."
-=======
-    "required": [ "deviceInformation" ],
-    "properties": {
-        "deviceInformation": {
-            "type": "object",
-            "required": [ "make", "model", "resolution" ],
-            "properties": {
-                "make": {
-                    "type": "string",
-                    "description": "The manufacturer or brand of the camera (e.g., Canon, Nikon, Sony)."
-                },
-                "model": {
-                    "type": "string",
-                    "description": "The specific product designation given by the manufacturer, which identifies the version or type of the camera (e.g., EOS 5D Mark IV, Alpha 7R IV)."
-                },
-                "serialNumber": {
-                    "type": "string",
-                    "description": "A unique identifier assigned by the manufacturer to distinguish an individual camera unit from others of the same make and model."
-                },
-                "resolution": {
-                    "type": "object",
-                    "required": [ "x", "y" ],
-                    "properties": {
-                        "x": {
-                            "type": "integer",
-                            "unit": "qudt:px",
-                            "description": "The camera resolution in pixels, represented as width."
-                        },
-                        "y": {
-                            "type": "integer",
-                            "unit": "qudt:px",
-                            "description": "The camera resolution in pixels, represented as height."
-                        }
-                    }
-                }
-            }
-        },
-        "captureSettings": {
-            "type": "object",
-            "required": [ "imageAcquisitionRate", "imageNoise" ],
-            "properties": {
-                "imageAcquisitionRate": {
-                    "type": "number",
-                    "unit": "qudt:Hertz",
-                    "description": "The rate at which images are acquired, measured in Hertz."
-                },
-                "imageNoise": {
-                    "type": "number",
-                    "description": "The noise level in the image, typically measured as a signal-to-noise ratio."
-                },
-                "imageScale": {
-                    "type": "number",
-                    "unit": "qudt:MilliM-PER-Pixel",
-                    "description": "The scale of the image in millimeters per pixel (mm/pixel) or similar."
->>>>>>> develop
                 }
             }
         }
