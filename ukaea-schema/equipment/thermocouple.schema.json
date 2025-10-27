@@ -3,36 +3,30 @@
     "$id": "https://w3id.org/fusion/schemas/1.0.0/equipment/thermocouple",
     "description": "Metadata to describe thermocouple equipment",
     "type": "object",
-    "required": [ "thermocouple" ],
+    "required": [
+        "attachment",
+        "thermocoupleType",
+        "circleDiameter",
+        "noiseFloor"
+    ],
     "properties": {
-        "thermocouple": {
-            "type": "object",
-            "required": [
-                "attachment",
-                "thermocoupleType",
-                "circleDiameter",
-                "noiseFloor"
-            ],
-            "properties": {
-                "attachment": {
-                    "type": "string",
-                    "description": "The method or mechanism used to attach or secure the thermocouple to the measurement point (e.g., clamp, adhesive, probe, screw-in)."
-                },
-                "thermocoupleType": {
-                    "type": "string",
-                    "description": "The classification of the thermocouple based on its metal alloy combination, which determines its temperature range and sensitivity (e.g., Type K, Type J, Type T, Type N)."
-                },
-                "circleDiameter": {
-                    "type": "number",
-                    "unit": "qudt:MilliM",
-                    "description": "Diameter (mm) of the circular surface used to attach the thermocouple to the measurement point, can be used to give an area."
-                },
-                "noiseFloor": {
-                    "type": "number",
-                    "unit": "qudt:PERCENT",
-                    "description": "The minimum measurable signal level above background electrical noise, expressed as a percentage"
-                }
-            }
+        "attachment": {
+            "type": "string",
+            "description": "The method or mechanism used to attach or secure the thermocouple to the measurement point (e.g., clamp, adhesive, probe, screw-in)."
+        },
+        "thermocoupleType": {
+            "type": "string",
+            "description": "The classification of the thermocouple based on its metal alloy combination, which determines its temperature range and sensitivity (e.g., Type K, Type J, Type T, Type N)."
+        },
+        "circleDiameter": {
+            "type": "number",
+            "unit": "qudt:MilliM",
+            "description": "Diameter (mm) of the circular surface used to attach the thermocouple to the measurement point, can be used to give an area."
+        },
+        "noiseFloor": {
+            "type": "number",
+            "unit": "qudt:PERCENT",
+            "description": "The minimum measurable signal level above background electrical noise, expressed as a percentage"
         }
     }
 }

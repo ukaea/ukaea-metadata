@@ -1,0 +1,14 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "UKAEA Instrument Schema",
+    "type": "object",
+    "properties": {
+        "instrumentID": {
+            "type": "string"
+        },
+        "additional": {
+            "type": "object"
+        }
+    },
+    "required": [ "instrumentID" ]
+}
