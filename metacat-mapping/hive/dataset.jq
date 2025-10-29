@@ -7,5 +7,5 @@
       "description": $parent.comment,
       "experimentId": $parent.experimentId,
       "diagnosticId": .,
-      "additional": (del($parent.comment, $parent.experimentId, $parent.diagnostics))
+      "additional": ($parent | del(.comment, .experimentId, .diagnostics))
   }
