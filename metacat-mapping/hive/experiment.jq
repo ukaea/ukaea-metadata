@@ -1,6 +1,6 @@
 {
     "facility": "HIVE",
-    "facilityExperimentID": .ID,
+    "facilityExperimentID": .experimentID,
     "startDate": .startDate,
     "endDate": .endDate?,
     "description": .description,
