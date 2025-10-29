@@ -3,15 +3,14 @@ from pathlib import Path
 
 import jq
 import requests
-from jsonschema import validate, ValidationError
-
+from jsonschema import ValidationError, validate
 
 # Read in pulse json file
 with open("pulse.json") as file:
     pulse_data = json.load(file)
 
 pulse_directory = Path(
-    f"/mnt/HIVE/{pulse_data['experimentID']}/{pulse_data['sampleID']}/{pulse_data['pulseID']}"
+    f"/mnt/HIVE/{pulse_data['experimentId']}/{pulse_data['sampleId']}/{pulse_data['pulseId']}"
 )
 
 # Query metacat using experimentID to get contactEmail, ownerGroup and owner
