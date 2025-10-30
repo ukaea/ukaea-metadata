@@ -1,0 +1,21 @@
+{
+  "@context": "../context/ukaea-core.jsonld",
+  "facility": "MRF",
+  "facilityExperimentId": "12345-1234-3",
+  "startDate": "2025-11-01",
+  "endDate": "2025-11-10",
+  "description": "MRF test experiment",
+  "leadInvestigator": {
+    "email": "jane.doe@ukaea.uk",
+    "firstName": "Jane",
+    "lastName": "Doe"
+  },
+  "customer": {
+    "organisation": "Oxford University",
+    "contactPerson": {
+      "email": "john.doe@ox.ac.uk",
+      "firstName": "John",
+      "lastName": "Doe"
+    }
+  }
+}
