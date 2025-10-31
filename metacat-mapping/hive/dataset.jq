@@ -1,5 +1,5 @@
 . as $parent
-| .diagnostics[]
+| .diagnostics
 | {
       "creationTime" : $parent.pulseStart,
       "type": "raw",
