@@ -30,5 +30,5 @@
         "targetCoolantFlow": 19.3,
         "targetCoolantTemperature": 22.3
     },
-    "diagnostics": [{"diagnosticId": "3bd8d8f6-5c2e-43b7-95f0-7a6ef832c4ad"}]
+    "diagnostics": [{"diagnosticId": "3bd8d8f6-5c2e-43b7-95f0-7a6ef832c4ad"}, {"diagnosticId": "3bd8d8f6-5c2e-43b7-95f0-7a6ef832c4fg"}]
 }
