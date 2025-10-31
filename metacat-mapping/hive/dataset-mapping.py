@@ -42,8 +42,8 @@ for dataset in hive_pulse:
 
     output_file = (
         pulse_directory
-        / Path(f"{dataset['diagnosticID']}")
-        / f"{dataset['diagnosticID']}-metadata.json"
+        / Path(f"{dataset['diagnosticId']}")
+        / f"{dataset['diagnosticId']}-metadata.json"
     )
 
     output_file.parent.mkdir(parents=True, exist_ok=True)
