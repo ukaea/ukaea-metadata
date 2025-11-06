@@ -4,10 +4,10 @@
     "description": "Metadata schema for a HIVE pulse",
     "type": "object",
     "properties": {
-        "pulseId": {
+        "pulseNumber": {
             "type": "number"
         },
-        "sampleId": {
+        "sampleNumber": {
             "type": "string"
         },
         "dataCaptureStart": {
@@ -195,7 +195,7 @@
         "pulseQuality": {
             "enum": [ "Success", "Fail" ]
         },
-        "experimentId": {
+        "experimentNumber": {
             "type": "string"
         },
         "configurationUUID": {
@@ -232,8 +232,8 @@
         }
     },
     "required": [
-        "pulseId",
-        "sampleId",
+        "pulseNumber",
+        "sampleNumber",
         "dataCaptureStart",
         "pulseStart",
         "pulseEnd",
@@ -245,7 +245,7 @@
         "thermocoupleInformation",
         "comment",
         "pulseQuality",
-        "experimentId",
+        "experimentNumber",
         "configurationUUID",
         "diagnostics"
     ]
