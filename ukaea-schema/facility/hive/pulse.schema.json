@@ -205,29 +205,13 @@
         "diagnostics": {
             "type": "array",
             "items": {
-                "oneOf": [
-                    {
-                        "type": "object",
-                        "properties": {
-                            "diagnosticId": {
-                                "type": "string"
-                            }
-                        },
-                        "required": [ "diagnosticId" ]
-                    },
-                    {
-                        "type": "array",
-                        "items": {
-                            "type": "object",
-                            "properties": {
-                                "diagnosticId": {
-                                    "type": "string"
-                                }
-                            },
-                            "required": [ "diagnosticId" ]
-                        }
+                "type": "object",
+                "properties": {
+                    "diagnosticId": {
+                        "type": "string"
                     }
-                ]
+                },
+                "required": [ "diagnosticId" ]
             }
         }
     },
