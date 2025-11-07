@@ -205,13 +205,7 @@
         "diagnostics": {
             "type": "array",
             "items": {
-                "type": "object",
-                "properties": {
-                    "diagnosticId": {
-                        "type": "string"
-                    }
-                },
-                "required": [ "diagnosticId" ]
+                "type": "string"
             }
         }
     },
