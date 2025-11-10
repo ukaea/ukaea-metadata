@@ -10,7 +10,7 @@ with open("pulse.json") as file:
     pulse_data = json.load(file)
 
 pulse_directory = Path(
-    f"/mnt/HIVE/{pulse_data['experimentId']}/{pulse_data['sampleId']}/{pulse_data['pulseId']}"
+    f"/mnt/HIVE/{pulse_data['experimentNumber']}/{pulse_data['sampleNumber']}/{pulse_data['pulseNumber']}"
 )
 
 # Query metacat using experimentID to get contactEmail, ownerGroup and owner
