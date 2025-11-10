@@ -24,7 +24,7 @@
         "description": {
             "type": "string"
         },
-        "experimentId": {
+        "experimentNumber": {
             "type": "string"
         },
         "additional": {
