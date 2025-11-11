@@ -5,7 +5,7 @@
     "type": "object",
     "properties": {
         "experimentNumber": {
-            "type": "string",
+            "type": "integer",
             "description": "A unique identifier for the experiment"
         },
         "startDate": {
