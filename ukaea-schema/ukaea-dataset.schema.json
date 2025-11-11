@@ -29,6 +29,12 @@
         },
         "additional": {
             "type": "object"
+        },
+        "instrument": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
         }
     },
     "required": [ "creationTime", "type", "sourceFolder", "description" ]
