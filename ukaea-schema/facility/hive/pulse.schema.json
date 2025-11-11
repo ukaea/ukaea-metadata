@@ -205,7 +205,11 @@
         "diagnostics": {
             "type": "array",
             "items": {
-                "type": "string"
+                "type": "array",
+                "items": {
+                    "type": "string"
+                },
+                "minItems": 1
             }
         }
     },
