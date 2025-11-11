@@ -6,6 +6,6 @@
       "sourceFolder": "/mnt/HIVE/\($parent.experimentNumber)/\($parent.sampleNumber)/\($parent.pulseNumber)",
       "description": $parent.comment,
       "experimentNumber": $parent.experimentNumber,
-      "diagnosticId": .,
+      "instrument": .,
       "additional": ($parent | del(.comment, .experimentNumber, .diagnostics))
   }
