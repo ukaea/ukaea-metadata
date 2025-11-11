@@ -5,10 +5,10 @@
     "type": "object",
     "properties": {
         "pulseNumber": {
-            "type": "number"
+            "type": "integer"
         },
         "sampleNumber": {
-            "type": "string"
+            "type": "integer"
         },
         "dataCaptureStart": {
             "type": "string",
@@ -196,7 +196,7 @@
             "enum": [ "Success", "Fail" ]
         },
         "experimentNumber": {
-            "type": "string"
+            "type": "integer"
         },
         "configurationUUID": {
             "type": "string",
