@@ -1,8 +1,6 @@
 {
-    "thermocouple": {
-        "attachment": "weld",
-        "thermocoupleType": "K-type",
-        "circleDiameter": 20,
-        "noiseFloor": 56
-    }
+    "attachment": "weld",
+    "thermocoupleType": "K-type",
+    "circleDiameter": 20,
+    "noiseFloor": 56
 }

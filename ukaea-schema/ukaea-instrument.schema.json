@@ -3,12 +3,12 @@
     "title": "UKAEA Instrument Schema",
     "type": "object",
     "properties": {
-        "instrumentID": {
+        "instrumentId": {
             "type": "string"
         },
         "additional": {
             "type": "object"
         }
     },
-    "required": [ "instrumentID" ]
+    "required": [ "instrumentId" ]
 }

@@ -4,11 +4,11 @@
     "description": "Metadata schema for a HIVE pulse",
     "type": "object",
     "properties": {
-        "pulseId": {
-            "type": "number"
+        "pulseNumber": {
+            "type": "integer"
         },
-        "sampleId": {
-            "type": "string"
+        "sampleNumber": {
+            "type": "integer"
         },
         "dataCaptureStart": {
             "type": "string",
@@ -195,8 +195,8 @@
         "pulseQuality": {
             "enum": [ "Success", "Fail" ]
         },
-        "experimentId": {
-            "type": "string"
+        "experimentNumber": {
+            "type": "integer"
         },
         "configurationUUID": {
             "type": "string",
@@ -205,35 +205,17 @@
         "diagnostics": {
             "type": "array",
             "items": {
-                "oneOf": [
-                    {
-                        "type": "object",
-                        "properties": {
-                            "diagnosticId": {
-                                "type": "string"
-                            }
-                        },
-                        "required": [ "diagnosticId" ]
-                    },
-                    {
-                        "type": "array",
-                        "items": {
-                            "type": "object",
-                            "properties": {
-                                "diagnosticId": {
-                                    "type": "string"
-                                }
-                            },
-                            "required": [ "diagnosticId" ]
-                        }
-                    }
-                ]
+                "type": "array",
+                "items": {
+                    "type": "string"
+                },
+                "minItems": 1
             }
         }
     },
     "required": [
-        "pulseId",
-        "sampleId",
+        "pulseNumber",
+        "sampleNumber",
         "dataCaptureStart",
         "pulseStart",
         "pulseEnd",
@@ -245,7 +227,7 @@
         "thermocoupleInformation",
         "comment",
         "pulseQuality",
-        "experimentId",
+        "experimentNumber",
         "configurationUUID",
         "diagnostics"
     ]

@@ -1,4 +1,4 @@
 {
-    "instrumentID": .equipmentName,
+    "instrumentId": .equipmentName,
     "additional": (del(.equipmentName))
 }
