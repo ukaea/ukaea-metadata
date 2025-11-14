@@ -44,7 +44,7 @@
                 "cameras": {
                     "type": "array",
                     "items": {
-                        "$ref": "https://w3id.org/fuel/schemas/1.0.0/equipment/camera"
+                        "$ref": "https://w3id.org/fusion/schemas/1.0.0/equipment/camera"
                     }
                 }
             }
