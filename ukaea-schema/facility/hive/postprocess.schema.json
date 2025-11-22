@@ -1,0 +1,125 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://w3id.org/fusion/schemas/1.0.0/facility/hive/post-process",
+    "description": "Metadata schema for a HIVE post processing data",
+    "type": "object",
+    "properties": {
+        "powerSupplyReportedPower": {
+            "type": "number",
+            "unit": ""
+        },
+        "measuredPower": {
+            "type": "number",
+            "unit": ""
+        },
+        "outputFrequency": {
+            "type": "number",
+            "unit": ""
+        },
+        "outputVoltage": {
+            "type": "number",
+            "unit": ""
+        },
+        "ouputCurrent": {
+            "type": "number",
+            "unit": ""
+        },
+        "coolantFlow": {
+            "type": "number",
+            "unit": ""
+        },
+        "coolantFlowVariance": {
+            "type": "number",
+            "unit": ""
+        },
+        "coolantPressureIn": {
+            "type": "number",
+            "unit": ""
+        },
+        "coolantPressureOut": {
+            "type": "number",
+            "unit": ""
+        },
+        "deltaPressure": {
+            "type": "number",
+            "unit": ""
+        },
+        "coolantTemperatureIn": {
+            "type": "number",
+            "unit": ""
+        },
+        "coolantTemperatureInVariance": {
+            "type": "number",
+            "unit": ""
+        },
+        "coolantTemperatureOut": {
+            "type": "number",
+            "unit": ""
+        },
+        "coolantTemperatureOutVariance": {
+            "type": "number",
+            "unit": ""
+        },
+        "deltaTemperature": {
+            "type": "number",
+            "unit": ""
+        },
+        "k-TypeThermocouple1": {
+            "type": "number",
+            "unit": ""
+        },
+        "k-TypeThermocouple2": {
+            "type": "number",
+            "unit": ""
+        },
+        "k-TypeThermocouple7": {
+            "type": "number",
+            "unit": ""
+        },
+        "k-TypeThermocouple8": {
+            "type": "number",
+            "unit": ""
+        },
+        "k-TypeThermocouple9": {
+            "type": "number",
+            "unit": ""
+        },
+        "k-TypeThermocouple10": {
+            "type": "number",
+            "unit": ""
+        },
+        "pulseDuration": {
+            "type": "number",
+            "unit": ""
+        },
+        "pulseEndTimestamp": {
+            "type": "string",
+            "format": "date"
+        },
+        "pulseStartTimestamp": {
+            "type": "string",
+            "format": "date"
+        },
+        "dataCaptureStartTimestamp": {
+            "type": "string",
+            "format": "date"
+        }
+    },
+    "required": [
+        "powerSupplyReportedPower",
+        "measuredPower",
+        "outputFrequency",
+        "outputVoltage",
+        "ouputCurrent",
+        "coolantFlow",
+        "coolantFlowVariance",
+        "coolantPressureIn",
+        "coolantPressureOut",
+        "deltaPressure",
+        "coolantTemperatureIn",
+        "coolantTemperatureInVariance",
+        "coolantTemperatureOut",
+        "coolantTemperatureOutVariance",
+        "deltaTemperature"
+    ]
+}
