@@ -3,9 +3,9 @@
 | {
       "creationTime" : $parent.pulseStart,
       "type": "raw",
-      "sourceFolder": "/mnt/HIVE/\($parent.experimentId)/\($parent.sampleId)/\($parent.pulseId)",
+      "sourceFolder": "/mnt/HIVE/\($parent.experimentNumber)/\($parent.sampleNumber)/\($parent.pulseNumber)",
       "description": $parent.comment,
-      "experimentId": $parent.experimentId,
-      "diagnosticId": .,
-      "additional": (del($parent.comment, $parent.experimentId, $parent.diagnostics))
+      "experimentNumber": $parent.experimentNumber,
+      "instrument": .?,
+      "additional": ($parent | del(.comment, .experimentNumber, .diagnostics))
   }

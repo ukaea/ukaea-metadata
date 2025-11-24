@@ -1,12 +1,12 @@
 {
-    "pulseInformation": {
-        "pulseUUID": "3bd8d8f6-5c2e-43b7-95f0-7a6ef832c4ad",
-        "pulseStart": "2025-03-06T10:33:00.000Z",
-        "pulseDuration": 120,
-        "dataCaptureStart": "2025-03-04T03:00:00.000Z",
-        "experimentUUID": "07cf92f4-5e1b-4fc3-96d1-6e6e527c3b39",
-        "configurationUUID": "a64870d1-4b12-4a7b-b7d6-3010f5e0f958"
-    },
+    "pulseNumber": "3bd8d8f6-5c2e-43b7-95f0-7a6ef832c4ad",
+    "pulseStart": "2025-03-06T10:33:00.000Z",
+    "sampleNumber": "3bd8d8f6-5c2e-43b7-95f0-7a6ef832c4ad",
+    "pulseDuration": 120,
+    "dataCaptureStart": "2025-03-04T03:00:00.000Z",
+    "experimentNumber": "07cf92f4-5e1b-4fc3-96d1-6e6e527c3b39",
+    "configurationId": "a64870d1-4b12-4a7b-b7d6-3010f5e0f958",
+    "pulseEnd": "2025-03-06T10:38:00.000Z",
     "operator1": {
         "firstName": "Bob",
         "lastName": "Smith",
@@ -17,10 +17,8 @@
         "lastName": "Doe",
         "email": "jane.doe@facility.org"
     },
-    "pulseDetails": {
-        "comment": "This is a test comment",
-        "pulseQuality": "Success"
-    },
+    "comment": "This is a test comment",
+    "pulseQuality": "Success",
     "heatingInformation": {
         "currentType": "AC",
         "inputPower": 500,
@@ -31,5 +29,7 @@
         "coolantType": "Demineralised Water",
         "targetCoolantFlow": 19.3,
         "targetCoolantTemperature": 22.3
-    }
+    },
+    "diagnostics": [["3bd8d8f6-5c2e-43b7-95f0-7a6ef832c4ad", "3bd8d8f6-5c2e-43b7-95f0-7a6ef832c4fg"], 
+    ["3bd8d8f6-5c2e-43b7-95f0-7a6wf462c4fg"]]
 }

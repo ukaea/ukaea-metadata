@@ -3,15 +3,14 @@ from pathlib import Path
 
 import jq
 import requests
-from jsonschema import validate, ValidationError
-
+from jsonschema import ValidationError, validate
 
 # Read in pulse json file
 with open("pulse.json") as file:
     pulse_data = json.load(file)
 
 pulse_directory = Path(
-    f"/mnt/HIVE/{pulse_data['experimentID']}/{pulse_data['sampleID']}/{pulse_data['pulseID']}"
+    f"/mnt/HIVE/{pulse_data['experimentNumber']}/{pulse_data['sampleNumber']}/{pulse_data['pulseNumber']}"
 )
 
 # Query metacat using experimentID to get contactEmail, ownerGroup and owner
@@ -43,8 +42,8 @@ for dataset in hive_pulse:
 
     output_file = (
         pulse_directory
-        / Path(f"{dataset['diagnosticID']}")
-        / f"{dataset['diagnosticID']}-metadata.json"
+        / Path(f"{dataset['instrument']}")
+        / f"{dataset['instrument']}-metadata.json"
     )
 
     output_file.parent.mkdir(parents=True, exist_ok=True)
