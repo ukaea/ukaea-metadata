@@ -77,9 +77,9 @@
             },
             "$comment": "Would lead to an institution"
         },
-            "institution": {
+        "institution": {
                 "type": "string"
-            },
+        },
         "scientificSupport": {
             "type": "array",
             "items": {
