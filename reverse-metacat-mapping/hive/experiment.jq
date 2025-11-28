@@ -1,5 +1,5 @@
 {
-    "experimentId": .facilityExperimentId,
+    "experimentNumber": .facilityExperimentId,
     "leadInvestigator": .leadInvestigator,
     "startDate": .startDate,
     "endDate": .endDate?,
