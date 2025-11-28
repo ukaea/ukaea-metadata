@@ -1,18 +1,19 @@
-.[0] 
+.[] 
 | {
-    "pulseId": .sourceFolder | split("/")[-1],
+    "pulseNumber": .sourceFolder | split("/")[-1],
     "pulseStart": .creationTime,
-    "sampleId": .sourceFolder | split("/")[-2],
+    "sampleNumber": .sourceFolder | split("/")[-2],
     "pulseDuration": .additional.pulseDuration,
     "dataCaptureStart": .additional.dataCaptureStart,
-    "experimentId": .experimentId,
-    "configurationId": .additional.configurationId,
+    "experimentNumber": .experimentNumber,
+    "configurationUUID": .additional.configurationId,
     "pulseEnd": .additional.pulseEnd,
-    "operator1": .operator1,
-    "operator2": .operator2,
+    "operator1": .additional.operator1,
+    "operator2": .additional.operator2,
     "comment": .description,
     "pulseQuality": .additional.pulseQuality,
     "heatingInformation": .additional.heatingInformation,
     "coolantInformation": .additional.coolantInformation,
-    "diagnostics": .diagnostics
+    "diagnostics": .diagnosticId,
+    "thermocoupleInformation": .additional.thermocoupleInformation
   }
