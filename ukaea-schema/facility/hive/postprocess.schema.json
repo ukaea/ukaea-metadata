@@ -103,6 +103,10 @@
         "dataCaptureStartTimestamp": {
             "type": "string",
             "format": "date"
+        },
+        "date": {
+            "type": "string",
+            "format": "date"
         }
     },
     "required": [
