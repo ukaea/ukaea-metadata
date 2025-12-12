@@ -1,0 +1,42 @@
+{
+    "@context": {
+        "fuel": "https://w3id.org/fuel/schemas/1.0.0/ukaea-schema/",
+        "foaf": "http://xmlns.com/foaf/0.1/",
+        "schema": "http://schema.org/",
+        "dcat": "http://www.w3.org/ns/dcat#",
+        "dct": "http://purl.org/dc/terms/",
+        "prov": "http://www.w3.org/ns/prov#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+
+        "instrument": "fuel:instrument",
+        "instrumentId": "fuel:instrument/instrumentId",
+        "additional": "fuel:additional",
+        "facility": "fuel:facility",
+        "facilityId": "fuel:facility/facilityId",
+        "facilityExperimentId": "fuel:facility/facilityExperimentId",
+        "experiment": "fuel:experiment",
+        "experimentId": "fuel:experiment/experimentId",
+        "type": "fuel:processingLevel",
+        "raw": {"@id": "fuel:raw", "@type": "fuel:processingLevel"},
+        "calibrated": {"@id": "fuel:calibrated", "@type": "fuel:processingLevel"},
+        "leadInvestigator": "fuel:leadInvestigator",
+        "customer": "fuel:customer",
+        "sample": "fuel:sample",
+        "sampleNumber": "fuel:sample/sampleNumber",
+
+        "email": "schema:email",
+        "contactEmail": "schema:email",
+        "firstName": { "@id": "foaf:givenName" },
+        "lastName":  { "@id": "foaf:familyName" },
+        "organisation": "foaf:Organization",
+        "owner": "dct:publisher",
+
+        "creationTime": { "@id": "dct:created", "@type": "xsd:dateTime" },
+        "startDate": { "@id": "dcat:startDate", "@type": "xsd:date" },
+        "endDate": { "@id": "dcat:endDate", "@type": "xsd:date" },
+        "sourceFolder": "prov:location",
+        "description": "dct:description",
+        "experimentNumber": "dct:identifier",
+        "dataset": "dcat:Dataset"
+    }
+}
