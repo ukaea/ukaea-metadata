@@ -28,7 +28,7 @@
         "contactEmail": "schema:email",
         "firstName": { "@id": "foaf:givenName" },
         "lastName":  { "@id": "foaf:familyName" },
-        "organisation": "foaf:Organization",
+        "organisation": "prov:Organization",
         "owner": "dct:publisher",
 
         "creationTime": { "@id": "dct:created", "@type": "xsd:dateTime" },
