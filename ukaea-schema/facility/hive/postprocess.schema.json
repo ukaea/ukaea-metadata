@@ -64,30 +64,6 @@
             "type": "number",
             "unit": ""
         },
-        "k-TypeThermocouple1": {
-            "type": "number",
-            "unit": ""
-        },
-        "k-TypeThermocouple2": {
-            "type": "number",
-            "unit": ""
-        },
-        "k-TypeThermocouple7": {
-            "type": "number",
-            "unit": ""
-        },
-        "k-TypeThermocouple8": {
-            "type": "number",
-            "unit": ""
-        },
-        "k-TypeThermocouple9": {
-            "type": "number",
-            "unit": ""
-        },
-        "k-TypeThermocouple10": {
-            "type": "number",
-            "unit": ""
-        },
         "pulseDuration": {
             "type": "number",
             "unit": ""
@@ -124,6 +100,11 @@
         "coolantTemperatureInVariance",
         "coolantTemperatureOut",
         "coolantTemperatureOutVariance",
-        "deltaTemperature"
+        "deltaTemperature",
+        "pulseDuration",
+        "pulseEndTimestamp",
+        "pulseStartTimestamp",
+        "dataCaptureStartTimestamp",
+        "date"
     ]
 }
