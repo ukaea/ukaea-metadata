@@ -1,7 +1,6 @@
 {
     "@context": {
         "fuel": "https://w3id.org/fuel/schemas/1.0.0/ukaea-schema/",
-        "foaf": "http://xmlns.com/foaf/0.1/",
         "schema": "http://schema.org/",
         "xsd": "http://www.w3.org/2001/XMLSchema#",
 
@@ -17,9 +16,9 @@
 
         "email": "schema:email",
         "contactEmail": "schema:email",
-        "firstName": { "@id": "foaf:givenName" },
-        "lastName":  { "@id": "foaf:familyName" },
-        "owner": "foaf:name",
+        "firstName": { "@id": "schema:givenName" },
+        "lastName":  { "@id": "schema:familyName" },
+        "owner": "schema:name",
 
         "creationTime": { "@id": "schema:dateCreated", "@type": "xsd:dateTime" },
         "description": "schema:description",
