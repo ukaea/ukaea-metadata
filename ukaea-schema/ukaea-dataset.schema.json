@@ -4,24 +4,30 @@
     "title": "UKAEA Dataset Schema",
     "type": "object",
     "properties": {
-        "contactEmail": {
+        "contactPoint": {
+            "description": "Relevant contact information for the dataset. ",
             "type": "string",
             "format": "email"
         },
-        "creationTime": {
+        "issued": {
+            "description": "Date of formal issuance (e.g., publication) of the dataset.",
             "type": "string",
             "format": "date-time"
         },
-        "owner": {
+        "creator": {
+            "description": "The entity responsible for producing the Dataset.",
             "type": "string"
         },
         "type": {
+            "description": "The nature or genre of the dataset.",
             "type": "string"
         },
-        "sourceFolder": {
+        "distribution": {
+            "description": "An available distribution of the dataset.",
             "type": "string"
         },
         "description": {
+            "description": "A free-text account of the dataset.",
             "type": "string"
         },
         "experimentNumber": {
@@ -37,5 +43,10 @@
             }
         }
     },
-    "required": [ "creationTime", "type", "sourceFolder", "description" ]
+    "required": [
+        "issued",
+        "type",
+        "distribution",
+        "description"
+    ]
 }
