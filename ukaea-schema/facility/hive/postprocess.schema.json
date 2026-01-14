@@ -8,61 +8,71 @@
             "type": "number",
             "unit": ""
         },
-        "measuredPower": {
-            "type": "number",
-            "unit": ""
+        "heatingInformation": {
+            "type": "object",
+            "properties": {
+                "measuredPower": {
+                    "type": "number",
+                    "unit": ""
+                },
+                "outputFrequency": {
+                    "type": "number",
+                    "unit": ""
+                },
+                "outputVoltage": {
+                    "type": "number",
+                    "unit": ""
+                },
+                "outputCurrent": {
+                    "type": "number",
+                    "unit": ""
+                }
+            }
         },
-        "outputFrequency": {
-            "type": "number",
-            "unit": ""
-        },
-        "outputVoltage": {
-            "type": "number",
-            "unit": ""
-        },
-        "ouputCurrent": {
-            "type": "number",
-            "unit": ""
-        },
-        "coolantFlow": {
-            "type": "number",
-            "unit": ""
-        },
-        "coolantFlowVariance": {
-            "type": "number",
-            "unit": ""
-        },
-        "coolantPressureIn": {
-            "type": "number",
-            "unit": ""
-        },
-        "coolantPressureOut": {
-            "type": "number",
-            "unit": ""
-        },
-        "deltaPressure": {
-            "type": "number",
-            "unit": ""
-        },
-        "coolantTemperatureIn": {
-            "type": "number",
-            "unit": ""
-        },
-        "coolantTemperatureInVariance": {
-            "type": "number",
-            "unit": ""
-        },
-        "coolantTemperatureOut": {
-            "type": "number",
-            "unit": ""
-        },
-        "coolantTemperatureOutVariance": {
-            "type": "number",
-            "unit": ""
-        },
-        "deltaTemperature": {
-            "type": "number",
-            "unit": ""
+        "coolantInformation": {
+            "type": "object",
+            "properties": {
+                "coolantFlow": {
+                    "type": "number",
+                    "unit": ""
+                },
+                "coolantFlowVariance": {
+                    "type": "number",
+                    "unit": ""
+                },
+                "coolantPressureIn": {
+                    "type": "number",
+                    "unit": ""
+                },
+                "coolantPressureOut": {
+                    "type": "number",
+                    "unit": ""
+                },
+                "deltaPressure": {
+                    "type": "number",
+                    "unit": ""
+                },
+                "coolantTemperatureIn": {
+                    "type": "number",
+                    "unit": ""
+                },
+                "coolantTemperatureInVariance": {
+                    "type": "number",
+                    "unit": ""
+                },
+                "coolantTemperatureOut": {
+                    "type": "number",
+                    "unit": ""
+                },
+                "coolantTemperatureOutVariance": {
+                    "type": "number",
+                    "unit": ""
+                },
+                "deltaTemperature": {
+                    "type": "number",
+                    "unit": ""
+                }
+            }
         },
         "pulseDuration": {
             "type": "number",
@@ -86,25 +96,11 @@
         }
     },
     "required": [
-        "powerSupplyReportedPower",
-        "measuredPower",
-        "outputFrequency",
-        "outputVoltage",
-        "ouputCurrent",
-        "coolantFlow",
-        "coolantFlowVariance",
-        "coolantPressureIn",
-        "coolantPressureOut",
-        "deltaPressure",
-        "coolantTemperatureIn",
-        "coolantTemperatureInVariance",
-        "coolantTemperatureOut",
-        "coolantTemperatureOutVariance",
-        "deltaTemperature",
+        "coolantInformation",
+        "heatingInformation",
         "pulseDuration",
         "pulseEndTimestamp",
         "pulseStartTimestamp",
-        "dataCaptureStartTimestamp",
-        "date"
+        "dataCaptureStartTimestamp"
     ]
 }
