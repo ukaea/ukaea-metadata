@@ -1,4 +1,4 @@
 {
   "instrumentId": .seid,
-  "additional": { "seidDescription": .seidDescription }
+  "seidDescription": .seidDescription
 }

@@ -6,5 +6,5 @@
   "description": .notes,
   "experimentNumber": "\(.jobId)-\(.sessionId)",
   "instrument": [.seid],
-  "additional": (. | del(.notes, .seid))
+  "additional": (. | del(.notes, .seid, .bookingStart, .jobId, .sessionId))
 }
