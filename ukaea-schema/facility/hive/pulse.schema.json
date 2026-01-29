@@ -140,24 +140,6 @@
                 "measuredCoolantFlow"
             ]
         },
-        "thermocoupleInformation": {
-            "type": "array",
-            "items": {
-                "type": "object",
-                "properties": {
-                    "thermocoupleId": {
-                        "type": "number"
-                    },
-                    "maxValue": {
-                        "type": "number"
-                    }
-                },
-                "required": [
-                    "thermocoupleId",
-                    "maxValue"
-                ]
-            }
-        },
         "comment": {
             "type": "string"
         },
@@ -195,7 +177,6 @@
         "operator2",
         "heatingInformation",
         "coolantInformation",
-        "thermocoupleInformation",
         "comment",
         "pulseQuality",
         "experimentNumber",

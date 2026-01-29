@@ -74,6 +74,24 @@
                 }
             }
         },
+        "thermocoupleInformation": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "thermocoupleId": {
+                        "type": "number"
+                    },
+                    "maxValue": {
+                        "type": "number"
+                    }
+                },
+                "required": [
+                    "thermocoupleId",
+                    "maxValue"
+                ]
+            }
+        },
         "pulseDuration": {
             "type": "number",
             "unit": ""
@@ -97,6 +115,7 @@
         "pulseDuration",
         "pulseEndTimestamp",
         "pulseStartTimestamp",
-        "dataCaptureStartTimestamp"
+        "dataCaptureStartTimestamp",
+        "thermocoupleInformation"
     ]
 }
