@@ -107,7 +107,7 @@
             "type": "boolean"
         },
         "splitSampleId": {
-            "type": ["string", "array"],
+            "type": "array",
             "items": {
                 "type": "string"
             }
