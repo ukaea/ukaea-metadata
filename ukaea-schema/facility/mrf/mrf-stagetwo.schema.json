@@ -98,7 +98,7 @@
             "enum": [
                 "User",
                 "Engineering",
-                "Mainenance",
+                "Maintenance",
                 "Environment",
                 "Repair"
             ]
