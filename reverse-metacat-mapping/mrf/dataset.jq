@@ -7,13 +7,14 @@
   "sampleId": .additional.sampleId,
   "bookingStart": .creationTime,
   "bookingEnd": .additional.bookingEnd,
+  "internalUser": .additional.internalUser
   "externalUser": .additional.externalUser,
   "institution": .additional.institution,
   "scientificSupport": .additional.scientificSupport,
   "notes": .description,
   "workCategory": .additional.workCategory,
   "sampleSplit": .additional.sampleSplit,
-  "splitSamepleId": .additional.splitSamepleId,
+  "splitSampleId": .additional.splitSampleId,
   "tritium": .additional.tritium,
   "beryllium": .additional.beryllium,
   "betaGamma": .additional.betaGamma
