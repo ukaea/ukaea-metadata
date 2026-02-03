@@ -18,22 +18,6 @@ jobs:
         uses: GrantBirki/json-yaml-validate@v3
         with: 
           comment: "true"
-          
-      - name: Validate experiment JSON
-        uses: cardinalby/schema-validator-action@v3
-        with: 
-          schema: ./ukaea-schema/facility/hive/experiment.schema.json 
-          file: ./ukaea-schema/examples/hive/experiment.json
-      - name: Install the sourcemeta JSON Schema CLI
-        uses: sourcemeta/jsonschema@v14.6.0
-
-      - name: Check schema validity
-        run: 
-      # - name: Validate facility JSON
-      #   uses: cardinalby/schema-validator-action@v3
-      #   with: 
-      #     schema: ./ukaea-schema/facility/facility.schema.json
-      #     file: ./ukaea-schema/examples/facility.json
       - name: Set up Python
         uses: actions/setup-python@v4
         with: 
