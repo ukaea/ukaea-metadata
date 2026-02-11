@@ -7,9 +7,15 @@
         "instrumentId": {
             "type": "string"
         },
+        "schemaVersion": {
+            "type": "string"
+        },
         "additional": {
             "type": "object"
         }
     },
-    "required": [ "instrumentId" ]
+    "required": [
+        "instrumentId",
+        "schemaVersion"
+    ]
 }

@@ -58,12 +58,16 @@
                     }
                 }
             }
+        },
+        "schemaVersion": {
+            "type": "string"
         }
     },
     "required": [
         "facility",
         "facilityExperimentId",
         "startDate",
-        "description"
+        "description",
+        "schemaVersion"
     ]
 }
