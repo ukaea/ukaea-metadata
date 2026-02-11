@@ -3,12 +3,20 @@
     "$id": "https://w3id.org/fusion/schemas/1.0.0/facility/hive/equipment",
     "description": "Metadata schema for a HIVE equipment",
     "type": "object",
-    "required": [ "equipmentName", "equipmentType", "equipment" ],
+    "required": [
+        "equipmentName",
+        "equipmentType",
+        "equipment",
+        "schemaVersion"
+    ],
     "properties": {
         "equipmentName": {
             "type": "string"
         },
         "equipmentType": {
+            "type": "string"
+        },
+        "schemaVersion": {
             "type": "string"
         },
         "equipment": {

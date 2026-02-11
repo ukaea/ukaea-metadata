@@ -24,7 +24,7 @@
         },
         "pulseDuration": {
             "type": "number",
-            "unit": "qudt:SEC"
+            "x-unit": "qudt:SEC"
         },
         "operator1": {
             "type": "object",
@@ -69,15 +69,15 @@
                 },
                 "inputPower": {
                     "type": "number",
-                    "unit": "qudt:KiloW"
+                    "x-unit": "qudt:KiloW"
                 },
                 "inputCurrent": {
                     "type": "number",
-                    "unit": "qudt:A"
+                    "x-unit": "qudt:A"
                 },
                 "inputVoltage": {
                     "type": "number",
-                    "unit": "qudt:V"
+                    "x-unit": "qudt:V"
                 },
                 "measuredPower": {
                     "type": "number"
@@ -211,6 +211,9 @@
                 },
                 "minItems": 1
             }
+        },
+        "schemaVersion": {
+            "type": "string"
         }
     },
     "required": [
@@ -229,6 +232,7 @@
         "pulseQuality",
         "experimentNumber",
         "configurationUUID",
-        "diagnostics"
+        "diagnostics",
+        "schemaVersion"
     ]
 }

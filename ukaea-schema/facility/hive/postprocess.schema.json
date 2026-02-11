@@ -1,0 +1,118 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://w3id.org/fusion/schemas/1.0.0/facility/hive/post-process",
+    "description": "Metadata schema for a HIVE post processing data",
+    "type": "object",
+    "properties": {
+        "powerSupplyReportedPower": {
+            "type": "number",
+            "x-unit": ""
+        },
+        "heatingInformation": {
+            "type": "object",
+            "properties": {
+                "measuredPower": {
+                    "type": "number",
+                    "x-unit": ""
+                },
+                "outputFrequency": {
+                    "type": "number",
+                    "x-unit": ""
+                },
+                "outputVoltage": {
+                    "type": "number",
+                    "x-unit": ""
+                },
+                "outputCurrent": {
+                    "type": "number",
+                    "x-unit": ""
+                }
+            }
+        },
+        "coolantInformation": {
+            "type": "object",
+            "properties": {
+                "coolantFlow": {
+                    "type": "number",
+                    "x-unit": ""
+                },
+                "coolantFlowVariance": {
+                    "type": "number",
+                    "x-unit": ""
+                },
+                "coolantPressureIn": {
+                    "type": "number",
+                    "x-unit": ""
+                },
+                "coolantPressureOut": {
+                    "type": "number",
+                    "x-unit": ""
+                },
+                "deltaPressure": {
+                    "type": "number",
+                    "x-unit": ""
+                },
+                "coolantTemperatureIn": {
+                    "type": "number",
+                    "x-unit": ""
+                },
+                "coolantTemperatureInVariance": {
+                    "type": "number",
+                    "x-unit": ""
+                },
+                "coolantTemperatureOut": {
+                    "type": "number",
+                    "x-unit": ""
+                },
+                "coolantTemperatureOutVariance": {
+                    "type": "number",
+                    "x-unit": ""
+                },
+                "deltaTemperature": {
+                    "type": "number",
+                    "x-unit": ""
+                }
+            }
+        },
+        "thermocoupleInformation": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "thermocoupleId": {
+                        "type": "number"
+                    },
+                    "maxValue": {
+                        "type": "number"
+                    }
+                },
+                "required": [ "thermocoupleId", "maxValue" ]
+            }
+        },
+        "pulseDuration": {
+            "type": "number",
+            "x-unit": ""
+        },
+        "pulseEndTimestamp": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "pulseStartTimestamp": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "dataCaptureStartTimestamp": {
+            "type": "string",
+            "format": "date-time"
+        }
+    },
+    "required": [
+        "coolantInformation",
+        "heatingInformation",
+        "pulseDuration",
+        "pulseEndTimestamp",
+        "pulseStartTimestamp",
+        "dataCaptureStartTimestamp",
+        "thermocoupleInformation"
+    ]
+}
