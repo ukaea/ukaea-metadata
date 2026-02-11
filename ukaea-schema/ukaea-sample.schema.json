@@ -9,10 +9,21 @@
         },
         "schemaVersion": {
             "type": "string"
+        },
+        "ownerGroup": {
+            "type": "string"
+        },
+        "accessGroups": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
         }
     },
     "required": [
         "sampleNumber",
-        "schemaVersion"
+        "schemaVersion",
+        "ownerGroup",
+        "accessGroups"
     ]
 }

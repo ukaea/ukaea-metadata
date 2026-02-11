@@ -12,10 +12,21 @@
         },
         "additional": {
             "type": "object"
+        },
+        "ownerGroup": {
+            "type": "string"
+        },
+        "accessGroups": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
         }
     },
     "required": [
         "instrumentId",
-        "schemaVersion"
+        "schemaVersion",
+        "ownerGroup",
+        "accessGroups"
     ]
 }

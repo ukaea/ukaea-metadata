@@ -38,6 +38,15 @@
         },
         "schemaVersion": {
             "type": "string"
+        },
+        "ownerGroup": {
+            "type": "string"
+        },
+        "accessGroups": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
         }
     },
     "required": [
@@ -45,6 +54,8 @@
         "type",
         "sourceFolder",
         "description",
-        "schemaVersion"
+        "schemaVersion",
+        "ownerGroup",
+        "accessGroups"
     ]
 }
