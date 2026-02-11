@@ -6,26 +6,26 @@
     "properties": {
         "powerSupplyReportedPower": {
             "type": "number",
-            "x-unit": ""
+            "unit": ""
         },
         "heatingInformation": {
             "type": "object",
             "properties": {
                 "measuredPower": {
                     "type": "number",
-                    "x-unit": ""
+                    "unit": ""
                 },
                 "outputFrequency": {
                     "type": "number",
-                    "x-unit": ""
+                    "unit": ""
                 },
                 "outputVoltage": {
                     "type": "number",
-                    "x-unit": ""
+                    "unit": ""
                 },
                 "outputCurrent": {
                     "type": "number",
-                    "x-unit": ""
+                    "unit": ""
                 }
             }
         },
@@ -34,43 +34,43 @@
             "properties": {
                 "coolantFlow": {
                     "type": "number",
-                    "x-unit": ""
+                    "unit": ""
                 },
                 "coolantFlowVariance": {
                     "type": "number",
-                    "x-unit": ""
+                    "unit": ""
                 },
                 "coolantPressureIn": {
                     "type": "number",
-                    "x-unit": ""
+                    "unit": ""
                 },
                 "coolantPressureOut": {
                     "type": "number",
-                    "x-unit": ""
+                    "unit": ""
                 },
                 "deltaPressure": {
                     "type": "number",
-                    "x-unit": ""
+                    "unit": ""
                 },
                 "coolantTemperatureIn": {
                     "type": "number",
-                    "x-unit": ""
+                    "unit": ""
                 },
                 "coolantTemperatureInVariance": {
                     "type": "number",
-                    "x-unit": ""
+                    "unit": ""
                 },
                 "coolantTemperatureOut": {
                     "type": "number",
-                    "x-unit": ""
+                    "unit": ""
                 },
                 "coolantTemperatureOutVariance": {
                     "type": "number",
-                    "x-unit": ""
+                    "unit": ""
                 },
                 "deltaTemperature": {
                     "type": "number",
-                    "x-unit": ""
+                    "unit": ""
                 }
             }
         },
@@ -86,12 +86,15 @@
                         "type": "number"
                     }
                 },
-                "required": [ "thermocoupleId", "maxValue" ]
+                "required": [
+                    "thermocoupleId",
+                    "maxValue"
+                ]
             }
         },
         "pulseDuration": {
             "type": "number",
-            "x-unit": ""
+            "unit": ""
         },
         "pulseEndTimestamp": {
             "type": "string",

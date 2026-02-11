@@ -24,7 +24,7 @@
         },
         "pulseDuration": {
             "type": "number",
-            "x-unit": "qudt:SEC"
+            "unit": "qudt:SEC"
         },
         "operator1": {
             "type": "object",
@@ -40,7 +40,11 @@
                     "type": "string"
                 }
             },
-            "required": [ "email", "firstName", "lastName" ]
+            "required": [
+                "email",
+                "firstName",
+                "lastName"
+            ]
         },
         "operator2": {
             "type": "object",
@@ -56,28 +60,38 @@
                     "type": "string"
                 }
             },
-            "required": [ "email", "firstName", "lastName" ]
+            "required": [
+                "email",
+                "firstName",
+                "lastName"
+            ]
         },
         "heatingInformation": {
             "type": "object",
             "properties": {
                 "heatingType": {
-                    "enum": [ "Induction", "DC" ]
+                    "enum": [
+                        "Induction",
+                        "DC"
+                    ]
                 },
                 "currentType": {
-                    "enum": [ "AC", "DC" ]
+                    "enum": [
+                        "AC",
+                        "DC"
+                    ]
                 },
                 "inputPower": {
                     "type": "number",
-                    "x-unit": "qudt:KiloW"
+                    "unit": "qudt:KiloW"
                 },
                 "inputCurrent": {
                     "type": "number",
-                    "x-unit": "qudt:A"
+                    "unit": "qudt:A"
                 },
                 "inputVoltage": {
                     "type": "number",
-                    "x-unit": "qudt:V"
+                    "unit": "qudt:V"
                 },
                 "measuredPower": {
                     "type": "number"
@@ -108,7 +122,11 @@
                 }
             },
             "then": {
-                "required": [ "inputPower", "inputCurrent", "inputVoltage" ]
+                "required": [
+                    "inputPower",
+                    "inputCurrent",
+                    "inputVoltage"
+                ]
             }
         },
         "coolantInformation": {
@@ -186,14 +204,20 @@
                         "type": "number"
                     }
                 },
-                "required": [ "thermocoupleId", "maxValue" ]
+                "required": [
+                    "thermocoupleId",
+                    "maxValue"
+                ]
             }
         },
         "comment": {
             "type": "string"
         },
         "pulseQuality": {
-            "enum": [ "Success", "Fail" ]
+            "enum": [
+                "Success",
+                "Fail"
+            ]
         },
         "experimentNumber": {
             "type": "integer"
