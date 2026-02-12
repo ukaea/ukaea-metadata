@@ -4,6 +4,9 @@
   "startDate": .bookingStart,
   "endDate": .bookingEnd?,
   "description": .notes,
+  "schema_version": (.datasetVersion // "1.0.0"),
+  "ownerGroup": "MRF",
+  "accessGroups": "[MRF]",
   "leadInvestigator": (.internalUser[0] // .scientificSupport[0])
   +
   ( if (.institution and .externalUser) then

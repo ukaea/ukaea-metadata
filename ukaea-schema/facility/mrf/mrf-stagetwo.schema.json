@@ -125,6 +125,10 @@
         },
         "betaGamma": {
             "type": "boolean"
+        },
+        "schemaVersion": {
+            "type": "string",
+            "default": "1.0.0"
         }
     }
 }
