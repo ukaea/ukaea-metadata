@@ -1,0 +1,4 @@
+{
+  "instrumentId": .seid,
+  "seidDescription": .seidDescription
+}
