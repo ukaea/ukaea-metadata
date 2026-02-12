@@ -1,0 +1,28 @@
+{
+    "@context": {
+        "fuel": "https://w3id.org/fuel/schemas/1.0.0/ukaea-schema/",
+        "schema": "http://schema.org/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+
+        "instrument": "fuel:instrument",
+        "instrumentId": "fuel:instrument/instrumentId",
+        "additional": "fuel:additional",
+        "facility": "fuel:facility",
+        "facilityId": "fuel:facility/facilityId",
+        "facilityExperimentId": "fuel:facility/facilityExperimentId",
+        "sourceFolder": "fuel:sourceFolder",
+        "experiment": "fuel:experiment",
+        "experimentId": "fuel:experiment/experimentId",
+
+        "email": "schema:email",
+        "contactEmail": "schema:email",
+        "firstName": { "@id": "schema:givenName" },
+        "lastName":  { "@id": "schema:familyName" },
+        "owner": "schema:name",
+
+        "creationTime": { "@id": "schema:dateCreated", "@type": "xsd:dateTime" },
+        "description": "schema:description",
+        "startDate": { "@id": "schema:startDate", "@type": "xsd:date" },
+        "endDate": { "@id": "schema:endDate", "@type": "xsd:date" }
+    }
+}
