@@ -3,7 +3,11 @@
     "$id": "https://w3id.org/fusion/schemas/1.0.0/equipment/dic",
     "description": "Digital Image Correlation (DIC) equipment metadata",
     "type": "object",
-    "required": [ "setupInformation", "softwareInformation", "cameraSetup" ],
+    "required": [
+        "setupInformation",
+        "softwareInformation",
+        "cameraSetup"
+    ],
     "properties": {
         "additionalInformation": {
             "type": "object",
@@ -19,7 +23,7 @@
                 },
                 "calTargetDims": {
                     "type": "string",
-                    "example": "9 x 12 dots with 5 mm spacing"
+                    "x-example": "9 x 12 dots with 5 mm spacing"
                 },
                 "calTargetMake": {
                     "type": "string"
@@ -51,14 +55,22 @@
         },
         "setupInformation": {
             "type": "object",
-            "required": [ "configuration", "stereoAngle", "standOffDistance" ],
+            "required": [
+                "configuration",
+                "stereoAngle",
+                "standOffDistance"
+            ],
             "properties": {
                 "configuration": {
-                    "enum": [ "2D", "Stereo", "Stereo+IR" ]
+                    "enum": [
+                        "2D",
+                        "Stereo",
+                        "Stereo+IR"
+                    ]
                 },
                 "imagedSurfaceOnSpecimen": {
                     "type": "string",
-                    "example": "XY plane"
+                    "x-example": "XY plane"
                 },
                 "standOffDistance": {
                     "type": "number",
@@ -72,7 +84,10 @@
         },
         "softwareInformation": {
             "type": "object",
-            "required": [ "softwareName", "softwareVersion" ],
+            "required": [
+                "softwareName",
+                "softwareVersion"
+            ],
             "properties": {
                 "softwareName": {
                     "description": "Name of the acquisition software used",
@@ -81,7 +96,7 @@
                 "softwareVersion": {
                     "description": "Version of the acquisition software used",
                     "type": "string",
-                    "comment": "versioning to be improved"
+                    "x-comment": "versioning to be improved"
                 }
             }
         }

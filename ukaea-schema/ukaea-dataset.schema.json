@@ -35,7 +35,27 @@
             "items": {
                 "type": "string"
             }
+        },
+        "schemaVersion": {
+            "type": "string"
+        },
+        "ownerGroup": {
+            "type": "string"
+        },
+        "accessGroups": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
         }
     },
-    "required": [ "creationTime", "type", "sourceFolder", "description" ]
+    "required": [
+        "creationTime",
+        "type",
+        "sourceFolder",
+        "description",
+        "schemaVersion",
+        "ownerGroup",
+        "accessGroups"
+    ]
 }

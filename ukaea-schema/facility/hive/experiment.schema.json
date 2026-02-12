@@ -59,7 +59,16 @@
                     }
                 }
             }
+        },
+        "schemaVersion": {
+            "type": "string"
         }
     },
-    "required": [ "experimentNumber", "startDate", "description", "leadInvestigator" ]
+    "required": [
+        "experimentNumber",
+        "startDate",
+        "description",
+        "leadInvestigator",
+        "schemaVersion"
+    ]
 }

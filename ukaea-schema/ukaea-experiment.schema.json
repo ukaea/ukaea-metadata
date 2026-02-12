@@ -58,12 +58,27 @@
                     }
                 }
             }
+        },
+        "schemaVersion": {
+            "type": "string"
+        },
+        "ownerGroup": {
+            "type": "string"
+        },
+        "accessGroups": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
         }
     },
     "required": [
         "facility",
         "facilityExperimentId",
         "startDate",
-        "description"
+        "description",
+        "schemaVersion",
+        "ownerGroup",
+        "accessGroups"
     ]
 }

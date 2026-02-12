@@ -13,15 +13,15 @@
     "properties": {
         "make": {
             "type": "string",
-            "description": "The manufacturer or brand of the flowmeter (e.g., Siemens, Yokogawa, Emerson)."
+            "description": "The manufacturer or brand of the flowmeter (e.g., Siemens, Yokogawa, Emerson)"
         },
         "model": {
             "type": "string",
-            "description": "The specific product designation given by the manufacturer, identifying the flowmeter type or version (e.g., SITRANS F M MAG 5100W)."
+            "description": "The specific product designation given by the manufacturer, identifying the flowmeter type or version (e.g., SITRANS F M MAG 5100W)"
         },
         "serialNumber": {
             "type": "string",
-            "description": "A unique identifier assigned by the manufacturer to distinguish an individual flowmeter unit."
+            "description": "A unique identifier assigned by the manufacturer to distinguish an individual flowmeter unit"
         },
         "assetId": {
             "type": "string",
@@ -29,21 +29,24 @@
         },
         "flowmeterType": {
             "type": "string",
-            "description": "The measurement basis or principle of operation of the flowmeter (e.g., turbine)."
+            "description": "The measurement basis or principle of operation of the flowmeter (e.g., turbine)"
         },
         "flowRange": {
             "type": "object",
-            "required": [ "minimum", "maximum" ],
+            "required": [
+                "minimum",
+                "maximum"
+            ],
             "properties": {
                 "maximum": {
                     "type": "number",
                     "unit": "qudt:L-PER-MIN",
-                    "description": "The highest flow value that the flowmeter is designed to measure accurately."
+                    "description": "The highest flow value that the flowmeter is designed to measure accurately"
                 },
                 "minimum": {
                     "type": "number",
                     "unit": "qudt:L-PER-MIN",
-                    "description": "The lowest flow value that the flowmeter is designed to measure accurately."
+                    "description": "The lowest flow value that the flowmeter is designed to measure accurately"
                 }
             }
         }

@@ -165,6 +165,9 @@
                 },
                 "minItems": 1
             }
+        },
+        "schemaVersion": {
+            "type": "string"
         }
     },
     "required": [
@@ -181,6 +184,7 @@
         "pulseQuality",
         "experimentNumber",
         "configurationUUID",
-        "diagnostics"
+        "diagnostics",
+        "schemaVersion"
     ]
 }

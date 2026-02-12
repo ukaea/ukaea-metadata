@@ -98,15 +98,15 @@
         },
         "pulseEndTimestamp": {
             "type": "string",
-            "format": "date"
+            "format": "date-time"
         },
         "pulseStartTimestamp": {
             "type": "string",
-            "format": "date"
+            "format": "date-time"
         },
         "dataCaptureStartTimestamp": {
             "type": "string",
-            "format": "date"
+            "format": "date-time"
         }
     },
     "required": [

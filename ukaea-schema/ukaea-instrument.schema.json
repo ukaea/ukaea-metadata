@@ -7,9 +7,26 @@
         "instrumentId": {
             "type": "string"
         },
+        "schemaVersion": {
+            "type": "string"
+        },
         "additional": {
             "type": "object"
+        },
+        "ownerGroup": {
+            "type": "string"
+        },
+        "accessGroups": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
         }
     },
-    "required": [ "instrumentId" ]
+    "required": [
+        "instrumentId",
+        "schemaVersion",
+        "ownerGroup",
+        "accessGroups"
+    ]
 }

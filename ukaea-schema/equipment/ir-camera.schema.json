@@ -3,7 +3,10 @@
     "$id": "https://w3id.org/fusion/schemas/1.0.0/equipment/ir-camera",
     "description": "Metadata to describe ir-camera equipment",
     "type": "object",
-    "required": [ "deviceInformation", "deviceSettings" ],
+    "required": [
+        "deviceInformation",
+        "deviceSettings"
+    ],
     "properties": {
         "deviceInformation": {
             "type": "object",
@@ -18,35 +21,41 @@
             "properties": {
                 "make": {
                     "type": "string",
-                    "description": "The manufacturer or brand of the infrared camera (e.g., FLIR, Testo, Fluke, Seek Thermal)."
+                    "description": "The manufacturer or brand of the infrared camera (e.g., FLIR, Testo, Fluke, Seek Thermal)"
                 },
                 "model": {
                     "type": "string",
-                    "description": "The specific product designation given by the manufacturer, identifying the type or version of the infrared camera (e.g., FLIR E8-XT, Testo 865, Fluke Ti480 Pro)."
+                    "description": "The specific product designation given by the manufacturer, identifying the type or version of the infrared camera (e.g., FLIR E8-XT, Testo 865, Fluke Ti480 Pro)"
                 },
                 "serialNumber": {
                     "type": "string",
-                    "description": "A unique identifier assigned by the manufacturer to distinguish an individual infrared camera unit, typically used for traceability, calibration records, or warranty purposes."
+                    "description": "A unique identifier assigned by the manufacturer to distinguish an individual infrared camera unit, typically used for traceability, calibration records, or warranty purposes"
                 },
                 "resolution": {
                     "type": "object",
-                    "required": [ "x", "y" ],
+                    "required": [
+                        "x",
+                        "y"
+                    ],
                     "properties": {
                         "x": {
                             "type": "integer",
                             "unit": "qudt:px",
-                            "description": "The camera resolution in pixels, represented as width."
+                            "description": "The camera resolution in pixels, represented as width"
                         },
                         "y": {
                             "type": "integer",
                             "unit": "qudt:px",
-                            "description": "The camera resolution in pixels, represented as height."
+                            "description": "The camera resolution in pixels, represented as height"
                         }
                     }
                 },
                 "spectralRange": {
                     "type": "object",
-                    "required": [ "minimum", "maximum" ],
+                    "required": [
+                        "minimum",
+                        "maximum"
+                    ],
                     "properties": {
                         "maximum": {
                             "type": "number",
@@ -62,7 +71,10 @@
                 },
                 "temperatureRange": {
                     "type": "object",
-                    "required": [ "minimum", "maximum" ],
+                    "required": [
+                        "minimum",
+                        "maximum"
+                    ],
                     "properties": {
                         "maximum": {
                             "type": "number",
@@ -80,11 +92,14 @@
         },
         "deviceSettings": {
             "type": "object",
-            "required": [ "emissivity", "framerate" ],
+            "required": [
+                "emissivity",
+                "framerate"
+            ],
             "properties": {
                 "emissivity": {
                     "type": "number",
-                    "description": "The emissivity value used for temperature calculations, representing the efficiency with which a surface emits thermal radiation."
+                    "description": "The emissivity value used for temperature calculations, representing the efficiency with which a surface emits thermal radiation"
                 },
                 "framerate": {
                     "type": "number",
