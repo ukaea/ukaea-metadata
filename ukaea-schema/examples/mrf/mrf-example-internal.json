@@ -1,4 +1,7 @@
 {
+    "@context": "https://w3id.org/fusion/schemas/1.0.0/facility/mrf/mrf-context.jsonld",
+    "@type": "MRFBooking",
+    "@id": "https://w3id.org/fusion/exp/mrf/23001/1",
     "labLocation": "MRF",
     "seid": "0001",
     "seidDescription": "FEI Helios",
