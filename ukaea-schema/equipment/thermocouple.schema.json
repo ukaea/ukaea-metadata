@@ -12,16 +12,16 @@
     "properties": {
         "attachment": {
             "type": "string",
-            "description": "The method or mechanism used to attach or secure the thermocouple to the measurement point (e.g., clamp, adhesive, probe, screw-in)."
+            "description": "The method or mechanism used to attach or secure the thermocouple to the measurement point (e.g., clamp, adhesive, probe, screw-in)"
         },
         "thermocoupleType": {
             "type": "string",
-            "description": "The classification of the thermocouple based on its metal alloy combination, which determines its temperature range and sensitivity (e.g., Type K, Type J, Type T, Type N)."
+            "description": "The classification of the thermocouple based on its metal alloy combination, which determines its temperature range and sensitivity (e.g., Type K, Type J, Type T, Type N)"
         },
         "circleDiameter": {
             "type": "number",
             "unit": "qudt:MilliM",
-            "description": "Diameter (mm) of the circular surface used to attach the thermocouple to the measurement point, can be used to give an area."
+            "description": "Diameter (mm) of the circular surface used to attach the thermocouple to the measurement point, can be used to give an area"
         },
         "noiseFloor": {
             "type": "number",

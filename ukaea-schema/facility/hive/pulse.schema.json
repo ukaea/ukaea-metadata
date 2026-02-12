@@ -1,14 +1,14 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://w3id.org/fuel/schemas/1.0.0/facility/hive/pulse",
+    "$id": "https://w3id.org/fusion/schemas/1.0.0/facility/hive/pulse",
     "description": "Metadata schema for a HIVE pulse",
     "type": "object",
     "properties": {
-        "pulseId": {
-            "type": "number"
+        "pulseNumber": {
+            "type": "integer"
         },
-        "sampleId": {
-            "type": "string"
+        "sampleNumber": {
+            "type": "integer"
         },
         "dataCaptureStart": {
             "type": "string",
@@ -21,10 +21,6 @@
         "pulseEnd": {
             "type": "string",
             "format": "date-time"
-        },
-        "pulseDuration": {
-            "type": "number",
-            "unit": "qudt:SEC"
         },
         "operator1": {
             "type": "object",
@@ -40,7 +36,11 @@
                     "type": "string"
                 }
             },
-            "required": [ "email", "firstName", "lastName" ]
+            "required": [
+                "email",
+                "firstName",
+                "lastName"
+            ]
         },
         "operator2": {
             "type": "object",
@@ -56,16 +56,26 @@
                     "type": "string"
                 }
             },
-            "required": [ "email", "firstName", "lastName" ]
+            "required": [
+                "email",
+                "firstName",
+                "lastName"
+            ]
         },
         "heatingInformation": {
             "type": "object",
             "properties": {
                 "heatingType": {
-                    "enum": [ "Induction", "DC" ]
+                    "enum": [
+                        "Induction",
+                        "DC"
+                    ]
                 },
                 "currentType": {
-                    "enum": [ "AC", "DC" ]
+                    "enum": [
+                        "AC",
+                        "DC"
+                    ]
                 },
                 "inputPower": {
                     "type": "number",
@@ -79,15 +89,6 @@
                     "type": "number",
                     "unit": "qudt:V"
                 },
-                "measuredPower": {
-                    "type": "number"
-                },
-                "outputFrequency": {
-                    "type": "number"
-                },
-                "outputVoltage": {
-                    "type": "number"
-                },
                 "outputCurrent": {
                     "type": "number"
                 }
@@ -95,9 +96,6 @@
             "required": [
                 "heatingType",
                 "currentType",
-                "measuredPower",
-                "outputFrequency",
-                "outputVoltage",
                 "outputCurrent"
             ],
             "if": {
@@ -108,7 +106,11 @@
                 }
             },
             "then": {
-                "required": [ "inputPower", "inputCurrent", "inputVoltage" ]
+                "required": [
+                    "inputPower",
+                    "inputCurrent",
+                    "inputVoltage"
+                ]
             }
         },
         "coolantInformation": {
@@ -128,33 +130,6 @@
                 },
                 "measuredCoolantFlow": {
                     "type": "number"
-                },
-                "coolantFlowVariance": {
-                    "type": "number"
-                },
-                "coolantPressureIn": {
-                    "type": "number"
-                },
-                "coolantPressureOut": {
-                    "type": "number"
-                },
-                "deltaPressure": {
-                    "type": "number"
-                },
-                "coolantTemperatureIn": {
-                    "type": "number"
-                },
-                "coolantTemperatureInVariance": {
-                    "type": "number"
-                },
-                "coolantTemperatureOut": {
-                    "type": "number"
-                },
-                "coolantTemperatureOutVariance": {
-                    "type": "number"
-                },
-                "deltaTemperature": {
-                    "type": "number"
                 }
             },
             "required": [
@@ -162,41 +137,20 @@
                 "coolantType",
                 "targetCoolantFlow",
                 "targetCoolantTemperature",
-                "measuredCoolantFlow",
-                "coolantFlowVariance",
-                "coolantPressureIn",
-                "coolantPressureOut",
-                "deltaPressure",
-                "coolantTemperatureIn",
-                "coolantTemperatureInVariance",
-                "coolantTemperatureOut",
-                "coolantTemperatureOutVariance",
-                "deltaTemperature"
+                "measuredCoolantFlow"
             ]
-        },
-        "thermocoupleInformation": {
-            "type": "array",
-            "items": {
-                "type": "object",
-                "properties": {
-                    "thermocoupleId": {
-                        "type": "number"
-                    },
-                    "maxValue": {
-                        "type": "number"
-                    }
-                },
-                "required": [ "thermocoupleId", "maxValue" ]
-            }
         },
         "comment": {
             "type": "string"
         },
         "pulseQuality": {
-            "enum": [ "Success", "Fail" ]
+            "enum": [
+                "Success",
+                "Fail"
+            ]
         },
-        "experimentId": {
-            "type": "string"
+        "experimentNumber": {
+            "type": "integer"
         },
         "configurationUUID": {
             "type": "string",
@@ -205,48 +159,32 @@
         "diagnostics": {
             "type": "array",
             "items": {
-                "oneOf": [
-                    {
-                        "type": "object",
-                        "properties": {
-                            "diagnosticId": {
-                                "type": "string"
-                            }
-                        },
-                        "required": [ "diagnosticId" ]
-                    },
-                    {
-                        "type": "array",
-                        "items": {
-                            "type": "object",
-                            "properties": {
-                                "diagnosticId": {
-                                    "type": "string"
-                                }
-                            },
-                            "required": [ "diagnosticId" ]
-                        }
-                    }
-                ]
+                "type": "array",
+                "items": {
+                    "type": "string"
+                },
+                "minItems": 1
             }
+        },
+        "schemaVersion": {
+            "type": "string"
         }
     },
     "required": [
-        "pulseId",
-        "sampleId",
+        "pulseNumber",
+        "sampleNumber",
         "dataCaptureStart",
         "pulseStart",
         "pulseEnd",
-        "pulseDuration",
         "operator1",
         "operator2",
         "heatingInformation",
         "coolantInformation",
-        "thermocoupleInformation",
         "comment",
         "pulseQuality",
-        "experimentId",
+        "experimentNumber",
         "configurationUUID",
-        "diagnostics"
+        "diagnostics",
+        "schemaVersion"
     ]
 }

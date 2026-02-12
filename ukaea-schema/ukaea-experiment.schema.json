@@ -1,5 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://w3id.org/fusion/schemas/1.0.0/ukaea-experiment",
     "title": "UKAEA Experiment Schema",
     "type": "object",
     "properties": {
@@ -57,12 +58,27 @@
                     }
                 }
             }
+        },
+        "schemaVersion": {
+            "type": "string"
+        },
+        "ownerGroup": {
+            "type": "string"
+        },
+        "accessGroups": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
         }
     },
     "required": [
         "facility",
         "facilityExperimentId",
         "startDate",
-        "description"
+        "description",
+        "schemaVersion",
+        "ownerGroup",
+        "accessGroups"
     ]
 }

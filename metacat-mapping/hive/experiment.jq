@@ -1,6 +1,9 @@
 {
     "facility": "HIVE",
-    "facilityExperimentID": .ID,
+    "facilityExperimentId": .experimentNumber,
+    "schemaVersion": .schemaVersion,
+    "ownerGroup": "HIVE",
+    "accessGroups": ["HIVE"],
     "startDate": .startDate,
     "endDate": .endDate?,
     "description": .description,

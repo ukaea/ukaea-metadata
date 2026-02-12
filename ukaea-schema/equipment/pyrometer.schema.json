@@ -1,20 +1,20 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://w3id.org/fusion/schemas/1.0.0/equipment/pyrometer-schema",
+    "$id": "https://w3id.org/fusion/schemas/1.0.0/equipment/pyrometer",
     "description": "Metadata to describe pyrometer equipment",
     "type": "object",
     "properties": {
         "make": {
             "type": "string",
-            "description": "The manufacturer or brand of the pyrometer (e.g., Optris, Fluke, Raytek)."
+            "description": "The manufacturer or brand of the pyrometer (e.g., Optris, Fluke, Raytek)"
         },
         "model": {
             "type": "string",
-            "description": "The specific product designation given by the manufacturer, identifying the pyrometer type or version (e.g., Optris CTlaser 3M, Fluke 568)."
+            "description": "The specific product designation given by the manufacturer, identifying the pyrometer type or version (e.g., Optris CTlaser 3M, Fluke 568)"
         },
         "serialNumber": {
             "type": "string",
-            "description": "A unique identifier assigned by the manufacturer to distinguish an individual pyrometer unit from others of the same make and model."
+            "description": "A unique identifier assigned by the manufacturer to distinguish an individual pyrometer unit from others of the same make and model"
         },
         "assetId": {
             "type": "string",
@@ -22,23 +22,29 @@
         },
         "spectralRange": {
             "type": "object",
-            "required": [ "minimum", "maximum" ],
+            "required": [
+                "minimum",
+                "maximum"
+            ],
             "properties": {
                 "maximum": {
                     "type": "number",
                     "unit": "qudt:MicroM",
-                    "description": "Maximum thermal radiation wavelength that the pyrometer's detector is sensitive to."
+                    "description": "Maximum thermal radiation wavelength that the pyrometer's detector is sensitive to"
                 },
                 "minimum": {
                     "type": "number",
                     "unit": "qudt:MicroM",
-                    "description": "Minimum thermal radiation wavelength that the pyrometer's detector is sensitive to."
+                    "description": "Minimum thermal radiation wavelength that the pyrometer's detector is sensitive to"
                 }
             }
         },
         "temperatureRange": {
             "type": "object",
-            "required": [ "minimum", "maximum" ],
+            "required": [
+                "minimum",
+                "maximum"
+            ],
             "properties": {
                 "maximum": {
                     "type": "number",

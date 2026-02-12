@@ -1,17 +1,14 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://w3id.org/fusion/schemas/1.0.0/ukaea-instrument",
-    "title": "UKAEA Instrument Schema",
+    "$id": "https://w3id.org/fusion/schemas/1.0.0/ukaea-sample",
+    "title": "UKAEA Sample Schema",
     "type": "object",
     "properties": {
-        "instrumentId": {
-            "type": "string"
+        "sampleNumber": {
+            "type": "integer"
         },
         "schemaVersion": {
             "type": "string"
-        },
-        "additional": {
-            "type": "object"
         },
         "ownerGroup": {
             "type": "string"
@@ -24,7 +21,7 @@
         }
     },
     "required": [
-        "instrumentId",
+        "sampleNumber",
         "schemaVersion",
         "ownerGroup",
         "accessGroups"
