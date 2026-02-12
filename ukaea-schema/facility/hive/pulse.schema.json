@@ -22,10 +22,6 @@
             "type": "string",
             "format": "date-time"
         },
-        "pulseDuration": {
-            "type": "number",
-            "unit": "qudt:SEC"
-        },
         "operator1": {
             "type": "object",
             "properties": {
@@ -93,15 +89,6 @@
                     "type": "number",
                     "unit": "qudt:V"
                 },
-                "measuredPower": {
-                    "type": "number"
-                },
-                "outputFrequency": {
-                    "type": "number"
-                },
-                "outputVoltage": {
-                    "type": "number"
-                },
                 "outputCurrent": {
                     "type": "number"
                 }
@@ -109,9 +96,6 @@
             "required": [
                 "heatingType",
                 "currentType",
-                "measuredPower",
-                "outputFrequency",
-                "outputVoltage",
                 "outputCurrent"
             ],
             "if": {
@@ -146,33 +130,6 @@
                 },
                 "measuredCoolantFlow": {
                     "type": "number"
-                },
-                "coolantFlowVariance": {
-                    "type": "number"
-                },
-                "coolantPressureIn": {
-                    "type": "number"
-                },
-                "coolantPressureOut": {
-                    "type": "number"
-                },
-                "deltaPressure": {
-                    "type": "number"
-                },
-                "coolantTemperatureIn": {
-                    "type": "number"
-                },
-                "coolantTemperatureInVariance": {
-                    "type": "number"
-                },
-                "coolantTemperatureOut": {
-                    "type": "number"
-                },
-                "coolantTemperatureOutVariance": {
-                    "type": "number"
-                },
-                "deltaTemperature": {
-                    "type": "number"
                 }
             },
             "required": [
@@ -180,35 +137,8 @@
                 "coolantType",
                 "targetCoolantFlow",
                 "targetCoolantTemperature",
-                "measuredCoolantFlow",
-                "coolantFlowVariance",
-                "coolantPressureIn",
-                "coolantPressureOut",
-                "deltaPressure",
-                "coolantTemperatureIn",
-                "coolantTemperatureInVariance",
-                "coolantTemperatureOut",
-                "coolantTemperatureOutVariance",
-                "deltaTemperature"
+                "measuredCoolantFlow"
             ]
-        },
-        "thermocoupleInformation": {
-            "type": "array",
-            "items": {
-                "type": "object",
-                "properties": {
-                    "thermocoupleId": {
-                        "type": "number"
-                    },
-                    "maxValue": {
-                        "type": "number"
-                    }
-                },
-                "required": [
-                    "thermocoupleId",
-                    "maxValue"
-                ]
-            }
         },
         "comment": {
             "type": "string"
@@ -246,12 +176,10 @@
         "dataCaptureStart",
         "pulseStart",
         "pulseEnd",
-        "pulseDuration",
         "operator1",
         "operator2",
         "heatingInformation",
         "coolantInformation",
-        "thermocoupleInformation",
         "comment",
         "pulseQuality",
         "experimentNumber",
