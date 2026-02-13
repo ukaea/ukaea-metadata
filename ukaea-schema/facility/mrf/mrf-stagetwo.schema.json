@@ -8,12 +8,7 @@
         "jobId", 
         "sessionId",
         "bookingStart",
-        "bookingEnd",
-        "workCategory",
-        "sampleSplit",
-        "tritium",
-        "beryllium",
-        "betaGamma"
+        "bookingEnd"
     ],
     "properties": {
         "labLocation": {

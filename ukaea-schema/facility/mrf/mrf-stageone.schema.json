@@ -8,12 +8,7 @@
         "jobId", 
         "sessionId",
         "bookingStart",
-        "bookingEnd",
-        "workCategory",
-        "sampleSplit",
-        "tritium",
-        "beryllium",
-        "betaGamma"
+        "bookingEnd"
     ],
     "properties": {
         "labLocation": {
@@ -78,13 +73,10 @@
                 "properties": {
                     "firstName": { "type": "string" },
                     "lastName": { "type": "string" },
-                    "email": { "type": "string" }
+                    "email": { "type": "string" },
+                    "institution": { "type": "string" }
                 }
-            },
-            "$comment": "Would lead to an institution"
-        },
-        "institution": {
-            "type": "string"
+            }
         },
         "scientificSupport": {
             "type": "array",
