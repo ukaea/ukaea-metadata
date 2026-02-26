@@ -32,6 +32,9 @@
             "type": "string",
             "$comment": "Written identifier of equipment in booking system"
         },
+        "labId": {
+            "type": "string"
+        },
         "jobId": {
             "type": "string",
             "pattern": "^\\d{5}$",
