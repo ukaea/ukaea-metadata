@@ -96,7 +96,7 @@
                 "softwareVersion": {
                     "description": "Version of the acquisition software used",
                     "type": "string",
-                    "x-comment": "versioning to be improved"
+                    "comment": "versioning to be improved"
                 }
             }
         }
