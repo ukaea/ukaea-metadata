@@ -4,7 +4,7 @@
     "description": "Metadata schema MRF experiments after directory creation",
     "type": "object",
     "required": [
-        "seid",
+        "seId",
         "jobId", 
         "sessionId",
         "bookingStart",
@@ -16,7 +16,7 @@
             "type": "string",
             "default": "MRF"
         },
-        "seid": {
+        "seId": {
             "type": "string",
             "oneOf": [
                 {
@@ -28,7 +28,7 @@
             ],
             "$comment": "4 digits of the SEID (equipment identity number)"
         },
-        "seidDescription": {
+        "seIdDescription": {
             "type": "string",
             "$comment": "Written identifier of equipment in booking system"
         },
