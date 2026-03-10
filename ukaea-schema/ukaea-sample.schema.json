@@ -6,9 +6,24 @@
     "properties": {
         "sampleNumber": {
             "type": "integer"
+        },
+        "schemaVersion": {
+            "type": "string"
+        },
+        "ownerGroup": {
+            "type": "string"
+        },
+        "accessGroups": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
         }
     },
     "required": [
-        "sampleNumber"
+        "sampleNumber",
+        "schemaVersion",
+        "ownerGroup",
+        "accessGroups"
     ]
 }

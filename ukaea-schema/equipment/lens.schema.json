@@ -3,44 +3,54 @@
     "$id": "https://w3id.org/fusion/schemas/1.0.0/equipment/lens",
     "description": "Metadata to describe lens equipment",
     "type": "object",
-    "required": [ "deviceInformation" ],
+    "required": [
+        "deviceInformation"
+    ],
     "properties": {
         "deviceInformation": {
             "type": "object",
-            "required": [ "make", "model", "aperture", "focalLength" ],
+            "required": [
+                "make",
+                "model",
+                "aperture",
+                "focalLength"
+            ],
             "properties": {
                 "make": {
                     "type": "string",
-                    "description": "The manufacturer or brand of the lens (e.g., Canon, Nikon, Sigma, Tamron)."
+                    "description": "The manufacturer or brand of the lens (e.g., Canon, Nikon, Sigma, Tamron)"
                 },
                 "model": {
                     "type": "string",
-                    "description": "The specific product designation given by the manufacturer, identifying the lens type or version (e.g., EF 24–70mm f/2.8L II USM)."
+                    "description": "The specific product designation given by the manufacturer, identifying the lens type or version (e.g., EF 24–70mm f/2.8L II USM)"
                 },
                 "serialNumber": {
                     "type": "string",
-                    "description": "A unique identifier assigned by the manufacturer to distinguish an individual lens unit."
+                    "description": "A unique identifier assigned by the manufacturer to distinguish an individual lens unit"
                 },
                 "aperture": {
                     "type": "string",
-                    "description": "The maximum aperture size of the lens, usually expressed as an f-number (e.g., f/1.8, f/2.8)."
+                    "description": "The maximum aperture size of the lens, usually expressed as an f-number (e.g., f/1.8, f/2.8)"
                 },
                 "focalLength": {
                     "type": "number",
                     "unit": "qudt:MilliM",
-                    "description": "The focal length or range of the lens in millimeters, determining its angle of view (e.g., 50)."
+                    "description": "The focal length or range of the lens in millimeters, determining its angle of view (e.g., 50)"
                 },
                 "fieldOfView": {
                     "type": "object",
-                    "required": [ "x", "y" ],
+                    "required": [
+                        "x",
+                        "y"
+                    ],
                     "properties": {
                         "x": {
-                            "description": "The field of view in pixels, represented as width.",
+                            "description": "The field of view in pixels, represented as width",
                             "type": "integer",
                             "unit": "qudt:px"
                         },
                         "y": {
-                            "description": "The field of view in pixels, represented as height.",
+                            "description": "The field of view in pixels, represented as height",
                             "type": "integer",
                             "unit": "qudt:px"
                         }
