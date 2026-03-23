@@ -3,5 +3,5 @@
     "schemaVersion": .schemaVersion,
     "ownerGroup": "HIVE",
     "accessGroups": ["HIVE"],
-    "additional": (del(.equipmentName))
+    "additional": (del(.equipmentName, .schemaVersion))
 }

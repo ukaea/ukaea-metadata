@@ -10,5 +10,5 @@
       "description": $parent.comment,
       "experimentNumber": $parent.experimentNumber,
       "instrument": .,
-      "additional": ($parent | del(.comment, .experimentNumber, .diagnostics))
+      "additional": ($parent | del(.comment, .experimentNumber, .diagnostics, .schemaVersion, .pulseStart))
   }
