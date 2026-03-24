@@ -4,29 +4,31 @@
     "description": "Metadata schema MRF experiments after directory creation",
     "type": "object",
     "required": [
-        "seid",
+        "seId",
+        "jobId", 
+        "sessionId",
         "bookingStart",
         "bookingEnd",
-        "workCategory",
-        "sampleSplit",
-        "tritium",
-        "beryllium",
-        "betaGamma"
+        "scientificSupport"
     ],
     "properties": {
         "labLocation": {
             "type": "string",
             "default": "MRF"
         },
-        "seid": {
+        "seId": {
             "type": "string",
             "pattern": "^\\d{4}$",
-            "readOnly": true,
             "$comment": "4 digits of the SEID (equipment identity number)"
         },
-        "seidDescription": {
+        "seIdDescription": {
             "type": "string",
             "$comment": "Written identifier of equipment in booking system"
+        },
+        "labId": {
+            "type": "string",
+            "pattern": "^\\d{4}$",
+            "$comment": "4 digits of the SEID of lab room that holds other equipment - not to be used in main hall"
         },
         "jobId": {
             "type": "string",
@@ -72,13 +74,10 @@
                 "properties": {
                     "firstName": { "type": "string" },
                     "lastName": { "type": "string" },
-                    "email": { "type": "string" }
+                    "email": { "type": "string" },
+                    "institution": { "type": "string" }
                 }
-            },
-            "$comment": "Would lead to an institution"
-        },
-        "institution": {
-                "type": "string"
+            }
         },
         "scientificSupport": {
             "type": "array",
@@ -120,19 +119,10 @@
         },
         "betaGamma": {
             "type": "boolean"
+        },
+        "schemaVersion": {
+            "type": "string",
+            "default": "1.0.0"
         }
-    },
-    "if": {
-        "properties": {
-            "workCategory": {
-                "const": "User"
-            }
-        }
-    },
-    "then": {
-        "required": ["jobId"]
-    },
-    "dependentRequired": {
-        "externalUser": ["institution"]
     }
 }
