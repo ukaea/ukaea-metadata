@@ -4,23 +4,8 @@
     "description": "Metadata schema for a HIVE pulse",
     "type": "object",
     "properties": {
-        "pulseNumber": {
-            "type": "integer"
-        },
         "sampleNumber": {
             "type": "integer"
-        },
-        "dataCaptureStart": {
-            "type": "string",
-            "format": "date-time"
-        },
-        "pulseStart": {
-            "type": "string",
-            "format": "date-time"
-        },
-        "pulseEnd": {
-            "type": "string",
-            "format": "date-time"
         },
         "operator1": {
             "type": "object",
@@ -152,7 +137,7 @@
         "experimentNumber": {
             "type": "integer"
         },
-        "configurationUUID": {
+        "configurationId": {
             "type": "string",
             "format": "uuid"
         },
@@ -171,11 +156,7 @@
         }
     },
     "required": [
-        "pulseNumber",
         "sampleNumber",
-        "dataCaptureStart",
-        "pulseStart",
-        "pulseEnd",
         "operator1",
         "operator2",
         "heatingInformation",
@@ -183,7 +164,7 @@
         "comment",
         "pulseQuality",
         "experimentNumber",
-        "configurationUUID",
+        "configurationId",
         "diagnostics",
         "schemaVersion"
     ]
