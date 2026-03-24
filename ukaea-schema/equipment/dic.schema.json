@@ -23,7 +23,7 @@
                 },
                 "calTargetDims": {
                     "type": "string",
-                    "x-example": "9 x 12 dots with 5 mm spacing"
+                    "example": "9 x 12 dots with 5 mm spacing"
                 },
                 "calTargetMake": {
                     "type": "string"
@@ -70,7 +70,7 @@
                 },
                 "imagedSurfaceOnSpecimen": {
                     "type": "string",
-                    "x-example": "XY plane"
+                    "example": "XY plane"
                 },
                 "standOffDistance": {
                     "type": "number",
@@ -96,7 +96,7 @@
                 "softwareVersion": {
                     "description": "Version of the acquisition software used",
                     "type": "string",
-                    "x-comment": "versioning to be improved"
+                    "comment": "versioning to be improved"
                 }
             }
         }

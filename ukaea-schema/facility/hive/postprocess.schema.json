@@ -80,7 +80,7 @@
                 "type": "object",
                 "properties": {
                     "thermocoupleId": {
-                        "type": "number"
+                        "type": "string"
                     },
                     "maxValue": {
                         "type": "number"
