@@ -1,6 +1,6 @@
 {
     "facility": "HIVE",
-    "facilityExperimentId": .experimentNumber,
+    "facilityExperimentId": "\(.experimentNumber)",
     "schemaVersion": .schemaVersion,
     "ownerGroup": "HIVE",
     "accessGroups": ["HIVE"],

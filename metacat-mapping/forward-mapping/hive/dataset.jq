@@ -9,7 +9,7 @@
       "type": "raw",
       "sourceFolder": "/mnt/HIVE/E-\($parent.experimentNumber)/S-\($parent.sampleNumber)/P-\($parent.pulseNumber)",
       "description": $parent.comment,
-      "experimentNumber": $parent.experimentNumber,
+      "experimentNumber": "\($parent.experimentNumber)",
       "instrument": .,
       "additional": ($parent | del(.comment, .experimentNumber, .diagnostics, .schemaVersion, .pulseStartTimestamp))
   }
