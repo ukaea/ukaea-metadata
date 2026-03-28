@@ -118,12 +118,23 @@
                 }
             },
             "required": [
-                "sampleCooling",
-                "coolantType",
-                "targetCoolantFlow",
-                "targetCoolantTemperature",
-                "measuredCoolantFlow"
-            ]
+                "sampleCooling"
+            ],
+            "if": {
+                "properties": {
+                    "sampleCooling": {
+                        "const": "yes"
+                    }
+                }
+            },
+            "then": {
+                "required": [
+                    "coolantType",
+                    "targetCoolantFlow",
+                    "targetCoolantTemperature",
+                    "measuredCoolantFlow"
+                ]
+            }
         },
         "comment": {
             "type": "string"
