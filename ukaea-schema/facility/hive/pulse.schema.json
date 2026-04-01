@@ -172,7 +172,6 @@
         "operator2",
         "heatingInformation",
         "coolantInformation",
-        "comment",
         "pulseQuality",
         "experimentNumber",
         "configurationId",
