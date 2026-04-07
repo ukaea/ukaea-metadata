@@ -1,8 +1,12 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "combinedPulse.schema.json",
-    "description": "Metadata schema for a HIVE pulse",
+    "$id": "https://w3id.org/fusion/schemas/1.0.0/facility/hive/combinedPulse",
+    "description": "Metadata schema for combined pulse",
     "type": "object",
+    "required": [
+        "manual",
+        "processing"
+    ],
     "properties": {
         "manual": {
             "$ref": "ukaea-schema/facility/hive/pulse.schema.json"
