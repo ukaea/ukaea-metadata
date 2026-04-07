@@ -8,6 +8,6 @@
   "instrument": [.seId],
   "schemaVersion": (.schemaVersion // "1.0.0"),
   "ownerGroup": "MRF",
-  "accessGroups": "[MRF]",
+  "accessGroups": ["MRF"],
   "additional": (. | del(.seId, .bookingStart, .jobId, .sessionId, .schemaVersion))
 }
