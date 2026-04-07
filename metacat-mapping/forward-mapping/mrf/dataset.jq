@@ -1,13 +1,13 @@
 {
-  "contactEmail": (.internalUser[0].email // .scientificSupport[0].email?),
+  "contactEmail": (.scientificSupport[0].email // .internalUser[0].email?),
   "creationTime" : .bookingStart,
   "type": "raw",
-  "sourceFolder": "/mnt/MRF/\(.jobId)/\(.seid)/\(.sessionId)",
-  "description": .notes,
+  "sourceFolder": "/mnt/MRF/\(.jobId)/\(.seId)/\(.sessionId)",
+  "description": "",
   "experimentNumber": "\(.jobId)-\(.sessionId)",
-  "instrument": [.seid],
+  "instrument": [.seId],
   "schemaVersion": (.schemaVersion // "1.0.0"),
   "ownerGroup": "MRF",
   "accessGroups": ["MRF"],
-  "additional": (. | del(.notes, .seid, .bookingStart, .jobId, .sessionId))
+  "additional": (. | del(.seId, .bookingStart, .jobId, .sessionId, .schemaVersion))
 }
