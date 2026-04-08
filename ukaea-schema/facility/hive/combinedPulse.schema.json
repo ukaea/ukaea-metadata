@@ -5,7 +5,8 @@
     "type": "object",
     "required": [
         "manual",
-        "processing"
+        "processing",
+        "annotation"
     ],
     "properties": {
         "manual": {
@@ -13,6 +14,20 @@
         },
         "processing": {
             "$ref": "ukaea-schema/facility/hive/postprocess.schema.json"
+        },
+        "annotation": {
+            "type": "object",
+            "required": [
+                "pulseQuality"
+            ],
+            "properties": {
+                "comment": {
+                    "type": "string"
+                },
+                "pulseQuality": {
+                    "type": "string"
+                }
+            }
         }
     }
 }
