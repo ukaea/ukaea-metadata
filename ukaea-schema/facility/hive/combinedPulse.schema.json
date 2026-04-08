@@ -25,7 +25,10 @@
                     "type": "string"
                 },
                 "pulseQuality": {
-                    "type": "string"
+                    "enum": [
+                        "success",
+                        "fail"
+                    ]
                 }
             }
         }
