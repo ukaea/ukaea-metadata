@@ -136,15 +136,6 @@
                 ]
             }
         },
-        "comment": {
-            "type": "string"
-        },
-        "pulseQuality": {
-            "enum": [
-                "Success",
-                "Fail"
-            ]
-        },
         "experimentNumber": {
             "type": "integer"
         },
@@ -172,7 +163,6 @@
         "operator2",
         "heatingInformation",
         "coolantInformation",
-        "pulseQuality",
         "experimentNumber",
         "configurationId",
         "diagnostics",
