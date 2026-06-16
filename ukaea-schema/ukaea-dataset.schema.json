@@ -8,6 +8,9 @@
             "type": "string",
             "format": "email"
         },
+        "title": {
+            "type": "string"
+        },
         "creationTime": {
             "type": "string",
             "format": "date-time"
@@ -52,6 +55,7 @@
     "required": [
         "creationTime",
         "type",
+        "title",
         "sourceFolder",
         "description",
         "schemaVersion",
