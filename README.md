@@ -1,4 +1,6 @@
-[![Build Status](https://github.com/ukaea/ukaea-metadata/actions/workflows/metadata-ci-workflow.yml/badge.svg)](https://github.com/ukaea/ukaea-metadata/actions/workflows/metadata-ci-workflow.yml)
+[![Lint](https://github.com/ukaea/ukaea-metadata/actions/workflows/lint-and-validation.yaml/badge.svg)](https://github.com/ukaea/ukaea-metadata/actions/workflows/lint-and-validation.yaml)
+
+[![Validation](https://github.com/ukaea/ukaea-metadata/actions/workflows/validation-workflow.yaml/badge.svg)](https://github.com/ukaea/ukaea-metadata/actions/workflows/validation-workflow.yaml)
 
 # UKAEA Metadata Schemas
 
