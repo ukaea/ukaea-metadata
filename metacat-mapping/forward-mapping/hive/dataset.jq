@@ -3,6 +3,7 @@
 | {
       "creationTime" : $parent.pulseStartTimestamp,
       "schemaVersion": $parent.schemaVersion,
+      "name: $parent.title,
       "ownerGroup": "HIVE",
       "owner": "HIVE",
       "accessGroups": ["HIVE"],
