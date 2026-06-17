@@ -1,6 +1,4 @@
 {
-    "campaignId": "4c7e8d7-6291-4a9f-9c27-0f8339c5f0a7",
-    "campaignTitle": "",
     "experimentNumber": "07cf92f4-5e1b-4fc3-96d1-6e6e527c3b39",
     "experimentTitle": "",
     "leadInvestigator": {
@@ -18,7 +16,6 @@
     },
     "startDate": "2023-09-05T10:00:00Z",
     "endDate": "2023-09-05T16:00:00Z",
-    "heatingType": "Induction",
-    "sampleCooling": true,
+    "schemaVersion": "0.0.1",
     "description": "this is the description"
 }

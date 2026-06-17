@@ -1,12 +1,7 @@
 {
-    "pulseNumber": "0023",
-    "pulseStart": "2025-03-06T10:33:00.000Z",
     "sampleNumber": "0011",
-    "pulseDuration": 120,
-    "dataCaptureStart": "2025-03-04T03:00:00.000Z",
     "experimentNumber": "0098",
     "configurationId": "a64870d1-4b12-4a7b-b7d6-3010f5e0f958",
-    "pulseEnd": "2025-03-06T10:38:00.000Z",
     "operator1": {
         "firstName": "Bob",
         "lastName": "Smith",
@@ -20,16 +15,21 @@
     "comment": "This is a test comment",
     "pulseQuality": "Success",
     "heatingInformation": {
+        "heatingType": "Induction",
         "currentType": "AC",
         "inputPower": 500,
         "inputCurrent": 100,
-        "inputVoltage": 5000
+        "inputVoltage": 5000,
+        "outputCurrent": 8978
     },
     "coolantInformation": {
+        "sampleCooling": "yes",
         "coolantType": "Demineralised Water",
         "targetCoolantFlow": 19.3,
-        "targetCoolantTemperature": 22.3
+        "targetCoolantTemperature": 22.3,
+        "measuredCoolantFlow": 14.3
     },
+    "schemaVersion": "0.0.1",
     "diagnostics": [
         [
             "CA-002",

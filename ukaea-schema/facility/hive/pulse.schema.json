@@ -118,21 +118,23 @@
                 }
             },
             "required": [
-                "sampleCooling",
-                "coolantType",
-                "targetCoolantFlow",
-                "targetCoolantTemperature",
-                "measuredCoolantFlow"
-            ]
-        },
-        "comment": {
-            "type": "string"
-        },
-        "pulseQuality": {
-            "enum": [
-                "Success",
-                "Fail"
-            ]
+                "sampleCooling"
+            ],
+            "if": {
+                "properties": {
+                    "sampleCooling": {
+                        "const": "yes"
+                    }
+                }
+            },
+            "then": {
+                "required": [
+                    "coolantType",
+                    "targetCoolantFlow",
+                    "targetCoolantTemperature",
+                    "measuredCoolantFlow"
+                ]
+            }
         },
         "experimentNumber": {
             "type": "integer"
@@ -153,6 +155,9 @@
         },
         "schemaVersion": {
             "type": "string"
+        },
+        "description": {
+            "type": "string"
         }
     },
     "required": [
@@ -161,8 +166,6 @@
         "operator2",
         "heatingInformation",
         "coolantInformation",
-        "comment",
-        "pulseQuality",
         "experimentNumber",
         "configurationId",
         "diagnostics",

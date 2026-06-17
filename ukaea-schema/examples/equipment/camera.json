@@ -1,16 +1,10 @@
 {
-    "deviceInformation": {
-        "make": "Canon",
-        "model": "EOS R5",
-        "serialNumber": "123456789",
-        "resolution": {
-            "x": 8192,
-            "y": 5464
-        }
-    },
-    "captureSettings": {
-        "imageAcquisitionRate": 120,
-        "imageNoise": 0.85,
-        "imageScale": 0.05
+    "make": "Canon",
+    "model": "EOS R5",
+    "serialNumber": "123456789",
+    "assetId": "C-0932",
+    "resolution": {
+        "x": 8192,
+        "y": 5464
     }
 }
