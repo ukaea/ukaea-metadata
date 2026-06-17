@@ -123,7 +123,7 @@
             "if": {
                 "properties": {
                     "sampleCooling": {
-                        "const": "yes"
+                        "const": true
                     }
                 }
             },
