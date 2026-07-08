@@ -4,7 +4,7 @@
     "description": "Metadata schema for a HIVE data annotation",
     "type": "object",
     "properties": {
-        "pulseQuality": {
+        "quality": {
             "type": "integer"
         },
         "comment": {
