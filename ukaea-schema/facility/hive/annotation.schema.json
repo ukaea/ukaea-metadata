@@ -1,0 +1,17 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://w3id.org/fusion/schemas/1.0.0/facility/hive/annotation",
+    "description": "Metadata schema for a HIVE data annotation",
+    "type": "object",
+    "properties": {
+        "pulseQuality": {
+            "type": "integer"
+        },
+        "comment": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "pulseQuality"
+    ]
+}
