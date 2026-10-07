@@ -7,6 +7,9 @@
         "sampleNumber": {
             "type": "integer"
         },
+        "name": {
+            "type": "string"
+        },
         "schemaVersion": {
             "type": "string"
         },
@@ -22,6 +25,7 @@
     },
     "required": [
         "sampleNumber",
+        "name",
         "schemaVersion",
         "ownerGroup",
         "accessGroups"

@@ -10,6 +10,9 @@
         "facilityExperimentId": {
             "type": "string"
         },
+        "title": {
+            "type": "string"
+        },
         "startDate": {
             "type": "string",
             "format": "date"
@@ -75,6 +78,7 @@
     "required": [
         "facility",
         "facilityExperimentId",
+        "title",
         "startDate",
         "description",
         "schemaVersion",
