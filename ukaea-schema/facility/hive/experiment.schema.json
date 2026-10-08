@@ -8,6 +8,10 @@
             "type": "integer",
             "description": "A unique identifier for the experiment"
         },
+        "title": {
+            "type": "string",
+            "description": "A short human-readable title for the experiment"
+        },
         "startDate": {
             "type": "string",
             "format": "date"
@@ -66,6 +70,7 @@
     },
     "required": [
         "experimentNumber",
+        "title",
         "startDate",
         "description",
         "leadInvestigator",
