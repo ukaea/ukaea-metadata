@@ -52,12 +52,6 @@
             "properties": {
                 "heatingType": {
                     "enum": [
-                        "Induction",
-                        "DC"
-                    ]
-                },
-                "currentType": {
-                    "enum": [
                         "AC",
                         "DC"
                     ]
@@ -81,22 +75,11 @@
             "required": [
                 "heatingType",
                 "currentType",
-                "outputCurrent"
-            ],
-            "if": {
-                "properties": {
-                    "currentType": {
-                        "const": "DC"
-                    }
-                }
-            },
-            "then": {
-                "required": [
-                    "inputPower",
-                    "inputCurrent",
-                    "inputVoltage"
-                ]
-            }
+                "outputCurrent",
+                "inputPower",
+                "inputCurrent",
+                "inputVoltage"
+            ]
         },
         "coolantInformation": {
             "type": "object",
