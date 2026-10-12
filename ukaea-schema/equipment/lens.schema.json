@@ -12,7 +12,6 @@
             "required": [
                 "make",
                 "model",
-                "aperture",
                 "focalLength"
             ],
             "properties": {
@@ -27,10 +26,6 @@
                 "serialNumber": {
                     "type": "string",
                     "description": "A unique identifier assigned by the manufacturer to distinguish an individual lens unit"
-                },
-                "aperture": {
-                    "type": "string",
-                    "description": "The maximum aperture size of the lens, usually expressed as an f-number (e.g., f/1.8, f/2.8)"
                 },
                 "focalLength": {
                     "type": "number",
