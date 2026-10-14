@@ -4,8 +4,7 @@
     "description": "Metadata to describe ir-camera equipment",
     "type": "object",
     "required": [
-        "deviceInformation",
-        "deviceSettings"
+        "deviceInformation"
     ],
     "properties": {
         "deviceInformation": {
@@ -87,24 +86,6 @@
                             "description": "Minimum temperature measured by the camera"
                         }
                     }
-                }
-            }
-        },
-        "deviceSettings": {
-            "type": "object",
-            "required": [
-                "emissivity",
-                "framerate"
-            ],
-            "properties": {
-                "emissivity": {
-                    "type": "number",
-                    "description": "The emissivity value used for temperature calculations, representing the efficiency with which a surface emits thermal radiation"
-                },
-                "framerate": {
-                    "type": "number",
-                    "unit": "qudt:HZ",
-                    "description": "The rate at which the camera acquires thermal data, typically measured in Hertz (Hz) or frames per second (fps)"
                 }
             }
         }
