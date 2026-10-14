@@ -4,8 +4,7 @@
     "description": "Metadata to describe ir-camera equipment",
     "type": "object",
     "required": [
-        "deviceInformation",
-        "deviceSettings"
+        "deviceInformation"
     ],
     "properties": {
         "deviceInformation": {

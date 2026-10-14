@@ -74,7 +74,6 @@
             },
             "required": [
                 "heatingType",
-                "currentType",
                 "outputCurrent",
                 "inputPower",
                 "inputCurrent",
