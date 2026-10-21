@@ -138,9 +138,6 @@
         "schemaVersion": {
             "type": "string"
         },
-        "description": {
-            "type": "string"
-        },
         "comment": {
             "type": "string"
         }
