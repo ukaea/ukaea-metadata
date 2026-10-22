@@ -9,7 +9,7 @@
       "accessGroups": ["HIVE"],
       "type": "raw",
       "sourceFolder": "/mnt/HIVE/E-\($parent.experimentNumber)/S-\($parent.sampleNumber)/P-\($parent.pulseNumber)",
-      "description": $parent.description,
+      "description": "\$parent.description",
       "experimentNumber": "\($parent.experimentNumber)",
       "instrument": .,
       "additional": ($parent | del(.description, .experimentNumber, .diagnostics, .schemaVersion, .pulseStartTimestamp))
